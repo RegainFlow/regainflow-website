@@ -1,0 +1,49 @@
+.service-image {
+  padding: 7px 8px 7px 8px;
+  background: rgba(0, 214, 203, 0.5);
+  border: 1px solid rgba(0, 214, 203, 0.5);
+  border-radius: 5px;
+}
+
+.service-page {
+  margin: 40px auto 40px auto;
+}
+
+.service-hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.service-text-block {
+  flex: 1;
+  min-width: 300px;
+}
+
+.service-card-grid {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background: rgba(26, 26, 26, 0.5);
+  backdrop-filter: blur(1px);
+  border: 0.5px solid rgba(0, 214, 203, 0.5);
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px 2px rgba(0, 214, 203, 0.15);
+}
+
+@media screen and (max-width: 768px) {
+  .service-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .service-image-block {
+    text-align: center;
+  }
+}

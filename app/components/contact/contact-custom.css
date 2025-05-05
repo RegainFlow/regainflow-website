@@ -1,0 +1,68 @@
+.contract-us-section {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.heading-9 {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.text-span-9 {
+  color: #00d6cb;
+}
+
+.form-card {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(26, 26, 26, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px rgba(0, 214, 203, 0.15);
+}
+
+.formfield {
+  display: block;
+  color: white;
+  text-align: left;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.formfield-label {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.25rem;
+  border-radius: 5px;
+  background: #1a1a1a;
+  color: white;
+  border: 1px solid rgba(0, 214, 203, 0.5);
+  font-family: 'Exo 2', sans-serif;
+}
+
+.submit-button {
+  background: rgba(0, 214, 203, 0.1);
+  color: #00d6cb;
+  border: 1px solid rgba(0, 214, 203, 0.5);
+  padding: 1rem 2rem;
+  margin-top: 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background: rgba(0, 214, 203, 0.2);
+}
+
+.text-block-12 {
+  color: #00ffcb;
+  margin-top: 1rem;
+}
+
+.error-message {
+  color: red;
+  margin-top: 1rem;
+}

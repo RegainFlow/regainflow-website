@@ -1,0 +1,108 @@
+:root {
+  /* Carousel */
+  --carousel-slide-size: 100px;
+  --carousel-slide-radius: 5px;
+  --carousel-slide-bg: rgba(0, 214, 203, 0.4);
+  --carousel-slide-shadow: 0 0 10px 1px rgba(0, 214, 203, 0.2);
+  --carousel-slide-margin: 20px;
+
+  --carousel-slide-size-md: 80px;
+  --carousel-slide-margin-md: 15px;
+
+  --carousel-slide-size-sm: 60px;
+  --carousel-slide-margin-sm: 10px;
+
+  /* Button Primary 2 */
+  --button-primary-color: #00d6cb;
+  --button-primary-border: rgba(0, 214, 203, 0.5);
+  --button-primary-hover-bg: rgba(0, 214, 203, 0.2);
+  --button-primary-hover-color: #00ffff;
+  --button-primary-shadow: 0 0 10px 2px rgba(0, 214, 203, 0.15);
+  --button-primary-active-bg: #43464d;
+  --button-radius: 5px;
+  --button-padding: 10px 40px;
+  --button-font-size: 15px;
+  --button-font-weight: 700;
+  --button-line-height: 20px;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.carousel-track {
+  display: flex;
+  animation: carousel-scroll 8s linear infinite;
+  width: fit-content;
+}
+
+.carousel-slide {
+  display: inline-block;
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  background-color: var(--carousel-slide-bg);
+  border-radius: var(--carousel-slide-radius);
+  padding: 10px;
+  box-shadow: var(--carousel-slide-shadow);
+  width: var(--carousel-slide-size);
+  height: var(--carousel-slide-size);
+  object-fit: contain;
+  margin-right: var(--carousel-slide-margin);
+}
+
+/* Primary Button Style */
+.button-primary-2 {
+  color: var(--button-primary-color);
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0.5px solid var(--button-primary-border);
+  border-radius: var(--button-radius);
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--button-padding);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  line-height: var(--button-line-height);
+  transition: all 0.2s;
+  box-shadow: var(--button-primary-shadow);
+}
+
+.button-primary-2:hover {
+  background-color: var(--button-primary-hover-bg);
+  color: var(--button-primary-hover-color);
+}
+
+.button-primary-2:active {
+  background-color: var(--button-primary-active-bg);
+}
+
+/* Keyframe animation */
+@keyframes carousel-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Medium devices */
+@media (max-width: 768px) {
+  .carousel-slide {
+    width: var(--carousel-slide-size-md);
+    height: var(--carousel-slide-size-md);
+    margin-right: var(--carousel-slide-margin-md);
+  }
+}
+
+/* Small devices */
+@media (max-width: 480px) {
+  .carousel-slide {
+    width: var(--carousel-slide-size-sm);
+    height: var(--carousel-slide-size-sm);
+    margin-right: var(--carousel-slide-margin-sm);
+  }
+}

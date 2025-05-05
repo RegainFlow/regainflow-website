@@ -1,0 +1,182 @@
+:root {
+  --vp-max-width: 1400px;
+  --vp-padding-side: 1rem;
+  --vp-gap-section: 4rem;
+  --vp-gap-content: 2rem;
+  --vp-gap-text: 1rem;
+  --vp-gap-bullets: 0.75rem;
+
+  --vp-border: 0.5px solid rgba(0, 214, 203, 0.5);
+  --vp-radius: 6px;
+  --vp-bg-card: rgba(26, 26, 26, 0.5);
+  --vp-blur: blur(1px);
+  --vp-shadow: 0 0 10px 2px rgba(0, 214, 203, 0.15);
+
+  --vp-title-color: white;
+  --vp-subtitle-color: #a6a6a6;
+  --vp-bullet-color: white;
+
+  --vp-button-bg: rgba(0, 214, 203, 0.1);
+  --vp-button-hover-bg: rgba(0, 214, 203, 0.2);
+  --vp-button-color: #00d6cb;
+  --vp-button-hover-color: #00ffff;
+
+  --vp-title-size: 2rem;
+  --vp-subtitle-size: 1rem;
+  --vp-bullet-size: 1rem;
+
+  --vp-button-padding: 12px 18px;
+  --vp-button-radius: 5px;
+}
+
+/* ===== Container & Section ===== */
+.vp-container {
+  max-width: var(--vp-max-width);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.value-proposition-section {
+  padding: var(--vp-gap-section) var(--vp-padding-side);
+  display: flex;
+  flex-direction: column;
+  gap: var(--vp-gap-section);
+}
+
+/* ===== Card & Layout ===== */
+.vp-card {
+  border: var(--vp-border);
+  border-radius: var(--vp-radius);
+  padding: 2rem;
+  background: var(--vp-bg-card);
+  backdrop-filter: var(--vp-blur);
+  box-shadow: var(--vp-shadow);
+  margin-top: 40px;
+}
+
+.vp-content-wrapper {
+  display: flex;
+  gap: var(--vp-gap-content);
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.vp-content-wrapper.row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* ===== Image ===== */
+.vp-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+/* ===== Text Content ===== */
+.vp-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--vp-gap-text);
+}
+
+.vp-title {
+  font-size: var(--vp-title-size);
+  font-weight: bold;
+  color: var(--vp-title-color);
+}
+
+.vp-subtitle {
+  font-size: var(--vp-subtitle-size);
+  color: var(--vp-subtitle-color);
+}
+
+/* ===== Bullet List ===== */
+.vp-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--vp-gap-bullets);
+}
+
+.vp-bullet-item {
+  display: flex;
+  align-items: center;
+  gap: var(--vp-gap-bullets);
+  font-size: var(--vp-bullet-size);
+  color: var(--vp-bullet-color);
+}
+
+/* ===== CTA Button ===== */
+.vp-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: var(--vp-button-padding);
+  border: var(--vp-border);
+  background: var(--vp-button-bg);
+  color: var(--vp-button-color);
+  font-weight: bold;
+  border-radius: var(--vp-button-radius);
+  text-decoration: none;
+  text-align: center;
+  transition: 0.2s ease;
+}
+
+.vp-button:hover {
+  background: var(--vp-button-hover-bg);
+  color: var(--vp-button-hover-color);
+}
+
+/* ===== Heading Alignment ===== */
+.heading-2.center {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* ===== Responsive Layout ===== */
+@media screen and (max-width: 768px) {
+  .vp-content-wrapper,
+  .vp-content-wrapper.row-reverse {
+    flex-direction: column;
+  }
+
+  .vp-image img {
+    max-width: 80%;
+    margin: auto;
+  }
+
+  .vp-text {
+    align-items: center;
+    width: 100%;
+  }
+
+  .vp-bullets {
+    align-items: center;
+  }
+
+  .vp-button {
+    width: 100%;
+  }
+}
+
+/* ===== Animation ===== */
+@keyframes fadeInPulse {
+  0% {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.fade-in-pulse {
+  animation: fadeInPulse 1.6s ease-out;
+}
