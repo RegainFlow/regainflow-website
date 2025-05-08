@@ -1,35 +1,45 @@
+/* ==========================================================================
+   Value Proposition Styles (Refactored & Responsive)
+   ========================================================================== */
+
 :root {
+  /* Layout */
   --vp-max-width: 1400px;
   --vp-padding-side: 1rem;
   --vp-gap-section: 4rem;
   --vp-gap-content: 2rem;
-  --vp-gap-text: 1rem;
-  --vp-gap-bullets: 0.75rem;
+  --vp-gap-text: 2.5rem;
+  --vp-gap-bullets: 1rem;
+  --vp-gap-card-top: 2rem;
 
+  /* Card */
   --vp-border: 0.5px solid rgba(0, 214, 203, 0.5);
-  --vp-radius: 6px;
+  --vp-radius: 5px;
   --vp-bg-card: rgba(26, 26, 26, 0.5);
   --vp-blur: blur(1px);
   --vp-shadow: 0 0 10px 2px rgba(0, 214, 203, 0.15);
 
+  /* Typography */
   --vp-title-color: white;
   --vp-subtitle-color: #a6a6a6;
   --vp-bullet-color: white;
+  --vp-title-size: 2.5rem;
+  --vp-subtitle-size: 1.5rem;
+  --vp-bullet-size: 1rem;
+  --font-base: 'Exo 2', sans-serif;
 
+  /* Button */
   --vp-button-bg: rgba(0, 214, 203, 0.1);
   --vp-button-hover-bg: rgba(0, 214, 203, 0.2);
   --vp-button-color: #00d6cb;
   --vp-button-hover-color: #00ffff;
-
-  --vp-title-size: 2rem;
-  --vp-subtitle-size: 1rem;
-  --vp-bullet-size: 1rem;
-
   --vp-button-padding: 12px 18px;
   --vp-button-radius: 5px;
 }
 
-/* ===== Container & Section ===== */
+/* --------------------------------------------------------------------------
+     Container & Section
+     -------------------------------------------------------------------------- */
 .vp-container {
   max-width: var(--vp-max-width);
   margin: 0 auto;
@@ -43,15 +53,17 @@
   gap: var(--vp-gap-section);
 }
 
-/* ===== Card & Layout ===== */
+/* --------------------------------------------------------------------------
+     Card & Layout
+     -------------------------------------------------------------------------- */
 .vp-card {
   border: var(--vp-border);
   border-radius: var(--vp-radius);
-  padding: 2rem;
+  padding: var(--vp-gap-content);
   background: var(--vp-bg-card);
   backdrop-filter: var(--vp-blur);
   box-shadow: var(--vp-shadow);
-  margin-top: 40px;
+  margin-top: var(--vp-gap-card-top);
 }
 
 .vp-content-wrapper {
@@ -59,21 +71,25 @@
   gap: var(--vp-gap-content);
   align-items: center;
   justify-content: space-between;
-  flex-direction: row;
 }
 
 .vp-content-wrapper.row-reverse {
   flex-direction: row-reverse;
 }
 
-/* ===== Image ===== */
+/* --------------------------------------------------------------------------
+     Image
+     -------------------------------------------------------------------------- */
 .vp-image img {
   width: 100%;
   max-width: 500px;
   height: auto;
+  border-radius: var(--vp-radius);
 }
 
-/* ===== Text Content ===== */
+/* --------------------------------------------------------------------------
+     Text Content
+     -------------------------------------------------------------------------- */
 .vp-text {
   flex: 1;
   display: flex;
@@ -90,30 +106,53 @@
 .vp-subtitle {
   font-size: var(--vp-subtitle-size);
   color: var(--vp-subtitle-color);
+  font-family: var(--font-base);
 }
 
-/* ===== Bullet List ===== */
+/* --------------------------------------------------------------------------
+     Bullet List (Enhanced)
+     -------------------------------------------------------------------------- */
 .vp-bullets {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--vp-gap-bullets);
 }
 
 .vp-bullet-item {
+  background: rgba(0, 214, 203, 0.05);
+  border: var(--vp-border);
+  border-radius: var(--vp-radius);
+  padding: var(--vp-gap-text) var(--vp-gap-bullets);
   display: flex;
   align-items: center;
   gap: var(--vp-gap-bullets);
   font-size: var(--vp-bullet-size);
   color: var(--vp-bullet-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 2px 3px 6px 0px rgba(0, 214, 203, 0.3);
 }
 
-/* ===== CTA Button ===== */
+.vp-bullet-item img {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 4px rgba(0, 214, 203, 0.5));
+}
+.vp-bullet-item span {
+  display: block;
+  font-family: var(--font-base);
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+     CTA Button
+     -------------------------------------------------------------------------- */
 .vp-button {
   display: inline-block;
-  margin-top: 1rem;
+  margin-top: var(--vp-gap-text);
   padding: var(--vp-button-padding);
   border: var(--vp-border);
   background: var(--vp-button-bg);
@@ -122,47 +161,67 @@
   border-radius: var(--vp-button-radius);
   text-decoration: none;
   text-align: center;
-  transition: 0.2s ease;
+  transition: background 0.2s, color 0.2s;
 }
-
 .vp-button:hover {
   background: var(--vp-button-hover-bg);
   color: var(--vp-button-hover-color);
 }
 
-/* ===== Heading Alignment ===== */
+/* --------------------------------------------------------------------------
+     Heading Alignment Utility
+     -------------------------------------------------------------------------- */
 .heading-2.center {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: var(--vp-gap-text);
 }
 
-/* ===== Responsive Layout ===== */
-@media screen and (max-width: 768px) {
+/* --------------------------------------------------------------------------
+     Responsive Layout
+     -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
   .vp-content-wrapper,
   .vp-content-wrapper.row-reverse {
     flex-direction: column;
+    text-align: center;
   }
-
   .vp-image img {
     max-width: 80%;
     margin: auto;
   }
-
   .vp-text {
     align-items: center;
     width: 100%;
   }
-
   .vp-bullets {
-    align-items: center;
+    margin: 20px 0;
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 40px;
   }
-
   .vp-button {
     width: 100%;
   }
 }
+@media (max-width: 480px) {
+  .vp-title {
+    font-size: calc(var(--vp-title-size) * 0.65);
+  }
+  .vp-subtitle {
+    font-size: calc(var(--vp-subtitle-size) * 0.7);
+  }
+  .vp-card {
+    padding: var(--vp-gap-text);
+  }
+  .vp-button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
 
-/* ===== Animation ===== */
+/* --------------------------------------------------------------------------
+     Animation Keyframes
+     -------------------------------------------------------------------------- */
 @keyframes fadeInPulse {
   0% {
     opacity: 0;
@@ -176,7 +235,6 @@
     transform: scale(1);
   }
 }
-
 .fade-in-pulse {
   animation: fadeInPulse 1.6s ease-out;
 }

@@ -1,82 +1,130 @@
+/* ==========================================================================
+   Hero Section Styles (Refactored & Responsive)
+   ========================================================================== */
+
 :root {
-  /* Carousel */
-  --carousel-slide-size: 100px;
+  /* Carousel Variables */
+  --carousel-slide-size: 165px;
   --carousel-slide-radius: 5px;
   --carousel-slide-bg: rgba(0, 214, 203, 0.4);
   --carousel-slide-shadow: 0 0 10px 1px rgba(0, 214, 203, 0.2);
   --carousel-slide-margin: 20px;
-
   --carousel-slide-size-md: 80px;
-  --carousel-slide-margin-md: 15px;
-
   --carousel-slide-size-sm: 60px;
-  --carousel-slide-margin-sm: 10px;
 
-  /* Button Primary 2 */
-  --button-primary-color: #00d6cb;
-  --button-primary-border: rgba(0, 214, 203, 0.5);
-  --button-primary-hover-bg: rgba(0, 214, 203, 0.2);
-  --button-primary-hover-color: #00ffff;
-  --button-primary-shadow: 0 0 10px 2px rgba(0, 214, 203, 0.15);
-  --button-primary-active-bg: #43464d;
+  /* Button Variables */
+  --button-color: #00d6cb;
+  --button-border: rgba(0, 214, 203, 0.5);
+  --button-hover-bg: rgba(0, 214, 203, 0.2);
+  --button-hover-color: #00ffff;
+  --button-active-bg: #43464d;
+  --button-shadow: 0 0 10px 2px rgba(0, 214, 203, 0.15);
   --button-radius: 5px;
   --button-padding: 10px 40px;
   --button-font-size: 15px;
   --button-font-weight: 700;
   --button-line-height: 20px;
+  --button-primary-color: var(--button-color);
+  --button-primary-border: var(--button-border);
+
+  /* Typography */
+  --font-base: 'Exo 2', sans-serif;
+  --text-color: #ffffff;
+  --highlight-color: var(--button-color);
+  --hero-header-color: #ffffff;
+  --hero-header-size: 70px;
+  --hero-header-line-height: 90px;
+  --hero-header-weight: 700;
+
+  /* Container */
+  --container-max-width: 1400px;
+  --section-padding: 2rem 1rem;
+}
+
+.hero-section {
+  padding: var(--section-padding);
+  text-align: center;
+  color: var(--text-color);
+  font-family: var(--font-base);
+}
+
+.landing-header {
+  color: var(--hero-header-color);
+  text-align: center;
+  font-family: var(--hero-header-font);
+  font-size: var(--hero-header-size);
+  font-weight: var(--hero-header-weight);
+  line-height: var(--hero-header-line-height);
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.typed-text {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.typed-highlight {
+  color: var(--highlight-color);
+  text-shadow: 0 0 10px rgba(0, 214, 203, 0.5);
+}
+
+.section-tech-stack {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 1rem 0;
 }
 
 .carousel-wrapper {
   overflow: hidden;
-  width: 100%;
-  padding: 1rem 0;
 }
 
 .carousel-track {
+  margin-top: 40px;
   display: flex;
-  animation: carousel-scroll 8s linear infinite;
+  animation: carousel-scroll 15s linear infinite;
   width: fit-content;
 }
 
 .carousel-slide {
-  display: inline-block;
   -webkit-backdrop-filter: blur(1px);
   backdrop-filter: blur(1px);
   background-color: var(--carousel-slide-bg);
   border-radius: var(--carousel-slide-radius);
-  padding: 10px;
   box-shadow: var(--carousel-slide-shadow);
   width: var(--carousel-slide-size);
   height: var(--carousel-slide-size);
   object-fit: contain;
+  padding: 10px;
   margin-right: var(--carousel-slide-margin);
 }
 
-/* Primary Button Style */
+/* Primary Button */
 .button-primary-2 {
-  color: var(--button-primary-color);
+  color: var(--button-color);
   text-transform: uppercase;
   cursor: pointer;
   background-color: transparent;
-  border: 0.5px solid var(--button-primary-border);
+  border: 0.5px solid var(--button-border);
   border-radius: var(--button-radius);
-  margin-left: auto;
-  margin-right: auto;
   padding: var(--button-padding);
   font-size: var(--button-font-size);
   font-weight: var(--button-font-weight);
   line-height: var(--button-line-height);
   transition: all 0.2s;
-  box-shadow: var(--button-primary-shadow);
+  box-shadow: var(--button-shadow);
+  margin-top: 100px;
+  margin: 100px auto 0 auto;
 }
 
 .button-primary-2:hover {
-  background-color: var(--button-primary-hover-bg);
-  color: var(--button-primary-hover-color);
+  background-color: var(--button-hover-bg);
+  color: var(--button-hover-color);
 }
 
 .button-primary-2:active {
-  background-color: var(--button-primary-active-bg);
+  background-color: var(--button-active-bg);
 }
 
 /* Keyframe animation */
@@ -89,20 +137,186 @@
   }
 }
 
-/* Medium devices */
+/* --------------------------------------------------------------------------
+     Responsive Breakpoints
+     -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
   .carousel-slide {
     width: var(--carousel-slide-size-md);
     height: var(--carousel-slide-size-md);
-    margin-right: var(--carousel-slide-margin-md);
+    margin-right: calc(var(--carousel-slide-margin) * 0.75);
+  }
+
+  .typed-text {
+    font-size: 2rem;
+  }
+
+  .button-primary-2 {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    justify-content: center;
+  }
+
+  .landing-header {
+    font-size: calc(var(--hero-header-size) * 0.6);
+    line-height: calc(var(--hero-header-line-height) * 0.6);
+    padding: 0 1rem;
   }
 }
 
-/* Small devices */
 @media (max-width: 480px) {
   .carousel-slide {
-    width: var(--carousel-slide-size-sm);
-    height: var(--carousel-slide-size-sm);
-    margin-right: var(--carousel-slide-margin-sm);
+    width: var(--carousel-slide-size-md);
+    height: var(--carousel-slide-size-md);
+    margin-right: calc(var(--carousel-slide-margin) * 0.5);
+    margin-top: calc(40px * 0.5);
   }
+
+  .typed-text {
+    font-size: 1.5rem;
+  }
+
+  .button-primary-2 {
+    padding: 10px;
+    font-size: 0.875rem;
+  }
+
+  .landing-header {
+    font-size: calc(var(--hero-header-size) * 0.6);
+    line-height: calc(var(--hero-header-line-height) * 0.9);
+    padding: 0 0.75rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Neon‑border animated button
+   -------------------------------------------------------------------------- */
+.animated-button {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  /* keep your base styling */
+  color: var(--button-primary-color);
+  text-transform: uppercase;
+  cursor: pointer;
+  background: transparent;
+  border: 0.5px solid var(--button-primary-border);
+  border-radius: var(--button-radius);
+  padding: var(--button-padding);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  line-height: var(--button-line-height);
+  transition: 0.5s;
+  letter-spacing: 2px;
+}
+
+/* on hover, invert & glow */
+.animated-button:hover {
+  background: var(--button-primary-color);
+  color: #050801; /* or your dark page background */
+  box-shadow: 0 0 5px var(--button-primary-color),
+    0 0 25px var(--button-primary-color), 0 0 50px var(--button-primary-color),
+    0 0 200px var(--button-primary-color);
+}
+
+/* four animated border lines */
+.animated-button span {
+  position: absolute;
+  display: block;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--button-primary-color)
+  );
+}
+
+.animated-button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  animation: neon1 1s linear infinite;
+}
+.animated-button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  animation: neon2 1s linear infinite;
+  animation-delay: 0.25s;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--button-primary-color)
+  );
+}
+.animated-button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  animation: neon3 1s linear infinite;
+  animation-delay: 0.5s;
+  background: linear-gradient(
+    to left,
+    transparent,
+    var(--button-primary-color)
+  );
+}
+.animated-button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  animation: neon4 1s linear infinite;
+  animation-delay: 0.75s;
+  background: linear-gradient(to top, transparent, var(--button-primary-color));
+}
+
+/* keyframes */
+@keyframes neon1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+@keyframes neon2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+@keyframes neon3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+@keyframes neon4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+/* keep your content centered */
+.animated-button .btn-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1; /* above the animated spans */
 }

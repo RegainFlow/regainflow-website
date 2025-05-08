@@ -1,12 +1,44 @@
-import { useState } from 'react';
-import { Link } from '@remix-run/react';
+import { useState, useEffect, useRef } from 'react';
+import { Link, useLocation } from '@remix-run/react';
 import { PiCaretDownBold } from 'react-icons/pi';
 
-export default function NavDropdown() {
+interface NavDropdownProps {
+  onSelect?: () => void;
+}
+
+export default function NavDropdown({ onSelect }: NavDropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const location = useLocation();
+
+  // Close on route change
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
+
+  // Close when clicking outside
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(e.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  function handleLinkClick() {
+    setIsOpen(false);
+    onSelect?.();
+  }
 
   return (
-    <div className="dropdown">
+    <div className="dropdown" ref={containerRef}>
       <button
         className="button-drop-down"
         onClick={() => setIsOpen((prev) => !prev)}
@@ -19,16 +51,22 @@ export default function NavDropdown() {
         />
       </button>
 
-      {isOpen && (
-        <div className="nav-dropdown-list w--open">
-          <Link to="/services/automation-audit" className="button-link">
-            Automation Audit + Strategy
-          </Link>
-          <Link to="/services/rapid-prototyping" className="button-link">
-            Rapid R&D Prototyping
-          </Link>
-        </div>
-      )}
+      <div className={`nav-dropdown-list ${isOpen ? 'w--open' : ''}`}>
+        <Link
+          to="/services/automation-audit"
+          className="button-link"
+          onClick={handleLinkClick}
+        >
+          Automation Audit + Strategy
+        </Link>
+        <Link
+          to="/services/rapid-solutions"
+          className="button-link"
+          onClick={handleLinkClick}
+        >
+          Rapid R&D Solutions
+        </Link>
+      </div>
     </div>
   );
 }

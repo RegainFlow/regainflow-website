@@ -1,17 +1,7 @@
-interface Card {
-  icon: string;
-  text: string;
-}
-
-interface ServicePageProps {
-  title: string;
-  subtitle: string;
-  image: string;
-  sectionOneTitle: string;
-  sectionOneCards: Card[];
-  sectionTwoTitle: string;
-  sectionTwoCards: Card[];
-}
+// app/components/ServicePage.tsx
+import type { ServiceInfo } from '~/components/services/servicesData';
+import FeatureCard from '~/components/services/FeatureCard';
+import { Link } from '@remix-run/react';
 
 export default function ServicePage({
   title,
@@ -20,66 +10,120 @@ export default function ServicePage({
   sectionOneTitle,
   sectionOneCards,
   sectionTwoTitle,
-  sectionTwoCards
-}: ServicePageProps) {
+  sectionTwoCards,
+  videoUrl
+}: ServiceInfo) {
   return (
-    <section className="service-page">
-      <div className="w-layout-blockcontainer container-9 w-container">
-        <div className="service-hero">
-          <div className="service-text-block">
+    <>
+      {/* HERO */}
+      <section className="hero-section">
+        <div className="service-hero-extended">
+          <div className="service-hero-text">
             <h1
-              className="heading-7"
+              className="hero-title"
               dangerouslySetInnerHTML={{ __html: title }}
             />
-            <p className="paragraph-3">{subtitle}</p>
-          </div>
-          <div className="service-image-block">
-            <img src={image} alt={title} className="image-9" loading="lazy" />
-          </div>
-        </div>
-      </div>
-
-      <div className="w-layout-blockcontainer container-12 w-container">
-        <h2
-          className="heading-11"
-          dangerouslySetInnerHTML={{ __html: sectionOneTitle }}
-        />
-        <div className="service-card-grid">
-          {sectionOneCards.map((card, idx) => (
-            <div className="service-card" key={idx}>
-              <img
-                className="service-image"
-                src={card.icon}
-                alt=""
-                width={50}
-                height={50}
-              />
-              <h4 className="heading-12">{card.text}</h4>
+            <p className="hero-subtitle">{subtitle}</p>
+            <a href="/free-trial" className="hero-cta">
+              Book A Free Audit
+            </a>
+            <div className="hero-tagline">
+              30 min free call · Calculate ROI · Regain Value
             </div>
-          ))}
-        </div>
-      </div>
+          </div>
 
-      <div className="w-layout-blockcontainer container-12 w-container">
+          <div className="service-hero-image-wrapper">
+            <img
+              src={image}
+              alt={title}
+              className="hero-main-image"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* WHAT YOU GET */}
+      <section className="cards-section container-12">
         <h2
-          className="heading-11"
+          className="section-heading"
           dangerouslySetInnerHTML={{ __html: sectionTwoTitle }}
-        />
-        <div className="service-card-grid">
-          {sectionTwoCards.map((card, idx) => (
-            <div className="service-card" key={idx}>
-              <img
-                className="service-image"
-                src={card.icon}
-                alt=""
-                width={50}
-                height={50}
-              />
-              <h4 className="heading-12">{card.text}</h4>
+        ></h2>
+        <div className="get-grid">
+          {sectionTwoCards.map((card, i) => (
+            <div className="get-card" key={i}>
+              <div className="get-icon-wrapper">
+                <img src={card.icon} alt={card.text} />
+              </div>
+              <div className="get-text">
+                <strong>{card.text}</strong>
+                <p>{card.description}</p>
+              </div>
             </div>
           ))}
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* WHO IT’S FOR */}
+      <section className="cards-section stack-cards container-12">
+        <h2
+          className="section-heading"
+          dangerouslySetInnerHTML={{ __html: sectionOneTitle }}
+        ></h2>
+        <div className="feature-section">
+          <div className="feature-section">
+            {sectionOneCards.map((card, i) => (
+              <FeatureCard
+                key={i}
+                icon={card.icon}
+                title={card.text}
+                image={image}
+                description={card.description}
+                onCtaClick={() => console.log('clicked', card.text)}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* USE CASE VIDEO */}
+      {/* {videoUrl && (
+        <section className="video-section container-12">
+          <h2 className="section-heading">Use Case Video</h2>
+          <div className="video-wrapper">
+            <iframe
+              src={videoUrl}
+              title="Use Case Video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </section>
+      )} */}
+
+      {/* FINAL CALL‑TO‑ACTION */}
+      <section className="trial-section">
+        <div className="trial-wrapper container-12">
+          <div className="trial-text">
+            <h2 className="trial-title">
+              Ready to consult with <span className="logo">Regain Flow</span>?
+            </h2>
+            <p className="trial-subtitle">
+              How promotion excellent curiosity yet attempted happiness Gay
+              prosperous impression.
+            </p>
+            <Link to="#" className="trial-button">
+              Book Now For Free
+            </Link>
+          </div>
+          <div className="trial-logo">
+            <div className="trial-logo-inner">
+              <img src="/images/regain_flow_logo.png" alt="Regain Flow logo" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

@@ -1,56 +1,97 @@
+/* ==========================================================================
+   Contact Us Page Styles (Refactored & Responsive)
+   ========================================================================== */
+
+:root {
+  /* Colors */
+  --color-primary: #00d6cb;
+  --color-primary-soft: rgba(0, 214, 203, 0.1);
+  --color-primary-border: rgba(0, 214, 203, 0.5);
+  --color-bg-card: rgba(26, 26, 26, 0.5);
+  --color-bg-input: #1a1a1a;
+  --color-text: #ffffff;
+  --color-text-muted: #00ffcb;
+  --color-error: #ff4d4f;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+
+  /* Border & Radius */
+  --border-radius: 5px;
+  --border-base: 1px solid var(--color-primary-border);
+
+  /* Shadows */
+  --shadow-base: 0 0 10px 2px rgba(0, 214, 203, 0.15);
+
+  /* Widths */
+  --form-max-width: 800px;
+
+  --container-max-width: 1400px;
+}
+
 .contract-us-section {
-  padding: 3rem 1rem;
   text-align: center;
+  max-width: var(--container-max-width);
+  margin: 40px auto;
 }
 
 .heading-9 {
-  font-size: 2.5rem;
-  color: white;
+  font-size: 4rem;
+  color: var(--color-text);
   font-weight: bold;
-  margin-bottom: 2rem;
 }
 
 .text-span-9 {
-  color: #00d6cb;
+  color: var(--color-primary);
 }
 
 .form-card {
-  max-width: 600px;
+  max-width: var(--form-max-width);
   margin: 0 auto;
-  background: rgba(26, 26, 26, 0.5);
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px 2px rgba(0, 214, 203, 0.15);
+  background: var(--color-bg-card);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-base);
+  backdrop-filter: blur(1px);
+  border: 0.5px solid var(--color-primary-border);
 }
 
 .formfield {
   display: block;
-  color: white;
+  color: var(--color-text);
   text-align: left;
   font-weight: bold;
-  margin-top: 1rem;
+  margin-top: var(--spacing-md);
 }
 
 .formfield-label {
   width: 100%;
-  padding: 0.75rem;
-  margin-top: 0.25rem;
-  border-radius: 5px;
-  background: #1a1a1a;
-  color: white;
-  border: 1px solid rgba(0, 214, 203, 0.5);
+  padding: var(--spacing-sm);
+  margin-top: var(--spacing-xs);
+  border-radius: var(--border-radius);
+  background: var(--color-bg-input);
+  color: var(--color-text);
+  border: var(--border-base);
   font-family: 'Exo 2', sans-serif;
 }
 
 .submit-button {
-  background: rgba(0, 214, 203, 0.1);
-  color: #00d6cb;
-  border: 1px solid rgba(0, 214, 203, 0.5);
-  padding: 1rem 2rem;
-  margin-top: 1.5rem;
-  border-radius: 5px;
+  display: inline-block;
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  border: var(--border-base);
+  margin-top: var(--spacing-md);
+  border-radius: var(--border-radius);
   font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.2s ease;
+  padding: 10px 50px;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
 .submit-button:hover {
@@ -58,11 +99,40 @@
 }
 
 .text-block-12 {
-  color: #00ffcb;
-  margin-top: 1rem;
+  color: var(--color-text-muted);
+  margin-top: var(--spacing-md);
 }
 
 .error-message {
-  color: red;
-  margin-top: 1rem;
+  color: var(--color-error);
+  margin-top: var(--spacing-md);
+}
+
+/* ==========================================================================
+     Responsive
+     ========================================================================== */
+@media (max-width: 768px) {
+  .contract-us-section {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+  .heading-9 {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+  }
+  .form-card {
+    padding: var(--spacing-sm);
+  }
+  .submit-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .formfield-label {
+    padding: var(--spacing-xs);
+  }
+  .submit-button {
+    padding: var(--spacing-sm) 0;
+  }
 }

@@ -44,7 +44,8 @@ export default function RoiOutputTable({
           target="_blank"
           rel="noopener noreferrer"
         >
-          BOOK A <span className="text-span-28">FREE</span> CALL
+          BOOK A{' '}
+          <span style={{ color: '#00ff08', margin: '0 4px' }}> FREE </span> CALL
         </a>
       </div>
     </div>

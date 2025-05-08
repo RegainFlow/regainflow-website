@@ -7,56 +7,67 @@ export default function HeroSection() {
   const typedRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    if (typedRef.current) {
-      const typed = new Typed(typedRef.current, {
-        strings: [
-          'workflows.',
-          'lead gen.',
-          'ops.',
-          'processes.',
-          'tasks.',
-          'data pipelines.',
-          'back office.',
-          'sales funnels.',
-          'headaches.'
-        ],
-        typeSpeed: 70,
-        backSpeed: 40,
-        loop: true,
-        fadeOut: true,
-        smartBackspace: false,
-        fadeOutDelay: 500
-      });
+    if (!typedRef.current) return;
 
-      return () => {
-        typed.destroy(); // destroy instance to prevent memory leaks
-      };
-    }
+    const typed = new Typed('#typed', {
+      stringsElement: '#typed-strings',
+      typeSpeed: 70,
+      backSpeed: 40,
+      backDelay: 1000,
+      startDelay: 500,
+      loop: true,
+      smartBackspace: false
+    });
+
+    return () => typed.destroy();
   }, []);
 
   const handleScroll = () => {
     const target = document.getElementById('value-prop');
-    if (target) {
-      const yOffset = -80;
-      const y =
-        target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    if (!target) return;
 
-      window.scrollTo({ top: y, behavior: 'smooth' });
+    const yOffset = -80;
+    const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
-      // Remove previous animation class
-      target.classList.remove('fade-in-pulse');
-
-      // Force reflow to restart animation
-      void target.offsetWidth;
-
-      // Add animation class
-      target.classList.add('fade-in-pulse');
-    }
+    window.scrollTo({ top: y, behavior: 'smooth' });
+    target.classList.remove('fade-in-pulse');
+    // force reflow
+    void target.offsetWidth;
+    target.classList.add('fade-in-pulse');
   };
 
   return (
     <section className="hero-section">
-      <div className="w-layout-blockcontainer container-10 w-container">
+      {/* hidden list of phrases for Typed.js */}
+      <div id="typed-strings" style={{ display: 'none' }}>
+        <p>
+          We relieve your <span className="typed-highlight">headaches.</span>
+        </p>
+        <p>
+          We automate your <span className="typed-highlight">process.</span>
+        </p>
+        <p>
+          We solve your <span className="typed-highlight">bottlenecks.</span>
+        </p>
+        <p>
+          We eliminate your{' '}
+          <span className="typed-highlight">manual work.</span>
+        </p>
+        <p>
+          We streamline your <span className="typed-highlight">workflows.</span>
+        </p>
+        <p>
+          We accelerate your <span className="typed-highlight">delivery.</span>
+        </p>
+        <p>
+          We optimize your <span className="typed-highlight">pipelines.</span>
+        </p>
+        <p>
+          We scale your <span className="typed-highlight">operations.</span>
+        </p>
+      </div>
+
+      <div className="container-10">
         <h1 className="landing-header">
           Automate Your <span className="text-span-17">Flow</span>.<br />
           <span className="text-span-18">Regain</span> Control.
@@ -65,10 +76,7 @@ export default function HeroSection() {
           <br />
         </h1>
         <div className="div-block-33">
-          <div className="text-block-10 landing-sub-heading">
-            We automate your
-          </div>
-          <div className="code-embed-2 w-embed">
+          <div className="typed-text">
             <span id="typed" ref={typedRef}></span>
           </div>
         </div>
@@ -81,16 +89,19 @@ export default function HeroSection() {
 
       <button
         onClick={handleScroll}
-        className="button-primary-2 w-button"
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          alignItems: 'center',
-          justifyContent: 'center'
-        }}
+        className="button-primary-2 animated-button w-button"
       >
-        <PiRocketLaunchDuotone size={25} style={{ marginRight: '10px' }} />
-        Get Started
+        {/* these four spans drive the four edge animations */}
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+        {/* your existing content */}
+        <div className="btn-content">
+          <PiRocketLaunchDuotone size={25} style={{ marginRight: '10px' }} />
+          Get Started
+        </div>
       </button>
     </section>
   );

@@ -119,45 +119,49 @@ export default function RoiCalculator() {
                 tooltip="Rate the complexity of your process from 1 (very simple) to 10 (extremely complex)."
               />
 
-              <RadioGroup
-                label="Physical Documents?"
-                name="physical-docs"
-                value={physicalDocs}
-                onChange={setPhysicalDocs}
-                tooltip="Are physical documents involved at any step in the process?"
-              />
+              <div className="radio-questions">
+                <RadioGroup
+                  label="Physical Documents?"
+                  name="physical-docs"
+                  value={physicalDocs}
+                  onChange={setPhysicalDocs}
+                  tooltip="Are physical documents involved at any step in the process?"
+                />
 
-              <RadioGroup
-                label="Can an intern learn it in a month?"
-                name="teach-intern"
-                value={teachIntern}
-                onChange={setTeachIntern}
-                tooltip="Would a non-technical intern be able to learn this process within 30 days?"
-              />
+                <RadioGroup
+                  label="Can an intern learn it in a month?"
+                  name="teach-intern"
+                  value={teachIntern}
+                  onChange={setTeachIntern}
+                  tooltip="Would a non-technical intern be able to learn this process within 30 days?"
+                />
+              </div>
 
-              <NumberInput
-                label="Annual Salary (USD)"
-                value={annualSalary}
-                onChange={setAnnualSalary}
-                step={1000}
-                tooltip="Typical annual salary of a full-time employee performing this task."
-              />
+              <div className="number-questions">
+                <NumberInput
+                  label="Annual Salary (USD)"
+                  value={annualSalary}
+                  onChange={setAnnualSalary}
+                  step={1000}
+                  tooltip="Typical annual salary of a full-time employee performing this task."
+                />
 
-              <NumberInput
-                label="Employees Involved"
-                value={employeesInvolved}
-                onChange={setEmployeesInvolved}
-                step={1}
-                tooltip="How many team members touch this process weekly?"
-              />
+                <NumberInput
+                  label="Employees Involved"
+                  value={employeesInvolved}
+                  onChange={setEmployeesInvolved}
+                  step={1}
+                  tooltip="How many team members touch this process weekly?"
+                />
 
-              <NumberInput
-                label="Hours per Week"
-                value={hoursPerWeek}
-                onChange={setHoursPerWeek}
-                step={1}
-                tooltip="Rough estimate of total hours spent weekly on this process."
-              />
+                <NumberInput
+                  label="Hours per Week"
+                  value={hoursPerWeek}
+                  onChange={setHoursPerWeek}
+                  step={1}
+                  tooltip="Rough estimate of total hours spent weekly on this process."
+                />
+              </div>
             </div>
           </div>
 

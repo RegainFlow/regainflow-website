@@ -22,7 +22,7 @@ export default function ValueProposition() {
               </div>
               <div className="vp-text">
                 <h2 className="vp-title">
-                  <div style={{ display: 'flex' }}>
+                  <div style={{ display: 'flex', alignItems: 'center' }}>
                     {idx === 0 ? (
                       <>
                         <PiMagnifyingGlassDuotone

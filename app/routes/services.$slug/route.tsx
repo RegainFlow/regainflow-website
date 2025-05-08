@@ -2,15 +2,18 @@ import type { LoaderFunctionArgs } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
 import type { LinksFunction, MetaFunction } from '@remix-run/node';
 import ServicePage from '~/components/services/ServicePage';
+
 import {
   servicesData,
   type ServiceSlug
 } from '~/components/services/servicesData';
 
 import serviceStyles from '~/components/services/services-custom.css?url';
+import featureCardStyles from '~/components/services/feature-card.css?url';
 
 export const links: LinksFunction = () => [
-  { rel: 'stylesheet', href: serviceStyles }
+  { rel: 'stylesheet', href: serviceStyles },
+  { rel: 'stylesheet', href: featureCardStyles }
 ];
 
 export const meta: MetaFunction = () => {

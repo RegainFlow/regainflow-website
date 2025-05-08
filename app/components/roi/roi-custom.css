@@ -1,12 +1,15 @@
 /* ==========================================================================
-   1. Variables
+   ROI Calculator Styles (Refactored & Responsive)
    ========================================================================== */
+
 :root {
   /* Font */
   --font-base: 'Exo 2', sans-serif;
 
   /* Spacing */
-  --gap: 1rem;
+  --gap-xl: 2rem;
+  --gap-lg: 1rem;
+  --gap-md: 0.75rem;
   --gap-sm: 0.5rem;
   --gap-xs: 0.25rem;
 
@@ -17,9 +20,10 @@
   --color-primary-bright: #00ffff;
   --color-bg-card: rgba(26, 26, 26, 0.5);
   --color-bg-slider: #333;
-  --color-text-light: white;
+  --color-text-light: #ffffff;
   --color-text-muted: #a6a6a6;
   --color-bg-tooltip: #1a1a1a;
+  --color-error: #ff4d4f;
 
   /* Borders & Radius */
   --border-base: 0.5px solid var(--color-primary-semi);
@@ -35,59 +39,81 @@
   --feedback-min-width: 60px;
   --tooltip-width: 300px;
   --tooltip-font-size: 0.85rem;
+
+  /* Layout */
+  --container-max-width: 1400px;
 }
 
-/* ==========================================================================
-     2. Utility Classes
-     ========================================================================== */
+/* --------------------------------------------------------------------------
+     Utilities
+     -------------------------------------------------------------------------- */
 .u-flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.label-row {
+.label-row,
+.range-input-group,
+.custom-radio,
+.number-input-group {
   display: flex;
-  flex-direction: row;
-  justify-content: start;
   align-items: center;
+  gap: var(--gap-lg);
+}
+
+.label-row {
+  margin-bottom: 10px;
 }
 
 .field-layout {
-  margin-bottom: 10px;
-  padding: 5px;
+  margin-bottom: 30px;
+  padding: var(--gap-xs);
 }
 
 .roi-calculator {
   display: flex;
-  flex-flow: column;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  margin-top: 0;
-  margin-bottom: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100vw;
+  margin: var(--gap-md) auto;
+  width: 100%;
+  max-width: var(--container-max-width);
+  padding: 0 var(--gap-lg);
 }
 
-/* ==========================================================================
-     3. Range Input & Slider Groups
-     ========================================================================== */
-.range-input-group {
-  display: flex;
-  align-items: center;
-  gap: var(--gap);
+.container-3 {
+  width: 100%;
 }
 
+/* --------------------------------------------------------------------------
+     Range & Slider
+     -------------------------------------------------------------------------- */
 .range-track-group {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  flex: 1;
   gap: var(--gap-xs);
 }
 
-.range-track-group input[type='range'] {
+.range-track-group input[type='range'],
+input[type='range'] {
+  -webkit-appearance: none;
   width: 100%;
+  height: var(--slider-height);
+  background: var(--color-bg-slider);
+  border-radius: 3px;
+  outline: none;
+  margin: var(--gap-sm) 0;
+}
+
+input[type='range']::-webkit-slider-thumb,
+input[type='range']::-moz-range-thumb {
+  width: var(--thumb-size);
+  height: var(--thumb-size);
+  background: var(--color-primary-semi);
+  border: var(--border-base);
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .slider-labels {
@@ -96,40 +122,36 @@
   font-size: 0.875rem;
   color: var(--color-text-muted);
   font-family: var(--font-base);
-  padding: 0 2px;
 }
 
-/* ==========================================================================
-     4. Slider Feedback
-     ========================================================================== */
+/* --------------------------------------------------------------------------
+     Feedback
+     -------------------------------------------------------------------------- */
 .slider-feedback {
   background: var(--color-bg-card);
   color: var(--color-text-light);
-  padding: 6px 12px;
+  padding: var(--gap-sm) var(--gap-md);
   border-radius: var(--border-radius);
   font-weight: bold;
   font-family: var(--font-base);
   font-size: 1rem;
   min-width: var(--feedback-min-width);
   text-align: center;
-  white-space: nowrap;
   border: var(--border-base);
+  white-space: nowrap;
 }
 
 .slider-feedback--wide {
-  padding: 6px 14px;
+  padding: var(--gap-sm) var(--gap-lg);
 }
 
-/* ==========================================================================
-     5. Tooltips
-     ========================================================================== */
+/* --------------------------------------------------------------------------
+     Tooltips
+     -------------------------------------------------------------------------- */
 .tooltip-container {
   position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  font-weight: bold;
-  background-color: transparent;
+  overflow: visible;
+  z-index: 3;
 }
 
 .tooltip-icon {
@@ -138,220 +160,171 @@
   align-items: center;
   width: 20px;
   height: 20px;
-  font-size: 14px;
-  background-color: var(--color-primary-light);
+  background: var(--color-primary-light);
   border: var(--border-base);
   color: var(--color-text-light);
   border-radius: 50%;
   cursor: pointer;
-  user-select: none;
-  position: relative;
-  z-index: 10;
 }
 
 .tooltip-text {
-  visibility: hidden;
-  opacity: 0;
-  background-color: var(--color-bg-tooltip);
-  color: var(--color-text-light);
-  text-align: left;
-  border-radius: var(--border-radius);
-  padding: 10px;
   position: absolute;
-  bottom: 90%;
-  left: 0;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: var(--gap-sm);
   width: var(--tooltip-width);
-  font-size: var(--tooltip-font-size);
-  line-height: 1.4;
+  background: var(--color-bg-tooltip);
+  color: var(--color-text-light);
+  padding: var(--gap-sm);
+  border-radius: var(--border-radius);
   border: var(--border-base);
   box-shadow: var(--shadow-base);
+  font-size: var(--tooltip-font-size);
+  line-height: 1.4;
+  opacity: 0;
+  visibility: hidden;
   transition: opacity 0.3s;
   pointer-events: none;
-  z-index: 99;
+  z-index: 4;
 }
 
 .tooltip-text::after {
   content: '';
-  position: absolute;
   top: 100%;
-  left: 17px;
-  border-width: 8px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 7px;
   border-style: solid;
-  border-color: var(--color-primary-semi) transparent transparent transparent;
+  border-color: var(--color-primary) transparent transparent;
 }
 
 .tooltip-icon:hover + .tooltip-text,
-.tooltip-icon:focus + .tooltip-text,
-.tooltip-icon:active + .tooltip-text {
-  visibility: visible;
+.tooltip-icon:focus + .tooltip-text {
   opacity: 1;
+  visibility: visible;
 }
 
-/* ==========================================================================
-     6. Slider Styles
-     ========================================================================== */
-input[type='range'] {
-  -webkit-appearance: none;
-  width: 100%;
-  height: var(--slider-height);
-  background: var(--color-bg-slider);
-  border-radius: 3px;
-  outline: none;
-}
-
-input[type='range']::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: var(--thumb-size);
-  height: var(--thumb-size);
-  background-color: var(--color-primary-semi);
-  border: var(--border-base);
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-input[type='range']::-moz-range-thumb {
-  width: var(--thumb-size);
-  height: var(--thumb-size);
-  background-color: var(--color-primary-semi);
-  border: var(--border-base);
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-/* ==========================================================================
-     7. Radio Buttons
-     ========================================================================== */
+/* --------------------------------------------------------------------------
+     Radio & Number Inputs
+     -------------------------------------------------------------------------- */
 .custom-radio {
-  display: flex;
-  align-items: center;
-  gap: var(--gap-sm);
   font-family: var(--font-base);
   font-size: 1rem;
   color: var(--color-text-light);
   cursor: pointer;
   position: relative;
+  margin-right: 40px;
 }
 
 .custom-radio input[type='radio'] {
   position: absolute;
   opacity: 0;
-  pointer-events: none;
 }
 
 .radio-mark {
   width: var(--input-size);
   height: var(--input-size);
-  background-color: var(--color-bg-tooltip);
+  background: var(--color-bg-tooltip);
   border: 1px solid var(--color-primary);
   border-radius: 50%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  position: relative;
-  flex-shrink: 0;
+  align-items: center;
 }
 
 .radio-mark::after {
   content: '';
   width: 8px;
   height: 8px;
-  border-radius: 50%;
   background: var(--color-primary);
+  border-radius: 50%;
   opacity: 0;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.2s;
 }
 
-.custom-radio input[type='radio']:checked + .radio-mark::after {
+.custom-radio input:checked + .radio-mark::after {
   opacity: 1;
 }
 
 .radio-group {
   display: flex;
-  gap: var(--gap);
-  margin-top: var(--gap-xs);
-}
-
-.radio-label {
-  line-height: 1;
-}
-
-/* ==========================================================================
-     8. Number Inputs
-     ========================================================================== */
-.number-input-group {
-  display: flex;
-  align-items: center;
-  gap: var(--gap-sm);
-  font-family: var(--font-base);
+  gap: var(--gap-lg);
 }
 
 .number-input-group input[type='number'] {
   width: 80px;
-  padding: 8px 10px;
+  padding: var(--gap-xs) var(--gap-sm);
   background: var(--color-bg-tooltip);
   color: var(--color-text-light);
-  font-size: 1rem;
-  text-align: center;
   border: var(--border-base);
   border-radius: var(--border-radius);
-  outline: none;
-  -moz-appearance: textfield;
+  font-size: 1rem;
+  text-align: center;
 }
 
-.number-input-group input[type='number']::-webkit-outer-spin-button,
-.number-input-group input[type='number']::-webkit-inner-spin-button {
+/* --------------------------------------------------------------------------
+   Hide native spin‑buttons on number inputs
+   -------------------------------------------------------------------------- */
+/* Chrome, Safari, Edge, Opera */
+.number-input-group input[type='number']::-webkit-inner-spin-button,
+.number-input-group input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
+/* Firefox */
+.number-input-group input[type='number'] {
+  -moz-appearance: textfield;
+}
+
 .num-btn {
-  background: rgba(0, 214, 203, 0.4);
+  background: var(--color-primary-light);
   color: var(--color-text-light);
   border: var(--border-base);
   border-radius: var(--border-radius);
-  padding: 6px 12px;
-  font-size: 1rem;
+  padding: var(--gap-sm) var(--gap-md);
+  font-family: var(--font-base);
   font-weight: bold;
   cursor: pointer;
-  transition: all 0.2s ease;
-  font-family: var(--font-base);
+  transition: background 0.2s, box-shadow 0.2s;
 }
 
 .num-btn:hover {
-  background: rgba(0, 214, 203, 0.6);
+  background: var(--color-primary-semi);
   box-shadow: var(--shadow-base);
 }
 
-/* ==========================================================================
-     9. ROI Output Card & Table
-     ========================================================================== */
-.roi-output-card {
-  font-family: var(--font-base);
-  background: var(--color-bg-card);
-  border: var(--border-base);
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-base);
-  padding: 20px;
-  color: var(--color-text-light);
-  width: 100%;
-  margin: 0 auto;
-  backdrop-filter: blur(1px);
-}
-
+/* --------------------------------------------------------------------------
+     ROI Output Card & Grid
+     -------------------------------------------------------------------------- */
 .roi-form-card {
-  -webkit-backdrop-filter: blur(1px);
-  backdrop-filter: blur(1px);
+  position: relative;
+  z-index: 2; /* higher than the output card */
+}
+
+.roi-output-card {
+  position: relative;
+  z-index: 1; /* sits below the form */
+}
+
+.roi-output-card,
+.roi-form-card {
   background: var(--color-bg-card);
   border: var(--border-base);
   border-radius: var(--border-radius);
-  width: 100%;
-  padding: 10px;
   box-shadow: var(--shadow-base);
+  padding: var(--gap-lg);
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: var(--gap-md) auto;
+  backdrop-filter: blur(1px);
 }
 
 .roi-title {
   font-size: 2.5rem;
-  margin: 0 0 var(--gap);
+  margin: 0 0 var(--gap-lg);
   text-align: center;
   font-weight: bold;
   color: var(--color-text-light);
@@ -359,28 +332,27 @@ input[type='range']::-moz-range-thumb {
 
 .roi-subtitle {
   font-size: 0.9375rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--gap-md);
   color: var(--color-text-muted);
+  text-align: center;
 }
 
 .roi-output-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.75rem;
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  gap: var(--gap-md);
   font-size: 0.95rem;
   color: var(--color-primary);
 }
 
 .roi-output-grid > div {
   background: var(--color-bg-card);
-  backdrop-filter: blur(1px);
-  padding: 0.5rem;
-  text-align: center;
+  border: var(--border-base);
   border-radius: var(--border-radius);
+  padding: var(--gap-sm);
+  text-align: center;
   font-family: monospace;
-  border: 1px solid rgba(0, 214, 203, 0.2);
 }
-
 .roi-header {
   font-weight: bold;
   background: var(--color-primary-light);
@@ -388,7 +360,6 @@ input[type='range']::-moz-range-thumb {
   font-family: var(--font-base);
 }
 
-/* Emphasize every 4th cell (ROI column) */
 .roi-output-grid > div:nth-child(4n) {
   font-weight: bold;
   color: var(--color-primary-bright);
@@ -396,29 +367,58 @@ input[type='range']::-moz-range-thumb {
   font-size: 1.05rem;
 }
 
+/* --------------------------------------------------------------------------
+   Labels & Input Spacing
+   -------------------------------------------------------------------------- */
+.roi-calculator label {
+  color: var(--color-text-light);
+  font-family: var(--font-base);
+  display: block;
+  font-weight: bold;
+  max-width: var(--container-max-width);
+}
+
 .roi-cta-msg {
-  margin-top: 2rem;
+  margin-top: var(--gap-lg);
   color: var(--color-text-muted);
   font-size: 1rem;
   font-family: var(--font-base);
   text-align: center;
 }
 
+/* --------------------------------------------------------------------------
+   Radio & Number Groups (mobile‑first 2‑/3‑col, then stack)
+   -------------------------------------------------------------------------- */
+.radio-questions,
+.number-questions {
+  display: flex;
+}
+
+/* Radios: two columns on mobile */
+.radio-questions > * {
+  flex: 1 1 calc(50% - var(--gap-md));
+}
+
+/* Numbers: three columns on mobile */
+.number-questions > * {
+  flex: 1 1 calc(33.333% - var(--gap-md));
+}
+
 .neon-cta-button {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   font-family: var(--font-base);
-  font-size: 0.9375rem;
+  font-weight: bold;
+  font-size: 1rem;
   color: var(--color-primary);
   text-decoration: none;
-  padding: 15px 20px;
-  background: var(--color-primary-light);
+  padding: var(--gap-md) var(--gap-lg);
+  background: rgba(0, 214, 203, 0.1);
   border: var(--border-base);
   border-radius: var(--border-radius);
-  box-shadow: 0 0 10px 2px rgba(0, 214, 203, 0.3);
-  transition: all 0.25s ease;
-  text-align: center;
-  font-weight: bold;
-  margin: var(--gap) 0;
+  box-shadow: var(--shadow-base);
+  transition: background 0.25s;
+  margin: var(--gap-md) auto;
 }
 
 .neon-cta-button:hover {
@@ -426,70 +426,67 @@ input[type='range']::-moz-range-thumb {
   color: var(--color-primary-bright);
 }
 
-.button-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
+/* --------------------------------------------------------------------------
+     Flexible Layout
+     -------------------------------------------------------------------------- */
 .roi-flex-layout {
   display: flex;
-  direction: row;
-  gap: 2rem;
-  align-items: center;
+  flex-direction: row;
+  gap: var(--gap-xl);
+  align-items: flex-start;
   justify-content: space-between;
-  margin-top: 40px;
-  width: 1400px;
+  margin-top: var(--gap-xl);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .roi-left-panel,
 .roi-right-panel {
-  width: 100vw;
+  flex: 1;
+  width: 100%;
 }
 
-/* ==========================================================================
-     10. Responsive Breakpoints
+/* --------------------------------------------------------------------------
+     Responsive Breakpoints
      ========================================================================== */
-@media screen and (max-width: 1401px) {
-  .range-input-group,
-  .tooltip-container,
-  .custom-radio,
-  .number-input-group {
-    flex-direction: row;
-    align-items: stretch;
-  }
-
-  .roi-output-grid {
-    gap: 0.5rem;
-    font-size: 0.9375rem;
-  }
-
+@media (max-width: 1024px) {
   .roi-flex-layout {
     flex-direction: column;
-    width: 100vw;
-    padding: 0 17px;
-  }
-
-  .roi-left-panel,
-  .roi-right-panel {
-    max-width: 100%;
   }
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 768px) {
   .roi-output-grid {
-    font-size: 9px;
+    font-size: 0.75rem;
+    grid-template-columns: repeat(4, minmax(0px, 1fr));
   }
 
+  .roi-output-grid > div:nth-child(4n) {
+    font-size: 0.75rem;
+  }
+
+  .radio-questions,
+  .number-questions {
+    flex-direction: column;
+  }
+
+  .radio-questions > *,
+  .number-questions > * {
+    flex: 1 1 100%;
+  }
+
+  .roi-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
   .roi-title {
     font-size: 1.5rem;
   }
 
   .neon-cta-button {
-    font-size: 0.9rem;
-    padding: 15px 20px;
-  }
-
-  .roi-output-grid > div:nth-child(4n) {
-    font-size: 9px;
+    font-size: 0.875rem;
+    padding: var(--gap-sm) var(--gap-md);
   }
 }
