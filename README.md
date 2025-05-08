@@ -1,3 +1,12 @@
+# To-Do
+- [ ] refactor with images, text
+- [ ] fix carousel transition
+- [ ] missing or remove tech stack icons
+- [ ] blurb below logo icon in foot
+- [ ] add email contact-us
+- [ ] check through each route and add MetaData functions. look at other out of the box features for seo in remix
+
+
 # Welcome to Remix!
 
 - 📖 [Remix docs](https://remix.run/docs)
