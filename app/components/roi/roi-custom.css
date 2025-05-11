@@ -489,4 +489,16 @@ input[type='range']::-moz-range-thumb {
     font-size: 0.875rem;
     padding: var(--gap-sm) var(--gap-md);
   }
+
+  .roi-output-grid {
+    font-size: 0.6rem;
+  }
+
+  .roi-output-grid > div {
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

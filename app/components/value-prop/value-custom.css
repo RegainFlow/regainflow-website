@@ -205,10 +205,10 @@
 }
 @media (max-width: 468px) {
   .vp-title {
-    font-size: calc(var(--vp-title-size) * 0.5);
+    font-size: calc(var(--vp-title-size) * 0.4);
   }
   .vp-subtitle {
-    font-size: calc(var(--vp-subtitle-size) * 0.7);
+    font-size: calc(var(--vp-subtitle-size) * 0.6);
   }
   .vp-card {
     padding: var(--vp-gap-text);
