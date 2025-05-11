@@ -5,15 +5,15 @@ export const valuePropData = [
     bullets: [
       {
         img: '/images/roi_analysis_audit_icon.png',
-        text: 'ROI Analysis of workflows'
+        text: 'ROI Analysis of Workflows'
       },
       {
         img: '/images/tech_stack_audit_icon.png',
-        text: 'Tech stack + process audit'
+        text: 'Tech Stack + Srocess Audit'
       },
       {
         img: '/images/workflow_audit_icon.png',
-        text: 'ROI Analysis of workflows'
+        text: 'Automation Opportunity Map'
       }
     ],
     ctaLink: 'https://calendly.com/regainflow/30min',
@@ -21,20 +21,20 @@ export const valuePropData = [
     imageFirst: true
   },
   {
-    title: 'Rapid R&D Solutions',
-    subtitle: 'Test AI and automation ideas in days—not months.',
+    title: 'Rapid R&D and Solutions',
+    subtitle: 'Receive AI and automation ideas in days—not months.',
     bullets: [
       {
         img: '/images/mvps_solutions_icon.png',
-        text: 'Build MVPs and prototypes fast'
+        text: 'Build MVPs and Prototypes Fast'
       },
       {
         img: '/images/exec_solutions_icon.png',
-        text: 'Align teams with visual demos'
+        text: 'Turn Ideas Into Visual Proof'
       },
       {
         img: '/images/exec_solutions_icon.png',
-        text: 'Get buy-in from execs/investors'
+        text: 'Get Buy-In From Execs/Investors'
       }
     ],
     ctaLink: 'https://calendly.com/regainflow/30min',

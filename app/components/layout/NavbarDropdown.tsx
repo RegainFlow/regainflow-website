@@ -64,7 +64,7 @@ export default function NavDropdown({ onSelect }: NavDropdownProps) {
           className="button-link"
           onClick={handleLinkClick}
         >
-          Rapid R&D Solutions
+          Rapid R&D and Solutions
         </Link>
       </div>
     </div>

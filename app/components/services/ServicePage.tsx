@@ -110,8 +110,7 @@ export default function ServicePage({
               Ready to consult with <span className="logo">Regain Flow</span>?
             </h2>
             <p className="trial-subtitle">
-              How promotion excellent curiosity yet attempted happiness Gay
-              prosperous impression.
+              No pushy sales. Just insight, action, and results.
             </p>
             <Link to="#" className="trial-button">
               Book Now For Free

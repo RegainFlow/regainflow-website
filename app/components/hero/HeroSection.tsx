@@ -8,7 +8,6 @@ export default function HeroSection() {
 
   useEffect(() => {
     if (!typedRef.current) return;
-
     const typed = new Typed('#typed', {
       stringsElement: '#typed-strings',
       typeSpeed: 70,
@@ -18,27 +17,22 @@ export default function HeroSection() {
       loop: true,
       smartBackspace: false
     });
-
     return () => typed.destroy();
   }, []);
 
   const handleScroll = () => {
     const target = document.getElementById('value-prop');
     if (!target) return;
-
     const yOffset = -80;
     const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
     window.scrollTo({ top: y, behavior: 'smooth' });
     target.classList.remove('fade-in-pulse');
-    // force reflow
     void target.offsetWidth;
     target.classList.add('fade-in-pulse');
   };
 
   return (
     <section className="hero-section">
-      {/* hidden list of phrases for Typed.js */}
       <div id="typed-strings" style={{ display: 'none' }}>
         <p>
           We relieve your <span className="typed-highlight">headaches.</span>
@@ -60,21 +54,42 @@ export default function HeroSection() {
           We accelerate your <span className="typed-highlight">delivery.</span>
         </p>
         <p>
-          We optimize your <span className="typed-highlight">pipelines.</span>
-        </p>
-        <p>
           We scale your <span className="typed-highlight">operations.</span>
         </p>
       </div>
 
       <div className="container-10">
         <h1 className="landing-header">
-          Automate Your <span className="text-span-17">Flow</span>.<br />
-          <span className="text-span-18">Regain</span> Control.
+          Streamline Your <span className="text-highlight">Flow</span>
           <br />
-          Profit.
+          Reclaim Your <span className="text-highlight">Control</span>
           <br />
+          Boost Your <span className="text-highlight">Profit</span>
         </h1>
+
+        {/* new sub‑headline */}
+        {/* <p className="hero-subhead">
+          For manufacturing, logistics & finance teams who need error‑free,
+          scalable automation.
+        </p> */}
+
+        <button
+          onClick={handleScroll}
+          className="button-primary-2 animated-button w-button"
+        >
+          {/* these four spans drive the four edge animations */}
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+
+          {/* your existing content */}
+          <div className="btn-content">
+            <PiRocketLaunchDuotone size={25} style={{ marginRight: '10px' }} />
+            Get Started
+          </div>
+        </button>
+
         <div className="div-block-33">
           <div className="typed-text">
             <span id="typed" ref={typedRef}></span>
@@ -82,27 +97,9 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Carousel will live here */}
       <div className="section-tech-stack">
         <Carousel />
       </div>
-
-      <button
-        onClick={handleScroll}
-        className="button-primary-2 animated-button w-button"
-      >
-        {/* these four spans drive the four edge animations */}
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-
-        {/* your existing content */}
-        <div className="btn-content">
-          <PiRocketLaunchDuotone size={25} style={{ marginRight: '10px' }} />
-          Get Started
-        </div>
-      </button>
     </section>
   );
 }

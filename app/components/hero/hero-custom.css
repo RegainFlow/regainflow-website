@@ -4,7 +4,7 @@
 
 :root {
   /* Carousel Variables */
-  --carousel-slide-size: 165px;
+  --carousel-slide-size: 100px;
   --carousel-slide-radius: 5px;
   --carousel-slide-bg: rgba(0, 214, 203, 0.4);
   --carousel-slide-shadow: 0 0 10px 1px rgba(0, 214, 203, 0.2);
@@ -46,22 +46,34 @@
   text-align: center;
   color: var(--text-color);
   font-family: var(--font-base);
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.hero-subhead {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 0 auto 2rem auto;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .landing-header {
-  color: var(--hero-header-color);
-  text-align: center;
-  font-family: var(--hero-header-font);
-  font-size: var(--hero-header-size);
-  font-weight: var(--hero-header-weight);
-  line-height: var(--hero-header-line-height);
+  font-size: 3.5rem;
+  line-height: 5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: left;
   margin: 0 auto;
-  max-width: 100%;
+}
+
+.text-highlight {
+  color: var(--highlight-color);
+  text-shadow: 0 0 10px rgba(0, 214, 203, 0.5);
 }
 
 .typed-text {
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 3rem;
 }
 
 .typed-highlight {
@@ -72,19 +84,25 @@
 .section-tech-stack {
   max-width: var(--container-max-width);
   margin: 0 auto;
-  overflow: hidden;
-  padding: 1rem 0;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .carousel-wrapper {
-  overflow: hidden;
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+  left: 0;
+  transform: none;
+  margin-top: 50px;
 }
 
 .carousel-track {
-  margin-top: 40px;
   display: flex;
   animation: carousel-scroll 15s linear infinite;
-  width: fit-content;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  will-change: transform;
 }
 
 .carousel-slide {
@@ -98,6 +116,11 @@
   object-fit: contain;
   padding: 10px;
   margin-right: var(--carousel-slide-margin);
+  flex: 0 0 auto;
+}
+
+.carousel-slide:last-child {
+  margin-right: 0;
 }
 
 /* Primary Button */
@@ -115,7 +138,6 @@
   transition: all 0.2s;
   box-shadow: var(--button-shadow);
   margin-top: 100px;
-  margin: 100px auto 0 auto;
 }
 
 .button-primary-2:hover {
@@ -141,10 +163,24 @@
      Responsive Breakpoints
      -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
+  .section-tech-stack {
+    overflow-x: visible !important;
+  }
+
   .carousel-slide {
     width: var(--carousel-slide-size-md);
     height: var(--carousel-slide-size-md);
     margin-right: calc(var(--carousel-slide-margin) * 0.75);
+  }
+
+  .carousel-wrapper {
+    /* undo desktop hack (if you’ve disabled it) */
+    width: auto !important;
+    left: auto !important;
+    transform: none !important;
+
+    /* break out by exactly your parent padding (1rem) */
+    overflow-x: hidden; /* hide the half‑slide at the right edge */
   }
 
   .typed-text {
@@ -166,13 +202,6 @@
 }
 
 @media (max-width: 480px) {
-  .carousel-slide {
-    width: var(--carousel-slide-size-md);
-    height: var(--carousel-slide-size-md);
-    margin-right: calc(var(--carousel-slide-margin) * 0.5);
-    margin-top: calc(40px * 0.5);
-  }
-
   .typed-text {
     font-size: 1.5rem;
   }
@@ -183,8 +212,8 @@
   }
 
   .landing-header {
-    font-size: calc(var(--hero-header-size) * 0.6);
-    line-height: calc(var(--hero-header-line-height) * 0.9);
+    font-size: calc(var(--hero-header-size) * 0.5);
+    line-height: calc(var(--hero-header-line-height) * 0.6);
     padding: 0 0.75rem;
   }
 }
@@ -196,6 +225,8 @@
   position: relative;
   display: inline-block;
   overflow: hidden;
+  width: 400px;
+  margin: 40px auto;
   /* keep your base styling */
   color: var(--button-primary-color);
   text-transform: uppercase;

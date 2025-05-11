@@ -14,6 +14,10 @@ export default function Footer() {
           <Link to="/" className="logo-link">
             REGAINFLOW
           </Link>
+          <p className="footer-logo-blurb">
+            We're the bridge between cutting-edge AI/Automation research and
+            real-world business impact
+          </p>
           <img
             src="/images/regain_flow_logo.png"
             alt="Regain Flow Logo"
@@ -25,11 +29,11 @@ export default function Footer() {
         <div className="footer-link-blocks">
           <div className="footer-block">
             <div className="title-small">Services</div>
-            <Link to="/automation-roi-audit-strategy" className="footer-link">
+            <Link to="/services/automation-audit" className="footer-link">
               Automation Audit + Strategy
             </Link>
-            <Link to="/rapid-prototyping" className="footer-link">
-              Rapid R&D Prototyping
+            <Link to="/services/rapid-solutions" className="footer-link">
+              Rapid R&D and Solutions
             </Link>
           </div>
           <div className="footer-block">
