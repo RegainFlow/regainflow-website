@@ -24,7 +24,7 @@
 /*–––––––– Card Container ––––––––*/
 .feature-card {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   border: var(--fc-border);
   border-radius: var(--fc-radius);
   overflow: hidden;
@@ -38,20 +38,22 @@
 }
 
 /*–––––––– Icon Column ––––––––*/
-.feature-icon {
+.feature-icon-wrapper {
   padding: 10px;
   border: var(--fc-border);
   background-color: rgba(0, 214, 203, 0.3);
   border-radius: var(--fc-radius);
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.feature-icon-image {
+.feature-icon {
+  color: var(--fc-primary);
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: var(--fc-radius);
+  height: auto;
 }
 
 /*–––––––– Content Column ––––––––*/
@@ -67,10 +69,12 @@
   color: #fff;
   font-size: 2.5rem;
   font-weight: bold;
+  line-height: 3rem;
 }
 
 .feature-desc {
   color: var(--fc-text-muted);
+  font-size: 20px;
   line-height: 1.5;
   font-family: var(--font-base);
 }
@@ -78,7 +82,6 @@
 /*–––––––– CTA Button ––––––––*/
 .feature-cta {
   margin-top: auto;
-  align-self: flex-start;
   background: transparent;
   color: var(--fc-primary);
   border: var(--fc-border);
@@ -99,12 +102,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: var(--fc-gap-md);
   background: rgba(0, 214, 203, 0.3);
 }
+
 .feature-image {
   max-width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 /*–––––––– Stack container ––––––––*/

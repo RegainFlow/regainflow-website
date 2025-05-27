@@ -1,9 +1,8 @@
-// app/components/services/FeatureCard.tsx
+import * as PiIcons from 'react-icons/pi';
 
 export interface FeatureCardProps {
   /** The small icon that sits in the colored circle */
   icon: string;
-  /** The large “illustration” or screenshot to the right */
   image?: string;
   title: string;
   description: string;
@@ -17,15 +16,13 @@ export default function FeatureCard({
   description,
   onCtaClick
 }: FeatureCardProps) {
+  const IconComponent = PiIcons[icon as keyof typeof PiIcons];
+
   return (
     <article className="feature-card">
       <div className="feature-content">
-        <div className="feature-icon">
-          <img
-            src={icon}
-            alt={`${title} icon`}
-            className="feature-icon-image"
-          />
+        <div className="feature-icon-wrapper">
+          <IconComponent className="feature-icon" />
         </div>
         <h3 className="feature-title">{title}</h3>
         <p className="feature-desc">{description}</p>

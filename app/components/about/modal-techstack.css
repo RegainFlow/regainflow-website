@@ -1,0 +1,274 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-panel {
+  background: #121212;
+  border: var(--border-base);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: var(--spacing-lg);
+  max-width: 1000px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.modal-title {
+  color: var(--color-primary);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.modal-close {
+  background: transparent;
+  border: none;
+  color: var(--color-primary);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.modal-skills-grid {
+  display: grid;
+  gap: var(--spacing-md);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.modal-skill-card {
+  background: var(--color-bg-card);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  transition: 0.3s ease;
+  border: 0.5px solid transparent;
+  box-shadow: none;
+}
+
+.modal-skill-name {
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-xs);
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.modal-skill-bar {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  border: var(--border-base);
+  overflow: hidden;
+}
+
+.modal-skill-bar-inner {
+  height: 100%;
+  background: var(--color-primary);
+  transition: width 0.5s ease;
+}
+
+.modal-skill-level {
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  color: var(--color-primary);
+  font-weight: bold;
+  text-align: right;
+}
+
+.modal-category {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 1.5rem 0 0.5rem;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.3rem;
+  text-transform: uppercase;
+}
+
+.modal-skill-bar-inner {
+  height: 100%;
+  background: var(--color-primary);
+  width: 0%;
+  transition: none;
+}
+
+.animate-bar {
+  animation: growBar 1s ease-out forwards;
+}
+
+@keyframes growBar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: var(--final-width);
+  }
+}
+/* Custom neon category bar colors */
+.modal-skill-card[data-category='AI / LLM Frameworks'] .modal-skill-bar-inner {
+  background: #00d6cb;
+}
+.modal-skill-card[data-category='Programming Languages']
+  .modal-skill-bar-inner {
+  background: #00bfff;
+}
+.modal-skill-card[data-category='Search / Vector DBs'] .modal-skill-bar-inner {
+  background: #a270f1;
+}
+.modal-skill-card[data-category='Frontend'] .modal-skill-bar-inner {
+  background: #00ff9f;
+}
+.modal-skill-card[data-category='Backend / APIs'] .modal-skill-bar-inner {
+  background: #fff740;
+}
+.modal-skill-card[data-category='DevOps / Automation'] .modal-skill-bar-inner {
+  background: #ff8c42;
+}
+.modal-skill-card[data-category='Security / Cyber Ops'] .modal-skill-bar-inner {
+  background: #ff3864;
+}
+
+/* AI / LLM Frameworks */
+.modal-skill-card[data-category='AI / LLM Frameworks'] {
+  border-color: #00d6cb;
+  box-shadow: 0 0 10px 2px #00d6cb33;
+}
+
+/* Programming Languages */
+.modal-skill-card[data-category='Programming Languages'] {
+  border-color: #00bfff;
+  box-shadow: 0 0 10px 2px #00bfff33;
+}
+
+/* Search / Vector DBs */
+.modal-skill-card[data-category='Search / Vector DBs'] {
+  border-color: #a270f1;
+  box-shadow: 0 0 10px 2px #a270f133;
+}
+
+/* Frontend */
+.modal-skill-card[data-category='Frontend'] {
+  border-color: #00ff9f;
+  box-shadow: 0 0 10px 2px #00ff9f33;
+}
+
+/* Backend / APIs */
+.modal-skill-card[data-category='Backend / APIs'] {
+  border-color: #fff740;
+  box-shadow: 0 0 10px 2px #fff74033;
+}
+
+/* DevOps / Automation */
+.modal-skill-card[data-category='DevOps / Automation'] {
+  border-color: #ff8c42;
+  box-shadow: 0 0 10px 2px #ff8c4233;
+}
+
+/* Security / Cyber Ops */
+.modal-skill-card[data-category='Security / Cyber Ops'] {
+  border-color: #ff3864;
+  box-shadow: 0 0 10px 2px #ff386433;
+}
+
+/* Color headings by content */
+.modal-category:has(
+    + .modal-skills-grid .modal-skill-card[data-category='AI / LLM Frameworks']
+  ) {
+  color: #00d6cb;
+}
+.modal-category:has(
+    + .modal-skills-grid
+      .modal-skill-card[data-category='Programming Languages']
+  ) {
+  color: #00bfff;
+}
+.modal-category:has(
+    + .modal-skills-grid .modal-skill-card[data-category='Search / Vector DBs']
+  ) {
+  color: #a270f1;
+}
+.modal-category:has(
+    + .modal-skills-grid .modal-skill-card[data-category='Frontend']
+  ) {
+  color: #00ff9f;
+}
+.modal-category:has(
+    + .modal-skills-grid .modal-skill-card[data-category='Backend / APIs']
+  ) {
+  color: #fff740;
+}
+.modal-category:has(
+    + .modal-skills-grid .modal-skill-card[data-category='DevOps / Automation']
+  ) {
+  color: #ff8c42;
+}
+.modal-category:has(
+    + .modal-skills-grid .modal-skill-card[data-category='Security / Cyber Ops']
+  ) {
+  color: #ff3864;
+}
+
+@media (max-width: 768px) {
+  .modal-panel {
+    max-width: 90%;
+    max-height: 85vh;
+    padding: var(--spacing-md);
+    border-radius: 10px;
+  }
+
+  .modal-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .modal-skills-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+
+  .modal-header {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-title {
+    font-size: 1.2rem;
+  }
+
+  .modal-skill-name {
+    font-size: 0.85rem;
+  }
+
+  .modal-skill-level {
+    font-size: 0.75rem;
+  }
+}

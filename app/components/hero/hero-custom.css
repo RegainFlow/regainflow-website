@@ -134,6 +134,57 @@
 }
 
 /* --------------------------------------------------------------------------
+     Responsive Breakpoints
+     -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .section-tech-stack {
+    overflow-x: visible !important;
+  }
+
+  .carousel-slide {
+    width: var(--carousel-slide-size-md);
+    height: var(--carousel-slide-size-md);
+    margin-right: calc(var(--carousel-slide-margin) * 0.75);
+  }
+
+  .carousel-wrapper {
+    /* undo desktop hack (if you’ve disabled it) */
+    width: auto !important;
+    left: auto !important;
+    transform: none !important;
+
+    /* break out by exactly your parent padding (1rem) */
+    overflow-x: hidden; /* hide the half‑slide at the right edge */
+  }
+
+  .typed-text {
+    font-size: 2rem;
+  }
+
+  .landing-header {
+    font-size: calc(var(--hero-header-size) * 0.6);
+    line-height: calc(var(--hero-header-line-height) * 0.6);
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .typed-text {
+    font-size: 1.5rem;
+  }
+
+  .landing-header {
+    font-size: calc(var(--hero-header-size) * 0.4);
+    line-height: calc(var(--hero-header-line-height) * 0.6);
+    padding: 0 0.75rem;
+  }
+
+  .animated-button {
+    width: 300px;
+  }
+}
+
+/* --------------------------------------------------------------------------
    Neon‑border animated button
    -------------------------------------------------------------------------- */
 .animated-button {
@@ -265,55 +316,4 @@
   align-items: center;
   justify-content: center;
   z-index: 1; /* above the animated spans */
-}
-
-/* --------------------------------------------------------------------------
-     Responsive Breakpoints
-     -------------------------------------------------------------------------- */
-@media (max-width: 768px) {
-  .section-tech-stack {
-    overflow-x: visible !important;
-  }
-
-  .carousel-slide {
-    width: var(--carousel-slide-size-md);
-    height: var(--carousel-slide-size-md);
-    margin-right: calc(var(--carousel-slide-margin) * 0.75);
-  }
-
-  .carousel-wrapper {
-    /* undo desktop hack (if you’ve disabled it) */
-    width: auto !important;
-    left: auto !important;
-    transform: none !important;
-
-    /* break out by exactly your parent padding (1rem) */
-    overflow-x: hidden; /* hide the half‑slide at the right edge */
-  }
-
-  .typed-text {
-    font-size: 2rem;
-  }
-
-  .landing-header {
-    font-size: calc(var(--hero-header-size) * 0.6);
-    line-height: calc(var(--hero-header-line-height) * 0.6);
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .typed-text {
-    font-size: 1.5rem;
-  }
-
-  .landing-header {
-    font-size: calc(var(--hero-header-size) * 0.4);
-    line-height: calc(var(--hero-header-line-height) * 0.6);
-    padding: 0 0.75rem;
-  }
-
-  .animated-button {
-    width: 300px;
-  }
 }

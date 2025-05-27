@@ -4,20 +4,20 @@ export const valuePropData = [
     subtitle: 'Uncover ROI opportunities and automation priorities.',
     bullets: [
       {
-        img: '/images/roi_analysis_audit_icon.png',
+        img: '/images/home/value-prop/roi_analysis_audit_icon.png',
         text: 'ROI Analysis of Workflows'
       },
       {
-        img: '/images/tech_stack_audit_icon.png',
+        img: '/images/home/value-prop/tech_stack_audit_icon.png',
         text: 'Tech Stack + Srocess Audit'
       },
       {
-        img: '/images/workflow_audit_icon.png',
+        img: '/images/home/value-prop/workflow_audit_icon.png',
         text: 'Automation Opportunity Map'
       }
     ],
     ctaLink: 'https://calendly.com/regainflow/30min',
-    image: '/images/vp1_solutions_image.png',
+    image: '/images/home/value-prop/vp1_solutions_image.png',
     imageFirst: true
   },
   {
@@ -25,20 +25,20 @@ export const valuePropData = [
     subtitle: 'Receive AI and automation ideas in days—not months.',
     bullets: [
       {
-        img: '/images/mvps_solutions_icon.png',
+        img: '/images/home/value-prop/mvps_solutions_icon.png',
         text: 'Build MVPs and Prototypes Fast'
       },
       {
-        img: '/images/exec_solutions_icon.png',
+        img: '/images/home/value-prop/exec_solutions_icon.png',
         text: 'Turn Ideas Into Visual Proof'
       },
       {
-        img: '/images/exec_solutions_icon.png',
+        img: '/images/home/value-prop/exec_solutions_icon.png',
         text: 'Get Buy-In From Execs/Investors'
       }
     ],
     ctaLink: 'https://calendly.com/regainflow/30min',
-    image: '/images/vp2_solutions_image.png',
+    image: '/images/home/value-prop/vp2_solutions_image.png',
     imageFirst: false
   }
 ];

@@ -15,9 +15,29 @@ export const links: LinksFunction = () => [
 ];
 
 export const meta: MetaFunction = () => {
+  const title = 'Regain Flow | AI Automation for Real ROI';
+  const description =
+    'Turn manual workflows into scalable automation. Regain Flow helps teams cut costs and increase speed with AI-driven RPA solutions.';
+  const image = 'https://www.regainflow.com/images/og/og-home.png'; // make this
+  const url = 'https://www.regainflow.com/';
+
   return [
-    { title: 'Regain Flow - Home' },
-    { name: 'description', content: 'Homepage' }
+    { title },
+    { name: 'description', content: description },
+    { tagName: 'link', rel: 'canonical', href: url },
+
+    // OG
+    { property: 'og:title', content: title },
+    { property: 'og:description', content: description },
+    { property: 'og:image', content: image },
+    { property: 'og:url', content: url },
+    { property: 'og:type', content: 'website' },
+
+    // Twitter
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: title },
+    { name: 'twitter:description', content: description },
+    { name: 'twitter:image', content: image }
   ];
 };
 

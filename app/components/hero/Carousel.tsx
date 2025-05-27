@@ -20,7 +20,7 @@ export default function Carousel() {
         {allLogos.map((logo, idx) => (
           <img
             key={idx}
-            src={`/images/${logo}`}
+            src={`/images/home/carousel/${logo}`}
             alt={logo.replace('.svg', '')}
             className="carousel-slide"
           />

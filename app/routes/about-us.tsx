@@ -1,17 +1,40 @@
 import type { MetaFunction, LinksFunction } from '@remix-run/node';
 
-import aboutUsStyles from '~/components/about/about-custom.css?url';
 import { teamMembers } from '~/components/about/teamData';
 import ProfileDetailCard from '~/components/about/ProfileDetailCard';
 
+import aboutUsStyles from '~/components/about/about-custom.css?url';
+import modalTechstackStyles from '~/components/about/modal-techstack.css?url';
+
 export const links: LinksFunction = () => [
-  { rel: 'stylesheet', href: aboutUsStyles }
+  { rel: 'stylesheet', href: aboutUsStyles },
+  { rel: 'stylesheet', href: modalTechstackStyles }
 ];
 
 export const meta: MetaFunction = () => {
+  const title = 'About Regain Flow | Meet the Operators';
+  const description =
+    'Discover the mission and the minds behind Regain Flow — a tactical automation firm turning AI into measurable ROI.';
+  const image = 'https://www.regainflow.com/images/og/og-about.png'; // make this
+  const url = 'https://www.regainflow.com/';
+
   return [
-    { title: 'Regain Flow - About Us ' },
-    { name: 'description', content: 'Meet the operators behind Regain Flow.' }
+    { title },
+    { name: 'description', content: description },
+    { tagName: 'link', rel: 'canonical', href: url },
+
+    // OG
+    { property: 'og:title', content: title },
+    { property: 'og:description', content: description },
+    { property: 'og:image', content: image },
+    { property: 'og:url', content: url },
+    { property: 'og:type', content: 'website' },
+
+    // Twitter
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: title },
+    { name: 'twitter:description', content: description },
+    { name: 'twitter:image', content: image }
   ];
 };
 
@@ -24,27 +47,31 @@ export default function AboutUs() {
             Who We <span className="text-span-27">Are</span>
           </h1>
           <p className="overview-text">
-            At Regain Flow, we're the bridge between cutting-edge AI/Automation
-            research and real-world business impact. Over the last decade we've
-            partnered with enterprise teams at IBM, Lockheed Martin, and Fortune
-            500 firms to:
+            Regain Flow bridges the gap between emerging AI automation tools and
+            practical business execution. Our team brings hands-on engineering
+            and operational insight from defense, enterprise, and startup
+            environments to:
           </p>
           <ul className="overview-list">
             <li>
-              <strong>Enterprise Search:</strong> Architected scalable RAG
-              solutions on Elasticsearch and Milvus for rapid insights.
+              <strong>RAG & AI Workflows:</strong> Built secure, scalable LLM
+              pipelines using Elasticsearch, LangGraph, and cloud-native
+              infrastructure.
             </li>
             <li>
-              <strong>Automation Audits:</strong> Identified & quantified
-              high-ROI workflows across Finance, Healthcare, and Manufacturing.
+              <strong>Automation & Audit Strategy:</strong> Helped organizations
+              surface repetitive tasks, define automation-ready flows, and
+              estimate ROI using internal data.
             </li>
             <li>
-              <strong>RPA & AI Integrations:</strong> Deployed end-to-end
-              robotic process automations that cut processing time by 70%+.
+              <strong>RPA Deployments:</strong> Delivered Blue Prism and
+              Python-based automations that accelerated business ops and
+              improved data handling accuracy.
             </li>
             <li>
-              <strong>DevOps & Cloud:</strong> Built CI/CD pipelines,
-              containerized deployments, and Kubernetes orchestration.
+              <strong>Cloud & DevOps:</strong> Containerized and deployed
+              microservices with GitLab CI/CD, OpenShift, and Kubernetes for
+              internal engineering and AI agents.
             </li>
           </ul>
         </div>

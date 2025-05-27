@@ -25,7 +25,7 @@ export default function ServicePage({
             />
             <p className="hero-subtitle">{subtitle}</p>
             <a href="/free-trial" className="hero-cta">
-              Book A Free Audit
+              Book A <span className="text-span-29">Free</span> Audit
             </a>
             <div className="hero-tagline">
               30 min free call · Calculate ROI · Regain Value
@@ -77,7 +77,7 @@ export default function ServicePage({
                 key={i}
                 icon={card.icon}
                 title={card.text}
-                image={image}
+                image={card.image}
                 description={card.description}
                 onCtaClick={() => console.log('clicked', card.text)}
               />

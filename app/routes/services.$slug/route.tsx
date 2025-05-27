@@ -16,10 +16,46 @@ export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: featureCardStyles }
 ];
 
-export const meta: MetaFunction = () => {
+export const meta: MetaFunction<typeof loader> = ({ data, params }) => {
+  if (!data) {
+    return [
+      { title: 'Regain Flow - Service Not Found' },
+      {
+        name: 'description',
+        content: 'This automation service is not currently available.'
+      }
+    ];
+  }
+
+  const slug = params.slug;
+  const cleanTitle = data.title.replace(/<[^>]*>/g, '').trim();
+  const cleanSubtitle = data.subtitle.replace(/<[^>]*>/g, '').trim();
+
+  const canonicalUrl = `https://www.regainflow.com/services/${slug}`;
+
   return [
-    { title: 'Regain Flow - Services' },
-    { name: 'description', content: 'Explore our services at Regain Flow' }
+    { title: `Regain Flow - ${cleanTitle}` },
+    { name: 'description', content: cleanSubtitle },
+    { tagName: 'link', rel: 'canonical', href: canonicalUrl },
+
+    // OG
+    { property: 'og:title', content: `Regain Flow - ${cleanTitle}` },
+    { property: 'og:description', content: cleanSubtitle },
+    { property: 'og:url', content: canonicalUrl },
+    { property: 'og:type', content: 'website' },
+    {
+      property: 'og:image',
+      content: `https://www.regainflow.com${data.image}`
+    },
+
+    // Twitter
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: `Regain Flow - ${cleanTitle}` },
+    { name: 'twitter:description', content: cleanSubtitle },
+    {
+      name: 'twitter:image',
+      content: `https://www.regainflow.com${data.image}`
+    }
   ];
 };
 

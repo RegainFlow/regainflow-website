@@ -56,9 +56,16 @@ export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: notFoundStyles }
 ];
 
-export const meta: MetaFunction = () => {
-  return [{ title: 'Regain Flow' }];
-};
+export const meta: MetaFunction = () => [
+  { title: 'Regain Flow | AI Automation Consulting' },
+  {
+    name: 'description',
+    content:
+      'Regain Flow helps businesses turn manual operations into automated pipelines using AI and RPA.'
+  },
+  { property: 'og:site_name', content: 'Regain Flow' },
+  { property: 'og:type', content: 'website' }
+];
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (

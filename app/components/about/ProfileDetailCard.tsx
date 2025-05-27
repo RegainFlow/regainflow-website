@@ -1,19 +1,60 @@
-// app/components/ProfileDetailCard.tsx
+import { useState, useEffect } from 'react';
+import ModalTechStack from '~/components/about/ModalTechStack';
+import { PiStackDuotone } from 'react-icons/pi';
+
 import type { TeamMember } from '~/components/about/teamData';
+import type { LinksFunction } from '@remix-run/node';
+
+import modalTechstackStyles from '~/components/about/modal-techstack.css?url';
+
+export const links: LinksFunction = () => [
+  { rel: 'stylesheet', href: modalTechstackStyles }
+];
 
 interface ProfileDetailCardProps {
   member: TeamMember;
 }
 
 export default function ProfileDetailCard({ member }: ProfileDetailCardProps) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const topSkills = member.techStack.slice(0, 3);
+  const remainingSkills = member.techStack.slice(3);
+
+  const [animateBars, setAnimateBars] = useState(false);
+
+  useEffect(() => {
+    // Trigger after component mounts
+    const timeout = setTimeout(() => setAnimateBars(true), 100);
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <div className="profile-detail-card">
       <div className="profile-detail-left">
         <img src={member.profilePic} alt={member.name} />
+        <div className="profile-role-block">
+          <div className="profile-role-tag">{member.role}</div>
+          <div className="profile-role-links">
+            {member.socials.map((social, i) => (
+              <a
+                key={i}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="profile-role-link"
+              >
+                <img src={social.icon} alt={`social-${i}`} />
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
       <div className="profile-detail-right">
         <h2>{member.name}</h2>
         <p>{member.bio}</p>
+
+        {/* Stats */}
         <div className="profile-stats">
           {member.stats.map((stat, i) => (
             <div className="profile-stat" key={i}>
@@ -22,20 +63,57 @@ export default function ProfileDetailCard({ member }: ProfileDetailCardProps) {
             </div>
           ))}
         </div>
+
+        {/* Skills (Top 3) */}
         <div className="profile-skills">
-          {member.techStack.map((tech, i) => (
-            <div className="profile-skill" key={i}>
+          {topSkills.map((tech, i) => (
+            <div
+              className="profile-skill"
+              key={i}
+              data-category={tech.category}
+            >
               <label>{tech.name}</label>
               <div className="skill-bar">
                 <div
-                  className="skill-bar-inner"
-                  style={{ width: `${tech.level}%` }}
+                  className={`skill-bar-inner ${
+                    animateBars ? 'animate-bar' : ''
+                  }`}
+                  style={
+                    {
+                      '--final-width': `${tech.level}%`
+                    } as React.CSSProperties
+                  }
                 />
               </div>
               <span className="skill-percent">{tech.level}%</span>
             </div>
           ))}
         </div>
+
+        {/* More Skills Toggle */}
+        {remainingSkills.length > 0 && (
+          <>
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="button-primary-2 animated-button w-button"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <div className="btn-content">
+                <PiStackDuotone size={20} style={{ marginRight: '10px' }} />
+                View Full Tech Stack
+              </div>
+            </button>
+
+            <ModalTechStack
+              isOpen={isModalOpen}
+              onClose={() => setIsModalOpen(false)}
+              skills={member.techStack}
+            />
+          </>
+        )}
       </div>
     </div>
   );
