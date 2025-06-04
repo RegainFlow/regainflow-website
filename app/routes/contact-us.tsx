@@ -137,6 +137,29 @@ export default function ContactUs() {
           </div>
         )}
       </div>
+
+      {/* Netlify Test Form */}
+      <form name="netlify-test" method="POST" data-netlify="true" style={{ marginTop: 40, background: '#222', padding: 20, borderRadius: 8 }}>
+        <input type="hidden" name="form-name" value="netlify-test" />
+        <p>
+          <label>
+            Name: <input type="text" name="name" />
+          </label>
+        </p>
+        <p>
+          <label>
+            Email: <input type="email" name="email" />
+          </label>
+        </p>
+        <p>
+          <label>
+            Message: <textarea name="message"></textarea>
+          </label>
+        </p>
+        <p>
+          <button type="submit">Send Test</button>
+        </p>
+      </form>
     </section>
   );
 }
