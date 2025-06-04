@@ -47,6 +47,7 @@ export default function Footer() {
             <Link to="/about-us" className="footer-link">
               About Us
             </Link>
+            <Link to="/portfolio" className="footer-link">Portfolio</Link>
             <a href="https://form.typeform.com/to/SOXnbS4E" className="footer-link" target="_blank" rel="noopener">Contact Us</a>
           </div>
         </div>

@@ -9,7 +9,7 @@ export const valuePropData = [
       },
       {
         img: '/images/home/value-prop/tech_stack_audit_icon.png',
-        text: 'Tech Stack + Srocess Audit'
+        text: 'Tech Stack + Process Audit'
       },
       {
         img: '/images/home/value-prop/workflow_audit_icon.png',
@@ -29,7 +29,7 @@ export const valuePropData = [
         text: 'Build MVPs and Prototypes Fast'
       },
       {
-        img: '/images/home/value-prop/exec_solutions_icon.png',
+        img: '/images/home/value-prop/idea_to_proof.png',
         text: 'Turn Ideas Into Visual Proof'
       },
       {

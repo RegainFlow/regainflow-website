@@ -66,6 +66,11 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
+                <Link to="/portfolio" className="button-link">
+                  PORTFOLIO
+                </Link>
+              </li>
+              <li>
                 <a href="https://form.typeform.com/to/SOXnbS4E" className="contact-us-link" target="_blank" rel="noopener">
                   CONTACT US
                 </a>
