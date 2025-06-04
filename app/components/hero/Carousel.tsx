@@ -12,18 +12,19 @@ export default function Carousel() {
     'hugging-face-icon.svg'
   ];
 
-  const allLogos = [...logos, ...logos, ...logos]; // Tripled for loop
+  // Triple the logos for a smoother infinite scroll
+  const allLogos = [...logos, ...logos, ...logos];
 
   return (
     <div className="carousel-wrapper">
       <div className="carousel-track">
         {allLogos.map((logo, idx) => (
-          <img
-            key={idx}
-            src={`/images/home/carousel/${logo}`}
-            alt={logo.replace('.svg', '')}
-            className="carousel-slide"
-          />
+          <div key={idx} className="carousel-slide">
+            <img
+              src={`/images/home/carousel/${logo}`}
+              alt={logo.replace('.svg', '')}
+            />
+          </div>
         ))}
       </div>
     </div>

@@ -89,20 +89,19 @@
 }
 
 .carousel-wrapper {
-  overflow-x: hidden;
+  overflow: hidden;
   width: 100%;
   position: relative;
-  left: 0;
-  transform: none;
   margin-top: 50px;
 }
 
 .carousel-track {
   display: flex;
-  animation: carousel-scroll 15s linear infinite;
+  animation: carousel-scroll 20s linear infinite;
   flex-wrap: nowrap;
   white-space: nowrap;
   will-change: transform;
+  width: max-content;
 }
 
 .carousel-slide {
@@ -117,6 +116,15 @@
   padding: 10px;
   margin-right: var(--carousel-slide-margin);
   flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-slide img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
 }
 
 .carousel-slide:last-child {
@@ -126,10 +134,10 @@
 /* Keyframe animation */
 @keyframes carousel-scroll {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(calc(-33.333%));
   }
 }
 
@@ -148,17 +156,14 @@
   }
 
   .carousel-wrapper {
-    /* undo desktop hack (if you’ve disabled it) */
     width: auto !important;
     left: auto !important;
     transform: none !important;
-
-    /* break out by exactly your parent padding (1rem) */
-    overflow-x: hidden; /* hide the half‑slide at the right edge */
+    overflow-x: hidden;
   }
 
   .typed-text {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .landing-header {
@@ -166,11 +171,23 @@
     line-height: calc(var(--hero-header-line-height) * 0.6);
     padding: 0 1rem;
   }
+
+  .animated-button {
+    width: 90%;
+    max-width: 350px;
+    margin: 30px auto;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .animated-button .btn-content {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 480px) {
   .typed-text {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .landing-header {
@@ -180,7 +197,27 @@
   }
 
   .animated-button {
-    width: 300px;
+    width: 90%;
+    max-width: 300px;
+    margin: 25px auto;
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .animated-button .btn-content {
+    font-size: 13px;
+  }
+
+  .animated-button .btn-content svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+
+  .carousel-slide {
+    width: var(--carousel-slide-size-sm);
+    height: var(--carousel-slide-size-sm);
+    margin-right: calc(var(--carousel-slide-margin) * 0.5);
   }
 }
 
