@@ -33,7 +33,7 @@
 .stack-cards > .get-grid,        /* or .feature-section */
 .stack-cards > .feature-section {
   /* ensure direct children snap */
-  scroll-snap-type: none; /* child container shouldn’t interfere */
+  scroll-snap-type: none; /* child container shouldn't interfere */
 }
 
 /*=============================================================================
@@ -187,7 +187,7 @@
 }
 
 /* ──────────────────────────────────────────────────────────────────────────
-   Final “Try for free” Section
+   Final "Try for free" Section
    ────────────────────────────────────────────────────────────────────────── */
 .trial-section {
   padding: var(--spacing-lg) var(--spacing-sm);
@@ -313,5 +313,23 @@
   }
   .trial-logo {
     display: none;
+  }
+
+  .service-hero-image-wrapper {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-hero-image-wrapper {
+    max-width: 220px;
+  }
+  .hero-title {
+    font-size: 1.3rem;
   }
 }
