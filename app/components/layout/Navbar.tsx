@@ -66,7 +66,7 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link to="/portfolio" className="button-link">
+                <Link to="/portfolio" className="button-link" onClick={() => setIsMenuOpen(false)}>
                   PORTFOLIO
                 </Link>
               </li>
