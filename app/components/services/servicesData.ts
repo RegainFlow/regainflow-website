@@ -52,13 +52,13 @@ export const servicesData: Record<ServiceSlug, ServiceInfo> = {
     sectionTwoTitle: `What <span class="text-span-24">You</span> Get`,
     sectionTwoCards: [
       {
-        icon: '/images/services/automation-audit/call_icon.png',
+        icon: '/images/services/automation-audit/call_audit.png',
         text: 'Call',
         description:
           "Clarify your systems and spot blockers. A deep-dive session to unpack your current workflows, bottlenecks, and goals so we can analyze your org's readiness and opportunities for automation."
       },
       {
-        icon: '/images/services/automation-audit/.png',
+        icon: '/images/services/automation-audit/workflow_mapping.png',
         text: 'Workflow Mapping',
         description:
           'Make the invisible visible. Annotated workflow diagrams with key inefficiencies, manual steps, and delay points highlighted. So your team knows exactly where to focus next.'
@@ -122,7 +122,7 @@ export const servicesData: Record<ServiceSlug, ServiceInfo> = {
         icon: '/images/services/rapid-solutions/1_on_1_icon.png',
         text: '1:1',
         description:
-          'One-on-one session to lock in goals, technical requirements, and measurable outcomes. Rapid Technical Build: A build of your core automation tailored to your needs and ready to operate on day 1'
+          'One-on-one session to lock in goals, technical requirements, and measurable outcomes.'
       },
       {
         icon: '/images/services/rapid-solutions/rapid_proto_icon.png',
@@ -137,13 +137,13 @@ export const servicesData: Record<ServiceSlug, ServiceInfo> = {
           'Interactive demo session for stakeholders, complete with Q&A and feedback loops.'
       },
       {
-        icon: '/images/services/rapid-solutions/.png',
+        icon: '/images/services/rapid-solutions/deployment_blueprint.png',
         text: 'Deployment Blueprint',
         description:
           'Your delivery guide to install, configure, troubleshoot, and run your solution.'
       },
       {
-        icon: '/images/services/rapid-solutions/.png',
+        icon: '/images/services/rapid-solutions/rollout_guidance.png',
         text: 'Rollout Guidance',
         description:
           'Clear guidance on scaling your solution and how to extend your new system into other business areas.'

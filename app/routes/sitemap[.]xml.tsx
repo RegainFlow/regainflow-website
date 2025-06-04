@@ -23,7 +23,7 @@ export const loader: LoaderFunction = () => {
   <url>
     <loc>${baseUrl}${path}</loc>
     <changefreq>${changefreq}</changefreq>
-    <priority>${priority.toFixed(1)}</priority>
+    <priority>${priority}</priority>
   </url>`
     )
     .join('');

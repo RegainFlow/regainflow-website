@@ -293,6 +293,12 @@
     text-align: center;
   }
 
+  .service-hero-image-wrapper {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto 1.5rem auto;
+  }
+
   .get-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
@@ -313,23 +319,5 @@
   }
   .trial-logo {
     display: none;
-  }
-
-  .service-hero-image-wrapper {
-    width: 100%;
-    max-width: 350px;
-    margin: 0 auto;
-  }
-  .hero-title {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .service-hero-image-wrapper {
-    max-width: 220px;
-  }
-  .hero-title {
-    font-size: 1.3rem;
   }
 }
