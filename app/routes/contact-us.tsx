@@ -40,104 +40,10 @@ export default function ContactUs() {
       <h1 className="heading-9">
         Get In <span className="text-span-9">Touch</span>
       </h1>
-
-      {/* ✅ Hidden static HTML form to help Netlify detect it */}
-      <form
-        name="contact"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        hidden
-      >
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-        <input type="text" name="role" />
-        <textarea name="message" />
-      </form>
-
-      <div className="form-block w-form">
-        <fetcher.Form
-          name="contact"
-          method="POST"
-          action="/"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          className="form form-card"
-        >
-          <input type="hidden" name="form-name" value="contact" />
-
-          <label htmlFor="name" className="formfield">
-            Name
-          </label>
-          <input
-            className="formfield-label w-input"
-            id="name"
-            name="name"
-            type="text"
-            required
-          />
-
-          <label htmlFor="email" className="formfield">
-            Email Address
-          </label>
-          <input
-            className="formfield-label w-input"
-            id="email"
-            name="email"
-            type="email"
-            required
-          />
-
-          <label htmlFor="role" className="formfield">
-            Role
-          </label>
-          <input
-            className="formfield-label w-input"
-            id="role"
-            name="role"
-            type="text"
-            required
-          />
-
-          <label htmlFor="message" className="formfield">
-            Description
-          </label>
-          <textarea
-            className="formfield-label w-input"
-            id="message"
-            name="message"
-            required
-          />
-
-          <button
-            type="submit"
-            className="submit-button w-button"
-            disabled={fetcher.state === 'submitting'}
-          >
-            {fetcher.state === 'submitting' ? (
-              <div className="submit-loader">
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            ) : (
-              'Submit'
-            )}
-          </button>
-        </fetcher.Form>
-
-        {fetcher.data === 'success' && (
-          <div className="text-block-12">
-            ✅ Thank you! Your submission has been received.
-          </div>
-        )}
-
-        {fetcher.data === 'error' && (
-          <div className="error-message">
-            ❌ Something went wrong. Please try again.
-          </div>
-        )}
+      <div style={{background:'#222',padding:20,borderRadius:8,margin:'2rem auto',maxWidth:400}}>
+        <h2 style={{color:'#00d6cb'}}>Please use our main contact form <a href="/contact-us.html" style={{color:'#00d6cb',textDecoration:'underline'}}>here</a>.</h2>
+        <p style={{color:'#aaa',fontSize:'1rem'}}>This page is for testing/debugging only.</p>
       </div>
-
       {/* Netlify Test Form */}
       <form name="netlify-test" method="POST" data-netlify="true" style={{ marginTop: 40, background: '#222', padding: 20, borderRadius: 8 }}>
         <input type="hidden" name="form-name" value="netlify-test" />
