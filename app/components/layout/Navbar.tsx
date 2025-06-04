@@ -14,7 +14,7 @@ export default function Navbar() {
     // first thing: always close the menu
     setIsMenuOpen(false);
 
-    // if we’re on homepage, smooth‑scroll
+    // if we're on homepage, smooth-scroll
     if (pathname === '/') {
       e.preventDefault();
       const target = document.getElementById('ROI-Section');
@@ -66,9 +66,9 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link to="/contact-us" className="contact-us-link">
+                <a href="https://form.typeform.com/to/SOXnbS4E" className="contact-us-link" target="_blank" rel="noopener">
                   CONTACT US
-                </Link>
+                </a>
               </li>
               <li className="call-to-action mobile-only">
                 <a
