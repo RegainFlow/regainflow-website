@@ -1,6 +1,4 @@
 # To-Do
-- [ ] fix carousel transition
-- [ ] text netlify contact-us sending
 - [ ] add og dynamic iamge creation: https://vercel.com/docs/og-image-generation?package-manager=npm
 
 
