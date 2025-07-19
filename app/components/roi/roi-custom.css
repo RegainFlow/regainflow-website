@@ -337,6 +337,59 @@ input[type='range']::-moz-range-thumb {
   text-align: center;
 }
 
+/* Cost Summary Styles */
+.cost-summary {
+  background: var(--color-bg-card);
+  border: var(--border-base);
+  border-radius: var(--border-radius);
+  padding: var(--gap-lg);
+  margin-bottom: var(--gap-lg);
+  box-shadow: var(--shadow-base);
+}
+
+.cost-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--gap-sm) 0;
+  border-bottom: 1px solid rgba(0, 214, 203, 0.2);
+}
+
+.cost-item:last-child {
+  border-bottom: none;
+}
+
+.cost-label {
+  color: var(--color-text-light);
+  font-weight: 500;
+  font-family: var(--font-base);
+}
+
+.cost-value {
+  color: var(--color-primary-bright);
+  font-weight: bold;
+  font-family: var(--font-base);
+  font-size: 1.1rem;
+}
+
+.opportunity-cost-note {
+  background: rgba(0, 214, 203, 0.1);
+  border: 1px solid rgba(0, 214, 203, 0.3);
+  border-radius: var(--border-radius);
+  padding: var(--gap-md);
+  margin-top: var(--gap-lg);
+}
+
+.opportunity-cost-note p {
+  margin: 0;
+  line-height: 1.5;
+  color: var(--color-text-light);
+}
+
+.opportunity-cost-note strong {
+  color: #00d6cb;
+}
+
 .roi-output-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(100px, 1fr));

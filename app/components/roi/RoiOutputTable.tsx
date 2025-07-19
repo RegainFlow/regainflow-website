@@ -6,7 +6,7 @@ export default function RoiOutputTable({
   results: Record<string, number>;
 }) {
   function formatCurrency(num: number): string {
-    return `$${num.toFixed(2)}`;
+    return `$${num.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
   }
 
   return (
@@ -17,11 +17,23 @@ export default function RoiOutputTable({
         analysis.
       </p>
 
+      {/* Cost Summary */}
+      <div className="cost-summary">
+        <div className="cost-item">
+          <span className="cost-label">Current Annual Cost:</span>
+          <span className="cost-value">{formatCurrency(results.currentAnnualCost)}</span>
+        </div>
+        <div className="cost-item">
+          <span className="cost-label">Project Cost:</span>
+          <span className="cost-value">{formatCurrency(results.projectCost)}</span>
+        </div>
+      </div>
+
       <div className="roi-output-grid">
         {/* Headers */}
         <div className="roi-header">Year</div>
         <div className="roi-header">Savings</div>
-        <div className="roi-header">Profit</div>
+        <div className="roi-header">Net Profit</div>
         <div className="roi-header">ROI</div>
 
         {/* Rows */}
@@ -30,12 +42,13 @@ export default function RoiOutputTable({
             <div>Year {year}</div>
             <div>{formatCurrency(results[`year${year}`])}</div>
             <div>{formatCurrency(results[`profitYear${year}`])}</div>
-            <div>{results[`roiYear${year}`].toFixed(2)}%</div>
+            <div>{results[`roiYear${year}`].toFixed(1)}%</div>
           </React.Fragment>
         ))}
       </div>
+      
       <p className="roi-cta-msg">
-        Looks good? Let’s talk about automating your process.
+        Looks good? Let's talk about automating your process.
       </p>
       <div className="button-wrapper">
         <a
