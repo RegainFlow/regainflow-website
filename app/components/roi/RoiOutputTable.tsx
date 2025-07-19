@@ -47,6 +47,19 @@ export default function RoiOutputTable({
         ))}
       </div>
       
+      {/* Explainer Section */}
+      <div className="roi-explainer">
+        <h4>What These Numbers Mean:</h4>
+        <ul>
+          <li><strong>Cost:</strong> Money spent that year (Year 1 = project cost, Years 2-4 = $0)</li>
+          <li><strong>Profit:</strong> Money saved minus all costs (cumulative savings over time)</li>
+          <li><strong>ROI:</strong> Return on investment percentage based on your project cost</li>
+        </ul>
+        <p className="explainer-note">
+          <em>Note: Year 1 includes the upfront project cost, while Years 2-4 show pure savings.</em>
+        </p>
+      </div>
+      
       <p className="roi-cta-msg">
         Looks good? Let's talk about automating your process.
       </p>
