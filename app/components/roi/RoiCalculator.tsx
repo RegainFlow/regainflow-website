@@ -5,13 +5,13 @@ import NumberInput from './NumberInput';
 import RoiOutputTable from './RoiOutputTable';
 
 export default function RoiCalculator() {
-  const [processLength, setProcessLength] = useState(5);
+  const [processLength, setProcessLength] = useState(3);
   const [processComplexity, setProcessComplexity] = useState(5);
-  const [processSeverity, setProcessSeverity] = useState(5);
+  const [processSeverity, setProcessSeverity] = useState(3);
   const [physicalDocs, setPhysicalDocs] = useState('no');
   const [annualSalary, setAnnualSalary] = useState(80000);
-  const [employeesInvolved, setEmployeesInvolved] = useState(3);
-  const [hoursPerWeek, setHoursPerWeek] = useState(12);
+  const [employeesInvolved, setEmployeesInvolved] = useState(1);
+  const [hoursPerWeek, setHoursPerWeek] = useState(6);
 
   const [results, setResults] = useState({
     currentAnnualCost: 0,
@@ -36,12 +36,21 @@ export default function RoiCalculator() {
     const currentAnnualCost = hoursPerWeek * employeesInvolved * hourlyRate * 52;
 
     // Calculate project hours based on complexity factors
-    // Base: 25-30 hours for 5/5 complexity, with exponential scaling
-    const baseHours = 27.5; // Average of 25-30
-    const complexityFactor = (processLength + processComplexity + processSeverity) / 15; // Normalize to 0-1 scale (3 factors × 5 max each)
-    // Apply exponential curve: complexityFactor^1.5 for more dramatic scaling
-    const curvedFactor = Math.pow(complexityFactor, 1.5);
-    const estimatedHours = baseHours * curvedFactor * 3; // Increased multiplier for more impact
+    // Target: ~$5k project cost for all 5's, ~$500 for all 1's, ~$50k for all 10's
+    const baseHours = 80; // Increased base hours for higher target costs
+    
+    // Use original scaling for 5 and below, heavier scaling for 6+
+    const lengthWeight = processLength <= 5 ? processLength / 10 : Math.pow(processLength / 10, 2) * 2;
+    const complexityWeight = processComplexity <= 5 ? processComplexity / 10 : Math.pow(processComplexity / 10, 2) * 2;
+    const severityWeight = processSeverity <= 5 ? processSeverity / 10 : Math.pow(processSeverity / 10, 2) * 2;
+    
+    const complexityFactor = (lengthWeight + complexityWeight + severityWeight) / 3;
+    
+    // Apply exponential curve: complexityFactor^1.5 for 5 and below, ^2.0 for 6+
+    const maxFactor = Math.max(processLength, processComplexity, processSeverity);
+    const exponent = maxFactor <= 5 ? 1.5 : 2.0;
+    const curvedFactor = Math.pow(complexityFactor, exponent);
+    const estimatedHours = baseHours * curvedFactor; // Scale from base hours
     
     // Add buffer for physical docs
     const finalHours = physicalDocs === 'yes' ? estimatedHours * 1.2 : estimatedHours;
@@ -49,18 +58,18 @@ export default function RoiCalculator() {
     // Calculate project cost: $120/hour × hours × 1.5 buffer
     const projectCost = finalHours * 120 * 1.5;
 
-    // Calculate annual savings (current cost minus project cost amortized over years)
-    const year1 = currentAnnualCost - (projectCost / 3); // Amortize over 3 years
-    const year2 = currentAnnualCost;
-    const year3 = currentAnnualCost;
-    const year4 = currentAnnualCost;
+    // Calculate costs and profits for each year
+    const year1Cost = projectCost; // Year 1: one-time project cost
+    const year2Cost = 0; // Year 2+: no additional costs
+    const year3Cost = 0;
+    const year4Cost = 0;
 
-    // Calculate profit (savings minus ongoing maintenance costs)
+    // Calculate profits (cumulative savings minus costs)
     const maintenanceCost = projectCost * 0.1; // 10% annual maintenance
-    const profitYear1 = year1 - maintenanceCost;
-    const profitYear2 = year2 - maintenanceCost;
-    const profitYear3 = year3 - maintenanceCost;
-    const profitYear4 = year4 - maintenanceCost;
+    const profitYear1 = currentAnnualCost - year1Cost - maintenanceCost; // Year 1: savings minus project cost minus maintenance
+    const profitYear2 = (currentAnnualCost * 2) - year1Cost - (maintenanceCost * 2); // Year 2: 2x savings minus project cost minus 2x maintenance
+    const profitYear3 = (currentAnnualCost * 3) - year1Cost - (maintenanceCost * 3); // Year 3: 3x savings minus project cost minus 3x maintenance
+    const profitYear4 = (currentAnnualCost * 4) - year1Cost - (maintenanceCost * 4); // Year 4: 4x savings minus project cost minus 4x maintenance
 
     // Calculate ROI based on project cost
     const roiYear1 = (profitYear1 / projectCost) * 100;
@@ -71,10 +80,10 @@ export default function RoiCalculator() {
     setResults({
       currentAnnualCost,
       projectCost,
-      year1,
-      year2,
-      year3,
-      year4,
+      year1: year1Cost,
+      year2: year2Cost,
+      year3: year3Cost,
+      year4: year4Cost,
       profitYear1,
       profitYear2,
       profitYear3,

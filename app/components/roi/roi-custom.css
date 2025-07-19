@@ -372,6 +372,10 @@ input[type='range']::-moz-range-thumb {
   font-size: 1.1rem;
 }
 
+.cost-value.current-cost {
+  color: #ff6b6b;
+}
+
 .opportunity-cost-note {
   background: rgba(0, 214, 203, 0.1);
   border: 1px solid rgba(0, 214, 203, 0.3);

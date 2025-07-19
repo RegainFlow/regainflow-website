@@ -21,10 +21,10 @@ export default function RoiOutputTable({
       <div className="cost-summary">
         <div className="cost-item">
           <span className="cost-label">Current Annual Cost:</span>
-          <span className="cost-value">{formatCurrency(results.currentAnnualCost)}</span>
+          <span className="cost-value current-cost">-{formatCurrency(results.currentAnnualCost)}</span>
         </div>
         <div className="cost-item">
-          <span className="cost-label">Project Cost:</span>
+          <span className="cost-label">One Time Cost:</span>
           <span className="cost-value">{formatCurrency(results.projectCost)}</span>
         </div>
       </div>
@@ -32,8 +32,8 @@ export default function RoiOutputTable({
       <div className="roi-output-grid">
         {/* Headers */}
         <div className="roi-header">Year</div>
-        <div className="roi-header">Savings</div>
-        <div className="roi-header">Net Profit</div>
+        <div className="roi-header">Cost</div>
+        <div className="roi-header">Profit</div>
         <div className="roi-header">ROI</div>
 
         {/* Rows */}
@@ -57,8 +57,8 @@ export default function RoiOutputTable({
           target="_blank"
           rel="noopener noreferrer"
         >
-          BOOK A{' '}
-          <span style={{ color: '#00ff08', margin: '0 4px' }}> FREE </span> CALL
+          SAVE{' '}
+          <span style={{ color: '#00ff08', margin: '0 4px' }}> NOW </span>
         </a>
       </div>
     </div>

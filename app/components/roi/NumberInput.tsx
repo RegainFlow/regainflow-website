@@ -25,14 +25,15 @@ export default function NumberInput({
         <button
           type="button"
           className="num-btn"
-          onClick={() => onChange(value - step)}
+          onClick={() => onChange(Math.max(0, value - step))}
         >
           –
         </button>
         <input
           type="number"
           value={value}
-          onChange={(e) => onChange(+e.target.value)}
+          min="0"
+          onChange={(e) => onChange(Math.max(0, +e.target.value))}
         />
         <button
           type="button"
