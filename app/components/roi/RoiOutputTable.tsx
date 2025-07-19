@@ -39,7 +39,7 @@ export default function RoiOutputTable({
       </p>
       <div className="button-wrapper">
         <a
-          href="https://calendly.com/regainflow/30min"
+          href="https://cal.com/regainflow/30min"
           className="neon-cta-button"
           target="_blank"
           rel="noopener noreferrer"

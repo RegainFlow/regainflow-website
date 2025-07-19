@@ -102,6 +102,11 @@
 
 .button-link {
   color: var(--text-color-light);
+  display: inline-flex;
+  align-items: center;
+  justify-content: left;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .button-link:hover {
@@ -131,7 +136,7 @@
   position: absolute;
   top: calc(100% + 0.25rem); /* a small gap under the button */
   left: 0; /* align its left edge to the left of the button */
-  width: 300px;
+  width: 350px;
   /* (or use left: 50%; transform: translateX(-50%); to center it) */
 }
 

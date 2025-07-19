@@ -1,4 +1,5 @@
 import * as PiIcons from 'react-icons/pi';
+import { PiLockSimpleOpenDuotone } from 'react-icons/pi';
 
 export interface FeatureCardProps {
   /** The small icon that sits in the colored circle */
@@ -6,6 +7,7 @@ export interface FeatureCardProps {
   image?: string;
   title: string;
   description: string;
+  ctaText: string;
   onCtaClick: () => void;
 }
 
@@ -13,6 +15,7 @@ export default function FeatureCard({
   icon,
   image,
   title,
+  ctaText,
   description,
   onCtaClick
 }: FeatureCardProps) {
@@ -27,7 +30,8 @@ export default function FeatureCard({
         <h3 className="feature-title">{title}</h3>
         <p className="feature-desc">{description}</p>
         <button type="button" className="feature-cta" onClick={onCtaClick}>
-          Book Now
+          <PiLockSimpleOpenDuotone size={20} />
+          <span dangerouslySetInnerHTML={{ __html: ctaText }}></span>
         </button>
       </div>
 

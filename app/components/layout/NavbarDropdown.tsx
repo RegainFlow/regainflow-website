@@ -1,6 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from '@remix-run/react';
-import { PiCaretDownBold } from 'react-icons/pi';
+import {
+  PiCaretDownBold,
+  PiMagnifyingGlassDuotone,
+  PiLightningDuotone
+} from 'react-icons/pi';
 
 interface NavDropdownProps {
   onSelect?: () => void;
@@ -57,14 +61,16 @@ export default function NavDropdown({ onSelect }: NavDropdownProps) {
           className="button-link"
           onClick={handleLinkClick}
         >
-          Automation Audit + Strategy
+          <PiMagnifyingGlassDuotone size={16} />
+          Automation Audit
         </Link>
         <Link
-          to="/services/rapid-solutions"
+          to="/services/automation-solutions"
           className="button-link"
           onClick={handleLinkClick}
         >
-          Rapid R&D and Solutions
+          <PiLightningDuotone size={16} />
+          Rapid Automation Solutions
         </Link>
       </div>
     </div>

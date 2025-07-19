@@ -144,7 +144,7 @@ export default function Portfolio() {
       <section className="portfolio-cta">
         <h2>Want results like these?</h2>
         <a
-          href="https://calendly.com/regainflow/30min"
+          href="https://cal.com/regainflow/30min"
           className="portfolio-cta-btn"
           target="_blank"
           rel="noopener"

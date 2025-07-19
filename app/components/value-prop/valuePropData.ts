@@ -16,7 +16,7 @@ export const valuePropData = [
         text: 'Automation Opportunity Map'
       }
     ],
-    ctaLink: 'https://calendly.com/regainflow/30min',
+    ctaLink: 'https://cal.com/regainflow/30min',
     image: '/images/home/value-prop/vp1_solutions_image.png',
     imageFirst: true
   },
@@ -37,7 +37,7 @@ export const valuePropData = [
         text: 'Get Buy-In From Execs/Investors'
       }
     ],
-    ctaLink: 'https://calendly.com/regainflow/30min',
+    ctaLink: 'https://cal.com/regainflow/30min',
     image: '/images/home/value-prop/vp2_solutions_image.png',
     imageFirst: false
   }

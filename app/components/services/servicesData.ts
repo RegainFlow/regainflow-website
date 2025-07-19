@@ -1,4 +1,4 @@
-export type ServiceSlug = 'automation-audit' | 'rapid-solutions';
+export type ServiceSlug = 'automation-audit' | 'automation-solutions';
 
 interface Card {
   icon: string;
@@ -11,11 +11,13 @@ export interface ServiceInfo {
   title: string;
   subtitle: string;
   image: string;
+  heroTagline?: string;
+  ctaText?: string;
+  ctaLink?: string;
   sectionOneTitle: string;
   sectionOneCards: Card[];
   sectionTwoTitle: string;
   sectionTwoCards: Card[];
-  /** Optional use‐case video embed, e.g. Loom or YouTube */
   videoUrl?: string;
 }
 
@@ -24,6 +26,9 @@ export const servicesData: Record<ServiceSlug, ServiceInfo> = {
     title: 'Automation <span class="text-span-22">Audit</span>',
     subtitle:
       'Cut through the noise. This strategic engagement reveals automation-ready workflows, audits your real, and delivers a high-impact roadmap that eliminates guesswork and unlocks measurable ROI.',
+    heroTagline: 'Free 60-min call · Spot inefficiencies · Unlock hidden ROI',
+    ctaText: 'Unlock <span style="color: #00ff08">Free</span> Audit Now',
+    ctaLink: 'https://cal.com/regainflow/60min',
     image: '/images/services/automation-audit/audit_landing_page.png',
     sectionOneTitle: `Who It's <span class="text-span-23">For</span>`,
     sectionOneCards: [
@@ -53,7 +58,7 @@ export const servicesData: Record<ServiceSlug, ServiceInfo> = {
     sectionTwoCards: [
       {
         icon: '/images/services/automation-audit/call_audit.png',
-        text: 'Call',
+        text: '<span style="color: #00ff08">Free</span> Audit Call',
         description:
           "Clarify your systems and spot blockers. A deep-dive session to unpack your current workflows, bottlenecks, and goals so we can analyze your org's readiness and opportunities for automation."
       },
@@ -79,38 +84,42 @@ export const servicesData: Record<ServiceSlug, ServiceInfo> = {
     videoUrl:
       'https://www.loom.com/embed/6f5585b8d5904426b5fe09cf95d99367?sid=3f8a1dda-7308-4401-99a6-39552c172368'
   },
-
-  'rapid-solutions': {
-    title: 'Rapid <span class="text-span-23">R&D</span> Solutions',
+  'automation-solutions': {
+    title: 'Rapid <span class="text-span-23">Automation</span> Solutions',
     subtitle:
-      "Move from insight to implementation. You've got the clarity - now you need sharp execution. Our team blends elite engineering with operational business sense to build robust solutions in record time. No fluff, no shortcuts, just results. ",
-    image: '/images/services/rapid-solutions/rapid_solution_landing_page.png',
+      'Go from audit to action. We build, demo, and deliver the automation systems that drive ROI.',
+    heroTagline:
+      'Disocvery call · Rapid Prototyping · Real automation, no fluff',
+    ctaText: 'Book Now',
+    ctaLink: 'https://cal.com/regainflow/30min',
+    image:
+      '/images/services/automation-solutions/rapid_solution_landing_page.png',
     sectionOneTitle: `Who It's <span class="text-span-23">For</span>`,
     sectionOneCards: [
       {
         icon: 'PiNumberSquareOneFill',
-        image: '/images/services/rapid-solutions/post_audit.png',
+        image: '/images/services/automation-solutions/post_audit.png',
         text: 'Post-Audit Clients ready to see results before investing further',
         description:
           "You've identified what's broken — now you need to prove impact fast. We turn audit insights into working systems and measurable results that de-risk your next investment or initiative."
       },
       {
         icon: 'PiNumberSquareTwoFill',
-        image: '/images/services/rapid-solutions/founder_start_ups.png',
+        image: '/images/services/automation-solutions/founder_start_ups.png',
         text: 'Founders or startup ops teams needing demos for fundraising or investor buy-in',
         description:
           'You need to show traction, not slides. We build functional, clean solutions that make investors and partners say “You actually built this?” — because you did, with us.'
       },
       {
         icon: 'PiNumberSquareThreeFill',
-        image: '/images/services/rapid-solutions/innovation_depts.png',
+        image: '/images/services/automation-solutions/innovation_depts.png',
         text: 'Innovation departments or RPA leads exploring use cases',
         description:
           "You've seen the hype. Now you need to test what's possible in your environment — fast. We build validated use cases on your stack, so your team isn't stuck in theory."
       },
       {
         icon: 'PiNumberSquareFourFill',
-        image: '/images/services/rapid-solutions/growth_margins.png',
+        image: '/images/services/automation-solutions/growth_margins.png',
         text: 'Teams/Business drivers under pressure to grow efficiently and increase margin.',
         description:
           "You've got traction — customers, users, revenue — but you're hitting operational drag. We help you cut time, cost, and manual overhead with automation that scales cleanly and boosts margins."
@@ -119,31 +128,31 @@ export const servicesData: Record<ServiceSlug, ServiceInfo> = {
     sectionTwoTitle: `What <span class="text-span-24">You</span> Get`,
     sectionTwoCards: [
       {
-        icon: '/images/services/rapid-solutions/1_on_1_icon.png',
+        icon: '/images/services/automation-solutions/1_on_1_icon.png',
         text: '1:1',
         description:
           'One-on-one session to lock in goals, technical requirements, and measurable outcomes.'
       },
       {
-        icon: '/images/services/rapid-solutions/rapid_proto_icon.png',
+        icon: '/images/services/automation-solutions/rapid_proto_icon.png',
         text: 'Rapid technical prototype (automation or agent)',
         description:
           'A build of your core automation tailored to your needs and ready to operate on day 1.'
       },
       {
-        icon: '/images/services/rapid-solutions/demo_icon.png',
+        icon: '/images/services/automation-solutions/demo_icon.png',
         text: 'Executive Walkthrough & Stakeholder Buy-In',
         description:
           'Interactive demo session for stakeholders, complete with Q&A and feedback loops.'
       },
       {
-        icon: '/images/services/rapid-solutions/deployment_blueprint.png',
+        icon: '/images/services/automation-solutions/deployment_blueprint.png',
         text: 'Deployment Blueprint',
         description:
           'Your delivery guide to install, configure, troubleshoot, and run your solution.'
       },
       {
-        icon: '/images/services/rapid-solutions/rollout_guidance.png',
+        icon: '/images/services/automation-solutions/rollout_guidance.png',
         text: 'Rollout Guidance',
         description:
           'Clear guidance on scaling your solution and how to extend your new system into other business areas.'

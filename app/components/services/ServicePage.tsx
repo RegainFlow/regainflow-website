@@ -2,17 +2,31 @@
 import type { ServiceInfo } from '~/components/services/servicesData';
 import FeatureCard from '~/components/services/FeatureCard';
 import { Link } from '@remix-run/react';
+import { PiLockSimpleOpenDuotone } from 'react-icons/pi';
+import { useLocation } from '@remix-run/react';
 
 export default function ServicePage({
   title,
   subtitle,
   image,
+  heroTagline,
+  ctaText,
+  ctaLink,
   sectionOneTitle,
   sectionOneCards,
   sectionTwoTitle,
   sectionTwoCards,
   videoUrl
 }: ServiceInfo) {
+  const location = useLocation();
+  const pathname = location.pathname;
+
+  const isAudit = pathname.includes('automation-audit');
+
+  const mainCtaLink = isAudit
+    ? 'https://forms.gle/6Dq6wZ3J6TcBxEJu9'
+    : 'https://cal.com/regainflow/30min';
+
   return (
     <>
       {/* HERO */}
@@ -24,11 +38,25 @@ export default function ServicePage({
               dangerouslySetInnerHTML={{ __html: title }}
             />
             <p className="hero-subtitle">{subtitle}</p>
-            <a href="/free-trial" className="hero-cta">
-              Book A <span className="text-span-29">Free</span> Audit
+            <a
+              href={mainCtaLink}
+              target={mainCtaLink?.startsWith('http') ? '_blank' : undefined}
+              className="hero-cta"
+            >
+              <PiLockSimpleOpenDuotone size={20} />
+              {isAudit ? (
+                <>
+                  Unlock My <span className="text-span-29">Free</span> Audit
+                </>
+              ) : (
+                <>
+                  Book A <span className="text-span-29">Free</span>
+                  Call
+                </>
+              )}
             </a>
             <div className="hero-tagline">
-              30 min free call · Calculate ROI · Regain Value
+              {heroTagline && <div className="hero-tagline">{heroTagline}</div>}
             </div>
           </div>
 
@@ -56,7 +84,9 @@ export default function ServicePage({
                 <img src={card.icon} alt={card.text} />
               </div>
               <div className="get-text">
-                <strong>{card.text}</strong>
+                <strong
+                  dangerouslySetInnerHTML={{ __html: card.text }}
+                ></strong>
                 <p>{card.description}</p>
               </div>
             </div>
@@ -71,18 +101,19 @@ export default function ServicePage({
           dangerouslySetInnerHTML={{ __html: sectionOneTitle }}
         ></h2>
         <div className="feature-section">
-          <div className="feature-section">
-            {sectionOneCards.map((card, i) => (
-              <FeatureCard
-                key={i}
-                icon={card.icon}
-                title={card.text}
-                image={card.image}
-                description={card.description}
-                onCtaClick={() => console.log('clicked', card.text)}
-              />
-            ))}
-          </div>
+          {sectionOneCards.map((card, i) => (
+            <FeatureCard
+              key={i}
+              icon={card.icon}
+              title={card.text}
+              image={card.image}
+              description={card.description}
+              ctaText={ctaText}
+              onCtaClick={() => {
+                if (ctaLink) window.open(ctaLink, '_blank');
+              }}
+            />
+          ))}
         </div>
       </section>
 
@@ -112,8 +143,11 @@ export default function ServicePage({
             <p className="trial-subtitle">
               No pushy sales. Just insight, action, and results.
             </p>
-            <Link to="#" className="trial-button">
-              Book Now For Free
+            <Link
+              to="https://cal.com/regainflow/30min"
+              className="trial-button"
+            >
+              Book Now For <span style={{ color: '#00ff08' }}>Free</span>
             </Link>
           </div>
           <div className="trial-logo">
