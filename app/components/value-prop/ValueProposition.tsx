@@ -60,13 +60,8 @@ export default function ValueProposition() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {idx === 0 ? (
-                    <>
-                      BOOK A <span className="text-span-28">FREE</span> AUDIT
-                    </>
-                  ) : (
-                    'REQUEST A PROTOTYPE'
-                  )}
+                  BOOK A <span style={{ color: '#00ff08' }}>FREE</span>{' '}
+                  {idx === 0 ? 'AUDIT' : 'BOOK'}
                 </a>
               </div>
             </div>

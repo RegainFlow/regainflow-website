@@ -8,6 +8,7 @@ export interface FeatureCardProps {
   title: string;
   description: string;
   ctaText: string;
+  isAudit: boolean;
   onCtaClick: () => void;
 }
 
@@ -17,6 +18,7 @@ export default function FeatureCard({
   title,
   ctaText,
   description,
+  isAudit,
   onCtaClick
 }: FeatureCardProps) {
   const IconComponent = PiIcons[icon as keyof typeof PiIcons];
@@ -30,7 +32,7 @@ export default function FeatureCard({
         <h3 className="feature-title">{title}</h3>
         <p className="feature-desc">{description}</p>
         <button type="button" className="feature-cta" onClick={onCtaClick}>
-          <PiLockSimpleOpenDuotone size={20} />
+          {isAudit ? <PiLockSimpleOpenDuotone size={20} /> : ''}
           <span dangerouslySetInnerHTML={{ __html: ctaText }}></span>
         </button>
       </div>

@@ -1,13 +1,16 @@
 export const portfolioItems = [
   {
-    title: 'Project Manager/Estimator Audit',
+    title: 'Automated Payroll Data Validation System',
     description:
-      'Migration of data from one source to another saved 2 hours per day per project manager/estimator per project. This led to hundreds of hours saved yearly and allowed project managers to focus on higher-value tasks.',
-    image: '/images/portfolio/comsense_pfp.jpg',
-    pdf: '/pdfs/Comsense_Audit.pdf',
-    metrics: ['2 hours/day saved per PM', 'Hundreds of hours/year saved'],
-    industry: 'Construction/Project Management',
-    actionType: 'pdf'
+      'Built a multi-agent validation system to replace a 3-month manual payroll data quality process. Validates SAP payroll data using SQL queries and flat file comparisons with a deterministic checklist and AI-generated validation rules. Reduced manual effort and increased accuracy across multiple pay groups. Includes a Streamlit MVP, LangGraph agents, FastAPI backend, and SQLite-based schema storage.',
+    image: '/images/portfolio/payroll_validation_mvp.png',
+    metrics: [
+      '3-month process reduced to days',
+      '$8M+ in savings',
+      'Multi-agent validation with AI rule generation'
+    ],
+    industry: 'Enterprise HR/Payroll Automation',
+    actionType: 'nda'
   },
   {
     title: 'Distributor Marketing & Metrics Automation',
@@ -31,11 +34,25 @@ export const portfolioItems = [
     metrics: ['4 hours/report saved', '32% increase in yearly profits'],
     industry: 'Professional Services/AI',
     actionType: 'nda'
+  },
+  {
+    title: 'Anomaly Detection for Satellite Sensor Streams',
+    description:
+      'Deployed an Elasticsearch-based cluster to index and search telemetry from over 5,000+ space system sensors. Built anomaly detection models and dashboards to surface critical issues automatically, replacing hours of manual spreadsheet review by operators. Enabled rapid triage and insight across terabytes of structured data.',
+    image: '/images/portfolio/sat_anomaly_dashboard.png',
+    metrics: [
+      '5000+ sensors monitored',
+      'Hours of operator time saved daily',
+      'Real-time anomaly surfacing via dashboard'
+    ],
+    industry: 'Aerospace/Defense Automation',
+    actionType: 'nda'
   }
 ];
 
 export const metrics = [
-  { label: 'Hours Saved', value: '2500+' },
-  { label: 'Customers Served', value: '30+' },
-  { label: 'Automations Delivered', value: '15+' }
+  { label: 'Hours Saved', value: '5000+' },
+  { label: 'Business Users Impacted', value: '50+' },
+  { label: 'Enterprise Automations Delivered', value: '20+' },
+  { label: 'Estimated Value Created', value: '$8M+' }
 ];

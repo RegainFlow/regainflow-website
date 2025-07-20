@@ -23,10 +23,6 @@ export default function ServicePage({
 
   const isAudit = pathname.includes('automation-audit');
 
-  const mainCtaLink = isAudit
-    ? 'https://forms.gle/6Dq6wZ3J6TcBxEJu9'
-    : 'https://cal.com/regainflow/30min';
-
   return (
     <>
       {/* HERO */}
@@ -39,18 +35,18 @@ export default function ServicePage({
             />
             <p className="hero-subtitle">{subtitle}</p>
             <a
-              href={mainCtaLink}
-              target={mainCtaLink?.startsWith('http') ? '_blank' : undefined}
+              href={ctaLink}
+              target={ctaLink?.startsWith('http') ? '_blank' : undefined}
               className="hero-cta"
             >
               <PiLockSimpleOpenDuotone size={20} />
               {isAudit ? (
                 <>
-                  Unlock My <span className="text-span-29">Free</span> Audit
+                  Unlock Your <span className="text-span-29">Free</span> Audit
                 </>
               ) : (
                 <>
-                  Book A <span className="text-span-29">Free</span>
+                  Book Your <span className="text-span-29">Free</span>
                   Call
                 </>
               )}
@@ -107,8 +103,9 @@ export default function ServicePage({
               icon={card.icon}
               title={card.text}
               image={card.image}
+              ctaText={ctaText ?? 'Learn More'}
               description={card.description}
-              ctaText={ctaText}
+              isAudit={isAudit}
               onCtaClick={() => {
                 if (ctaLink) window.open(ctaLink, '_blank');
               }}
