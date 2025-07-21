@@ -22,5 +22,11 @@ export default defineConfig({
     }),
     tsconfigPaths(),
     netlifyPlugin()
-  ]
+  ],
+  optimizeDeps: {
+    include: ['@splidejs/react-splide']
+  },
+  ssr: {
+    noExternal: ['@splidejs/react-splide']
+  }
 });

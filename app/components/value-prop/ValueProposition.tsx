@@ -61,7 +61,7 @@ export default function ValueProposition() {
                   rel="noopener noreferrer"
                 >
                   BOOK A <span style={{ color: '#00ff08' }}>FREE</span>{' '}
-                  {idx === 0 ? 'AUDIT' : 'BOOK'}
+                  {idx === 0 ? 'AUDIT' : 'CALL'}
                 </a>
               </div>
             </div>

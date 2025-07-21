@@ -147,6 +147,24 @@
 .modal-skill-card[data-category='Security / Cyber Ops'] .modal-skill-bar-inner {
   background: #ff3864;
 }
+.modal-skill-card[data-category='ML / DL Frameworks'] .modal-skill-bar-inner {
+  background: #e066ff;
+}
+.modal-skill-card[data-category='RPA / Automation'] .modal-skill-bar-inner {
+  background: #ffb347;
+}
+.modal-skill-card[data-category='Cloud / AI Services'] .modal-skill-bar-inner {
+  background: #6495ed;
+}
+.modal-skill-card[data-category='API / Integration'] .modal-skill-bar-inner {
+  background: #ff69b4;
+}
+.modal-skill-card[data-category='Databases'] .modal-skill-bar-inner {
+  background: #ffa07a;
+}
+.modal-skill-card[data-category='Frontend / Apps'] .modal-skill-bar-inner {
+  background: #00fa9a;
+}
 
 /* AI / LLM Frameworks */
 .modal-skill-card[data-category='AI / LLM Frameworks'] {
@@ -190,6 +208,42 @@
   box-shadow: 0 0 10px 2px #ff386433;
 }
 
+/* ML / DL Frameworks */
+.modal-skill-card[data-category='ML / DL Frameworks'] {
+  border-color: #e066ff;
+  box-shadow: 0 0 10px 2px #e066ff33;
+}
+
+/* RPA / Automation */
+.modal-skill-card[data-category='RPA / Automation'] {
+  border-color: #ffb347;
+  box-shadow: 0 0 10px 2px #ffb34733;
+}
+
+/* Cloud / AI Services */
+.modal-skill-card[data-category='Cloud / AI Services'] {
+  border-color: #6495ed;
+  box-shadow: 0 0 10px 2px #6495ed33;
+}
+
+/* API / Integration */
+.modal-skill-card[data-category='API / Integration'] {
+  border-color: #ff69b4;
+  box-shadow: 0 0 10px 2px #ff69b433;
+}
+
+/* Databases */
+.modal-skill-card[data-category='Databases'] {
+  border-color: #ffa07a;
+  box-shadow: 0 0 10px 2px #ffa07a33;
+}
+
+/* Frontend / Apps */
+.modal-skill-card[data-category='Frontend / Apps'] {
+  border-color: #00fa9a;
+  box-shadow: 0 0 10px 2px #00fa9a33;
+}
+
 /* Color headings by content */
 .modal-category:has(
     + .modal-skills-grid .modal-skill-card[data-category='AI / LLM Frameworks']
@@ -226,6 +280,36 @@
     + .modal-skills-grid .modal-skill-card[data-category='Security / Cyber Ops']
   ) {
   color: #ff3864;
+}
+.modal-category:has(
+    + .modal-skills-grid .modal-skill-card[data-category='ML / DL Frameworks']
+  ) {
+  color: #e066ff;
+}
+.modal-category:has(
+    + .modal-skills-grid .modal-skill-card[data-category='RPA / Automation']
+  ) {
+  color: #ffb347;
+}
+.modal-category:has(
+    + .modal-skills-grid .modal-skill-card[data-category='Cloud / AI Services']
+  ) {
+  color: #6495ed;
+}
+.modal-category:has(
+    + .modal-skills-grid .modal-skill-card[data-category='API / Integration']
+  ) {
+  color: #ff69b4;
+}
+.modal-category:has(
+    + .modal-skills-grid .modal-skill-card[data-category='Databases']
+  ) {
+  color: #ffa07a;
+}
+.modal-category:has(
+    + .modal-skills-grid .modal-skill-card[data-category='Frontend / Apps']
+  ) {
+  color: #00fa9a;
 }
 
 @media (max-width: 768px) {

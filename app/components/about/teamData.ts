@@ -97,7 +97,7 @@ export const teamMembers: TeamMember[] = [
         icon: '/images/about-us/linkedin.svg'
       },
       {
-        href: 'https://github.com/R3d5tatic/',
+        href: 'https://github.com/R3d5tatic',
         icon: '/images/about-us/github.svg'
       },
       {
@@ -117,24 +117,56 @@ export const teamMembers: TeamMember[] = [
       { label: 'Clients', value: '10+' }
     ],
     techStack: [
-      { name: 'LangGraph / LangChain', level: 90 },
-      { name: 'Python', level: 90 },
-      { name: 'TensorFlow', level: 85 },
-      { name: 'PyTorch', level: 80 },
-      { name: 'Docker', level: 80 },
-      { name: 'RPA Tools', level: 75 }
+      // AI / LLM Frameworks
+      {
+        name: 'LangGraph / LangChain',
+        level: 90,
+        category: 'AI / LLM Frameworks'
+      },
+      { name: 'LlamaIndex', level: 85, category: 'AI / LLM Frameworks' },
+      // Machine Learning & Deep Learning
+      { name: 'TensorFlow', level: 85, category: 'ML / DL Frameworks' },
+      { name: 'PyTorch', level: 80, category: 'ML / DL Frameworks' },
+      // Programming Languages
+      { name: 'Python', level: 90, category: 'Programming Languages' },
+      { name: 'C#', level: 80, category: 'Programming Languages' },
+      {
+        name: 'JavaScript / TypeScript',
+        level: 75,
+        category: 'Programming Languages'
+      },
+      // RPA Tools
+      { name: 'UiPath', level: 85, category: 'RPA / Automation' },
+      { name: 'Automation Anywhere', level: 80, category: 'RPA / Automation' },
+      { name: 'Blue Prism', level: 75, category: 'RPA / Automation' },
+      // Data Engineering / Pipelines
+      {
+        name: 'Azure Cognitive Services',
+        level: 75,
+        category: 'Cloud / AI Services'
+      },
+      { name: 'AWS Bedrock', level: 70, category: 'Cloud / AI Services' },
+      { name: 'REST APIs', level: 80, category: 'API / Integration' },
+      // Containerization & DevOps
+      { name: 'Docker', level: 80, category: 'DevOps / Automation' },
+      { name: 'Kubernetes', level: 70, category: 'DevOps / Automation' },
+      // Databases & Storage
+      { name: 'Elasticsearch', level: 75, category: 'Search / Vector DBs' },
+      { name: 'MongoDB', level: 70, category: 'Databases' },
+      // Web Frontend (for Streamlit UI)
+      { name: 'Streamlit', level: 80, category: 'Frontend / Apps' }
     ],
     socials: [
       {
-        href: 'https://www.linkedin.com/in/leonardo-j-ramirez',
+        href: 'https://www.linkedin.com/in/william-baltus',
         icon: '/images/about-us/linkedin.svg'
       },
       {
-        href: 'https://github.com/R3d5tatic/',
+        href: 'https://github.com/WilliamBaltus',
         icon: '/images/about-us/github.svg'
       },
       {
-        href: 'https://www.notion.so/Leonardo-J-Ramirez-abf55c6b109249059f3b3c4fc8cf29e0',
+        href: 'https://www.notion.so/William-Jaunius-Baltus-e4729f9c870f4ab4a0421ca461e07b57',
         icon: '/images/about-us/resume.svg'
       }
     ]
