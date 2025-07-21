@@ -15,7 +15,7 @@ export const portfolioItems = [
   {
     title: 'Hybrid RAG Search Engine for Space Engineering',
     description:
-      'Collaborated with William to design and deploy a hybrid Retrieval-Augmented Generation (RAG) system for internal aerospace engineers. Data pipelines written in C# extracted and ingested millions of records into Elasticsearch. Leveraged ELSER v2 for semantic retrieval combined with keyword search to enable hybrid passage ranking. Integrated ChatGPT via Streamlit to build a user-friendly search assistant. Application serves over 6,000 internal users daily and powers high-accuracy technical question answering at scale.',
+      'Desiged and deployed a hybrid Retrieval-Augmented Generation (RAG) system for internal aerospace engineers. Data pipelines written in C# extracted and ingested millions of records into Elasticsearch. Leveraged ELSER v2 for semantic retrieval combined with keyword search to enable hybrid passage ranking. Integrated ChatGPT via Streamlit to build a user-friendly search assistant. Application serves over 6,000 internal users daily and powers high-accuracy technical question answering at scale.',
     image: '/images/portfolio/rag_search_engine.png',
     tags: [
       'Millions of records ingested',
