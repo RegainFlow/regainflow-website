@@ -8,7 +8,6 @@ import {
   useRouteError,
   isRouteErrorResponse
 } from '@remix-run/react';
-
 import Navbar from '~/components/layout/Navbar';
 import Footer from '~/components/layout/Footer';
 import NotFound from '~/components/layout/NotFound';
@@ -75,6 +74,18 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
+        <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "ttg4gr4m0m");
+            `
+          }}
+        />
       </head>
       <body>
         <div className="background-theme">

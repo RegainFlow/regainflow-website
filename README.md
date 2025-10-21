@@ -1,6 +1,10 @@
 # To-Do
 - [ ] add og dynamic iamge creation: https://vercel.com/docs/og-image-generation?package-manager=npm
 
+## Environment Variables
+
+### Microsoft Clarity
+- `CLARITY_PROJECT_ID`: Your Microsoft Clarity project ID
 
 # Welcome to Remix!
 
