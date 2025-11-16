@@ -1,0 +1,523 @@
+/**
+ * Component Base Styles
+ * Shared component patterns to eliminate duplication
+ * Use these as base styles - components can extend with specific variations
+ */
+
+/* ==================== Buttons ==================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  border: none;
+  border-radius: var(--radius-base);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  user-select: none;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Button Sizes */
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: var(--font-size-sm);
+  height: var(--button-height-sm);
+}
+
+.btn-lg {
+  padding: 1rem 2rem;
+  font-size: var(--font-size-lg);
+  height: var(--button-height-lg);
+}
+
+/* Button Variants */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-text-dark);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--color-primary-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-text-primary);
+  border: var(--border-primary);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: var(--color-primary-alpha-10);
+  border-color: var(--color-primary-light);
+}
+
+.btn-outlined {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: var(--border-width-base) solid var(--color-primary);
+}
+
+.btn-outlined:hover:not(:disabled) {
+  background-color: var(--color-primary);
+  color: var(--color-text-dark);
+}
+
+/* Neon Button (Consolidated from 4+ files - 200+ lines of duplication) */
+.btn-neon {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: var(--color-primary);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  overflow: hidden;
+  transition: all var(--transition-slow);
+  border: var(--border-width-base) solid var(--color-primary);
+  border-radius: var(--radius-base);
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn-neon:hover {
+  background: var(--color-primary);
+  color: var(--color-bg-primary);
+  box-shadow: var(--shadow-neon-lg);
+}
+
+.btn-neon span {
+  position: absolute;
+  display: block;
+}
+
+/* Neon button animated borders */
+.btn-neon span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: var(--border-width-base);
+  background: linear-gradient(90deg, transparent, var(--color-primary));
+  animation: neon-animate-1 1s linear infinite;
+}
+
+.btn-neon span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: var(--border-width-base);
+  height: 100%;
+  background: linear-gradient(180deg, transparent, var(--color-primary));
+  animation: neon-animate-2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+.btn-neon span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: var(--border-width-base);
+  background: linear-gradient(270deg, transparent, var(--color-primary));
+  animation: neon-animate-3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+.btn-neon span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: var(--border-width-base);
+  height: 100%;
+  background: linear-gradient(360deg, transparent, var(--color-primary));
+  animation: neon-animate-4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+/* ==================== Cards ==================== */
+
+.card {
+  background-color: var(--color-bg-card);
+  border: var(--border-secondary);
+  border-radius: var(--radius-lg);
+  padding: var(--card-padding-base);
+  transition: all var(--transition-base);
+  backdrop-filter: blur(var(--blur-sm));
+}
+
+.card:hover {
+  border-color: var(--color-primary-alpha-40);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-interactive:hover {
+  background-color: var(--color-primary-alpha-10);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-neon);
+}
+
+.card-sm {
+  padding: var(--card-padding-sm);
+}
+
+.card-lg {
+  padding: var(--card-padding-lg);
+}
+
+.card-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.card-description {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+/* ==================== Forms ==================== */
+
+.form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-secondary);
+  border: var(--border-secondary);
+  border-radius: var(--radius-base);
+  transition: all var(--transition-base);
+  outline: none;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-alpha-20);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-error {
+  display: block;
+  margin-top: var(--spacing-xs);
+  font-size: var(--font-size-sm);
+  color: var(--color-error);
+}
+
+.form-helper {
+  display: block;
+  margin-top: var(--spacing-xs);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+/* ==================== Badges ==================== */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+.badge-primary {
+  background-color: var(--color-primary-alpha-20);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary-alpha-40);
+}
+
+.badge-secondary {
+  background-color: var(--color-bg-tertiary);
+  color: var(--color-text-secondary);
+  border: var(--border-muted);
+}
+
+/* Tech Category Badges */
+.badge-ai {
+  background-color: rgba(255, 107, 107, 0.2);
+  color: var(--color-category-ai);
+  border: 1px solid var(--color-category-ai);
+}
+
+.badge-ml {
+  background-color: rgba(78, 205, 196, 0.2);
+  color: var(--color-category-ml);
+  border: 1px solid var(--color-category-ml);
+}
+
+.badge-backend {
+  background-color: rgba(69, 183, 209, 0.2);
+  color: var(--color-category-backend);
+  border: 1px solid var(--color-category-backend);
+}
+
+.badge-frontend {
+  background-color: rgba(150, 206, 180, 0.2);
+  color: var(--color-category-frontend);
+  border: 1px solid var(--color-category-frontend);
+}
+
+.badge-cloud {
+  background-color: rgba(255, 234, 167, 0.2);
+  color: var(--color-category-cloud);
+  border: 1px solid var(--color-category-cloud);
+}
+
+.badge-database {
+  background-color: rgba(223, 230, 233, 0.2);
+  color: var(--color-category-database);
+  border: 1px solid var(--color-category-database);
+}
+
+.badge-devops {
+  background-color: rgba(116, 185, 255, 0.2);
+  color: var(--color-category-devops);
+  border: 1px solid var(--color-category-devops);
+}
+
+.badge-vector {
+  background-color: rgba(162, 155, 254, 0.2);
+  color: var(--color-category-vector);
+  border: 1px solid var(--color-category-vector);
+}
+
+/* ==================== Skill Bars & Progress ==================== */
+
+.skill-bar-container {
+  width: 100%;
+  margin-bottom: var(--spacing-sm);
+}
+
+.skill-bar-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-xs);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.skill-bar-track {
+  width: 100%;
+  height: var(--skill-bar-height);
+  background-color: var(--color-bg-tertiary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--color-primary-dark),
+    var(--color-primary)
+  );
+  border-radius: var(--radius-full);
+  transition: width var(--transition-slow);
+  box-shadow: var(--shadow-neon);
+}
+
+.skill-bar-lg .skill-bar-track {
+  height: var(--skill-bar-height-lg);
+}
+
+/* Progress Indicator */
+.progress-bar {
+  width: 100%;
+  height: var(--progress-bar-height);
+  background-color: var(--color-bg-tertiary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: var(--radius-full);
+  transition: width var(--transition-base);
+}
+
+/* ==================== Modals ==================== */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-bg-overlay);
+  backdrop-filter: blur(var(--blur-base));
+  z-index: var(--z-index-modal-backdrop);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md);
+}
+
+.modal-content {
+  background-color: var(--color-bg-secondary);
+  border: var(--border-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-xl);
+  z-index: var(--z-index-modal);
+}
+
+.modal-header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.modal-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+
+.modal-close {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xl);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.modal-close:hover {
+  color: var(--color-primary);
+}
+
+/* ==================== Links ==================== */
+
+.link {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.link:hover {
+  color: var(--color-primary-light);
+  text-decoration: underline;
+}
+
+.link-muted {
+  color: var(--color-text-muted);
+}
+
+.link-muted:hover {
+  color: var(--color-text-primary);
+}
+
+/* ==================== Dividers ==================== */
+
+.divider {
+  height: 1px;
+  background-color: var(--color-primary-alpha-20);
+  border: none;
+  margin: var(--spacing-lg) 0;
+}
+
+.divider-vertical {
+  width: 1px;
+  height: 100%;
+  background-color: var(--color-primary-alpha-20);
+}
+
+/* ==================== Sections ==================== */
+
+.section {
+  padding: var(--spacing-3xl) 0;
+}
+
+.section-sm {
+  padding: var(--spacing-xl) 0;
+}
+
+.section-lg {
+  padding: 6rem 0;
+}
+
+.section-title {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.section-subtitle {
+  font-size: var(--font-size-xl);
+  color: var(--color-text-secondary);
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+  line-height: var(--line-height-relaxed);
+}
+
+/* ==================== Images ==================== */
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.img-cover {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.img-contain {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}

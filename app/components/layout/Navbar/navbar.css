@@ -1,0 +1,360 @@
+/* Navbar-specific overrides (using global variables) */
+:root {
+  --navbar-button-padding: 10px 20px;
+  --navbar-container-max: 1400px;
+}
+
+/* Mobile/Desktop visibility utilities */
+.call-to-action.mobile-only {
+  display: none;
+}
+.call-to-action.desktop-only {
+  display: inline-flex;
+}
+
+/* ==========================================================================
+   Base & Layout
+   ========================================================================== */
+.container {
+  max-width: calc(var(--navbar-container-max) + 40px);
+  margin: 0 auto;
+}
+
+.navbar-logo-left {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-index-sticky);
+  backdrop-filter: blur(var(--blur-md));
+  background-color: var(--color-bg-overlay);
+  border-bottom: var(--border-muted);
+}
+
+.navbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  margin: 0 20px;
+}
+
+/* ==========================================================================
+   Logo
+   ========================================================================== */
+
+.logo-link {
+  font-family: var(--font-accent);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-black);
+  color: var(--color-primary);
+  text-decoration: none;
+  text-shadow: var(--shadow-text-glow);
+}
+
+/* ==========================================================================
+   Navigation Menu
+   ========================================================================== */
+.nav-menu-wrapper {
+  display: flex;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.nav-menu-two {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu-two li {
+  display: flex;
+  align-items: center;
+}
+
+/* ==========================================================================
+   Link Styles
+   ========================================================================== */
+.button-link,
+.contact-us-link {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
+  padding: var(--navbar-button-padding);
+  text-decoration: none;
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast);
+  border-radius: var(--radius-base);
+}
+
+.button-link {
+  color: var(--color-text-secondary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: left;
+  flex-direction: row;
+  gap: var(--spacing-xs);
+}
+
+.button-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-text-primary);
+}
+
+.contact-us-link {
+  color: var(--color-primary);
+  border: var(--border-width-thin) solid var(--color-primary-alpha-50);
+  background: transparent;
+  text-align: center;
+}
+
+.contact-us-link:hover {
+  background-color: var(--color-primary-alpha-10);
+}
+
+/* ==========================================================================
+   Dropdown Menu
+   ========================================================================== */
+.dropdown {
+  position: relative; /* the <div class="dropdown"> is now the context */
+}
+
+.dropdown .nav-dropdown-list {
+  position: absolute;
+  top: calc(100% + 0.25rem); /* a small gap under the button */
+  left: 0; /* align its left edge to the left of the button */
+  width: 350px;
+  /* (or use left: 50%; transform: translateX(-50%); to center it) */
+}
+
+.button-drop-down {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
+  background: transparent;
+  cursor: pointer;
+  padding: var(--navbar-button-padding);
+  transition: background-color var(--transition-fast);
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-base);
+}
+
+.button-drop-down:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-text-primary);
+  border-radius: var(--radius-base);
+}
+
+.dropdown-icon {
+  transition: transform var(--transition-base);
+}
+
+.dropdown-icon.rotate {
+  transform: rotate(-180deg);
+}
+
+.nav-dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-xs);
+  padding: var(--spacing-xs);
+  background-color: var(--color-bg-secondary);
+  border: var(--border-width-thin) solid var(--color-primary-alpha-50);
+  border-radius: var(--radius-base);
+  box-shadow: 0 0 10px 2px var(--color-primary-alpha-10);
+  z-index: var(--z-index-dropdown);
+}
+
+.nav-dropdown-list.w--open {
+  display: flex;
+}
+
+/* ==========================================================================
+   Call-to-Action Button
+   ========================================================================== */
+.button {
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
+  padding: 10px 40px;
+  border: var(--border-width-thin) solid var(--color-primary-alpha-50);
+  border-radius: var(--radius-base);
+  background-color: var(--color-primary-alpha-10);
+  color: var(--color-primary);
+  text-align: center;
+  transition: background-color var(--transition-fast);
+}
+
+.button:hover {
+  background-color: var(--color-primary-alpha-20);
+}
+
+/* ==========================================================================
+   Hamburger Menu (Mobile)
+   ========================================================================== */
+.menu-button {
+  display: none;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+  border: var(--border-width-thin) solid var(--color-primary-alpha-50);
+  border-radius: var(--radius-base);
+  box-shadow: 0 0 10px 2px var(--color-primary-alpha-10);
+  background: transparent;
+  transition: background-color var(--transition-fast);
+}
+
+.menu-button:hover {
+  background-color: var(--color-primary-alpha-10);
+}
+
+.menu-button span {
+  position: absolute;
+  left: 7px;
+  width: 24px;
+  height: 3px;
+  background: var(--color-primary);
+  border-radius: 2px;
+  transition:
+    transform var(--transition-base),
+    opacity var(--transition-base);
+}
+
+.menu-button span:nth-child(1) {
+  top: 12px;
+}
+
+.menu-button span:nth-child(2) {
+  top: 18px;
+}
+
+.menu-button span:nth-child(3) {
+  top: 24px;
+}
+
+.menu-button.open {
+  background: var(--color-primary-alpha-10);
+}
+
+.menu-button.open span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.menu-button.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-button.open span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .call-to-action.desktop-only {
+    display: none;
+  }
+  .call-to-action.mobile-only {
+    display: inline-flex;
+  }
+  .nav-menu-wrapper {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: calc(100% - 2rem);
+    margin: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    background: var(--color-bg-secondary);
+    backdrop-filter: blur(var(--blur-sm));
+    border: var(--border-width-thin) solid var(--color-primary-alpha-50);
+    box-shadow: 0 0 10px 2px var(--color-primary-alpha-10);
+    border-radius: var(--radius-base);
+    align-items: flex-start;
+  }
+
+  .nav-menu-wrapper.open {
+    display: flex;
+  }
+
+  .nav-menu-two {
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .call-to-action.desktop-only {
+    display: none;
+  }
+
+  .call-to-action.mobile-only {
+    display: block;
+  }
+
+  .menu-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-dropdown-list {
+    position: static;
+    background: transparent;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .button-link {
+    display: block;
+    width: 100%;
+  }
+
+  .button {
+    display: block;
+    width: 100%;
+  }
+
+  .contact-us-link {
+    width: 100%;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+
+  .dropdown .nav-dropdown-list {
+    position: static;
+    width: 100%;
+  }
+
+  .button-drop-down {
+    display: flex;
+    width: 100%;
+  }
+
+  .dropdown-icon {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 479px) {
+  .button-link,
+  .button-drop-down,
+  .nav-dropdown-link {
+    padding: 10px 10px;
+  }
+}

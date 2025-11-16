@@ -1,7 +1,7 @@
-import type { LinksFunction, MetaFunction } from '@remix-run/node';
-import RoiCalculator from '~/components/roi/RoiCalculator';
+import type { LinksFunction, MetaFunction } from '@react-router/node';
+import { RoiCalculator } from '~/features/roi-calculator';
 
-import roiStyles from '~/components/roi/roi-custom.css?url';
+import roiStyles from '~/features/roi-calculator/components/roi-custom.css?url';
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: roiStyles }

@@ -1,15 +1,14 @@
-import type { LoaderFunctionArgs } from '@remix-run/node';
-import { useLoaderData } from '@remix-run/react';
-import type { LinksFunction, MetaFunction } from '@remix-run/node';
-import ServicePage from '~/components/services/ServicePage';
-
+import type { LoaderFunctionArgs } from '@react-router/node';
+import { useLoaderData } from 'react-router';
+import type { LinksFunction, MetaFunction } from '@react-router/node';
 import {
+  ServicePage,
   servicesData,
   type ServiceSlug
-} from '~/components/services/servicesData';
+} from '~/features/services';
 
-import serviceStyles from '~/components/services/services-custom.css?url';
-import featureCardStyles from '~/components/services/feature-card.css?url';
+import serviceStyles from '~/features/services/components/services.css?url';
+import featureCardStyles from '~/features/services/components/feature-card.css?url';
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: serviceStyles },

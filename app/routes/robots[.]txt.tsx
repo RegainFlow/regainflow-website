@@ -1,5 +1,5 @@
 // app/routes/robots.txt.tsx
-import type { LoaderFunction } from '@remix-run/node';
+import type { LoaderFunction } from '@react-router/node';
 
 export const loader: LoaderFunction = () => {
   const lines = [

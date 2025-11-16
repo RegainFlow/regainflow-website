@@ -1,0 +1,467 @@
+/* ==========================================================================
+   About Us Page Styles (Refactored & Responsive)
+   ========================================================================== */
+
+:root {
+  /* Colors */
+  --color-primary: #00d6cb;
+  --color-text-muted: #a6a6a6;
+  --color-bg-card: rgba(26, 26, 26, 0.5);
+  --color-border: rgba(0, 214, 203, 0.5);
+  --color-shadow: rgba(0, 214, 203, 0.15);
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+
+  /* Radius & Borders */
+  --border-radius: 5px;
+  --border-base: 0.5px solid var(--color-border);
+
+  /* Card Defaults */
+  --card-bg: var(--color-bg-card);
+  --card-shadow: 0 0 10px 2px var(--color-shadow);
+
+  --font-base: 'Exo 2', sans-serif;
+
+  --container-max-width: 1400px;
+}
+
+/* --------------------------------------------------------------------------
+     Profile Detail Card
+     -------------------------------------------------------------------------- */
+.about-us-preview {
+  max-width: var(--container-max-width);
+  margin: 40px auto;
+}
+
+.profile-detail-card {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  background: var(--card-bg);
+  border: var(--border-base);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  backdrop-filter: blur(1px);
+  padding: var(--spacing-lg);
+  margin: var(--spacing-lg) 20px;
+  gap: var(--spacing-lg);
+}
+
+.profile-detail-left {
+  flex: 0 0 40%;
+  max-width: 350px;
+  width: 100%;
+  margin: auto auto;
+  text-align: center;
+}
+
+.profile-detail-left img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  border: var(--border-base);
+  box-shadow: var(--card-shadow);
+}
+
+.profile-detail-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-md);
+  width: 100%;
+}
+.profile-detail-right h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+}
+.profile-detail-right p {
+  margin: 0;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+  font-size: 1rem;
+  font-family: var(--font-base);
+}
+
+/* --------------------------------------------------------------------------
+     Profile Socials
+     -------------------------------------------------------------------------- */
+
+.profile-role-block {
+  margin-top: var(--spacing-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.profile-role-tag {
+  background: transparent;
+  color: var(--color-primary);
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  font-family: var(--font-base);
+  border: var(--border-base);
+  border-radius: var(--border-radius);
+  width: 100%;
+}
+
+.profile-role-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.6rem;
+}
+
+.profile-role-link img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease;
+  padding: 0.3rem;
+  background: rgba(0, 214, 203, 0.1);
+}
+
+.profile-role-link:hover img {
+  background: rgba(0, 214, 203, 0.2);
+}
+/* --------------------------------------------------------------------------
+     Profile Stats
+     -------------------------------------------------------------------------- */
+.profile-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  justify-content: center;
+  width: 100%;
+}
+.profile-stat {
+  flex: 1 1 calc(33.333% - var(--spacing-md));
+  background: rgba(0, 214, 203, 0.1);
+  border: var(--border-base);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-sm);
+  text-align: center;
+  box-shadow: var(--card-shadow);
+}
+.profile-stat h4 {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-base);
+}
+.profile-stat p {
+  margin: var(--spacing-xs) 0 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  text-shadow: 0 0 10px rgba(0, 214, 203, 0.5);
+  font-family: var(--font-base);
+}
+
+/* Category-colored stat & skill cards */
+.profile-stat[data-type='experience'] {
+  border: 0.5px solid #00d6cb;
+  box-shadow: 0 0 10px #00d6cb55;
+  color: #00d6cb;
+}
+.profile-stat[data-type='rags'] {
+  border: 0.5px solid #a270f1;
+  box-shadow: 0 0 10px #a270f155;
+  color: #a270f1;
+}
+.profile-stat[data-type='teams'] {
+  border: 0.5px solid #00ff9f;
+  box-shadow: 0 0 10px #00ff9f55;
+  color: #00ff9f;
+}
+
+/* --------------------------------------------------------------------------
+     Tech Stack Skills
+     -------------------------------------------------------------------------- */
+.profile-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  justify-content: center;
+  width: 100%;
+  margin-top: var(--spacing-md);
+}
+.profile-skill {
+  flex: 1 1 calc(33.333% - var(--spacing-md));
+  background: var(--card-bg);
+  border: var(--border-base);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-sm);
+  box-shadow: var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+.profile-skill label {
+  font-family: var(--font-base);
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: var(--color-text-muted);
+}
+.profile-skill .skill-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  border: var(--border-base);
+  overflow: hidden;
+}
+.profile-skill .skill-bar-inner {
+  height: 100%;
+  background: var(--color-primary);
+  transition: width 0.5s ease;
+}
+.profile-skill .skill-percent {
+  font-size: 0.875rem;
+  color: var(--color-primary);
+  font-weight: bold;
+  align-self: flex-end;
+}
+
+.toggle-skills-btn {
+  margin-top: var(--spacing-sm);
+  background: transparent;
+  border: var(--border-base);
+  border-radius: var(--border-radius);
+  color: var(--color-primary);
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: var(--card-shadow);
+}
+.toggle-skills-btn:hover {
+  background: rgba(0, 214, 203, 0.1);
+}
+
+/* Custom neon category bar colors */
+.profile-skill[data-category='AI / LLM Frameworks'] .skill-bar-inner {
+  background: #00d6cb;
+  color: #00d6cb;
+}
+
+.profile-skill[data-category='Programming Languages'] .skill-bar-inner {
+  background: #00bfff;
+  color: #00bfff;
+}
+
+.profile-skill[data-category='Search / Vector DBs'] .skill-bar-inner {
+  background: #a270f1;
+  color: #a270f1;
+}
+
+.profile-skill[data-category='Frontend'] .skill-bar-inner {
+  background: #00ff9f;
+  color: #00ff9f;
+}
+
+.profile-skill[data-category='Backend / APIs'] .skill-bar-inner {
+  background: #fff740;
+  color: #fff740;
+}
+
+.profile-skill[data-category='DevOps / Automation'] .skill-bar-inner {
+  background: #ff8c42;
+  color: #ff8c42;
+}
+
+.profile-skill[data-category='Security / Cyber Ops'] .skill-bar-inner {
+  background: #ff3864;
+  color: #ff3864;
+}
+
+.profile-skill[data-category='AI / LLM Frameworks'] {
+  border: 0.5px solid #00d6cb;
+  box-shadow: 0 0 10px 2px #00d6cb55;
+}
+
+.profile-skill[data-category='Programming Languages'] {
+  border: 0.5px solid #00bfff;
+  box-shadow: 0 0 10px 2px #00bfff55;
+}
+
+.profile-skill[data-category='Search / Vector DBs'] {
+  border: 0.5px solid #a270f1;
+  box-shadow: 0 0 10px 2px #a270f155;
+}
+
+.profile-skill[data-category='Frontend'] {
+  border: 0.5px solid #00ff9f;
+  box-shadow: 0 0 10px 2px #00ff9f55;
+}
+
+.profile-skill[data-category='Backend / APIs'] {
+  border: 0.5px solid #fff740;
+  box-shadow: 0 0 10px 2px #fff74055;
+}
+
+.profile-skill[data-category='DevOps / Automation'] {
+  border: 0.5px solid #ff8c42;
+  box-shadow: 0 0 10px 2px #ff8c4255;
+}
+
+.profile-skill[data-category='Security / Cyber Ops'] {
+  border: 0.5px solid #ff3864;
+  box-shadow: 0 0 10px 2px #ff386455;
+}
+
+.skill-bar-inner {
+  height: 100%;
+  width: 0%;
+}
+
+.animate-bar {
+  animation: growBar 1s ease-out forwards;
+}
+
+@keyframes growBar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--final-width);
+  }
+}
+
+/* ==========================================================================
+   Who We Are Overview
+   ========================================================================== */
+.overview {
+  padding: var(--spacing-lg) var(--spacing-sm);
+  backdrop-filter: blur(1px);
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.overview .overview-text {
+  margin: var(--spacing-md) auto;
+  color: var(--color-text-muted);
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.overview .overview-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--spacing-md) 0 0;
+  display: grid;
+  grid-template-columns: 1fr; /* stack all cards in a single column */
+  gap: var(--spacing-lg);
+}
+
+.overview .overview-list li {
+  background: rgba(0, 214, 203, 0.1);
+  border: var(--border-base);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md); /* increased inner padding */
+  font-size: 1.1rem; /* slightly larger font */
+  color: var(--color-text-muted);
+  box-shadow: var(--card-shadow);
+}
+
+.overview .overview-list strong {
+  color: var(--color-primary);
+}
+
+/* ==========================================================================
+     Responsive Adjustments
+     -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .profile-detail-card {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile-detail-left {
+    max-width: 60%;
+  }
+  .profile-stat,
+  .profile-skill {
+    flex: 1 1 calc(50% - var(--spacing-md));
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-stat,
+  .profile-skill {
+    flex: 1 1 100%;
+  }
+
+  .profile-skill label {
+    font-size: 0.9rem;
+  }
+
+  .profile-skill .skill-percent {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us-preview {
+    padding: var(--spacing-sm);
+    margin: var(--spacing-md) auto;
+  }
+
+  .profile-detail-card {
+    padding: var(--spacing-md);
+    margin: 0 0;
+    gap: var(--spacing-md);
+  }
+
+  .profile-detail-left {
+    max-width: 100%;
+  }
+
+  .profile-role-tag {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.5rem;
+    width: auto;
+    text-align: center;
+  }
+
+  .profile-role-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .profile-role-link img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .profile-detail-right h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Neon-border animated button
+   Uses global .btn-neon class from app/styles/components.css
+   Component-specific overrides below
+   -------------------------------------------------------------------------- */
+.animated-button {
+  /* Extends global .btn-neon - engineers landing specific overrides */
+  display: block;
+  width: 100%;
+  margin: 30px auto;
+}
+
+.animated-button .btn-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}

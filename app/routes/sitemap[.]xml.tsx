@@ -1,5 +1,5 @@
 // app/routes/sitemap.xml.tsx
-import type { LoaderFunction } from '@remix-run/node';
+import type { LoaderFunction } from '@react-router/node';
 
 export const loader: LoaderFunction = () => {
   const baseUrl = 'https://www.regainflow.com';
@@ -13,7 +13,9 @@ export const loader: LoaderFunction = () => {
       priority: 0.8
     },
     { path: '/services/rapid-solutions', changefreq: 'monthly', priority: 0.8 },
-    { path: '/about-us', changefreq: 'monthly', priority: 0.8 },
+    { path: '/services/c2c-contracting', changefreq: 'monthly', priority: 0.9 },
+    { path: '/engineers', changefreq: 'weekly', priority: 0.9 },
+    { path: '/portfolio', changefreq: 'monthly', priority: 0.7 },
     { path: '/contact-us', changefreq: 'monthly', priority: 0.8 }
   ];
 

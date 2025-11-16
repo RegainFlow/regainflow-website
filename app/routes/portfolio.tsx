@@ -1,7 +1,6 @@
-import type { MetaFunction, LinksFunction } from '@remix-run/node';
-import { metrics } from '~/components/portfolio/portfolioData';
-import portfolioStyles from '~/components/portfolio/portfolio.css?url';
-import PortfolioCarousel from '~/components/portfolio/PortfolioCarousel';
+import type { MetaFunction, LinksFunction } from '@react-router/node';
+import { metrics, PortfolioCarousel } from '~/features/portfolio';
+import portfolioStyles from '~/features/portfolio/components/portfolio.css?url';
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: portfolioStyles }
@@ -32,7 +31,7 @@ export default function Portfolio() {
       {/* HERO SECTION */}
       <section className="portfolio-hero">
         <h1 className="portfolio-title">
-          Our <span className="text-span-27">Portfolio</span>
+          Our <span className="text-accent">Portfolio</span>
         </h1>
         <p className="portfolio-subtitle">
           Explore real automation solutions and results we've delivered for

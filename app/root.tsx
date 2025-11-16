@@ -1,4 +1,4 @@
-import type { LinksFunction, MetaFunction } from '@remix-run/node';
+import type { LinksFunction, MetaFunction } from '@react-router/node';
 import {
   Links,
   Meta,
@@ -7,18 +7,25 @@ import {
   ScrollRestoration,
   useRouteError,
   isRouteErrorResponse
-} from '@remix-run/react';
-import Navbar from '~/components/layout/Navbar';
-import Footer from '~/components/layout/Footer';
-import NotFound from '~/components/layout/NotFound';
+} from 'react-router';
+import Navbar from '~/components/layout/Navbar/Navbar';
+import Footer from '~/components/layout/Footer/Footer';
+import NotFound from '~/components/layout/NotFound/NotFound';
+import { getClarityScript } from '~/lib/analytics';
+import { siteConfig } from '~/config/site.config';
 
-import normalizeStyles from '~/styles/normalize.css?url';
-import webflowStyles from '~/styles/webflow.css?url';
-import regainflowStyles from '~/styles/regainflow.webflow.css?url';
+// Modern consolidated CSS architecture
+import baseStyles from '~/styles/base.css?url';
 import tailwindStyles from '~/styles/tailwind.css?url';
-import navBarStyles from '~/components/layout/navbar-custom.css?url';
-import footerStyles from '~/components/layout/footer-custom.css?url';
-import notFoundStyles from '~/components/layout/404.css?url';
+import variablesStyles from '~/styles/variables.css?url';
+import utilitiesStyles from '~/styles/utilities.css?url';
+import componentsStyles from '~/styles/components.css?url';
+import animationsStyles from '~/styles/animations.css?url';
+
+// Component-specific styles
+import navBarStyles from '~/components/layout/Navbar/navbar.css?url';
+import footerStyles from '~/components/layout/Footer/footer.css?url';
+import notFoundStyles from '~/components/layout/NotFound/not-found.css?url';
 
 export const links: LinksFunction = () => [
   { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
@@ -46,10 +53,14 @@ export const links: LinksFunction = () => [
   },
   { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' },
   { rel: 'manifest', href: '/site.webmanifest' },
-  { rel: 'stylesheet', href: normalizeStyles },
-  { rel: 'stylesheet', href: webflowStyles },
-  { rel: 'stylesheet', href: regainflowStyles },
+
+  // CSS Load Order: Base → Framework → Design System → Components
+  { rel: 'stylesheet', href: baseStyles },
   { rel: 'stylesheet', href: tailwindStyles },
+  { rel: 'stylesheet', href: variablesStyles },
+  { rel: 'stylesheet', href: utilitiesStyles },
+  { rel: 'stylesheet', href: componentsStyles },
+  { rel: 'stylesheet', href: animationsStyles },
   { rel: 'stylesheet', href: navBarStyles },
   { rel: 'stylesheet', href: footerStyles },
   { rel: 'stylesheet', href: notFoundStyles }
@@ -77,13 +88,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <script
           type="text/javascript"
           dangerouslySetInnerHTML={{
-            __html: `
-              (function(c,l,a,r,i,t,y){
-                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-              })(window, document, "clarity", "script", "ttg4gr4m0m");
-            `
+            __html: getClarityScript(siteConfig.clarity.id)
           }}
         />
       </head>

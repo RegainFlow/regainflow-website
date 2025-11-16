@@ -1,0 +1,444 @@
+/* ==========================================================================
+   Individual Engineer Profile Styles
+   ========================================================================== */
+
+:root {
+  /* Button Variables */
+  --button-color: #00d6cb;
+  --button-border: rgba(0, 214, 203, 0.5);
+  --button-radius: 5px;
+  --button-padding: 10px 40px;
+  --button-font-size: 15px;
+  --button-font-weight: 700;
+  --button-line-height: 20px;
+  --button-primary-color: var(--button-color);
+  --button-primary-border: var(--button-border);
+}
+
+.engineer-profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  font-family: 'Exo 2', sans-serif;
+}
+
+.engineer-profile-hero {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(0, 214, 203, 0.2);
+}
+
+.engineer-profile-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.engineer-profile-pic {
+  width: 250px;
+  height: 250px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 3px solid rgba(0, 214, 203, 0.5);
+  box-shadow: 0 0 20px rgba(0, 214, 203, 0.3);
+}
+
+.engineer-availability-badge {
+  background: rgba(0, 255, 8, 0.1);
+  border: 2px solid rgba(0, 255, 8, 0.5);
+  border-radius: 8px;
+  padding: 12px 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.engineer-availability-badge h4 {
+  color: rgba(0, 255, 8, 1);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 0.5rem 0;
+}
+
+.engineer-availability-badge p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.85rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.engineer-social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.engineer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(0, 214, 203, 0.1);
+  border: 1px solid rgba(0, 214, 203, 0.3);
+  transition: all 0.3s ease;
+}
+
+.engineer-social-link:hover {
+  background: rgba(0, 214, 203, 0.2);
+  border-color: rgba(0, 214, 203, 0.6);
+  transform: translateY(-2px);
+}
+
+.engineer-social-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.engineer-profile-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.engineer-profile-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0.5rem 0;
+  font-family: 'Exo 2', sans-serif;
+}
+
+.engineer-profile-role {
+  font-size: 1.25rem;
+  color: rgba(0, 214, 203, 1);
+  font-weight: 600;
+  margin: 0 0 1.5rem 0;
+}
+
+.engineer-profile-bio {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.5rem;
+}
+
+.engineer-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.engineer-stat-card {
+  background: rgba(0, 214, 203, 0.05);
+  border: 1px solid rgba(0, 214, 203, 0.2);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.engineer-stat-card:hover {
+  background: rgba(0, 214, 203, 0.08);
+  border-color: rgba(0, 214, 203, 0.4);
+  transform: translateY(-2px);
+}
+
+.engineer-stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgba(0, 214, 203, 1);
+  margin-bottom: 0.5rem;
+}
+
+.engineer-stat-label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.engineer-section {
+  margin-bottom: 3rem;
+}
+
+.engineer-section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  font-family: 'Exo 2', sans-serif;
+  text-align: center;
+}
+
+.engineer-section-title .text-highlight {
+  color: rgba(0, 214, 203, 1);
+  text-shadow: 0 0 10px rgba(0, 214, 203, 0.5);
+}
+
+.engineer-tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.engineer-tech-category {
+  background: rgba(0, 214, 203, 0.03);
+  border: 1px solid rgba(0, 214, 203, 0.15);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.engineer-tech-category h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: 'Exo 2', sans-serif;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.3rem;
+}
+
+.engineer-tech-skill {
+  margin-bottom: 1rem;
+}
+
+.engineer-tech-skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.engineer-tech-skill-name {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+.engineer-tech-skill-level {
+  font-size: 0.85rem;
+  color: rgba(0, 214, 203, 0.8);
+  font-weight: 600;
+}
+
+.engineer-skill-bar {
+  height: 6px;
+  background: rgba(0, 214, 203, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.engineer-skill-bar-fill {
+  height: 100%;
+  background: #00d6cb;
+  border-radius: 3px;
+  transition: width 1s ease-out;
+}
+
+/* Category-specific colors matching modal-techstack */
+.engineer-tech-category[data-category='AI / LLM Frameworks'] h4 {
+  color: #00d6cb;
+}
+.engineer-tech-category[data-category='AI / LLM Frameworks']
+  .engineer-skill-bar-fill {
+  background: #00d6cb;
+}
+
+.engineer-tech-category[data-category='Programming Languages'] h4 {
+  color: #00bfff;
+}
+.engineer-tech-category[data-category='Programming Languages']
+  .engineer-skill-bar-fill {
+  background: #00bfff;
+}
+
+.engineer-tech-category[data-category='Search / Vector DBs'] h4 {
+  color: #a270f1;
+}
+.engineer-tech-category[data-category='Search / Vector DBs']
+  .engineer-skill-bar-fill {
+  background: #a270f1;
+}
+
+.engineer-tech-category[data-category='Frontend'] h4 {
+  color: #00ff9f;
+}
+.engineer-tech-category[data-category='Frontend'] .engineer-skill-bar-fill {
+  background: #00ff9f;
+}
+
+.engineer-tech-category[data-category='Backend / APIs'] h4 {
+  color: #fff740;
+}
+.engineer-tech-category[data-category='Backend / APIs']
+  .engineer-skill-bar-fill {
+  background: #fff740;
+}
+
+.engineer-tech-category[data-category='DevOps / Automation'] h4 {
+  color: #ff8c42;
+}
+.engineer-tech-category[data-category='DevOps / Automation']
+  .engineer-skill-bar-fill {
+  background: #ff8c42;
+}
+
+.engineer-tech-category[data-category='Security / Cyber Ops'] h4 {
+  color: #ff3864;
+}
+.engineer-tech-category[data-category='Security / Cyber Ops']
+  .engineer-skill-bar-fill {
+  background: #ff3864;
+}
+
+.engineer-tech-category[data-category='ML / DL Frameworks'] h4 {
+  color: #e066ff;
+}
+.engineer-tech-category[data-category='ML / DL Frameworks']
+  .engineer-skill-bar-fill {
+  background: #e066ff;
+}
+
+.engineer-tech-category[data-category='RPA / Automation'] h4 {
+  color: #ffb347;
+}
+.engineer-tech-category[data-category='RPA / Automation']
+  .engineer-skill-bar-fill {
+  background: #ffb347;
+}
+
+.engineer-tech-category[data-category='Cloud / AI Services'] h4 {
+  color: #6495ed;
+}
+.engineer-tech-category[data-category='Cloud / AI Services']
+  .engineer-skill-bar-fill {
+  background: #6495ed;
+}
+
+.engineer-tech-category[data-category='API / Integration'] h4 {
+  color: #ff69b4;
+}
+.engineer-tech-category[data-category='API / Integration']
+  .engineer-skill-bar-fill {
+  background: #ff69b4;
+}
+
+.engineer-tech-category[data-category='Databases'] h4 {
+  color: #ffa07a;
+}
+.engineer-tech-category[data-category='Databases'] .engineer-skill-bar-fill {
+  background: #ffa07a;
+}
+
+.engineer-tech-category[data-category='Frontend / Apps'] h4 {
+  color: #00fa9a;
+}
+.engineer-tech-category[data-category='Frontend / Apps']
+  .engineer-skill-bar-fill {
+  background: #00fa9a;
+}
+
+.engineer-cta-section {
+  background: rgba(0, 214, 203, 0.05);
+  border: 2px solid rgba(0, 214, 203, 0.3);
+  border-radius: 12px;
+  padding: 2.5rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.engineer-cta-section h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+  font-family: 'Exo 2', sans-serif;
+  text-align: center;
+}
+
+.engineer-cta-section p {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  text-align: center;
+  font-family: 'Exo 2', sans-serif;
+}
+
+.engineer-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .engineer-profile-hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .engineer-profile-sidebar {
+    align-items: center;
+  }
+
+  .engineer-profile-pic {
+    width: 200px;
+    height: 200px;
+  }
+
+  .engineer-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .engineer-tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .engineer-profile-header h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .engineer-profile-role {
+    text-align: center;
+  }
+
+  .engineer-cta-buttons {
+    flex-direction: column;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Neon-border animated button
+   Uses global .btn-neon class from app/styles/components.css
+   Component-specific overrides below
+   -------------------------------------------------------------------------- */
+.animated-button {
+  /* Extends global .btn-neon - engineer profile specific overrides */
+  min-width: 200px;
+  margin: 0;
+  text-decoration: none;
+}
+
+.animated-button .btn-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}

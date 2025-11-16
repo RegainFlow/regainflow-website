@@ -1,0 +1,240 @@
+/* ==========================================================================
+   Hero Section Styles (Refactored & Responsive)
+   ========================================================================== */
+
+/* Hero-specific component variables (using global design tokens) */
+:root {
+  /* Carousel Variables */
+  --carousel-slide-size: 100px;
+  --carousel-slide-radius: var(--radius-base);
+  --carousel-slide-bg: var(--color-primary-alpha-40);
+  --carousel-slide-shadow: 0 0 10px 1px var(--color-primary-alpha-20);
+  --carousel-slide-margin: 20px;
+  --carousel-slide-size-md: 80px;
+  --carousel-slide-size-sm: 60px;
+
+  /* Hero Typography */
+  --hero-header-size: 70px;
+  --hero-header-line-height: 90px;
+
+  /* Hero Layout */
+  --hero-container-max: 1400px;
+  --hero-section-padding: 2rem 1rem;
+}
+
+.hero-section {
+  padding: var(--hero-section-padding);
+  text-align: center;
+  color: var(--color-text-primary);
+  font-family: var(--font-primary);
+  max-width: var(--hero-container-max);
+  margin: 0 auto;
+}
+
+.hero-subhead {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 2rem;
+  margin: 1.5rem auto 2.5rem auto;
+  max-width: 900px;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+}
+
+.landing-header {
+  font-size: 3.5rem;
+  line-height: 5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.text-highlight {
+  color: var(--color-primary);
+  text-shadow: var(--shadow-text-glow);
+}
+
+.typed-text {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.typed-highlight {
+  color: var(--color-primary);
+  text-shadow: var(--shadow-text-glow);
+}
+
+.section-tech-stack {
+  max-width: var(--hero-container-max);
+  margin: 0 auto;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  margin-top: 50px;
+}
+
+.carousel-track {
+  display: flex;
+  animation: carousel-scroll 20s linear infinite;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  will-change: transform;
+  width: max-content;
+}
+
+.carousel-slide {
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  background-color: var(--carousel-slide-bg);
+  border-radius: var(--carousel-slide-radius);
+  box-shadow: var(--carousel-slide-shadow);
+  width: var(--carousel-slide-size);
+  height: var(--carousel-slide-size);
+  object-fit: contain;
+  padding: 10px;
+  margin-right: var(--carousel-slide-margin);
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-slide img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.carousel-slide:last-child {
+  margin-right: 0;
+}
+
+/* Keyframe animation */
+@keyframes carousel-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-33.333%));
+  }
+}
+
+/* --------------------------------------------------------------------------
+     Responsive Breakpoints
+     -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .section-tech-stack {
+    overflow-x: visible !important;
+  }
+
+  .carousel-slide {
+    width: var(--carousel-slide-size-md);
+    height: var(--carousel-slide-size-md);
+    margin-right: calc(var(--carousel-slide-margin) * 0.75);
+  }
+
+  .carousel-wrapper {
+    width: auto !important;
+    left: auto !important;
+    transform: none !important;
+    overflow-x: hidden;
+  }
+
+  .typed-text {
+    font-size: 1.5rem;
+  }
+
+  .landing-header {
+    font-size: calc(var(--hero-header-size) * 0.6);
+    line-height: calc(var(--hero-header-line-height) * 0.6);
+    padding: 0 1rem;
+  }
+
+  .animated-button {
+    width: 90%;
+    max-width: 350px;
+    margin: 30px auto;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .animated-button .btn-content {
+    font-size: 14px;
+  }
+
+  .hero-subhead {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    margin: 1rem auto 2rem auto;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .typed-text {
+    font-size: 1.25rem;
+  }
+
+  .landing-header {
+    font-size: calc(var(--hero-header-size) * 0.4);
+    line-height: calc(var(--hero-header-line-height) * 0.6);
+    padding: 0 0.75rem;
+  }
+
+  .animated-button {
+    width: 90%;
+    max-width: 300px;
+    margin: 25px auto;
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .animated-button .btn-content {
+    font-size: 13px;
+  }
+
+  .animated-button .btn-content svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+
+  .carousel-slide {
+    width: var(--carousel-slide-size-sm);
+    height: var(--carousel-slide-size-sm);
+    margin-right: calc(var(--carousel-slide-margin) * 0.5);
+  }
+
+  .hero-subhead {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    margin: 0.75rem auto 1.5rem auto;
+    padding: 0 0.75rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Neon-border animated button
+   Uses global .btn-neon class from app/styles/components.css
+   Custom overrides for hero section below
+   -------------------------------------------------------------------------- */
+.animated-button {
+  /* Extends global .btn-neon - add hero-specific overrides */
+  width: 400px;
+  margin: 40px auto;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.animated-button .btn-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}

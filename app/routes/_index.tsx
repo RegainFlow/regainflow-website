@@ -1,12 +1,12 @@
-import type { LinksFunction, MetaFunction } from '@remix-run/node';
+import type { LinksFunction, MetaFunction } from '@react-router/node';
 
-import HeroSection from '~/components/hero/HeroSection';
-import ValueProposition from '~/components/value-prop/ValueProposition';
-import RoiCalculator from '~/components/roi/RoiCalculator';
+import { HeroSection } from '~/features/hero';
+import { ValueProposition } from '~/features/value-proposition';
+import { RoiCalculator } from '~/features/roi-calculator';
 
-import valuePropStyles from '~/components/value-prop/value-custom.css?url';
-import roiStyles from '~/components/roi/roi-custom.css?url';
-import heroStyles from '~/components/hero/hero-custom.css?url';
+import valuePropStyles from '~/features/value-proposition/components/value-custom.css?url';
+import roiStyles from '~/features/roi-calculator/components/roi-custom.css?url';
+import heroStyles from '~/features/hero/components/hero-custom.css?url';
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: valuePropStyles },
@@ -15,9 +15,9 @@ export const links: LinksFunction = () => [
 ];
 
 export const meta: MetaFunction = () => {
-  const title = 'Regain Flow | AI Automation for Real ROI';
+  const title = 'RegainFlow | Senior AI/ML Engineers for C2C Contracts';
   const description =
-    'Turn manual workflows into scalable automation. Regain Flow helps teams cut costs and increase speed with AI-driven RPA solutions.';
+    'Contract-ready senior engineers specializing in AI/ML, RAG, and intelligent automation. Full-stack capabilities across backend, frontend, DevOps, and solution architecture. Available for long-term C2C contracts or project consulting.';
   const image = 'https://www.regainflow.com/images/og/og-home.png'; // make this
   const url = 'https://www.regainflow.com/';
 

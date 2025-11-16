@@ -1,11 +1,7 @@
-import { MetaFunction, LinksFunction } from '@remix-run/node';
-import LegalPage from '~/components/legal/LegalPage';
-import {
-  legalEffectiveDate,
-  termsSections
-} from '~/components/legal/legalData';
+import { MetaFunction, LinksFunction } from '@react-router/node';
+import { LegalPage, legalEffectiveDate, termsSections } from '~/features/legal';
 
-import legalStyles from '~/components/legal/legal-custom.css?url';
+import legalStyles from '~/features/legal/components/legal-custom.css?url';
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: legalStyles }

@@ -1,6 +1,6 @@
-import type { MetaFunction } from '@remix-run/node';
+import type { MetaFunction } from '@react-router/node';
 
-export { default } from '~/components/layout/NotFound';
+export { default } from '~/components/layout/NotFound/NotFound';
 
 export const meta: MetaFunction = () => [
   { title: 'Page Not Found | Regain Flow' },
