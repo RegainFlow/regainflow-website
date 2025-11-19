@@ -236,6 +236,36 @@
   font-weight: var(--font-weight-semibold);
 }
 
+/* Dropdown divider */
+.dropdown-divider {
+  grid-column: 1 / -1;
+  height: 1px;
+  width: 100%;
+  background: var(--glass-border);
+  margin: 0.5rem 0;
+}
+
+/* View All Services CTA */
+.dropdown-view-all {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  opacity: 0.75;
+  border-radius: var(--radius-base);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.dropdown-view-all:hover {
+  opacity: 1;
+  color: var(--color-primary);
+  text-shadow: var(--glow-subtle);
+  background: var(--glass-bg-light);
+}
+
 /* ==========================================================================
    Call-to-Action Button
    ========================================================================== */

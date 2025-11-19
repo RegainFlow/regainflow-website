@@ -180,6 +180,14 @@ export default function Navbar() {
                     />
                     <span>DevOps</span>
                   </Link>
+                  <div className="dropdown-divider" />
+                  <Link
+                    to="/services"
+                    className="dropdown-view-all"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    View All Services →
+                  </Link>
                 </div>
               </li>
               <li>
