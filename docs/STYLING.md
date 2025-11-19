@@ -272,13 +272,13 @@ import {
 
 ### Size Guidelines
 
-| Context | Size | Example |
-|---------|------|---------|
-| Feature grids & cards | 48px | Capability showcases |
-| Section headers | 32px | Process steps |
-| Card icons | 20-24px | Feature cards |
-| Navigation dropdowns | 16px | Menu items |
-| Inline text | 14-16px | Buttons, badges |
+| Context               | Size    | Example              |
+| --------------------- | ------- | -------------------- |
+| Feature grids & cards | 48px    | Capability showcases |
+| Section headers       | 32px    | Process steps        |
+| Card icons            | 20-24px | Feature cards        |
+| Navigation dropdowns  | 16px    | Menu items           |
+| Inline text           | 14-16px | Buttons, badges      |
 
 ### Standard Icons by Feature
 
@@ -399,7 +399,7 @@ Component CSS should be minimal and only include styles that can't be achieved w
 // In route file
 import styles from '~/features/my-feature/components/my-component.css?url';
 
-export const links: LinksFunction = () => [
+export const links: Route.LinksFunction = () => [
   { rel: 'stylesheet', href: styles }
 ];
 ```
@@ -450,12 +450,12 @@ export const links: LinksFunction = () => [
 
 ## Quick Reference
 
-| Element | Background | Blur | Border | Glow |
-|---------|------------|------|--------|------|
-| Standard card | `--glass-bg-medium` | 20px | `--glass-border-accent` | `--glow-subtle` |
-| Input field | 5% white | 8px | 10% white | Focus: 3px ring |
-| Button | `--color-primary-alpha-15` | 8px | `--color-primary` | `--glow-subtle` |
-| Hover state | +5% opacity | - | Brighter | `--glow-hover` |
+| Element       | Background                 | Blur | Border                  | Glow            |
+| ------------- | -------------------------- | ---- | ----------------------- | --------------- |
+| Standard card | `--glass-bg-medium`        | 20px | `--glass-border-accent` | `--glow-subtle` |
+| Input field   | 5% white                   | 8px  | 10% white               | Focus: 3px ring |
+| Button        | `--color-primary-alpha-15` | 8px  | `--color-primary`       | `--glow-subtle` |
+| Hover state   | +5% opacity                | -    | Brighter                | `--glow-hover`  |
 
 ---
 

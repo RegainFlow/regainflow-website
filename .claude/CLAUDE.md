@@ -89,13 +89,13 @@ The project uses a **hybrid CSS approach** with a specific load order defined in
 4. **Utilities** (`utilities.css`) - Custom utility classes
 5. **Components** (`components.css`) - Reusable component styles
 6. **Animations** (`animations.css`) - Animation definitions
-7. **Component-specific styles** - Imported via `LinksFunction` in routes
+7. **Component-specific styles** - Imported via `Route.LinksFunction` in routes
 
 **CSS Import Convention:**
 ```typescript
 import styles from '~/path/to/styles.css?url';
 
-export const links: LinksFunction = () => [
+export const links: Route.LinksFunction = () => [
   { rel: 'stylesheet', href: styles }
 ];
 ```
@@ -123,7 +123,7 @@ The `?url` suffix is required for CSS imports in React Router v7.
 Each route can export a `meta` function for SEO:
 
 ```typescript
-export const meta: MetaFunction = () => {
+export function meta({}: Route.MetaArgs) {
   return [
     { title: 'Page Title' },
     { name: 'description', content: 'Description' },
@@ -140,7 +140,7 @@ Routes that need feature-specific styles must import and link them:
 ```typescript
 import featureStyles from '~/features/feature-name/components/feature.css?url';
 
-export const links: LinksFunction = () => [
+export const links: Route.LinksFunction = () => [
   { rel: 'stylesheet', href: featureStyles }
 ];
 ```
@@ -165,7 +165,6 @@ Set in `.env` file:
 
 ## Important Notes
 
-- **React Router v7**: This project was migrated from Remix. Some README content may reference Remix patterns.
 - **TypeScript Strict Mode**: The project uses strict TypeScript settings. All code must type-check.
 - **SSR Enabled**: Server-side rendering is enabled (`ssr: true` in `react-router.config.ts`)
 - **Node Version**: Requires Node.js >= 20.0.0

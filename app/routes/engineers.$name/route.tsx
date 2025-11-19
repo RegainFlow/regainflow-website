@@ -1,5 +1,5 @@
-import type { LoaderFunctionArgs, MetaFunction, LinksFunction } from '@react-router/node';
-import { useLoaderData } from 'react-router';
+import type { Route } from './+types/route';
+
 import { teamMembers, EngineerProfile } from '~/features/engineers';
 
 import profileHeroStyles from '~/features/engineers/components/profile-hero.css?url';
@@ -8,50 +8,21 @@ import topSkillsShowcaseStyles from '~/features/engineers/components/top-skills-
 import techStackAccordionStyles from '~/features/engineers/components/tech-stack-accordion.css?url';
 import profileCtaStyles from '~/features/engineers/components/profile-cta.css?url';
 import engineerStatsGridStyles from '~/features/engineers/components/engineer-stats-grid.css?url';
+import modalTechstackStyles from '~/features/engineers/components/modal-techstack.css?url';
 
-export const links: LinksFunction = () => [
+import type { TeamMember } from '../../features/engineers/types/engineer.types';
+
+export const links: Route.LinksFunction = () => [
   { rel: 'stylesheet', href: profileHeroStyles },
   { rel: 'stylesheet', href: keyHighlightsStyles },
   { rel: 'stylesheet', href: topSkillsShowcaseStyles },
   { rel: 'stylesheet', href: engineerStatsGridStyles },
   { rel: 'stylesheet', href: techStackAccordionStyles },
-  { rel: 'stylesheet', href: profileCtaStyles }
+  { rel: 'stylesheet', href: profileCtaStyles },
+  { rel: 'stylesheet', href: modalTechstackStyles }
 ];
 
-export const meta: MetaFunction<typeof loader> = ({ data }) => {
-  if (!data) {
-    return [
-      { title: 'Engineer Not Found | RegainFlow' },
-      { name: 'description', content: 'This engineer profile could not be found.' }
-    ];
-  }
-
-  const title = `${data.name} | Senior AI/ML Engineer | C2C Available`;
-  const description = data.bio;
-  const image = 'https://www.regainflow.com/images/og/og-about.png';
-  const url = `https://www.regainflow.com/engineers/${data.name.split(' ')[0].toLowerCase()}`;
-
-  return [
-    { title },
-    { name: 'description', content: description },
-    { tagName: 'link', rel: 'canonical', href: url },
-
-    // OG
-    { property: 'og:title', content: title },
-    { property: 'og:description', content: description },
-    { property: 'og:image', content: image },
-    { property: 'og:url', content: url },
-    { property: 'og:type', content: 'profile' },
-
-    // Twitter
-    { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: title },
-    { name: 'twitter:description', content: description },
-    { name: 'twitter:image', content: image }
-  ];
-};
-
-export async function loader({ params }: LoaderFunctionArgs) {
+export function loader({ params }: Route.LoaderArgs) {
   const name = params.name?.toLowerCase();
 
   // Map URL name to full engineer name
@@ -70,7 +41,30 @@ export async function loader({ params }: LoaderFunctionArgs) {
   return Response.json(engineer);
 }
 
-export default function EngineerProfileRoute() {
-  const engineer = useLoaderData<typeof loader>();
-  return <EngineerProfile engineer={engineer} />;
+export default function EngineerProfileRoute({
+  loaderData
+}: Route.ComponentProps) {
+  const engineer: TeamMember = loaderData;
+
+  const title = `${engineer.name} | Senior AI/ML Engineer | C2C Available`;
+  const description = engineer.bio;
+  const url = `https://www.regainflow.com/engineers/${engineer.slug}`;
+  const image = 'https://www.regainflow.com/images/og/og-about.png';
+
+  return (
+    <>
+      {/* SEO */}
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <link rel="canonical" href={url} />
+
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+      <meta property="og:url" content={url} />
+
+      {/* Page UI */}
+      <EngineerProfile engineer={engineer} />
+    </>
+  );
 }

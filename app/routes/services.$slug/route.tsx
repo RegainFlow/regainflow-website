@@ -1,6 +1,7 @@
-import type { LoaderFunctionArgs } from '@react-router/node';
+import type { Route } from './+types/route';
+
 import { useLoaderData } from 'react-router';
-import type { LinksFunction, MetaFunction } from '@react-router/node';
+
 import {
   CapabilityPage,
   getCapabilityBySlug,
@@ -9,11 +10,9 @@ import {
 
 import { links as capabilityPageLinks } from '~/features/services/components/CapabilityPage';
 
-export const links: LinksFunction = () => [
-  ...capabilityPageLinks()
-];
+export const links: Route.LinksFunction = () => [...capabilityPageLinks()];
 
-export const meta: MetaFunction<typeof loader> = ({ data, params }) => {
+export function meta({ data, params }: Route.MetaArgs) {
   if (!data) {
     return [
       { title: 'Service Not Found | RegainFlow' },
@@ -40,17 +39,23 @@ export const meta: MetaFunction<typeof loader> = ({ data, params }) => {
     { property: 'og:description', content: description },
     { property: 'og:url', content: canonicalUrl },
     { property: 'og:type', content: 'website' },
-    { property: 'og:image', content: 'https://www.regainflow.com/images/og/og-services.png' },
+    {
+      property: 'og:image',
+      content: 'https://www.regainflow.com/images/og/og-services.png'
+    },
 
     // Twitter
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: title },
     { name: 'twitter:description', content: description },
-    { name: 'twitter:image', content: 'https://www.regainflow.com/images/og/og-services.png' }
+    {
+      name: 'twitter:image',
+      content: 'https://www.regainflow.com/images/og/og-services.png'
+    }
   ];
-};
+}
 
-export async function loader({ params }: LoaderFunctionArgs) {
+export function loader({ params }: Route.LoaderArgs) {
   const slug = params.slug as string;
 
   const capability = getCapabilityBySlug(slug);

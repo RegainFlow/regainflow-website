@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from 'react-router';
 
-export const useScrollToSection = (sectionId: string, homeRoute: string = '/') => {
+export const ScrollToSection = (sectionId: string, homeRoute: string = '/') => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
 
@@ -11,7 +11,8 @@ export const useScrollToSection = (sectionId: string, homeRoute: string = '/') =
       const target = document.getElementById(sectionId);
       if (target) {
         const yOffset = -80;
-        const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        const y =
+          target.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: 'smooth' });
       }
     } else {

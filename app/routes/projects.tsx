@@ -1,20 +1,22 @@
-import type { MetaFunction, LinksFunction } from '@react-router/node';
+import type { Route } from './+types/projects';
 import { metrics } from '~/features/projects';
 import CaseStudiesGrid from '~/features/projects/components/CaseStudiesGrid';
 import projectsStyles from '~/features/projects/components/projects.css?url';
 
-export const links: LinksFunction = () => [
+export const links: Route.LinksFunction = () => [
   { rel: 'stylesheet', href: projectsStyles }
 ];
 
-export const meta: MetaFunction = () => [
-  { title: 'Client Results | RegainFlow Engineering Consultancy' },
-  {
-    name: 'description',
-    content:
-      'Enterprise automation and data infrastructure delivered by senior engineers. Real projects, measured impact, production-scale outcomes.'
-  }
-];
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: 'Client Results | RegainFlow Engineering Consultancy' },
+    {
+      name: 'description',
+      content:
+        'Enterprise automation and data infrastructure delivered by senior engineers. Real projects, measured impact, production-scale outcomes.'
+    }
+  ];
+}
 
 export default function projects() {
   return (

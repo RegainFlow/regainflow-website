@@ -1,18 +1,16 @@
-import type { LinksFunction, MetaFunction } from '@react-router/node';
+import type { Route } from './+types/root';
 import {
   Links,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
-  useRouteError,
   isRouteErrorResponse
 } from 'react-router';
 import Navbar from '~/components/layout/Navbar/Navbar';
 import Footer from '~/components/layout/Footer/Footer';
 import NotFound from '~/components/layout/NotFound/NotFound';
-import { getClarityScript } from '~/lib/analytics';
-import { siteConfig } from '~/config/site.config';
+import { ScrollToTop } from '~/hooks/ScrollToTop';
 
 // Modern consolidated CSS architecture
 import baseStyles from '~/styles/base.css?url';
@@ -27,7 +25,7 @@ import navBarStyles from '~/components/layout/Navbar/navbar.css?url';
 import footerStyles from '~/components/layout/Footer/footer.css?url';
 import notFoundStyles from '~/components/layout/NotFound/not-found.css?url';
 
-export const links: LinksFunction = () => [
+export const links: Route.LinksFunction = () => [
   { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
   {
     rel: 'preconnect',
@@ -66,16 +64,18 @@ export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: notFoundStyles }
 ];
 
-export const meta: MetaFunction = () => [
-  { title: 'Regain Flow | AI Automation Consulting' },
-  {
-    name: 'description',
-    content:
-      'Regain Flow helps businesses turn manual operations into automated pipelines using AI and RPA.'
-  },
-  { property: 'og:site_name', content: 'Regain Flow' },
-  { property: 'og:type', content: 'website' }
-];
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: 'Regain Flow | AI Automation Consulting' },
+    {
+      name: 'description',
+      content:
+        'Regain Flow helps businesses turn manual operations into automated pipelines using AI and RPA.'
+    },
+    { property: 'og:site_name', content: 'Regain Flow' },
+    { property: 'og:type', content: 'website' }
+  ];
+}
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -85,24 +85,16 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
-        <script
-          type="text/javascript"
-          dangerouslySetInnerHTML={{
-            __html: getClarityScript(siteConfig.clarity.id)
-          }}
-        />
       </head>
+
       <body>
-        <div className="background-theme">
-          <div className="background-wrapper">
-            <div className="content-wrapper">
-              <div className="noise-overlay"></div>
-              <Navbar />
-              {children}
-              <Footer />
-            </div>
-          </div>
+        <ScrollToTop />
+        <div className="background-wrapper">
+          <Navbar />
+          {children}
+          <Footer />
         </div>
+
         <ScrollRestoration />
         <Scripts />
       </body>
@@ -110,9 +102,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function ErrorBoundary() {
-  const error = useRouteError();
+export default function App() {
+  return <Outlet />;
+}
 
+export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   // if someone did: throw new Response("Not Found", { status: 404 })
   if (isRouteErrorResponse(error) && error.status === 404) {
     return <NotFound />;
@@ -137,8 +131,4 @@ export function ErrorBoundary() {
       </div>
     </Layout>
   );
-}
-
-export default function App() {
-  return <Outlet />;
 }

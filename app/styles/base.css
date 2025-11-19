@@ -224,10 +224,6 @@ th {
 
 /* ==================== Modern Glass Background System ==================== */
 
-.background-theme {
-  background-color: transparent;
-}
-
 .background-wrapper {
   /* Clean dark gradient base */
   background: linear-gradient(
@@ -255,38 +251,6 @@ th {
   );
   pointer-events: none;
   z-index: 0;
-}
-
-.noise-overlay {
-  opacity: 0.03;
-  pointer-events: none;
-  z-index: 1;
-  position: absolute;
-  inset: 0;
-  /* CSS-generated minimal dot pattern */
-  background-image: radial-gradient(
-    circle at center,
-    rgba(0, 214, 203, 0.15) 1px,
-    transparent 1px
-  );
-  background-size: 24px 24px;
-  background-position: 0 0;
-}
-
-/* Glass layer for depth */
-.noise-overlay::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  backdrop-filter: var(--glass-blur-ambient);
-  -webkit-backdrop-filter: var(--glass-blur-ambient);
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-.content-wrapper {
-  position: relative;
-  z-index: 2;
 }
 
 .container-3,

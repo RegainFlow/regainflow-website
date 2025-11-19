@@ -1,7 +1,7 @@
 // app/routes/sitemap.xml.tsx
-import type { LoaderFunction } from '@react-router/node';
+import type { Route } from './+types/sitemap[.]xml';
 
-export const loader: LoaderFunction = () => {
+export function loader({}: Route.LoaderArgs) {
   const baseUrl = 'https://www.regainflow.com';
 
   // URL list for sitemap
@@ -11,8 +11,16 @@ export const loader: LoaderFunction = () => {
     { path: '/services/ai-automation', changefreq: 'monthly', priority: 0.8 },
     { path: '/services/rag-search', changefreq: 'monthly', priority: 0.8 },
     { path: '/services/data-validation', changefreq: 'monthly', priority: 0.8 },
-    { path: '/services/system-integration', changefreq: 'monthly', priority: 0.8 },
-    { path: '/services/full-stack-engineering', changefreq: 'monthly', priority: 0.8 },
+    {
+      path: '/services/system-integration',
+      changefreq: 'monthly',
+      priority: 0.8
+    },
+    {
+      path: '/services/full-stack-engineering',
+      changefreq: 'monthly',
+      priority: 0.8
+    },
     { path: '/services/devops', changefreq: 'monthly', priority: 0.8 },
     { path: '/engineers', changefreq: 'weekly', priority: 0.9 },
     { path: '/projects', changefreq: 'monthly', priority: 0.7 },
@@ -43,4 +51,4 @@ export const loader: LoaderFunction = () => {
       'Cache-Control': 'public, max-age=0, s-maxage=3600'
     }
   });
-};
+}

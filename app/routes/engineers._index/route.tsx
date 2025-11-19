@@ -1,4 +1,5 @@
-import type { MetaFunction, LinksFunction } from '@react-router/node';
+import type { Route } from './+types/route';
+
 import { EngineersLanding } from '~/features/engineers';
 
 import engineersLandingModernStyles from '~/features/engineers/components/engineers-landing-modern.css?url';
@@ -7,7 +8,7 @@ import expertiseFilterStyles from '~/features/engineers/components/expertise-fil
 import engineerCardStyles from '~/features/engineers/components/engineer-card.css?url';
 import teamCtaStyles from '~/features/engineers/components/team-cta.css?url';
 
-export const links: LinksFunction = () => [
+export const links: Route.LinksFunction = () => [
   { rel: 'stylesheet', href: engineersLandingModernStyles },
   { rel: 'stylesheet', href: teamStatsStyles },
   { rel: 'stylesheet', href: expertiseFilterStyles },
@@ -15,7 +16,7 @@ export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: teamCtaStyles }
 ];
 
-export const meta: MetaFunction = () => {
+export function meta({}: Route.MetaArgs) {
   const title = 'Our Engineers | RegainFlow C2C Contractors';
   const description =
     'Meet our senior AI/ML engineers available for C2C contracts. Production-proven expertise in RAG, automation, DevOps, and full-stack development.';
@@ -40,7 +41,7 @@ export const meta: MetaFunction = () => {
     { name: 'twitter:description', content: description },
     { name: 'twitter:image', content: image }
   ];
-};
+}
 
 export default function EngineersRoute() {
   return <EngineersLanding />;

@@ -1,14 +1,14 @@
 // app/routes/robots.txt.tsx
-import type { LoaderFunction } from '@react-router/node';
+import type { Route } from './+types/robots[.]txt';
 
-export const loader: LoaderFunction = () => {
-  const lines = [
+export function loader({}: Route.LoaderArgs) {
+  const body = [
     'User-agent: *',
     'Allow: /',
-    `Sitemap: https://www.regainflow.com/sitemap.xml`
+    'Sitemap: https://www.regainflow.com/sitemap.xml'
   ].join('\n');
 
-  return new Response(lines, {
+  return new Response(body, {
     headers: { 'Content-Type': 'text/plain' }
   });
-};
+}

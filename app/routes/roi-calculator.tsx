@@ -1,13 +1,14 @@
-import type { LinksFunction, MetaFunction } from '@react-router/node';
+import type { Route } from './+types/roi-calculator';
+
 import { RoiCalculator } from '~/features/roi-calculator';
 
 import roiStyles from '~/features/roi-calculator/components/roi-custom.css?url';
 
-export const links: LinksFunction = () => [
+export const links: Route.LinksFunction = () => [
   { rel: 'stylesheet', href: roiStyles }
 ];
 
-export const meta: MetaFunction = () => {
+export function meta({}: Route.MetaArgs) {
   const title = 'C2C Engineering ROI Calculator | Compare Costs & Save';
   const description =
     'Calculate your savings hiring senior C2C contract engineers vs full-time W2 employees. See 30-40% cost savings with our interactive ROI calculator.';
@@ -32,7 +33,7 @@ export const meta: MetaFunction = () => {
     { name: 'twitter:description', content: description },
     { name: 'twitter:image', content: image }
   ];
-};
+}
 export default function RoiPage() {
   return (
     <>

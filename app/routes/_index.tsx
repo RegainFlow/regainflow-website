@@ -1,4 +1,4 @@
-import type { LinksFunction, MetaFunction } from '@react-router/node';
+import type { Route } from './+types/_index';
 
 import { HeroSection } from '~/features/hero';
 import { StatsBar } from '~/features/stats-bar';
@@ -18,7 +18,7 @@ import caseStudiesPreviewStyles from '~/features/case-studies-preview/components
 import faqStyles from '~/features/faq/components/faq.css?url';
 import finalCtaStyles from '~/features/final-cta/components/final-cta.css?url';
 
-export const links: LinksFunction = () => [
+export const links: Route.LinksFunction = () => [
   { rel: 'stylesheet', href: heroStyles },
   { rel: 'stylesheet', href: statsStyles },
   { rel: 'stylesheet', href: valuePropStyles },
@@ -29,7 +29,7 @@ export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: finalCtaStyles }
 ];
 
-export const meta: MetaFunction = () => {
+export function meta({}: Route.MetaArgs) {
   const title = 'RegainFlow | Senior AI/ML Engineers for C2C Contracts';
   const description =
     'Contract-ready senior engineers specializing in AI/ML, RAG, and intelligent automation. Full-stack capabilities across backend, frontend, DevOps, and solution architecture. Available for long-term C2C contracts or project consulting.';
@@ -54,7 +54,7 @@ export const meta: MetaFunction = () => {
     { name: 'twitter:description', content: description },
     { name: 'twitter:image', content: image }
   ];
-};
+}
 
 export default function Index() {
   return (

@@ -4,13 +4,6 @@ import ModalTechStack from './ModalTechStack';
 import { PiStackDuotone, PiUserCircleDuotone } from 'react-icons/pi';
 
 import type { TeamMember } from '../types/engineer.types';
-import type { LinksFunction } from '@react-router/node';
-
-import modalTechstackStyles from './modal-techstack.css?url';
-
-export const links: LinksFunction = () => [
-  { rel: 'stylesheet', href: modalTechstackStyles }
-];
 
 interface ProfileDetailCardProps {
   member: TeamMember;

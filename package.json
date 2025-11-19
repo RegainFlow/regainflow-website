@@ -20,10 +20,9 @@
     "typed.js": "^2.1.0"
   },
   "devDependencies": {
-    "@netlify/vite-plugin-react-router": "^2.1.1",
     "@react-router/dev": "^7.0.2",
     "@react-router/fs-routes": "^7.0.2",
-    "@react-router/node": "^7.0.2",
+    "@react-router/node": "^7.9.6",
     "@react-router/serve": "^7.0.2",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",

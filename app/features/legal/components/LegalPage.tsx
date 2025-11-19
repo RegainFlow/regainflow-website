@@ -1,4 +1,4 @@
-import { type Props } from '~/components/legal/legalData';
+import { type Props } from '../data/legalData';
 
 export default function LegalPage({
   pageTitle,

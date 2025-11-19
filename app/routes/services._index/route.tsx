@@ -1,4 +1,5 @@
-import type { LinksFunction, MetaFunction } from '@react-router/node';
+import type { Route } from './+types/route';
+
 import { ServicesOverview } from '~/features/services';
 import { links as servicesHeroLinks } from '~/features/services/components/overview/ServicesHero';
 import { links as capabilitiesGridLinks } from '~/features/services/components/overview/CapabilitiesGrid';
@@ -7,7 +8,7 @@ import { links as serviceMetricsLinks } from '~/features/services/components/ove
 import { links as caseStudiesPreviewLinks } from '~/features/services/components/overview/CaseStudiesPreview';
 import { links as servicesCtaLinks } from '~/features/services/components/overview/ServicesCTA';
 
-export const links: LinksFunction = () => [
+export const links: Route.LinksFunction = () => [
   ...servicesHeroLinks(),
   ...capabilitiesGridLinks(),
   ...serviceMetricsLinks(),
@@ -16,7 +17,7 @@ export const links: LinksFunction = () => [
   ...servicesCtaLinks()
 ];
 
-export const meta: MetaFunction = () => {
+export function meta({}: Route.MetaArgs) {
   const title = 'Enterprise Engineering & AI Solutions | RegainFlow';
   const description =
     'Production-grade AI automation, RAG search systems, data validation, system integration, full-stack engineering, and DevOps solutions. We deliver engineering that scales.';
@@ -41,7 +42,7 @@ export const meta: MetaFunction = () => {
     { name: 'twitter:description', content: description },
     { name: 'twitter:image', content: image }
   ];
-};
+}
 
 export default function ServicesOverviewRoute() {
   return <ServicesOverview />;
