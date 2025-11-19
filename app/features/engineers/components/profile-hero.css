@@ -161,6 +161,10 @@
     align-items: center;
   }
 
+  .availability-badge {
+    margin: 0 auto;
+  }
+
   .profile-hero-socials {
     justify-content: center;
   }

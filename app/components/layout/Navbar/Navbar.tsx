@@ -200,6 +200,17 @@ export default function Navbar() {
                 </Link>
               </li>
             </ul>
+            <div className="mobile-menu-cta">
+              <a
+                href="https://form.typeform.com/to/SOXnbS4E"
+                className="button w-button"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                CONTACT US
+              </a>
+            </div>
           </nav>
 
           <div className="call-to-action desktop-only">

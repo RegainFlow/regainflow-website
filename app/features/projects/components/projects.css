@@ -427,8 +427,19 @@
   }
 
   .card-metric-badge {
-    font-size: 0.75rem;
-    padding: 0.4rem 0.8rem;
+    font-size: 0.7rem;
+    padding: 0.35rem 0.6rem;
+    top: 0.75rem;
+    right: 0.75rem;
+    max-width: 45%;
+  }
+
+  .card-industry-label {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.6rem;
+    top: 0.75rem;
+    left: 0.75rem;
+    max-width: 45%;
   }
 
   .metric-value {
@@ -454,6 +465,33 @@
   .category-tab {
     padding: 0.5rem 0.8rem;
     font-size: 0.75rem;
+  }
+
+  .card-metric-badge {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .card-industry-label {
+    font-size: 0.6rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .card-content-wrapper {
+    padding: 3rem 1rem 1rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-description {
+    font-size: 0.875rem;
+  }
+
+  .card-tag {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
   }
 }
 
