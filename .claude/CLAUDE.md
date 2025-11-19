@@ -34,13 +34,25 @@ app/features/{feature-name}/
 └── index.ts             # Public API exports
 ```
 
-**Key features include:**
-- `services/` - Service capabilities and offerings (new: 6 capability pages + overview with dropdown navigation)
-- `engineers/` - Team member profiles and capabilities
-- `projects/` - Case studies and project showcases (with capability tagging for cross-referencing)
-- `roi-calculator/` - ROI calculation tool
-- `hero/`, `value-proposition/`, `how-it-works/`, `faq/`, `final-cta/` - Landing page sections
-- `case-studies-preview/`, `roi-preview/`, `stats-bar/` - Reusable section components
+### Complete Feature List
+
+The project contains **13 feature modules**:
+
+| Feature | Purpose | Key Components |
+|---------|---------|----------------|
+| `services/` | Service capabilities (6 pages + overview) | ServicesOverview, CapabilityPage, CapabilitiesGrid |
+| `engineers/` | Team profiles and expertise | EngineersLanding, EngineerProfile, EngineerCard |
+| `projects/` | Case studies portfolio | CaseStudiesGrid |
+| `roi-calculator/` | Interactive ROI tool | ROICalculator |
+| `hero/` | Landing page hero section | HeroSection |
+| `value-proposition/` | Value proposition cards | ValueProposition |
+| `how-it-works/` | Process methodology | HowItWorks |
+| `roi-preview/` | ROI section preview | RoiPreview |
+| `case-studies-preview/` | Featured case studies | CaseStudiesPreview |
+| `faq/` | FAQ accordion | FAQ |
+| `final-cta/` | Call-to-action section | FinalCTA |
+| `stats-bar/` | Statistics display | StatsBar |
+| `legal/` | Privacy & terms pages | PrivacyPage, TermsPage |
 
 ### Feature Module Pattern
 
@@ -65,19 +77,22 @@ Uses React Router v7 file-based routing in `app/routes/`:
 
 - `_index.tsx` - Homepage
 - `services._index/route.tsx` - Services overview page (shows all 6 capabilities)
-- `services.$slug/route.tsx` - Dynamic capability pages (handles both new capabilities and legacy services)
+- `services.$slug/route.tsx` - Dynamic capability pages
 - `engineers._index/route.tsx` - Engineers landing page (team overview)
 - `engineers.$name/route.tsx` - Dynamic engineer profile pages
-- `projects.tsx` - projects page (case studies grid)
+- `projects.tsx` - Projects page (case studies grid)
 - `roi-calculator.tsx` - ROI calculator page
-- `[.]txt.tsx` and `[.]xml.tsx` - Special route syntax for static files (robots.txt, sitemap.xml)
+- `privacy.tsx` - Privacy policy page
+- `terms.tsx` - Terms of service page
+- `404.tsx` - Not found page
+- `robots[.]txt.tsx` and `sitemap[.]xml.tsx` - SEO files
 
 **Dynamic routes** use `$` prefix (e.g., `$slug`, `$name`) and access params via `useParams()` from `react-router`.
 
 **Navigation Patterns:**
 - Services dropdown in navbar (7 links: overview + 6 capabilities)
 - Engineers landing page with team grid linking to individual profiles
-- projects case studies filtered by capability tags
+- Projects case studies filtered by capability tags
 
 ### Styling Architecture
 
@@ -149,7 +164,7 @@ export const links: Route.LinksFunction = () => [
 
 Static data is stored in `{feature}/data/` files as TypeScript objects. Complex features may have:
 - Multiple data files (e.g., `servicesData.ts`, `capabilitiesData.ts`)
-- Helper functions for data access (e.g., `getCapabilityBySlug()`)
+- Helper functions for data access (e.g., `getCapabilityBySlug()`, `getEngineerBySlug()`)
 
 ### Error Handling
 
@@ -169,9 +184,11 @@ Set in `.env` file:
 - **SSR Enabled**: Server-side rendering is enabled (`ssr: true` in `react-router.config.ts`)
 - **Node Version**: Requires Node.js >= 20.0.0
 
-## Services Feature Architecture
+## Feature Architecture Details
 
-The `services/` feature was refactored to support a modern capability-based structure:
+### Services Feature
+
+The `services/` feature supports a modern capability-based structure:
 
 **Route Structure:**
 - `/services` - Overview page with hero, 6 capability cards, process steps, metrics, case studies, CTA
@@ -192,12 +209,74 @@ The `services/` feature was refactored to support a modern capability-based stru
 **Data Structure:**
 - `capabilitiesData.ts` - Comprehensive data for all 6 capabilities (problems, approach, tech stack)
 - `servicesOverviewData.ts` - Overview page data (hero, process steps, metrics, capability cards)
-- projects case studies tagged with `capabilities` field for cross-referencing
+- Projects case studies tagged with `capabilities` field for cross-referencing
 
 **Components:**
 - **Overview Page**: `ServicesOverview` (orchestrator) + 6 sub-components (Hero, Grid, Metrics, Process, Preview, CTA)
 - **Capability Pages**: `CapabilityPage` (unified component with 7 inline sections)
 - All components follow glass morphism + neon design system
+
+### Engineers Feature
+
+The `engineers/` feature showcases team members with detailed profiles:
+
+**Route Structure:**
+- `/engineers` - Team landing page with grid of engineer cards
+- `/engineers/:name` - Individual engineer profile pages
+
+**Data Structure:**
+- `engineersData.ts` - Array of engineer objects with:
+  - Basic info (name, slug, title, image)
+  - Tech stack and expertise areas
+  - Project highlights and achievements
+  - Social links (GitHub, LinkedIn)
+- Helper functions: `getEngineerBySlug()`, `getAllEngineers()`
+
+**Components:**
+- `EngineersLanding` - Team overview with search/filter capabilities
+- `EngineerCard` - Card component for grid display
+- `EngineerProfile` - Full profile page with sections
+
+**Patterns:**
+- Engineers linked to projects via shared tags
+- Tech stack badges using design system tokens
+- Responsive grid layout (1 → 2 → 3 columns)
+
+### Projects Feature
+
+The `projects/` feature displays case studies and portfolio work:
+
+**Route Structure:**
+- `/projects` - Case studies grid with filtering
+
+**Data Structure:**
+- `projectsData.ts` - Array of project objects with:
+  - Title, description, client info
+  - Capability tags for filtering
+  - Outcomes and metrics
+  - Images and media
+- Projects tagged with capabilities for cross-referencing with services
+
+**Components:**
+- `CaseStudiesGrid` - Main grid with filtering by capability
+- Individual project cards with hover effects
+
+**Features:**
+- Filter by capability (AI Automation, RAG, etc.)
+- Links to related services
+- Shows engineers involved in projects
+
+### Legal Feature
+
+The `legal/` feature handles privacy and terms pages:
+
+**Route Structure:**
+- `/privacy` - Privacy policy
+- `/terms` - Terms of service
+
+**Components:**
+- `PrivacyPage` - Privacy policy content
+- `TermsPage` - Terms of service content
 
 ## Additional Documentation
 
@@ -220,10 +299,11 @@ The `services/` feature was refactored to support a modern capability-based stru
 - ✅ Deprecating legacy code or marking code for removal
 
 **What to update:**
-- Add new features to the "Key features include" list
+- Add new features to the feature list table
 - Update architecture patterns if they change
 - Document new routing patterns in the Routing section
 - Update `docs/STYLING.md` when adding new design patterns
+- Add feature architecture details for complex features
 
 ## Design & Frontend Patterns
 
@@ -338,17 +418,6 @@ This project follows architecture patterns from the [Bulletproof React](https://
 - **Type safety** - TypeScript strict mode with comprehensive type definitions
 - **Separation of concerns** - Clear boundaries between features, routes, and shared code
 
-**When working on architecture decisions:**
-1. **ALWAYS consult Bulletproof React patterns** for best practices
-2. **Use Context7 MCP tool** to fetch up-to-date information from the GitHub repo:
-   ```
-   Use mcp__context7__resolve-library-id with: "bulletproof-react"
-   Then use mcp__context7__get-library-docs with the resolved ID
-   ```
-3. Follow the project structure patterns for new features
-4. Maintain colocation of related code
-5. Keep features independent and avoid tight coupling
-
 **Key Architecture Patterns:**
 - **Features** (`app/features/`) - Isolated feature modules with internal structure
 - **Components** (`app/components/`) - Shared, reusable components used across features
@@ -363,3 +432,22 @@ This project follows architecture patterns from the [Bulletproof React](https://
 - Testing strategies
 - Error handling patterns
 - Performance optimization techniques
+
+### Adding a New Feature
+
+1. Create feature directory: `app/features/{feature-name}/`
+2. Add subdirectories: `components/`, `data/`, `types/`
+3. Create `index.ts` with public API exports
+4. Add route in `app/routes/` if needed
+5. Import feature-specific CSS in route via `links` function
+6. Update this CLAUDE.md with feature details
+
+### Code Style Guidelines
+
+- Use TypeScript strict mode
+- Use design tokens from `variables.css`
+- Use Phosphor Icons Duotone
+- Follow mobile-first responsive design
+- Keep components focused and composable
+- Use meaningful variable and function names
+- Add JSDoc comments for complex functions
