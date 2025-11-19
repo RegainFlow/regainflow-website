@@ -1,0 +1,76 @@
+/* ==========================================================================
+   Key Highlights Section
+   ========================================================================== */
+
+.key-highlights-section {
+  background: transparent;
+}
+
+.key-highlights-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  transition: all 0.25s ease;
+}
+
+.highlight-item:hover {
+  transform: translateY(-2px);
+}
+
+.highlight-icon {
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 6px rgba(0, 214, 203, 0.5));
+}
+
+.highlight-text {
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  font-family: var(--font-primary);
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .key-highlights-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .highlight-item {
+    padding: 1.25rem;
+  }
+
+  .highlight-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .highlight-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .highlight-item {
+    padding: 1rem;
+  }
+
+  .highlight-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .highlight-text {
+    font-size: 0.9rem;
+  }
+}

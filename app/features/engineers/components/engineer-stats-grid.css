@@ -1,0 +1,33 @@
+/* ==========================================================================
+   Engineer Stats Grid Section
+   ========================================================================== */
+
+.engineer-stats-section {
+  background: transparent;
+}
+
+.engineer-stats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.engineer-stats-grid-modern {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .engineer-stats-grid-modern {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .engineer-stats-grid-modern {
+    grid-template-columns: 1fr;
+  }
+}

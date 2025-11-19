@@ -6,16 +6,17 @@ export const links = () => [{ rel: 'stylesheet', href: footerStyles }];
 export default function Footer() {
   return (
     <footer className="footer-dark">
-      {/* Top row */}
+      {/* Top row - Split Layout */}
       <div className="footer-top">
-        {/* Logo */}
+        {/* Left Side: Branding & Identity */}
         <div className="footer-logo-wrap">
           <Link to="/" className="logo-link">
             REGAINFLOW
           </Link>
           <p className="footer-logo-blurb">
-            Senior engineers available for C2C contracts and project-based consulting.
-            Production-ready expertise in AI/ML, automation, and full-stack development.
+            Senior engineers available for C2C contracts and project-based
+            consulting. Production-ready expertise in AI/ML, automation, and
+            full-stack development.
           </p>
           <img
             src="/images/regain_flow_logo.png"
@@ -24,36 +25,54 @@ export default function Footer() {
           />
         </div>
 
-        {/* Link blocks */}
+        {/* Right Side: 3-Column Link Grid */}
         <div className="footer-link-blocks">
+          {/* Column 1: Services */}
           <div className="footer-block">
             <div className="title-small">Services</div>
             <Link to="/services/c2c-contracting" className="footer-link">
-              C2C Contracting & Consulting
+              C2C Contracting
+            </Link>
+            <Link to="/services/c2c-contracting" className="footer-link">
+              Project Consulting
             </Link>
           </div>
+
+          {/* Column 2: Company */}
           <div className="footer-block">
             <div className="title-small">Company</div>
+            <Link to="/engineers" className="footer-link">
+              Our Engineers
+            </Link>
+            <Link to="/projects" className="footer-link">
+              Client Results
+            </Link>
+            <a
+              href="https://form.typeform.com/to/SOXnbS4E"
+              className="footer-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Contact Us
+            </a>
+          </div>
+
+          {/* Column 3: Resources */}
+          <div className="footer-block">
+            <div className="title-small">Resources</div>
             <Link to="/terms" className="footer-link">
-              Terms &amp; Conditions
+              Terms & Conditions
             </Link>
             <Link to="/privacy" className="footer-link">
               Privacy Policy
             </Link>
-            <Link to="/engineers" className="footer-link">
-              Engineers
-            </Link>
-            <Link to="/portfolio" className="footer-link">Portfolio</Link>
-            <a href="https://form.typeform.com/to/SOXnbS4E" className="footer-link" target="_blank" rel="noopener">Contact Us</a>
           </div>
         </div>
       </div>
 
       {/* Bottom row */}
       <div className="footer-bottom">
-        <div className="footer-copy">
-          © Copyright 2025, Regain Flow LLC | Site made by Regain Flow Agents 😎
-        </div>
+        <div className="footer-copy">© Copyright 2025, Regain Flow LLC</div>
       </div>
     </footer>
   );

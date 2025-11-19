@@ -1,13 +1,47 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
+import {
+  PiCaretDownBold,
+  PiRobotDuotone,
+  PiMagnifyingGlassDuotone,
+  PiShieldCheckDuotone,
+  PiPlugsConnectedDuotone,
+  PiCodeDuotone,
+  PiGitBranchDuotone
+} from 'react-icons/pi';
 
 export default function Navbar() {
   // whenever the route changes, make sure the menu is closed
   const { pathname } = useLocation();
-  useEffect(() => setIsMenuOpen(false), [pathname]);
+  useEffect(() => {
+    setIsMenuOpen(false);
+    setIsServicesDropdownOpen(false);
+  }, [pathname]);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const navigate = useNavigate();
+  const dropdownRef = useRef<HTMLLIElement>(null);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsServicesDropdownOpen(false);
+      }
+    };
+
+    if (isServicesDropdownOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isServicesDropdownOpen]);
 
   const handleScrollToROI = (e: React.MouseEvent<HTMLAnchorElement>) => {
     // first thing: always close the menu
@@ -24,9 +58,9 @@ export default function Navbar() {
         window.scrollTo({ top: y, behavior: 'smooth' });
       }
     } else {
-      // otherwise go to /roi
+      // otherwise go to /roi-calulator
       e.preventDefault();
-      navigate('/roi');
+      navigate('/roi-calulator');
       // optional: close the mobile menu if open
       setIsMenuOpen(false);
     }
@@ -65,54 +99,110 @@ export default function Navbar() {
                   ENGINEERS
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/services/c2c-contracting"
-                  className="button-link"
-                  onClick={() => setIsMenuOpen(false)}
+              <li className="dropdown" ref={dropdownRef}>
+                <button
+                  className="button-drop-down-wrapper"
+                  onClick={() =>
+                    setIsServicesDropdownOpen(!isServicesDropdownOpen)
+                  }
+                  aria-label="Toggle services menu"
                 >
-                  SERVICES
-                </Link>
+                  <span className="button-drop-down-link">SERVICES</span>
+                  <PiCaretDownBold
+                    className={`dropdown-icon ${
+                      isServicesDropdownOpen ? 'rotate' : ''
+                    }`}
+                    size={16}
+                  />
+                </button>
+                <div
+                  className={`nav-dropdown-list ${
+                    isServicesDropdownOpen ? 'w--open' : ''
+                  }`}
+                >
+                  <Link
+                    to="/services/ai-automation"
+                    className="nav-dropdown-item"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <PiRobotDuotone size={24} className="nav-dropdown-icon" />
+                    <span>AI Automation</span>
+                  </Link>
+                  <Link
+                    to="/services/rag-search"
+                    className="nav-dropdown-item"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <PiMagnifyingGlassDuotone
+                      size={24}
+                      className="nav-dropdown-icon"
+                    />
+                    <span>RAG & Search</span>
+                  </Link>
+                  <Link
+                    to="/services/data-validation"
+                    className="nav-dropdown-item"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <PiShieldCheckDuotone
+                      size={24}
+                      className="nav-dropdown-icon"
+                    />
+                    <span>Data Validation</span>
+                  </Link>
+                  <Link
+                    to="/services/system-integration"
+                    className="nav-dropdown-item"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <PiPlugsConnectedDuotone
+                      size={24}
+                      className="nav-dropdown-icon"
+                    />
+                    <span>System Integration</span>
+                  </Link>
+                  <Link
+                    to="/services/full-stack-engineering"
+                    className="nav-dropdown-item"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <PiCodeDuotone size={24} className="nav-dropdown-icon" />
+                    <span>Full-Stack</span>
+                  </Link>
+                  <Link
+                    to="/services/devops"
+                    className="nav-dropdown-item"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <PiGitBranchDuotone
+                      size={24}
+                      className="nav-dropdown-icon"
+                    />
+                    <span>DevOps</span>
+                  </Link>
+                </div>
               </li>
               <li>
                 <Link
-                  to="/portfolio"
+                  to="/projects"
                   className="button-link"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  PORTFOLIO
+                  PROJECTS
                 </Link>
-              </li>
-              <li>
-                <a
-                  href="https://form.typeform.com/to/SOXnbS4E"
-                  className="contact-us-link"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  CONTACT US
-                </a>
-              </li>
-              <li className="call-to-action mobile-only">
-                <a
-                  href="#ROI-Section"
-                  className="button w-button"
-                  onClick={handleScrollToROI}
-                >
-                  <span className="text-free-accent">FREE</span> ROI
-                </a>
               </li>
             </ul>
           </nav>
 
           <div className="call-to-action desktop-only">
-            <Link
-              to={pathname === '/' ? '#ROI-Section' : '/roi'}
+            <a
+              href="https://form.typeform.com/to/SOXnbS4E"
               className="button w-button"
-              onClick={handleScrollToROI}
+              target="_blank"
+              rel="noopener"
             >
-              <span className="text-free-accent">FREE</span> ROI
-            </Link>
+              CONTACT US
+            </a>
           </div>
 
           <div

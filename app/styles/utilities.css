@@ -247,11 +247,12 @@
   color: var(--color-text-muted);
 }
 
-.text-accent {
+.text-highlight {
   color: var(--color-primary);
+  text-shadow: var(--glow-text);
 }
 
-.text-free-accent {
+.text-free-highlight {
   color: var(--color-secondary-accent);
 }
 

@@ -1,69 +1,79 @@
+import { useState, useMemo } from 'react';
 import { teamMembers } from '../data/teamData';
-import ProfileDetailCard from './ProfileDetailCard';
+import TeamStatsBar from './TeamStatsBar';
+import ExpertiseFilter from './ExpertiseFilter';
+import EngineerCard from './EngineerCard';
+import TeamCTA from './TeamCTA';
 
 export default function EngineersLanding() {
+  const [activeFilter, setActiveFilter] = useState('all');
+
+  // Filter engineers based on active filter
+  const filteredEngineers = useMemo(() => {
+    if (activeFilter === 'all') {
+      return teamMembers;
+    }
+    return teamMembers.filter((engineer) =>
+      engineer.primaryExpertise?.some((exp) =>
+        exp.toLowerCase().replace('/', '-').includes(activeFilter)
+      )
+    );
+  }, [activeFilter]);
+
+  // Count engineers per filter
+  const engineerCounts = useMemo(() => {
+    const counts: Record<string, number> = {
+      all: teamMembers.length
+    };
+
+    const filterIds = ['ai-ml', 'full-stack', 'devops', 'automation'];
+    filterIds.forEach((filterId) => {
+      counts[filterId] = teamMembers.filter((engineer) =>
+        engineer.primaryExpertise?.some((exp) =>
+          exp.toLowerCase().replace('/', '-').includes(filterId)
+        )
+      ).length;
+    });
+
+    return counts;
+  }, []);
+
   return (
     <>
-      <section className="overview">
-        <div className="container-3">
-          <h1 className="heading-2">
-            Contract-Ready <span className="text-accent">Engineers</span>
+      {/* Section 1: Hero */}
+      <section className="engineers-hero-section glass-section">
+        <div className="engineers-hero-container">
+          <h1 className="section-title">
+            Meet Your Senior Engineering <span className="text-highlight">Team</span>
           </h1>
-          <p className="overview-text">
-            Senior engineers available for C2C contracts and project-based
-            consulting. Our team brings production-grade expertise in AI/ML,
-            automation, and full-stack development from defense, enterprise, and
-            high-growth environments:
-          </p>
-          <ul className="overview-list">
-            <li>
-              <strong>AI/ML Engineering:</strong> Built production RAG systems,
-              LangChain/LangGraph pipelines, and intelligent agents using modern
-              LLM frameworks and vector databases.
-            </li>
-            <li>
-              <strong>Full-Stack Development:</strong> Delivered scalable web
-              applications with React/Remix, Node.js, Python backends, and
-              TypeScript — from API design to production deployment.
-            </li>
-            <li>
-              <strong>RPA & Automation:</strong> Deployed UiPath, Blue Prism,
-              and custom Python automations that streamlined business operations
-              and eliminated manual workflows.
-            </li>
-            <li>
-              <strong>DevOps & Cloud:</strong> Architected CI/CD pipelines,
-              containerized microservices with Docker/Kubernetes, and deployed
-              on AWS, Azure, and OpenShift.
-            </li>
-            <li>
-              <strong>Security & Compliance:</strong> Implemented DoD-grade
-              hardening, penetration testing, and STIG compliance for sensitive
-              enterprise systems.
-            </li>
-          </ul>
-          <p
-            className="overview-text"
-            style={{ marginTop: '1.5rem', fontStyle: 'italic' }}
-          >
-            <strong>Available for:</strong> Long-term C2C contracts (6-12+
-            months) or project-based engagements. Remote-ready. US-based.
-            Autonomous execution.
+          <p className="section-subtitle">
+            Contract-ready senior engineers specializing in AI/ML, full-stack development, and automation.
+            Available for C2C contracts or project-based consulting.
           </p>
         </div>
       </section>
 
-      <section className="about-us-preview">
-        <div className="container-3">
-          <h1 className="heading-2">
-            Meet Our <span className="text-accent">Engineers</span>
-          </h1>
-        </div>
+      {/* Section 2: Team Stats */}
+      <TeamStatsBar />
 
-        {teamMembers.map((member, idx) => (
-          <ProfileDetailCard key={idx} member={member} />
-        ))}
+      {/* Section 3: Expertise Filter */}
+      <ExpertiseFilter
+        activeFilter={activeFilter}
+        onFilterChange={setActiveFilter}
+        engineerCounts={engineerCounts}
+      />
+
+      {/* Section 4: Engineers Grid */}
+      <section className="engineers-grid-section glass-section-sm">
+        <div className="engineers-grid-container">
+          {filteredEngineers.map((member, idx) => (
+            <EngineerCard key={idx} member={member} />
+          ))}
+        </div>
       </section>
+
+      {/* Section 5: Team CTA */}
+      <TeamCTA />
     </>
   );
 }

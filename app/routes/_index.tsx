@@ -1,17 +1,32 @@
 import type { LinksFunction, MetaFunction } from '@react-router/node';
 
 import { HeroSection } from '~/features/hero';
+import { StatsBar } from '~/features/stats-bar';
 import { ValueProposition } from '~/features/value-proposition';
-import { RoiCalculator } from '~/features/roi-calculator';
+import { HowItWorks } from '~/features/how-it-works';
+import { RoiPreview } from '~/features/roi-preview';
+import { CaseStudiesPreview } from '~/features/case-studies-preview';
+import { FAQ } from '~/features/faq';
+import { FinalCTA } from '~/features/final-cta';
 
-import valuePropStyles from '~/features/value-proposition/components/value-custom.css?url';
-import roiStyles from '~/features/roi-calculator/components/roi-custom.css?url';
 import heroStyles from '~/features/hero/components/hero-custom.css?url';
+import statsStyles from '~/features/stats-bar/components/stats.css?url';
+import valuePropStyles from '~/features/value-proposition/components/value-custom.css?url';
+import howItWorksStyles from '~/features/how-it-works/components/how-it-works.css?url';
+import roiPreviewStyles from '~/features/roi-preview/components/roi-preview.css?url';
+import caseStudiesPreviewStyles from '~/features/case-studies-preview/components/case-studies-preview.css?url';
+import faqStyles from '~/features/faq/components/faq.css?url';
+import finalCtaStyles from '~/features/final-cta/components/final-cta.css?url';
 
 export const links: LinksFunction = () => [
+  { rel: 'stylesheet', href: heroStyles },
+  { rel: 'stylesheet', href: statsStyles },
   { rel: 'stylesheet', href: valuePropStyles },
-  { rel: 'stylesheet', href: roiStyles },
-  { rel: 'stylesheet', href: heroStyles }
+  { rel: 'stylesheet', href: howItWorksStyles },
+  { rel: 'stylesheet', href: roiPreviewStyles },
+  { rel: 'stylesheet', href: caseStudiesPreviewStyles },
+  { rel: 'stylesheet', href: faqStyles },
+  { rel: 'stylesheet', href: finalCtaStyles }
 ];
 
 export const meta: MetaFunction = () => {
@@ -45,8 +60,13 @@ export default function Index() {
   return (
     <>
       <HeroSection />
+      <StatsBar />
       <ValueProposition />
-      <RoiCalculator />
+      <HowItWorks />
+      <RoiPreview />
+      <CaseStudiesPreview />
+      <FAQ />
+      <FinalCTA />
     </>
   );
 }

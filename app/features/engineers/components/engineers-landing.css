@@ -1,39 +1,13 @@
 /* ==========================================================================
-   About Us Page Styles (Refactored & Responsive)
+   Engineers Landing Page Styles
+   Uses global variables from app/styles/variables.css
    ========================================================================== */
-
-:root {
-  /* Colors */
-  --color-primary: #00d6cb;
-  --color-text-muted: #a6a6a6;
-  --color-bg-card: rgba(26, 26, 26, 0.5);
-  --color-border: rgba(0, 214, 203, 0.5);
-  --color-shadow: rgba(0, 214, 203, 0.15);
-
-  /* Spacing */
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 1.5rem;
-  --spacing-lg: 2rem;
-
-  /* Radius & Borders */
-  --border-radius: 5px;
-  --border-base: 0.5px solid var(--color-border);
-
-  /* Card Defaults */
-  --card-bg: var(--color-bg-card);
-  --card-shadow: 0 0 10px 2px var(--color-shadow);
-
-  --font-base: 'Exo 2', sans-serif;
-
-  --container-max-width: 1400px;
-}
 
 /* --------------------------------------------------------------------------
      Profile Detail Card
      -------------------------------------------------------------------------- */
 .about-us-preview {
-  max-width: var(--container-max-width);
+  max-width: 1400px;
   margin: 40px auto;
 }
 
@@ -41,14 +15,14 @@
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  background: var(--card-bg);
-  border: var(--border-base);
-  border-radius: var(--border-radius);
-  box-shadow: var(--card-shadow);
+  background: var(--glass-bg-medium);
+  border: 1px solid var(--color-primary-alpha-50);
+  border-radius: var(--radius-base);
+  box-shadow: var(--glow-subtle);
   backdrop-filter: blur(1px);
-  padding: var(--spacing-lg);
-  margin: var(--spacing-lg) 20px;
-  gap: var(--spacing-lg);
+  padding: 2rem;
+  margin: 2rem 20px;
+  gap: 2rem;
 }
 
 .profile-detail-left {
@@ -62,9 +36,9 @@
 .profile-detail-left img {
   width: 100%;
   height: auto;
-  border-radius: var(--border-radius);
-  border: var(--border-base);
-  box-shadow: var(--card-shadow);
+  border-radius: var(--radius-base);
+  border: 1px solid var(--color-primary-alpha-50);
+  box-shadow: var(--glow-subtle);
 }
 
 .profile-detail-right {
@@ -72,7 +46,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: var(--spacing-md);
+  gap: 1.5rem;
   width: 100%;
 }
 .profile-detail-right h2 {
@@ -83,10 +57,10 @@
 }
 .profile-detail-right p {
   margin: 0;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   line-height: 1.4;
   font-size: 1rem;
-  font-family: var(--font-base);
+  font-family: var(--font-primary);
 }
 
 /* --------------------------------------------------------------------------
@@ -94,7 +68,7 @@
      -------------------------------------------------------------------------- */
 
 .profile-role-block {
-  margin-top: var(--spacing-sm);
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,9 +81,9 @@
   padding: 0.5rem 0.75rem;
   font-size: 0.75rem;
   font-weight: bold;
-  font-family: var(--font-base);
-  border: var(--border-base);
-  border-radius: var(--border-radius);
+  font-family: var(--font-primary);
+  border: 1px solid var(--color-primary-alpha-50);
+  border-radius: var(--radius-base);
   width: 100%;
 }
 
@@ -136,24 +110,24 @@
 .profile-stats {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacing-md);
+  gap: 1.5rem;
   justify-content: center;
   width: 100%;
 }
 .profile-stat {
-  flex: 1 1 calc(33.333% - var(--spacing-md));
+  flex: 1 1 calc(33.333% - 1.5rem);
   background: rgba(0, 214, 203, 0.1);
-  border: var(--border-base);
-  border-radius: var(--border-radius);
-  padding: var(--spacing-sm);
+  border: 1px solid var(--color-primary-alpha-50);
+  border-radius: var(--radius-base);
+  padding: 1rem;
   text-align: center;
-  box-shadow: var(--card-shadow);
+  box-shadow: var(--glow-subtle);
 }
 .profile-stat h4 {
   margin: 0;
   font-size: 0.875rem;
-  color: var(--color-text-muted);
-  font-family: var(--font-base);
+  color: var(--color-text-secondary);
+  font-family: var(--font-primary);
 }
 .profile-stat p {
   margin: var(--spacing-xs) 0 0;
@@ -161,7 +135,7 @@
   font-weight: bold;
   color: var(--color-primary);
   text-shadow: 0 0 10px rgba(0, 214, 203, 0.5);
-  font-family: var(--font-base);
+  font-family: var(--font-primary);
 }
 
 /* Category-colored stat & skill cards */
@@ -187,34 +161,34 @@
 .profile-skills {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacing-md);
+  gap: 1.5rem;
   justify-content: center;
   width: 100%;
-  margin-top: var(--spacing-md);
+  margin-top: 1.5rem;
 }
 .profile-skill {
-  flex: 1 1 calc(33.333% - var(--spacing-md));
-  background: var(--card-bg);
-  border: var(--border-base);
-  border-radius: var(--border-radius);
-  padding: var(--spacing-sm);
-  box-shadow: var(--card-shadow);
+  flex: 1 1 calc(33.333% - 1.5rem);
+  background: var(--glass-bg-medium);
+  border: 1px solid var(--color-primary-alpha-50);
+  border-radius: var(--radius-base);
+  padding: 1rem;
+  box-shadow: var(--glow-subtle);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xs);
 }
 .profile-skill label {
-  font-family: var(--font-base);
+  font-family: var(--font-primary);
   font-size: 0.95rem;
   font-weight: bold;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
 }
 .profile-skill .skill-bar {
   width: 100%;
   height: 8px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 4px;
-  border: var(--border-base);
+  border: 1px solid var(--color-primary-alpha-50);
   overflow: hidden;
 }
 .profile-skill .skill-bar-inner {
@@ -230,16 +204,18 @@
 }
 
 .toggle-skills-btn {
-  margin-top: var(--spacing-sm);
+  margin-top: 1rem;
   background: transparent;
-  border: var(--border-base);
-  border-radius: var(--border-radius);
+  border: 1px solid var(--color-primary-alpha-50);
+  border-radius: var(--radius-base);
   color: var(--color-primary);
   padding: 0.4rem 0.75rem;
   font-size: 0.85rem;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
-  box-shadow: var(--card-shadow);
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+  box-shadow: var(--glow-subtle);
 }
 .toggle-skills-btn:hover {
   background: rgba(0, 214, 203, 0.1);
@@ -338,15 +314,15 @@
    Who We Are Overview
    ========================================================================== */
 .overview {
-  padding: var(--spacing-lg) var(--spacing-sm);
+  padding: 2rem 1rem;
   backdrop-filter: blur(1px);
-  max-width: var(--container-max-width);
+  max-width: 1400px;
   margin: 0 auto;
 }
 
 .overview .overview-text {
-  margin: var(--spacing-md) auto;
-  color: var(--color-text-muted);
+  margin: 1.5rem auto;
+  color: var(--color-text-secondary);
   font-size: 1.5rem;
   line-height: 1.6;
 }
@@ -354,20 +330,20 @@
 .overview .overview-list {
   list-style: none;
   padding: 0;
-  margin: var(--spacing-md) 0 0;
+  margin: 1.5rem 0 0;
   display: grid;
   grid-template-columns: 1fr; /* stack all cards in a single column */
-  gap: var(--spacing-lg);
+  gap: 2rem;
 }
 
 .overview .overview-list li {
   background: rgba(0, 214, 203, 0.1);
-  border: var(--border-base);
-  border-radius: var(--border-radius);
-  padding: var(--spacing-md); /* increased inner padding */
+  border: 1px solid var(--color-primary-alpha-50);
+  border-radius: var(--radius-base);
+  padding: 1.5rem; /* increased inner padding */
   font-size: 1.1rem; /* slightly larger font */
-  color: var(--color-text-muted);
-  box-shadow: var(--card-shadow);
+  color: var(--color-text-secondary);
+  box-shadow: var(--glow-subtle);
 }
 
 .overview .overview-list strong {
@@ -387,7 +363,7 @@
   }
   .profile-stat,
   .profile-skill {
-    flex: 1 1 calc(50% - var(--spacing-md));
+    flex: 1 1 calc(50% - 1.5rem);
   }
 }
 
@@ -408,14 +384,14 @@
 
 @media (max-width: 480px) {
   .about-us-preview {
-    padding: var(--spacing-sm);
-    margin: var(--spacing-md) auto;
+    padding: 1rem;
+    margin: 1.5rem auto;
   }
 
   .profile-detail-card {
-    padding: var(--spacing-md);
+    padding: 1.5rem;
     margin: 0 0;
-    gap: var(--spacing-md);
+    gap: 1.5rem;
   }
 
   .profile-detail-left {

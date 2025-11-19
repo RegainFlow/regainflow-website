@@ -1,0 +1,152 @@
+/* ==========================================================================
+   Process Steps Section
+   ========================================================================== */
+
+.process-steps-section {
+  background: transparent;
+}
+
+.process-steps-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.process-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+  padding-top: 1rem;
+}
+
+.process-step-card {
+  position: relative;
+  padding: 3rem 1.5rem 2rem 1.5rem;
+  text-align: center;
+  overflow: visible;
+}
+
+.process-step-number {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-primary-light)
+  );
+  border-radius: var(--radius-full);
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-black);
+  font-family: var(--font-secondary);
+  color: var(--color-bg-primary);
+  box-shadow: 0 4px 16px rgba(0, 214, 203, 0.4);
+  z-index: 10;
+}
+
+.process-step-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--glass-bg-ultra-light);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-base);
+  color: var(--color-primary);
+  margin: 1.5rem auto 1rem;
+}
+
+.process-step-title {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-secondary);
+  color: var(--color-text-primary);
+  margin: 0 0 1rem 0;
+}
+
+.process-step-description {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+/* Connecting arrows between steps */
+.process-step-card:not(:last-child)::after {
+  content: '→';
+  position: absolute;
+  top: 50%;
+  right: -2rem;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: var(--color-primary);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .process-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 2rem;
+  }
+
+  /* Remove arrows on 2-column layout */
+  .process-step-card::after {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .process-steps-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-top: 3rem;
+  }
+
+  .process-step-card {
+    padding: 2.5rem 1.25rem 2rem 1.25rem;
+  }
+
+  .process-step-title {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .process-steps-grid {
+    margin-top: 2.5rem;
+    gap: 2rem;
+  }
+
+  .process-step-card {
+    padding: 2.5rem 1rem 1.5rem 1rem;
+  }
+
+  .process-step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+    top: -20px;
+  }
+
+  .process-step-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .process-step-title {
+    font-size: 1.1rem;
+  }
+
+  .process-step-description {
+    font-size: 0.9rem;
+  }
+}

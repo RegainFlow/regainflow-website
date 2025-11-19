@@ -1,45 +1,23 @@
-:root {
-  /* Colors */
-  --color-primary: #00d6cb;
-  --color-text-muted: #a6a6a6;
-  --color-bg-card: rgba(26, 26, 26, 0.5);
-  --color-border: rgba(0, 214, 203, 0.5);
-  --color-shadow: rgba(0, 214, 203, 0.15);
-
-  /* Spacing */
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 1.5rem;
-  --spacing-lg: 2rem;
-
-  /* Radius & Borders */
-  --border-radius: 5px;
-  --border-base: 0.5px solid var(--color-border);
-
-  /* Card Defaults */
-  --card-bg: var(--color-bg-card);
-  --card-shadow: 0 0 10px 2px var(--color-shadow);
-
-  --font-base: 'Exo 2', sans-serif;
-
-  --container-max-width: 1400px;
-}
+/* ==========================================================================
+   Legal Pages Styles
+   Uses global variables from app/styles/variables.css
+   ========================================================================== */
 
 .legal-container {
-  padding-top: var(--spacing-lg);
-  padding-bottom: var(--spacing-lg);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   color: #e0e0e0;
-  max-width: var(--container-max-width);
+  max-width: 1400px;
   margin: 0 auto;
-  padding-left: var(--spacing-sm);
-  padding-right: var(--spacing-sm);
-  font-family: var(--font-base);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-family: var(--font-primary);
 }
 
 .legal-title {
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: 1rem;
   color: var(--color-primary);
   text-align: center;
 }
@@ -47,13 +25,13 @@
 .legal-subtitle {
   text-align: center;
   font-size: 1rem;
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: 2rem;
   color: var(--color-text-muted);
 }
 
 .legal-block {
-  margin-bottom: var(--spacing-lg);
-  padding: var(--spacing-sm);
+  margin-bottom: 2rem;
+  padding: 1rem;
   background-color: var(--card-bg);
   border: var(--border-base);
   border-radius: var(--border-radius);
@@ -80,7 +58,7 @@
   }
 
   .legal-container {
-    padding-top: var(--spacing-md);
-    padding-bottom: var(--spacing-md);
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 }

@@ -1,0 +1,112 @@
+/* ==========================================================================
+   Profile CTA Section
+   ========================================================================== */
+
+.profile-cta-section {
+  background: transparent;
+  padding-bottom: 4rem;
+}
+
+.profile-cta-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+}
+
+.profile-cta-content {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.profile-cta-title {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-black);
+  color: var(--color-text-primary);
+  font-family: var(--font-secondary);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.profile-cta-description {
+  font-size: 1.2rem;
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  max-width: 700px;
+  margin: 0;
+}
+
+.profile-cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.neon-button-secondary {
+  background: transparent;
+  border-color: var(--glass-border-accent);
+}
+
+.neon-button-secondary:hover {
+  background: var(--color-primary-alpha-10);
+  border-color: var(--color-primary);
+}
+
+.profile-cta-note {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile-cta-title {
+    font-size: 2rem;
+  }
+
+  .profile-cta-description {
+    font-size: 1.1rem;
+  }
+
+  .profile-cta-content {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .profile-cta-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .profile-cta-buttons .neon-button-glass {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-cta-title {
+    font-size: 1.75rem;
+  }
+
+  .profile-cta-description {
+    font-size: 1rem;
+  }
+
+  .profile-cta-content {
+    padding: 2rem 1.25rem;
+  }
+
+  .profile-cta-note {
+    font-size: 0.875rem;
+  }
+}

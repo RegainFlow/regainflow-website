@@ -58,10 +58,45 @@ LLM systems, DevOps pipelines, and complex backend platforms.',
         icon: '/images/about-us/github.svg'
       },
       {
-        href: 'https://www.notion.so/Leonardo-J-Ramirez-abf55c6b109249059f3b3c4fc29e0',
+        href: 'https://evergreen-clarinet-413.notion.site/Leonardo-J-Ramirez-abf55c6b109249059f3b3c4fc8cf29e0',
         icon: '/images/about-us/resume.svg'
       }
-    ]
+    ],
+
+    // New fields
+    primaryExpertise: ['AI/ML', 'Full-Stack', 'DevOps'],
+    topSkills: [
+      {
+        name: 'LangGraph / LangChain',
+        level: 95,
+        category: 'AI / LLM Frameworks'
+      },
+      { name: 'Python', level: 95, category: 'Programming Languages' },
+      { name: 'Elasticsearch', level: 90, category: 'Search / Vector DBs' },
+      { name: 'PenTest+ / CEH', level: 90, category: 'Security / Cyber Ops' },
+      { name: 'React / Remix.js', level: 85, category: 'Frontend' },
+      {
+        name: 'JavaScript / TypeScript',
+        level: 85,
+        category: 'Programming Languages'
+      },
+      { name: 'LlamaIndex', level: 85, category: 'AI / LLM Frameworks' },
+      { name: 'C#', level: 80, category: 'Programming Languages' },
+      { name: 'Node.js / Express', level: 80, category: 'Backend / APIs' },
+      {
+        name: 'Docker / Kubernetes',
+        level: 80,
+        category: 'DevOps / Automation'
+      }
+    ],
+    highlights: [
+      '7+ Years Enterprise Engineering',
+      '10+ Production AI/RAG Systems',
+      'Security Certified (PenTest+, CEH)'
+    ],
+    availability: {
+      status: 'available'
+    }
   },
 
   {
@@ -115,9 +150,40 @@ builds for Fortune 500 environments. Strong background in operational AI, MLOps,
         icon: '/images/about-us/github.svg'
       },
       {
-        href: 'https://www.notion.so/William-Jaunius-Baltus-e4729f9c870f4ab4a0421ca461e07b57',
+        href: 'https://grey-cloth-861.notion.site/William-Jaunius-Baltus-e4729f9c870f4ab4a0421ca461e07b57',
         icon: '/images/about-us/resume.svg'
       }
-    ]
+    ],
+
+    // New fields
+    primaryExpertise: ['AI/ML', 'Automation'],
+    topSkills: [
+      {
+        name: 'LangGraph / LangChain',
+        level: 90,
+        category: 'AI / LLM Frameworks'
+      },
+      { name: 'Python', level: 90, category: 'Programming Languages' },
+      { name: 'TensorFlow', level: 85, category: 'AI / LLM Frameworks' },
+      { name: 'UiPath', level: 85, category: 'RPA / Automation' },
+      { name: 'PyTorch', level: 80, category: 'AI / LLM Frameworks' },
+      { name: 'C#', level: 80, category: 'Programming Languages' },
+      {
+        name: 'Docker / Kubernetes',
+        level: 80,
+        category: 'DevOps / Automation'
+      },
+      { name: 'Streamlit', level: 80, category: 'Frontend / Apps' },
+      { name: 'Blue Prism', level: 75, category: 'RPA / Automation' },
+      { name: 'Elasticsearch', level: 75, category: 'Search / Vector DBs' }
+    ],
+    highlights: [
+      '10+ AI/ML Projects Delivered',
+      '40+ RPA Automation Builds',
+      'Fortune 500 Enterprise Experience'
+    ],
+    availability: {
+      status: 'available'
+    }
   }
 ];

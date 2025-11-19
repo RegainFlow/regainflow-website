@@ -184,6 +184,37 @@
   --z-index-popover: 1060;
   --z-index-tooltip: 1070;
 
+  /* ==================== Glass Morphism ==================== */
+
+  /* Glass Backgrounds */
+  --glass-bg-ultra-light: rgba(255, 255, 255, 0.025);
+  --glass-bg-light: rgba(255, 255, 255, 0.05);
+  --glass-bg-medium: rgba(255, 255, 255, 0.08);
+  --glass-bg-heavy: rgba(18, 18, 19, 0.8);
+  --glass-bg-navbar: rgba(18, 18, 19, 0.85);
+  --glass-bg-footer: rgba(18, 18, 19, 0.6);
+
+  /* Glass Borders */
+  --glass-border-subtle: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-border-accent: rgba(0, 214, 203, 0.15);
+  --glass-border-accent-hover: rgba(0, 214, 203, 0.5);
+
+  /* Glass Blur Values */
+  --glass-blur-sm: blur(12px);
+  --glass-blur-md: blur(16px);
+  --glass-blur-lg: blur(20px);
+  --glass-blur-xl: blur(24px);
+  --glass-blur-ambient: blur(120px);
+
+  /* Refined Glows (Subtle) */
+  --glow-subtle: 0 0 4px rgba(0, 214, 203, 0.3);
+  --glow-medium: 0 0 8px rgba(0, 214, 203, 0.4);
+  --glow-text: 0 0 4px rgba(0, 214, 203, 0.5);
+  --glow-text-logo:
+    0 0 6px rgba(0, 214, 203, 0.6), 0 0 2px rgba(0, 214, 203, 0.4);
+  --glow-hover: 0 0 12px rgba(0, 214, 203, 0.3);
+
   /* ==================== Layout ==================== */
 
   /* Container Widths */

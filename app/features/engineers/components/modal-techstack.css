@@ -1,20 +1,28 @@
+/* ==========================================================================
+   Modal Tech Stack - Glass Morphism Styling
+   ========================================================================== */
+
 .modal-overlay {
   position: fixed;
   inset: 0;
   z-index: 999;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(3px);
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
 }
 
 .modal-panel {
-  background: #121212;
-  border: var(--border-base);
-  border-radius: var(--border-radius);
-  box-shadow: var(--card-shadow);
-  padding: var(--spacing-lg);
+  background: var(--glass-bg-light);
+  backdrop-filter: var(--glass-blur-lg);
+  -webkit-backdrop-filter: var(--glass-blur-lg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 32px rgba(0, 214, 203, 0.15);
+  padding: 2rem;
   max-width: 1000px;
   width: 100%;
   max-height: 80vh;
@@ -26,13 +34,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--glass-border);
 }
 
 .modal-title {
-  color: var(--color-primary);
+  color: var(--color-text-primary);
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: var(--font-weight-black);
+  font-family: var(--font-secondary);
+  margin: 0;
+}
+
+.modal-title span {
+  color: var(--color-primary);
+  text-shadow: 0 0 8px rgba(0, 214, 203, 0.4);
 }
 
 .modal-close {
@@ -41,68 +58,58 @@
   color: var(--color-primary);
   cursor: pointer;
   padding: 0.5rem;
+  transition: all var(--transition-fast);
+  border-radius: var(--radius-base);
+}
+
+.modal-close:hover {
+  background: var(--glass-bg-ultra-light);
+  transform: rotate(90deg);
 }
 
 .modal-body {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
+  gap: 2rem;
 }
 
 .modal-skills-grid {
   display: grid;
-  gap: var(--spacing-md);
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .modal-skill-card {
-  background: var(--color-bg-card);
-  border-radius: var(--border-radius);
-  padding: var(--spacing-sm);
+  background: var(--glass-bg-ultra-light);
+  backdrop-filter: var(--glass-blur-md);
+  -webkit-backdrop-filter: var(--glass-blur-md);
+  border-radius: var(--radius-base);
+  padding: 1rem;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xs);
-  transition: 0.3s ease;
-  border: 0.5px solid transparent;
-  box-shadow: none;
+  gap: 0.5rem;
+  transition: all var(--transition-base);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 4px 12px rgba(0, 214, 203, 0.08);
+}
+
+.modal-skill-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 214, 203, 0.15);
 }
 
 .modal-skill-name {
-  color: var(--color-text-muted);
-  margin-bottom: var(--spacing-xs);
+  color: var(--color-text-primary);
+  margin-bottom: 0.25rem;
   font-size: 0.95rem;
-  font-weight: bold;
+  font-weight: var(--font-weight-medium);
 }
 
 .modal-skill-bar {
   height: 6px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 3px;
-  border: var(--border-base);
+  background: var(--glass-bg-medium);
+  border-radius: var(--radius-full);
   overflow: hidden;
-}
-
-.modal-skill-bar-inner {
-  height: 100%;
-  background: var(--color-primary);
-  transition: width 0.5s ease;
-}
-
-.modal-skill-level {
-  margin-top: 0.25rem;
-  font-size: 0.8rem;
-  color: var(--color-primary);
-  font-weight: bold;
-  text-align: right;
-}
-
-.modal-category {
-  font-size: 1rem;
-  font-weight: bold;
-  margin: 1.5rem 0 0.5rem;
-  border-bottom: 1px solid currentColor;
-  padding-bottom: 0.3rem;
-  text-transform: uppercase;
 }
 
 .modal-skill-bar-inner {
@@ -110,6 +117,7 @@
   background: var(--color-primary);
   width: 0%;
   transition: none;
+  border-radius: var(--radius-full);
 }
 
 .animate-bar {
@@ -124,235 +132,336 @@
     width: var(--final-width);
   }
 }
-/* Custom neon category bar colors */
-.modal-skill-card[data-category='AI / LLM Frameworks'] .modal-skill-bar-inner {
-  background: #00d6cb;
+
+.modal-skill-level {
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-secondary);
+  text-align: right;
 }
-.modal-skill-card[data-category='Programming Languages']
-  .modal-skill-bar-inner {
-  background: #00bfff;
+
+.modal-category {
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-secondary);
+  margin: 1.5rem 0 1rem;
+  border-bottom: 2px solid currentColor;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
 }
-.modal-skill-card[data-category='Search / Vector DBs'] .modal-skill-bar-inner {
-  background: #a270f1;
-}
-.modal-skill-card[data-category='Frontend'] .modal-skill-bar-inner {
-  background: #00ff9f;
-}
-.modal-skill-card[data-category='Backend / APIs'] .modal-skill-bar-inner {
-  background: #fff740;
-}
-.modal-skill-card[data-category='DevOps / Automation'] .modal-skill-bar-inner {
-  background: #ff8c42;
-}
-.modal-skill-card[data-category='Security / Cyber Ops'] .modal-skill-bar-inner {
-  background: #ff3864;
-}
-.modal-skill-card[data-category='ML / DL Frameworks'] .modal-skill-bar-inner {
-  background: #e066ff;
-}
-.modal-skill-card[data-category='RPA / Automation'] .modal-skill-bar-inner {
-  background: #ffb347;
-}
-.modal-skill-card[data-category='Cloud / AI Services'] .modal-skill-bar-inner {
-  background: #6495ed;
-}
-.modal-skill-card[data-category='API / Integration'] .modal-skill-bar-inner {
-  background: #ff69b4;
-}
-.modal-skill-card[data-category='Databases'] .modal-skill-bar-inner {
-  background: #ffa07a;
-}
-.modal-skill-card[data-category='Frontend / Apps'] .modal-skill-bar-inner {
-  background: #00fa9a;
-}
+/* ==========================================================================
+   Category Colors - 13 Categories with Refined Glows
+   ========================================================================== */
 
 /* AI / LLM Frameworks */
 .modal-skill-card[data-category='AI / LLM Frameworks'] {
-  border-color: #00d6cb;
-  box-shadow: 0 0 10px 2px #00d6cb33;
+  border-color: rgba(0, 214, 203, 0.3);
+}
+.modal-skill-card[data-category='AI / LLM Frameworks']:hover {
+  border-color: rgba(0, 214, 203, 0.5);
+  box-shadow: 0 4px 16px rgba(0, 214, 203, 0.2);
+}
+.modal-skill-card[data-category='AI / LLM Frameworks'] .modal-skill-bar-inner {
+  background: linear-gradient(90deg, #00d6cb, #00ffef);
+  box-shadow: 0 0 8px rgba(0, 214, 203, 0.3);
+}
+.modal-skill-card[data-category='AI / LLM Frameworks'] .modal-skill-level {
+  color: #00d6cb;
 }
 
 /* Programming Languages */
 .modal-skill-card[data-category='Programming Languages'] {
-  border-color: #00bfff;
-  box-shadow: 0 0 10px 2px #00bfff33;
+  border-color: rgba(0, 191, 255, 0.3);
+}
+.modal-skill-card[data-category='Programming Languages']:hover {
+  border-color: rgba(0, 191, 255, 0.5);
+  box-shadow: 0 4px 16px rgba(0, 191, 255, 0.2);
+}
+.modal-skill-card[data-category='Programming Languages'] .modal-skill-bar-inner {
+  background: linear-gradient(90deg, #00bfff, #66d9ff);
+  box-shadow: 0 0 8px rgba(0, 191, 255, 0.3);
+}
+.modal-skill-card[data-category='Programming Languages'] .modal-skill-level {
+  color: #00bfff;
 }
 
 /* Search / Vector DBs */
 .modal-skill-card[data-category='Search / Vector DBs'] {
-  border-color: #a270f1;
-  box-shadow: 0 0 10px 2px #a270f133;
+  border-color: rgba(162, 112, 241, 0.3);
+}
+.modal-skill-card[data-category='Search / Vector DBs']:hover {
+  border-color: rgba(162, 112, 241, 0.5);
+  box-shadow: 0 4px 16px rgba(162, 112, 241, 0.2);
+}
+.modal-skill-card[data-category='Search / Vector DBs'] .modal-skill-bar-inner {
+  background: linear-gradient(90deg, #a270f1, #c499f8);
+  box-shadow: 0 0 8px rgba(162, 112, 241, 0.3);
+}
+.modal-skill-card[data-category='Search / Vector DBs'] .modal-skill-level {
+  color: #a270f1;
 }
 
 /* Frontend */
 .modal-skill-card[data-category='Frontend'] {
-  border-color: #00ff9f;
-  box-shadow: 0 0 10px 2px #00ff9f33;
+  border-color: rgba(0, 255, 159, 0.3);
+}
+.modal-skill-card[data-category='Frontend']:hover {
+  border-color: rgba(0, 255, 159, 0.5);
+  box-shadow: 0 4px 16px rgba(0, 255, 159, 0.2);
+}
+.modal-skill-card[data-category='Frontend'] .modal-skill-bar-inner {
+  background: linear-gradient(90deg, #00ff9f, #66ffbf);
+  box-shadow: 0 0 8px rgba(0, 255, 159, 0.3);
+}
+.modal-skill-card[data-category='Frontend'] .modal-skill-level {
+  color: #00ff9f;
 }
 
 /* Backend / APIs */
 .modal-skill-card[data-category='Backend / APIs'] {
-  border-color: #fff740;
-  box-shadow: 0 0 10px 2px #fff74033;
+  border-color: rgba(255, 247, 64, 0.3);
+}
+.modal-skill-card[data-category='Backend / APIs']:hover {
+  border-color: rgba(255, 247, 64, 0.5);
+  box-shadow: 0 4px 16px rgba(255, 247, 64, 0.2);
+}
+.modal-skill-card[data-category='Backend / APIs'] .modal-skill-bar-inner {
+  background: linear-gradient(90deg, #fff740, #fffa80);
+  box-shadow: 0 0 8px rgba(255, 247, 64, 0.3);
+}
+.modal-skill-card[data-category='Backend / APIs'] .modal-skill-level {
+  color: #fff740;
 }
 
 /* DevOps / Automation */
 .modal-skill-card[data-category='DevOps / Automation'] {
-  border-color: #ff8c42;
-  box-shadow: 0 0 10px 2px #ff8c4233;
+  border-color: rgba(255, 140, 66, 0.3);
+}
+.modal-skill-card[data-category='DevOps / Automation']:hover {
+  border-color: rgba(255, 140, 66, 0.5);
+  box-shadow: 0 4px 16px rgba(255, 140, 66, 0.2);
+}
+.modal-skill-card[data-category='DevOps / Automation'] .modal-skill-bar-inner {
+  background: linear-gradient(90deg, #ff8c42, #ffb380);
+  box-shadow: 0 0 8px rgba(255, 140, 66, 0.3);
+}
+.modal-skill-card[data-category='DevOps / Automation'] .modal-skill-level {
+  color: #ff8c42;
 }
 
 /* Security / Cyber Ops */
 .modal-skill-card[data-category='Security / Cyber Ops'] {
-  border-color: #ff3864;
-  box-shadow: 0 0 10px 2px #ff386433;
+  border-color: rgba(255, 56, 100, 0.3);
 }
-
-/* ML / DL Frameworks */
-.modal-skill-card[data-category='ML / DL Frameworks'] {
-  border-color: #e066ff;
-  box-shadow: 0 0 10px 2px #e066ff33;
+.modal-skill-card[data-category='Security / Cyber Ops']:hover {
+  border-color: rgba(255, 56, 100, 0.5);
+  box-shadow: 0 4px 16px rgba(255, 56, 100, 0.2);
+}
+.modal-skill-card[data-category='Security / Cyber Ops'] .modal-skill-bar-inner {
+  background: linear-gradient(90deg, #ff3864, #ff7094);
+  box-shadow: 0 0 8px rgba(255, 56, 100, 0.3);
+}
+.modal-skill-card[data-category='Security / Cyber Ops'] .modal-skill-level {
+  color: #ff3864;
 }
 
 /* RPA / Automation */
 .modal-skill-card[data-category='RPA / Automation'] {
-  border-color: #ffb347;
-  box-shadow: 0 0 10px 2px #ffb34733;
+  border-color: rgba(255, 107, 157, 0.3);
+}
+.modal-skill-card[data-category='RPA / Automation']:hover {
+  border-color: rgba(255, 107, 157, 0.5);
+  box-shadow: 0 4px 16px rgba(255, 107, 157, 0.2);
+}
+.modal-skill-card[data-category='RPA / Automation'] .modal-skill-bar-inner {
+  background: linear-gradient(90deg, #ff6b9d, #ffa3c1);
+  box-shadow: 0 0 8px rgba(255, 107, 157, 0.3);
+}
+.modal-skill-card[data-category='RPA / Automation'] .modal-skill-level {
+  color: #ff6b9d;
 }
 
 /* Cloud / AI Services */
 .modal-skill-card[data-category='Cloud / AI Services'] {
-  border-color: #6495ed;
-  box-shadow: 0 0 10px 2px #6495ed33;
+  border-color: rgba(255, 200, 55, 0.3);
+}
+.modal-skill-card[data-category='Cloud / AI Services']:hover {
+  border-color: rgba(255, 200, 55, 0.5);
+  box-shadow: 0 4px 16px rgba(255, 200, 55, 0.2);
+}
+.modal-skill-card[data-category='Cloud / AI Services'] .modal-skill-bar-inner {
+  background: linear-gradient(90deg, #ffc837, #ffd970);
+  box-shadow: 0 0 8px rgba(255, 200, 55, 0.3);
+}
+.modal-skill-card[data-category='Cloud / AI Services'] .modal-skill-level {
+  color: #ffc837;
+}
+
+/* ML / DL Frameworks */
+.modal-skill-card[data-category='ML / DL Frameworks'] {
+  border-color: rgba(192, 192, 192, 0.3);
+}
+.modal-skill-card[data-category='ML / DL Frameworks']:hover {
+  border-color: rgba(192, 192, 192, 0.5);
+  box-shadow: 0 4px 16px rgba(192, 192, 192, 0.2);
+}
+.modal-skill-card[data-category='ML / DL Frameworks'] .modal-skill-bar-inner {
+  background: linear-gradient(90deg, #c0c0c0, #e0e0e0);
+  box-shadow: 0 0 8px rgba(192, 192, 192, 0.3);
+}
+.modal-skill-card[data-category='ML / DL Frameworks'] .modal-skill-level {
+  color: #c0c0c0;
 }
 
 /* API / Integration */
 .modal-skill-card[data-category='API / Integration'] {
-  border-color: #ff69b4;
-  box-shadow: 0 0 10px 2px #ff69b433;
+  border-color: rgba(255, 105, 180, 0.3);
+}
+.modal-skill-card[data-category='API / Integration']:hover {
+  border-color: rgba(255, 105, 180, 0.5);
+  box-shadow: 0 4px 16px rgba(255, 105, 180, 0.2);
+}
+.modal-skill-card[data-category='API / Integration'] .modal-skill-bar-inner {
+  background: linear-gradient(90deg, #ff69b4, #ff99cf);
+  box-shadow: 0 0 8px rgba(255, 105, 180, 0.3);
+}
+.modal-skill-card[data-category='API / Integration'] .modal-skill-level {
+  color: #ff69b4;
 }
 
 /* Databases */
 .modal-skill-card[data-category='Databases'] {
-  border-color: #ffa07a;
-  box-shadow: 0 0 10px 2px #ffa07a33;
+  border-color: rgba(255, 160, 122, 0.3);
+}
+.modal-skill-card[data-category='Databases']:hover {
+  border-color: rgba(255, 160, 122, 0.5);
+  box-shadow: 0 4px 16px rgba(255, 160, 122, 0.2);
+}
+.modal-skill-card[data-category='Databases'] .modal-skill-bar-inner {
+  background: linear-gradient(90deg, #ffa07a, #ffc0a5);
+  box-shadow: 0 0 8px rgba(255, 160, 122, 0.3);
+}
+.modal-skill-card[data-category='Databases'] .modal-skill-level {
+  color: #ffa07a;
 }
 
 /* Frontend / Apps */
 .modal-skill-card[data-category='Frontend / Apps'] {
-  border-color: #00fa9a;
-  box-shadow: 0 0 10px 2px #00fa9a33;
+  border-color: rgba(105, 240, 174, 0.3);
+}
+.modal-skill-card[data-category='Frontend / Apps']:hover {
+  border-color: rgba(105, 240, 174, 0.5);
+  box-shadow: 0 4px 16px rgba(105, 240, 174, 0.2);
+}
+.modal-skill-card[data-category='Frontend / Apps'] .modal-skill-bar-inner {
+  background: linear-gradient(90deg, #69f0ae, #9ff5c9);
+  box-shadow: 0 0 8px rgba(105, 240, 174, 0.3);
+}
+.modal-skill-card[data-category='Frontend / Apps'] .modal-skill-level {
+  color: #69f0ae;
 }
 
-/* Color headings by content */
-.modal-category:has(
-    + .modal-skills-grid .modal-skill-card[data-category='AI / LLM Frameworks']
-  ) {
+/* Category Headers */
+.modal-category:has(+ .modal-skills-grid .modal-skill-card[data-category='AI / LLM Frameworks']) {
   color: #00d6cb;
 }
-.modal-category:has(
-    + .modal-skills-grid
-      .modal-skill-card[data-category='Programming Languages']
-  ) {
+.modal-category:has(+ .modal-skills-grid .modal-skill-card[data-category='Programming Languages']) {
   color: #00bfff;
 }
-.modal-category:has(
-    + .modal-skills-grid .modal-skill-card[data-category='Search / Vector DBs']
-  ) {
+.modal-category:has(+ .modal-skills-grid .modal-skill-card[data-category='Search / Vector DBs']) {
   color: #a270f1;
 }
-.modal-category:has(
-    + .modal-skills-grid .modal-skill-card[data-category='Frontend']
-  ) {
+.modal-category:has(+ .modal-skills-grid .modal-skill-card[data-category='Frontend']) {
   color: #00ff9f;
 }
-.modal-category:has(
-    + .modal-skills-grid .modal-skill-card[data-category='Backend / APIs']
-  ) {
+.modal-category:has(+ .modal-skills-grid .modal-skill-card[data-category='Backend / APIs']) {
   color: #fff740;
 }
-.modal-category:has(
-    + .modal-skills-grid .modal-skill-card[data-category='DevOps / Automation']
-  ) {
+.modal-category:has(+ .modal-skills-grid .modal-skill-card[data-category='DevOps / Automation']) {
   color: #ff8c42;
 }
-.modal-category:has(
-    + .modal-skills-grid .modal-skill-card[data-category='Security / Cyber Ops']
-  ) {
+.modal-category:has(+ .modal-skills-grid .modal-skill-card[data-category='Security / Cyber Ops']) {
   color: #ff3864;
 }
-.modal-category:has(
-    + .modal-skills-grid .modal-skill-card[data-category='ML / DL Frameworks']
-  ) {
-  color: #e066ff;
+.modal-category:has(+ .modal-skills-grid .modal-skill-card[data-category='RPA / Automation']) {
+  color: #ff6b9d;
 }
-.modal-category:has(
-    + .modal-skills-grid .modal-skill-card[data-category='RPA / Automation']
-  ) {
-  color: #ffb347;
+.modal-category:has(+ .modal-skills-grid .modal-skill-card[data-category='Cloud / AI Services']) {
+  color: #ffc837;
 }
-.modal-category:has(
-    + .modal-skills-grid .modal-skill-card[data-category='Cloud / AI Services']
-  ) {
-  color: #6495ed;
+.modal-category:has(+ .modal-skills-grid .modal-skill-card[data-category='ML / DL Frameworks']) {
+  color: #c0c0c0;
 }
-.modal-category:has(
-    + .modal-skills-grid .modal-skill-card[data-category='API / Integration']
-  ) {
+.modal-category:has(+ .modal-skills-grid .modal-skill-card[data-category='API / Integration']) {
   color: #ff69b4;
 }
-.modal-category:has(
-    + .modal-skills-grid .modal-skill-card[data-category='Databases']
-  ) {
+.modal-category:has(+ .modal-skills-grid .modal-skill-card[data-category='Databases']) {
   color: #ffa07a;
 }
-.modal-category:has(
-    + .modal-skills-grid .modal-skill-card[data-category='Frontend / Apps']
-  ) {
-  color: #00fa9a;
+.modal-category:has(+ .modal-skills-grid .modal-skill-card[data-category='Frontend / Apps']) {
+  color: #69f0ae;
 }
+
+/* ==========================================================================
+   Responsive Styles
+   ========================================================================== */
 
 @media (max-width: 768px) {
   .modal-panel {
     max-width: 90%;
     max-height: 85vh;
-    padding: var(--spacing-md);
-    border-radius: 10px;
+    padding: 1.5rem;
   }
 
   .modal-title {
     font-size: 1.5rem;
-    text-align: center;
+  }
+
+  .modal-header {
+    margin-bottom: 1.5rem;
   }
 
   .modal-skills-grid {
     grid-template-columns: 1fr;
-    gap: var(--spacing-sm);
-  }
-
-  .modal-header {
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-sm);
+    gap: 0.875rem;
   }
 
   .modal-close {
     position: absolute;
-    top: 0.75rem;
-    right: 0.75rem;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .modal-category {
+    font-size: 1rem;
+    margin: 1.25rem 0 0.75rem;
   }
 }
 
 @media (max-width: 480px) {
+  .modal-panel {
+    padding: 1.25rem;
+  }
+
   .modal-title {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
+  }
+
+  .modal-skill-card {
+    padding: 0.875rem;
   }
 
   .modal-skill-name {
-    font-size: 0.85rem;
+    font-size: 0.875rem;
   }
 
   .modal-skill-level {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .modal-category {
+    font-size: 0.95rem;
   }
 }

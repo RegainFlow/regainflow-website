@@ -1,0 +1,79 @@
+/* ==========================================================================
+   Expertise Filter Section
+   ========================================================================== */
+
+.expertise-filter-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.expertise-filter-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 80px;
+  z-index: 100;
+  border: 1px solid rgba(0, 214, 203, 0.1);
+  border-radius: var(--radius-base);
+  background: linear-gradient(#181a1b);
+  padding: 1.5rem 0 2rem;
+}
+
+.expertise-filter-tab {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-base);
+  padding: 0.75rem 1.5rem;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  font-family: var(--font-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.expertise-filter-tab:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--glass-border-accent);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.expertise-filter-tab.active {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  box-shadow: 0 4px 12px rgba(0, 214, 203, 0.15);
+}
+
+.filter-count {
+  opacity: 0.7;
+  margin-left: 0.5rem;
+  font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .expertise-filter-container {
+    gap: 0.5rem;
+    padding: 1rem 0 1.5rem;
+    top: 60px;
+  }
+
+  .expertise-filter-tab {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .expertise-filter-tab {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.75rem;
+  }
+}

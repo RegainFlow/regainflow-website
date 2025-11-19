@@ -1,9 +1,19 @@
 // Public API for services feature
-export { default as ServicePage } from './components/ServicePage';
-export { default as FeatureCard } from './components/FeatureCard';
+
+// Components
+export { default as ServicesOverview } from './components/ServicesOverview';
+export { default as CapabilityPage } from './components/CapabilityPage';
 
 // Export types
-export type { ServiceSlug, ServiceInfo, Card } from './types/service.types';
+export type {
+  Capability,
+  CapabilitySlug,
+  ProcessStep,
+  ServiceMetric,
+  CapabilityCard,
+  ServicesOverview as ServicesOverviewType
+} from './types/service.types';
 
 // Export data
-export { servicesData } from './data/servicesData';
+export { capabilitiesData, getCapabilityBySlug } from './data/capabilitiesData';
+export { servicesOverviewData } from './data/servicesOverviewData';

@@ -4,18 +4,19 @@ import type { LoaderFunction } from '@react-router/node';
 export const loader: LoaderFunction = () => {
   const baseUrl = 'https://www.regainflow.com';
 
-  // Build your URL list dynamically if you like
+  // URL list for sitemap
   const pages = [
     { path: '/', changefreq: 'daily', priority: 1.0 },
-    {
-      path: '/services/automation-audit',
-      changefreq: 'monthly',
-      priority: 0.8
-    },
-    { path: '/services/rapid-solutions', changefreq: 'monthly', priority: 0.8 },
-    { path: '/services/c2c-contracting', changefreq: 'monthly', priority: 0.9 },
+    { path: '/services', changefreq: 'monthly', priority: 0.9 },
+    { path: '/services/ai-automation', changefreq: 'monthly', priority: 0.8 },
+    { path: '/services/rag-search', changefreq: 'monthly', priority: 0.8 },
+    { path: '/services/data-validation', changefreq: 'monthly', priority: 0.8 },
+    { path: '/services/system-integration', changefreq: 'monthly', priority: 0.8 },
+    { path: '/services/full-stack-engineering', changefreq: 'monthly', priority: 0.8 },
+    { path: '/services/devops', changefreq: 'monthly', priority: 0.8 },
     { path: '/engineers', changefreq: 'weekly', priority: 0.9 },
-    { path: '/portfolio', changefreq: 'monthly', priority: 0.7 },
+    { path: '/projects', changefreq: 'monthly', priority: 0.7 },
+    { path: '/roi-calculator', changefreq: 'monthly', priority: 0.7 },
     { path: '/contact-us', changefreq: 'monthly', priority: 0.8 }
   ];
 

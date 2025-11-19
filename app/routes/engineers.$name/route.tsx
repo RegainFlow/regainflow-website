@@ -2,10 +2,20 @@ import type { LoaderFunctionArgs, MetaFunction, LinksFunction } from '@react-rou
 import { useLoaderData } from 'react-router';
 import { teamMembers, EngineerProfile } from '~/features/engineers';
 
-import engineerProfileStyles from '~/features/engineers/components/engineer-profile-custom.css?url';
+import profileHeroStyles from '~/features/engineers/components/profile-hero.css?url';
+import keyHighlightsStyles from '~/features/engineers/components/key-highlights.css?url';
+import topSkillsShowcaseStyles from '~/features/engineers/components/top-skills-showcase.css?url';
+import techStackAccordionStyles from '~/features/engineers/components/tech-stack-accordion.css?url';
+import profileCtaStyles from '~/features/engineers/components/profile-cta.css?url';
+import engineerStatsGridStyles from '~/features/engineers/components/engineer-stats-grid.css?url';
 
 export const links: LinksFunction = () => [
-  { rel: 'stylesheet', href: engineerProfileStyles }
+  { rel: 'stylesheet', href: profileHeroStyles },
+  { rel: 'stylesheet', href: keyHighlightsStyles },
+  { rel: 'stylesheet', href: topSkillsShowcaseStyles },
+  { rel: 'stylesheet', href: engineerStatsGridStyles },
+  { rel: 'stylesheet', href: techStackAccordionStyles },
+  { rel: 'stylesheet', href: profileCtaStyles }
 ];
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {

@@ -1,0 +1,300 @@
+/* ==========================================================================
+   Tech Stack Accordion Section
+   ========================================================================== */
+
+.tech-stack-accordion-section {
+  background: transparent;
+}
+
+.tech-stack-accordion-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tech-stack-accordion {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.accordion-category {
+  background: var(--glass-bg-ultra-light);
+  backdrop-filter: var(--glass-blur-md);
+  -webkit-backdrop-filter: var(--glass-blur-md);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-base);
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.accordion-category:hover {
+  border-color: var(--glass-border-accent);
+  box-shadow: 0 4px 12px rgba(0, 214, 203, 0.1);
+}
+
+.accordion-category-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background var(--transition-fast);
+}
+
+.accordion-category-header:hover {
+  background: var(--glass-bg-light);
+}
+
+.accordion-category-title {
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-secondary);
+  margin: 0;
+  transition: color var(--transition-fast);
+}
+
+.accordion-category-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.accordion-skill-count {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-medium);
+}
+
+.accordion-category-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: var(--color-primary);
+  transition: transform var(--transition-base);
+}
+
+.accordion-category.active .accordion-category-icon {
+  transform: rotate(180deg);
+}
+
+.accordion-category-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.accordion-category.active .accordion-category-content {
+  max-height: 2000px;
+  transition: max-height 0.5s ease-in;
+}
+
+.accordion-skills-grid {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.accordion-skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.accordion-skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-skill-name {
+  font-size: 0.95rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+
+.accordion-skill-level {
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-secondary);
+}
+
+.accordion-skill-bar {
+  width: 100%;
+  height: 6px;
+  background: var(--glass-bg-medium);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.accordion-skill-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 0.6s ease;
+}
+
+/* Category Colors - 13 categories preserved */
+.accordion-category[data-category='AI / LLM Frameworks'] .accordion-category-title {
+  color: #00d6cb;
+}
+.accordion-category[data-category='AI / LLM Frameworks'] .accordion-skill-level {
+  color: #00d6cb;
+}
+.accordion-category[data-category='AI / LLM Frameworks'] .accordion-skill-bar-fill {
+  background: linear-gradient(90deg, #00d6cb, #00ffef);
+}
+
+.accordion-category[data-category='Programming Languages'] .accordion-category-title {
+  color: #00bfff;
+}
+.accordion-category[data-category='Programming Languages'] .accordion-skill-level {
+  color: #00bfff;
+}
+.accordion-category[data-category='Programming Languages'] .accordion-skill-bar-fill {
+  background: linear-gradient(90deg, #00bfff, #66d9ff);
+}
+
+.accordion-category[data-category='Search / Vector DBs'] .accordion-category-title {
+  color: #a270f1;
+}
+.accordion-category[data-category='Search / Vector DBs'] .accordion-skill-level {
+  color: #a270f1;
+}
+.accordion-category[data-category='Search / Vector DBs'] .accordion-skill-bar-fill {
+  background: linear-gradient(90deg, #a270f1, #c499f8);
+}
+
+.accordion-category[data-category='Frontend'] .accordion-category-title {
+  color: #00ff9f;
+}
+.accordion-category[data-category='Frontend'] .accordion-skill-level {
+  color: #00ff9f;
+}
+.accordion-category[data-category='Frontend'] .accordion-skill-bar-fill {
+  background: linear-gradient(90deg, #00ff9f, #66ffbf);
+}
+
+.accordion-category[data-category='Backend / APIs'] .accordion-category-title {
+  color: #fff740;
+}
+.accordion-category[data-category='Backend / APIs'] .accordion-skill-level {
+  color: #fff740;
+}
+.accordion-category[data-category='Backend / APIs'] .accordion-skill-bar-fill {
+  background: linear-gradient(90deg, #fff740, #fffa80);
+}
+
+.accordion-category[data-category='DevOps / Automation'] .accordion-category-title {
+  color: #ff8c42;
+}
+.accordion-category[data-category='DevOps / Automation'] .accordion-skill-level {
+  color: #ff8c42;
+}
+.accordion-category[data-category='DevOps / Automation'] .accordion-skill-bar-fill {
+  background: linear-gradient(90deg, #ff8c42, #ffb380);
+}
+
+.accordion-category[data-category='Security / Cyber Ops'] .accordion-category-title {
+  color: #ff3864;
+}
+.accordion-category[data-category='Security / Cyber Ops'] .accordion-skill-level {
+  color: #ff3864;
+}
+.accordion-category[data-category='Security / Cyber Ops'] .accordion-skill-bar-fill {
+  background: linear-gradient(90deg, #ff3864, #ff7094);
+}
+
+.accordion-category[data-category='RPA / Automation'] .accordion-category-title {
+  color: #ff6b9d;
+}
+.accordion-category[data-category='RPA / Automation'] .accordion-skill-level {
+  color: #ff6b9d;
+}
+.accordion-category[data-category='RPA / Automation'] .accordion-skill-bar-fill {
+  background: linear-gradient(90deg, #ff6b9d, #ffa3c1);
+}
+
+.accordion-category[data-category='Cloud / AI Services'] .accordion-category-title {
+  color: #ffc837;
+}
+.accordion-category[data-category='Cloud / AI Services'] .accordion-skill-level {
+  color: #ffc837;
+}
+.accordion-category[data-category='Cloud / AI Services'] .accordion-skill-bar-fill {
+  background: linear-gradient(90deg, #ffc837, #ffd970);
+}
+
+.accordion-category[data-category='ML / DL Frameworks'] .accordion-category-title {
+  color: #c0c0c0;
+}
+.accordion-category[data-category='ML / DL Frameworks'] .accordion-skill-level {
+  color: #c0c0c0;
+}
+.accordion-category[data-category='ML / DL Frameworks'] .accordion-skill-bar-fill {
+  background: linear-gradient(90deg, #c0c0c0, #e0e0e0);
+}
+
+.accordion-category[data-category='Frontend / Apps'] .accordion-category-title {
+  color: #69f0ae;
+}
+.accordion-category[data-category='Frontend / Apps'] .accordion-skill-level {
+  color: #69f0ae;
+}
+.accordion-category[data-category='Frontend / Apps'] .accordion-skill-bar-fill {
+  background: linear-gradient(90deg, #69f0ae, #9ff5c9);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .accordion-category-header {
+    padding: 1rem 1.25rem;
+  }
+
+  .accordion-category-title {
+    font-size: 1rem;
+  }
+
+  .accordion-skill-count {
+    font-size: 0.85rem;
+  }
+
+  .accordion-skills-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1.25rem 1.25rem 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .accordion-category-header {
+    padding: 0.875rem 1rem;
+  }
+
+  .accordion-category-title {
+    font-size: 0.95rem;
+  }
+
+  .accordion-category-meta {
+    gap: 0.5rem;
+  }
+
+  .accordion-skill-count {
+    display: none;
+  }
+
+  .accordion-skills-grid {
+    padding: 0 1rem 1rem 1rem;
+  }
+
+  .accordion-skill-name {
+    font-size: 0.9rem;
+  }
+
+  .accordion-skill-level {
+    font-size: 0.95rem;
+  }
+}

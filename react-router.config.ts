@@ -1,17 +1,16 @@
-import type { Config } from "@react-router/dev/config";
+import type { Config } from '@react-router/dev/config';
 
 export default {
   // App directory
-  appDirectory: "app",
+  appDirectory: 'app',
 
   // Build output directory
-  buildDirectory: "build",
+  buildDirectory: 'build',
 
   // Enable SSR
-  ssr: true,
+  ssr: true
 
   // Optional: Pre-render specific routes for faster initial loads
   // Uncomment and customize as needed:
-  // prerender: ["/", "/portfolio", "/privacy", "/terms"],
-
+  // prerender: ["/", "/projects", "/privacy", "/terms"],
 } satisfies Config;

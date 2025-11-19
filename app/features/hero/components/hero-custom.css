@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Hero Section Styles (Refactored & Responsive)
+   Hero Section Styles - Hybrid Glass + Neon Design
    ========================================================================== */
 
 /* Hero-specific component variables (using global design tokens) */
@@ -7,8 +7,6 @@
   /* Carousel Variables */
   --carousel-slide-size: 100px;
   --carousel-slide-radius: var(--radius-base);
-  --carousel-slide-bg: var(--color-primary-alpha-40);
-  --carousel-slide-shadow: 0 0 10px 1px var(--color-primary-alpha-20);
   --carousel-slide-margin: 20px;
   --carousel-slide-size-md: 80px;
   --carousel-slide-size-sm: 60px;
@@ -19,7 +17,7 @@
 
   /* Hero Layout */
   --hero-container-max: 1400px;
-  --hero-section-padding: 2rem 1rem;
+  --hero-section-padding: 4rem 1rem 3rem;
 }
 
 .hero-section {
@@ -29,6 +27,7 @@
   font-family: var(--font-primary);
   max-width: var(--hero-container-max);
   margin: 0 auto;
+  position: relative;
 }
 
 .hero-subhead {
@@ -52,17 +51,26 @@
 
 .text-highlight {
   color: var(--color-primary);
-  text-shadow: var(--shadow-text-glow);
+  text-shadow: var(--glow-text);
 }
 
 .typed-text {
   font-size: var(--font-size-2xl);
   margin-bottom: var(--spacing-3xl);
+  padding: 1.5rem 2rem;
+  background: var(--glass-bg-ultra-light);
+  backdrop-filter: var(--glass-blur-md);
+  -webkit-backdrop-filter: var(--glass-blur-md);
+  border: 1px solid var(--glass-border-subtle);
+  border-radius: var(--radius-base);
+  display: inline-block;
+  min-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 214, 203, 0.08);
 }
 
 .typed-highlight {
   color: var(--color-primary);
-  text-shadow: var(--shadow-text-glow);
+  text-shadow: var(--glow-text);
 }
 
 .section-tech-stack {
@@ -89,11 +97,12 @@
 }
 
 .carousel-slide {
-  -webkit-backdrop-filter: blur(1px);
-  backdrop-filter: blur(1px);
-  background-color: var(--carousel-slide-bg);
+  background: var(--glass-bg-light);
+  backdrop-filter: var(--glass-blur-md);
+  -webkit-backdrop-filter: var(--glass-blur-md);
+  border: 1px solid var(--glass-border);
   border-radius: var(--carousel-slide-radius);
-  box-shadow: var(--carousel-slide-shadow);
+  box-shadow: 0 4px 12px rgba(0, 214, 203, 0.1);
   width: var(--carousel-slide-size);
   height: var(--carousel-slide-size);
   object-fit: contain;
@@ -103,6 +112,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.25s ease-in-out;
+}
+
+.carousel-slide:hover {
+  transform: translateY(-4px);
+  border-color: var(--glass-border-accent);
+  box-shadow: 0 8px 20px rgba(0, 214, 203, 0.15);
 }
 
 .carousel-slide img {
@@ -129,6 +145,10 @@
      Responsive Breakpoints
      -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
+  .hero-section {
+    padding: 3rem 1rem 2rem;
+  }
+
   .section-tech-stack {
     overflow-x: visible !important;
   }
@@ -148,6 +168,8 @@
 
   .typed-text {
     font-size: 1.5rem;
+    padding: 1.25rem 1.5rem;
+    min-width: 300px;
   }
 
   .landing-header {
@@ -177,8 +199,14 @@
 }
 
 @media (max-width: 480px) {
+  .hero-section {
+    padding: 2.5rem 0.75rem 1.5rem;
+  }
+
   .typed-text {
     font-size: 1.25rem;
+    padding: 1rem 1.25rem;
+    min-width: 280px;
   }
 
   .landing-header {

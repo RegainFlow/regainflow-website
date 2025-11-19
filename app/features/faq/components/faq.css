@@ -1,0 +1,23 @@
+/* ==========================================================================
+   FAQ Section
+   ========================================================================== */
+
+.faq-section {
+  background: transparent;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-accordion {
+  margin-top: 3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .faq-accordion {
+    margin-top: 2rem;
+  }
+}

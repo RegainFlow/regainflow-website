@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Value Proposition Styles (Refactored & Responsive)
+   Value Proposition Styles - Hybrid Glass + Neon Design
    ========================================================================== */
 
 :root {
@@ -10,14 +10,7 @@
   --vp-gap-content: 2rem;
   --vp-gap-text: 2.5rem;
   --vp-gap-bullets: 1rem;
-  --vp-gap-card-top: 2rem;
-
-  /* Card */
-  --vp-border: 0.5px solid rgba(0, 214, 203, 0.5);
-  --vp-radius: 5px;
-  --vp-bg-card: rgba(26, 26, 26, 0.5);
-  --vp-blur: blur(1px);
-  --vp-shadow: 0 0 10px 2px rgba(0, 214, 203, 0.15);
+  --vp-gap-card-top: 5rem;
 
   /* Typography */
   --vp-title-color: white;
@@ -27,14 +20,6 @@
   --vp-subtitle-size: 1.5rem;
   --vp-bullet-size: 1rem;
   --font-base: 'Exo 2', sans-serif;
-
-  /* Button */
-  --vp-button-bg: rgba(0, 214, 203, 0.1);
-  --vp-button-hover-bg: rgba(0, 214, 203, 0.2);
-  --vp-button-color: #00d6cb;
-  --vp-button-hover-color: #00ffff;
-  --vp-button-padding: 12px 18px;
-  --vp-button-radius: 5px;
 }
 
 /* --------------------------------------------------------------------------
@@ -57,13 +42,21 @@
      Card & Layout
      -------------------------------------------------------------------------- */
 .vp-card {
-  border: var(--vp-border);
-  border-radius: var(--vp-radius);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-base);
   padding: var(--vp-gap-content);
-  background: var(--vp-bg-card);
-  backdrop-filter: var(--vp-blur);
-  box-shadow: var(--vp-shadow);
+  background: var(--glass-bg-light);
+  backdrop-filter: var(--glass-blur-lg);
+  -webkit-backdrop-filter: var(--glass-blur-lg);
+  box-shadow: 0 8px 24px rgba(0, 214, 203, 0.12);
   margin-top: var(--vp-gap-card-top);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vp-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--glass-border-accent);
+  box-shadow: 0 12px 36px rgba(0, 214, 203, 0.18);
 }
 
 .vp-content-wrapper {
@@ -84,7 +77,9 @@
   width: 100%;
   max-width: 500px;
   height: auto;
-  border-radius: var(--vp-radius);
+  border-radius: var(--radius-base);
+  border: 1px solid var(--glass-border-subtle);
+  /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); */
 }
 
 /* --------------------------------------------------------------------------
@@ -103,6 +98,10 @@
   color: var(--vp-title-color);
 }
 
+.vp-title svg {
+  filter: drop-shadow(0 0 4px rgba(0, 214, 203, 0.5));
+}
+
 .vp-subtitle {
   font-size: var(--vp-subtitle-size);
   color: var(--vp-subtitle-color);
@@ -117,34 +116,54 @@
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--vp-gap-bullets);
 }
 
 .vp-bullet-item {
-  background: rgba(0, 214, 203, 0.05);
-  border: var(--vp-border);
-  border-radius: var(--vp-radius);
-  padding: var(--vp-gap-text) var(--vp-gap-bullets);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 1.25rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: var(--vp-gap-bullets);
-  font-size: var(--vp-bullet-size);
+  text-align: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
   color: var(--vp-bullet-color);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 2px 3px 6px 0px rgba(0, 214, 203, 0.3);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 214, 203, 0.15);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
-.vp-bullet-item img {
-  width: 50px;
-  height: 50px;
-  flex-shrink: 0;
-  filter: drop-shadow(0 0 4px rgba(0, 214, 203, 0.5));
+.vp-bullet-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(0, 214, 203, 0.35);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 214, 203, 0.15);
+  transform: translateY(-3px);
 }
+
+.vp-bullet-icon {
+  color: var(--color-primary);
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 8px rgba(0, 214, 203, 0.5));
+  transition: all 0.3s ease;
+}
+
+.vp-bullet-item:hover .vp-bullet-icon {
+  filter: drop-shadow(0 0 12px rgba(0, 214, 203, 0.7));
+  transform: scale(1.1);
+}
+
 .vp-bullet-item span {
   display: block;
   font-family: var(--font-base);
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* --------------------------------------------------------------------------
@@ -153,19 +172,27 @@
 .vp-button {
   display: inline-block;
   margin-top: var(--vp-gap-text);
-  padding: var(--vp-button-padding);
-  border: var(--vp-border);
-  background: var(--vp-button-bg);
-  color: var(--vp-button-color);
-  font-weight: bold;
-  border-radius: var(--vp-button-radius);
+  padding: 0.875rem 2rem;
+  background: var(--color-primary-alpha-15);
+  backdrop-filter: var(--glass-blur-sm);
+  -webkit-backdrop-filter: var(--glass-blur-sm);
+  border: 1.5px solid var(--color-primary);
+  border-radius: var(--radius-base);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  transition: background 0.2s, color 0.2s;
+  letter-spacing: var(--letter-spacing-wide);
+  transition: all var(--transition-base);
+  box-shadow: var(--glow-subtle);
 }
+
 .vp-button:hover {
-  background: var(--vp-button-hover-bg);
-  color: var(--vp-button-hover-color);
+  background: var(--color-primary-alpha-25);
+  box-shadow: var(--glow-hover);
+  transform: translateY(-2px);
+  border-color: var(--color-primary-light);
 }
 
 /* --------------------------------------------------------------------------
@@ -179,6 +206,13 @@
 /* --------------------------------------------------------------------------
      Responsive Layout
      -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .vp-bullets {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+}
+
 @media (max-width: 768px) {
   .vp-content-wrapper,
   .vp-content-wrapper.row-reverse {
@@ -195,12 +229,33 @@
   }
   .vp-bullets {
     margin: 20px 0;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
     width: 100%;
-    gap: 40px;
+    gap: 0.5rem;
+  }
+  .vp-bullet-item {
+    padding: 1rem 0.75rem;
+  }
+  .vp-bullet-item span {
+    font-size: 0.75rem;
   }
   .vp-button {
     width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .vp-bullets {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  .vp-bullet-item {
+    flex-direction: row;
+    text-align: left;
+    padding: 1rem;
+  }
+  .vp-bullet-item span {
+    font-size: 0.85rem;
   }
 }
 @media (max-width: 468px) {

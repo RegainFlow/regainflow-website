@@ -15,6 +15,11 @@ export interface TechSkill {
   category: string;
 }
 
+export interface AvailabilityStatus {
+  status: 'available' | 'limited' | 'booked';
+  date?: string;
+}
+
 export interface TeamMember {
   name: string;
   role: string;
@@ -23,4 +28,9 @@ export interface TeamMember {
   stats: Stat[];
   techStack: TechSkill[];
   socials: SocialLink[];
+  // New fields for modernized design
+  primaryExpertise?: string[];
+  topSkills?: TechSkill[];
+  highlights?: string[];
+  availability?: AvailabilityStatus;
 }

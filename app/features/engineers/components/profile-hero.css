@@ -1,0 +1,223 @@
+/* ==========================================================================
+   Profile Hero Section
+   ========================================================================== */
+
+.profile-hero-section {
+  background: transparent;
+}
+
+.profile-hero-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.profile-hero-image-wrapper {
+  position: sticky;
+  top: 100px;
+}
+
+.profile-hero-image-container {
+  width: 300px;
+  height: 300px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  border: 3px solid var(--color-primary);
+  box-shadow: 0 12px 48px rgba(0, 214, 203, 0.35);
+  transition: all 0.3s ease;
+}
+
+.profile-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.profile-hero-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.profile-hero-name {
+  font-size: 3rem;
+  font-weight: var(--font-weight-black);
+  color: var(--color-text-primary);
+  font-family: var(--font-secondary);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.profile-hero-role {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.availability-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-base);
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: fit-content;
+}
+
+.availability-available {
+  background: rgba(34, 197, 94, 0.15);
+  border: 1.5px solid rgba(34, 197, 94, 0.5);
+  color: var(--color-secondary-accent);
+}
+
+.availability-limited {
+  background: rgba(251, 191, 36, 0.15);
+  border: 1.5px solid rgba(251, 191, 36, 0.5);
+  color: #fbbf24;
+}
+
+.availability-booked {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1.5px solid rgba(239, 68, 68, 0.5);
+  color: #ef4444;
+}
+
+.profile-hero-bio {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+.profile-hero-socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.profile-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--glass-bg-light);
+  backdrop-filter: var(--glass-blur-md);
+  -webkit-backdrop-filter: var(--glass-blur-md);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-base);
+  transition: all 0.25s ease;
+}
+
+.profile-social-link:hover {
+  background: var(--glass-bg-medium);
+  border-color: var(--glass-border-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 214, 203, 0.2);
+}
+
+.profile-social-link img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+}
+
+.profile-social-link:hover img {
+  opacity: 1;
+  filter: brightness(0) invert(1) drop-shadow(0 0 4px rgba(0, 214, 203, 0.5));
+}
+
+.profile-hero-cta {
+  margin-top: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .profile-hero-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .profile-hero-image-wrapper {
+    position: static;
+    margin: 0 auto;
+  }
+
+  .profile-hero-content {
+    text-align: center;
+    align-items: center;
+  }
+
+  .profile-hero-socials {
+    justify-content: center;
+  }
+
+  .profile-hero-cta {
+    width: 100%;
+  }
+
+  .profile-hero-cta .neon-button-glass {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-hero-image-container {
+    width: 250px;
+    height: 250px;
+  }
+
+  .profile-hero-name {
+    font-size: 2.5rem;
+  }
+
+  .profile-hero-role {
+    font-size: 1.1rem;
+  }
+
+  .profile-hero-bio {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-hero-image-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  .profile-hero-name {
+    font-size: 2rem;
+  }
+
+  .profile-hero-role {
+    font-size: 1rem;
+  }
+
+  .profile-hero-bio {
+    font-size: 0.95rem;
+  }
+
+  .profile-social-link {
+    width: 40px;
+    height: 40px;
+  }
+
+  .profile-social-link img {
+    width: 20px;
+    height: 20px;
+  }
+}

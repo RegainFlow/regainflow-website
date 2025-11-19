@@ -2,75 +2,66 @@ import type { LoaderFunctionArgs } from '@react-router/node';
 import { useLoaderData } from 'react-router';
 import type { LinksFunction, MetaFunction } from '@react-router/node';
 import {
-  ServicePage,
-  servicesData,
-  type ServiceSlug
+  CapabilityPage,
+  getCapabilityBySlug,
+  type Capability
 } from '~/features/services';
 
-import serviceStyles from '~/features/services/components/services.css?url';
-import featureCardStyles from '~/features/services/components/feature-card.css?url';
+import { links as capabilityPageLinks } from '~/features/services/components/CapabilityPage';
 
 export const links: LinksFunction = () => [
-  { rel: 'stylesheet', href: serviceStyles },
-  { rel: 'stylesheet', href: featureCardStyles }
+  ...capabilityPageLinks()
 ];
 
 export const meta: MetaFunction<typeof loader> = ({ data, params }) => {
   if (!data) {
     return [
-      { title: 'Regain Flow - Service Not Found' },
+      { title: 'Service Not Found | RegainFlow' },
       {
         name: 'description',
-        content: 'This automation service is not currently available.'
+        content: 'This service is not currently available.'
       }
     ];
   }
 
   const slug = params.slug;
-  const cleanTitle = data.title.replace(/<[^>]*>/g, '').trim();
-  const cleanSubtitle = data.subtitle.replace(/<[^>]*>/g, '').trim();
-
+  const capability = data as Capability;
+  const title = `${capability.title} | RegainFlow`;
+  const description = capability.subtitle;
   const canonicalUrl = `https://www.regainflow.com/services/${slug}`;
 
   return [
-    { title: `Regain Flow - ${cleanTitle}` },
-    { name: 'description', content: cleanSubtitle },
+    { title },
+    { name: 'description', content: description },
     { tagName: 'link', rel: 'canonical', href: canonicalUrl },
 
     // OG
-    { property: 'og:title', content: `Regain Flow - ${cleanTitle}` },
-    { property: 'og:description', content: cleanSubtitle },
+    { property: 'og:title', content: title },
+    { property: 'og:description', content: description },
     { property: 'og:url', content: canonicalUrl },
     { property: 'og:type', content: 'website' },
-    {
-      property: 'og:image',
-      content: `https://www.regainflow.com${data.image}`
-    },
+    { property: 'og:image', content: 'https://www.regainflow.com/images/og/og-services.png' },
 
     // Twitter
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: `Regain Flow - ${cleanTitle}` },
-    { name: 'twitter:description', content: cleanSubtitle },
-    {
-      name: 'twitter:image',
-      content: `https://www.regainflow.com${data.image}`
-    }
+    { name: 'twitter:title', content: title },
+    { name: 'twitter:description', content: description },
+    { name: 'twitter:image', content: 'https://www.regainflow.com/images/og/og-services.png' }
   ];
 };
 
 export async function loader({ params }: LoaderFunctionArgs) {
-  const slug = params.slug as ServiceSlug;
+  const slug = params.slug as string;
 
-  const data = servicesData[slug];
-
-  if (!data) {
-    throw new Response('Not Found', { status: 404 });
+  const capability = getCapabilityBySlug(slug);
+  if (capability) {
+    return Response.json(capability);
   }
 
-  return Response.json(data);
+  throw new Response('Not Found', { status: 404 });
 }
 
 export default function ServiceRoute() {
   const data = useLoaderData<typeof loader>();
-  return <ServicePage {...data} />;
+  return <CapabilityPage capability={data as Capability} />;
 }

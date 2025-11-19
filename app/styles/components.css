@@ -521,3 +521,313 @@
   width: 100%;
   height: 100%;
 }
+
+/* ==================== Glass Morphism Components ==================== */
+
+/* Glass Card - Base component for all glass morphism cards */
+.glass-card {
+  position: relative;
+  background: var(--glass-bg-ultra-light);
+  backdrop-filter: var(--glass-blur-lg);
+  -webkit-backdrop-filter: var(--glass-blur-lg);
+  border: 1px solid var(--glass-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0, 214, 203, 0.15);
+  border-color: var(--glass-border-accent);
+}
+
+/* Glass Card - Stat variant (for stats/metrics sections) */
+.glass-card-stat {
+  background: var(--glass-bg-ultra-light);
+  backdrop-filter: var(--glass-blur-md);
+  -webkit-backdrop-filter: var(--glass-blur-md);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-base);
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.25s ease-in-out;
+}
+
+.glass-card-stat:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0, 214, 203, 0.18);
+  border-color: var(--glass-border-accent-hover);
+}
+
+.glass-card-stat-value {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-black);
+  font-family: var(--font-secondary);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.glass-card-stat-label {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Glass Card - Step variant (for process/how-it-works sections) */
+.glass-card-step {
+  position: relative;
+  background: var(--glass-bg-light);
+  backdrop-filter: var(--glass-blur-lg);
+  -webkit-backdrop-filter: var(--glass-blur-lg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.glass-card-step::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    var(--color-primary) 0%,
+    var(--color-primary-light) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.glass-card-step:hover::before {
+  opacity: 1;
+}
+
+.glass-card-step:hover {
+  transform: translateX(4px);
+  border-color: var(--glass-border-accent);
+  box-shadow: 0 8px 24px rgba(0, 214, 203, 0.15);
+}
+
+.glass-card-step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--color-primary-alpha-15);
+  border: 1.5px solid var(--color-primary-alpha-40);
+  border-radius: var(--radius-full);
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  box-shadow: var(--glow-subtle);
+}
+
+.glass-card-step-title {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 0.75rem;
+  font-family: var(--font-secondary);
+}
+
+.glass-card-step-description {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Neon Button with Glass Backing */
+.neon-button-glass {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  padding: 1rem 2.5rem;
+  background: var(--color-primary-alpha-15);
+  backdrop-filter: var(--glass-blur-sm);
+  -webkit-backdrop-filter: var(--glass-blur-sm);
+  border: 1.5px solid var(--color-primary);
+  border-radius: var(--radius-base);
+  color: var(--color-primary);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: var(--letter-spacing-wide);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all var(--transition-base);
+  box-shadow: var(--glow-subtle);
+}
+
+.neon-button-glass:hover {
+  background: var(--color-primary-alpha-25);
+  box-shadow: var(--glow-hover);
+  transform: translateY(-2px);
+  border-color: var(--color-primary-light);
+}
+
+.neon-button-glass:active {
+  transform: translateY(0);
+}
+
+/* FAQ Accordion Item */
+.faq-accordion-item {
+  background: var(--glass-bg-ultra-light);
+  backdrop-filter: var(--glass-blur-md);
+  -webkit-backdrop-filter: var(--glass-blur-md);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-base);
+  margin-bottom: var(--spacing-sm);
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.faq-accordion-item:hover {
+  border-color: var(--glass-border-accent);
+  box-shadow: 0 4px 12px rgba(0, 214, 203, 0.1);
+}
+
+.faq-accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background var(--transition-fast);
+}
+
+.faq-accordion-header:hover {
+  background: var(--glass-bg-light);
+}
+
+.faq-accordion-question {
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  font-family: var(--font-secondary);
+  margin: 0;
+  padding-right: 1rem;
+}
+
+.faq-accordion-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--color-primary);
+  transition: transform var(--transition-base);
+}
+
+.faq-accordion-item.active .faq-accordion-icon {
+  transform: rotate(180deg);
+}
+
+.faq-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.faq-accordion-item.active .faq-accordion-content {
+  max-height: 500px;
+  transition: max-height 0.5s ease-in;
+}
+
+.faq-accordion-answer {
+  padding: 1.25rem 1.5rem 1.25rem 1.5rem;
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Glass Section Container (for consistency across sections) */
+.glass-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--spacing-3xl) var(--spacing-md);
+}
+
+.glass-section-sm {
+  padding: var(--spacing-2xl) var(--spacing-md);
+}
+
+.glass-section-lg {
+  padding: 6rem var(--spacing-md);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .glass-card,
+  .glass-card-step {
+    padding: 1.5rem;
+  }
+
+  .glass-card-stat {
+    padding: 1.25rem;
+  }
+
+  .glass-card-stat-value {
+    font-size: 2rem;
+  }
+
+  .glass-card-step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+
+  .glass-card-step-title {
+    font-size: 1.1rem;
+  }
+
+  .neon-button-glass {
+    padding: 0.875rem 2rem;
+    font-size: var(--font-size-sm);
+  }
+
+  .faq-accordion-question {
+    font-size: 1rem;
+  }
+
+  .glass-section {
+    padding: var(--spacing-2xl) var(--spacing-sm);
+  }
+
+  .glass-section-lg {
+    padding: 4rem var(--spacing-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .glass-card-stat-value {
+    font-size: 1.75rem;
+  }
+
+  .glass-card-stat-label {
+    font-size: 0.85rem;
+  }
+
+  .glass-card-step {
+    padding: 1.25rem;
+  }
+
+  .neon-button-glass {
+    padding: 0.75rem 1.5rem;
+    width: 100%;
+  }
+}

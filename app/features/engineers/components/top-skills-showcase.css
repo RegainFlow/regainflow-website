@@ -1,0 +1,222 @@
+/* ==========================================================================
+   Top Skills Showcase Section
+   ========================================================================== */
+
+.top-skills-section {
+  background: transparent;
+}
+
+.top-skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.top-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.top-skill-card {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: all 0.25s ease;
+}
+
+.top-skill-card:hover {
+  transform: translateY(-2px);
+}
+
+.top-skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 0.5rem;
+}
+
+.top-skill-name {
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  font-family: var(--font-secondary);
+  margin: 0;
+  flex: 1;
+  line-height: 1.3;
+}
+
+.top-skill-level {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-black);
+  font-family: var(--font-secondary);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.top-skill-category {
+  font-size: 0.85rem;
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.8;
+}
+
+.top-skill-bar {
+  width: 100%;
+  height: 6px;
+  background: var(--glass-bg-medium);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.top-skill-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 0.6s ease;
+}
+
+/* Category Colors - Preserved from original design */
+.top-skill-card[data-category='AI / LLM Frameworks'] .top-skill-level,
+.top-skill-card[data-category='AI / LLM Frameworks'] .top-skill-category {
+  color: #00d6cb;
+}
+.top-skill-card[data-category='AI / LLM Frameworks'] .top-skill-bar-fill {
+  background: linear-gradient(90deg, #00d6cb, #00ffef);
+  box-shadow: 0 0 10px rgba(0, 214, 203, 0.4);
+}
+
+.top-skill-card[data-category='Programming Languages'] .top-skill-level,
+.top-skill-card[data-category='Programming Languages'] .top-skill-category {
+  color: #00bfff;
+}
+.top-skill-card[data-category='Programming Languages'] .top-skill-bar-fill {
+  background: linear-gradient(90deg, #00bfff, #66d9ff);
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.4);
+}
+
+.top-skill-card[data-category='Search / Vector DBs'] .top-skill-level,
+.top-skill-card[data-category='Search / Vector DBs'] .top-skill-category {
+  color: #a270f1;
+}
+.top-skill-card[data-category='Search / Vector DBs'] .top-skill-bar-fill {
+  background: linear-gradient(90deg, #a270f1, #c499f8);
+  box-shadow: 0 0 10px rgba(162, 112, 241, 0.4);
+}
+
+.top-skill-card[data-category='Frontend'] .top-skill-level,
+.top-skill-card[data-category='Frontend'] .top-skill-category {
+  color: #00ff9f;
+}
+.top-skill-card[data-category='Frontend'] .top-skill-bar-fill {
+  background: linear-gradient(90deg, #00ff9f, #66ffbf);
+  box-shadow: 0 0 10px rgba(0, 255, 159, 0.4);
+}
+
+.top-skill-card[data-category='Backend / APIs'] .top-skill-level,
+.top-skill-card[data-category='Backend / APIs'] .top-skill-category {
+  color: #fff740;
+}
+.top-skill-card[data-category='Backend / APIs'] .top-skill-bar-fill {
+  background: linear-gradient(90deg, #fff740, #fffa80);
+  box-shadow: 0 0 10px rgba(255, 247, 64, 0.4);
+}
+
+.top-skill-card[data-category='DevOps / Automation'] .top-skill-level,
+.top-skill-card[data-category='DevOps / Automation'] .top-skill-category {
+  color: #ff8c42;
+}
+.top-skill-card[data-category='DevOps / Automation'] .top-skill-bar-fill {
+  background: linear-gradient(90deg, #ff8c42, #ffb380);
+  box-shadow: 0 0 10px rgba(255, 140, 66, 0.4);
+}
+
+.top-skill-card[data-category='Security / Cyber Ops'] .top-skill-level,
+.top-skill-card[data-category='Security / Cyber Ops'] .top-skill-category {
+  color: #ff3864;
+}
+.top-skill-card[data-category='Security / Cyber Ops'] .top-skill-bar-fill {
+  background: linear-gradient(90deg, #ff3864, #ff7094);
+  box-shadow: 0 0 10px rgba(255, 56, 100, 0.4);
+}
+
+.top-skill-card[data-category='RPA / Automation'] .top-skill-level,
+.top-skill-card[data-category='RPA / Automation'] .top-skill-category {
+  color: #ff6b9d;
+}
+.top-skill-card[data-category='RPA / Automation'] .top-skill-bar-fill {
+  background: linear-gradient(90deg, #ff6b9d, #ffa3c1);
+  box-shadow: 0 0 10px rgba(255, 107, 157, 0.4);
+}
+
+.top-skill-card[data-category='Cloud / AI Services'] .top-skill-level,
+.top-skill-card[data-category='Cloud / AI Services'] .top-skill-category {
+  color: #ffc837;
+}
+.top-skill-card[data-category='Cloud / AI Services'] .top-skill-bar-fill {
+  background: linear-gradient(90deg, #ffc837, #ffd970);
+  box-shadow: 0 0 10px rgba(255, 200, 55, 0.4);
+}
+
+.top-skill-card[data-category='ML / DL Frameworks'] .top-skill-level,
+.top-skill-card[data-category='ML / DL Frameworks'] .top-skill-category {
+  color: #c0c0c0;
+}
+.top-skill-card[data-category='ML / DL Frameworks'] .top-skill-bar-fill {
+  background: linear-gradient(90deg, #c0c0c0, #e0e0e0);
+  box-shadow: 0 0 10px rgba(192, 192, 192, 0.4);
+}
+
+.top-skill-card[data-category='Frontend / Apps'] .top-skill-level,
+.top-skill-card[data-category='Frontend / Apps'] .top-skill-category {
+  color: #69f0ae;
+}
+.top-skill-card[data-category='Frontend / Apps'] .top-skill-bar-fill {
+  background: linear-gradient(90deg, #69f0ae, #9ff5c9);
+  box-shadow: 0 0 10px rgba(105, 240, 174, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .top-skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .top-skill-card {
+    padding: 1.25rem;
+  }
+
+  .top-skill-name {
+    font-size: 1rem;
+  }
+
+  .top-skill-level {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .top-skill-card {
+    padding: 1rem;
+  }
+
+  .top-skill-name {
+    font-size: 0.95rem;
+  }
+
+  .top-skill-level {
+    font-size: 1.1rem;
+  }
+
+  .top-skill-category {
+    font-size: 0.75rem;
+  }
+}

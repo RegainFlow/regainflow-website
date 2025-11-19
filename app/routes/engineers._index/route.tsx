@@ -1,12 +1,18 @@
 import type { MetaFunction, LinksFunction } from '@react-router/node';
 import { EngineersLanding } from '~/features/engineers';
 
-import engineersLandingStyles from '~/features/engineers/components/engineers-landing.css?url';
-import modalTechstackStyles from '~/features/engineers/components/modal-techstack.css?url';
+import engineersLandingModernStyles from '~/features/engineers/components/engineers-landing-modern.css?url';
+import teamStatsStyles from '~/features/engineers/components/team-stats-bar.css?url';
+import expertiseFilterStyles from '~/features/engineers/components/expertise-filter.css?url';
+import engineerCardStyles from '~/features/engineers/components/engineer-card.css?url';
+import teamCtaStyles from '~/features/engineers/components/team-cta.css?url';
 
 export const links: LinksFunction = () => [
-  { rel: 'stylesheet', href: engineersLandingStyles },
-  { rel: 'stylesheet', href: modalTechstackStyles }
+  { rel: 'stylesheet', href: engineersLandingModernStyles },
+  { rel: 'stylesheet', href: teamStatsStyles },
+  { rel: 'stylesheet', href: expertiseFilterStyles },
+  { rel: 'stylesheet', href: engineerCardStyles },
+  { rel: 'stylesheet', href: teamCtaStyles }
 ];
 
 export const meta: MetaFunction = () => {

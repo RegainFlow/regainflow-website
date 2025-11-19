@@ -1,0 +1,118 @@
+/* ==========================================================================
+   ROI Preview Section
+   ========================================================================== */
+
+.roi-preview-section {
+  background: transparent;
+}
+
+.roi-preview-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.roi-preview-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.roi-preview-icon {
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0 0 8px rgba(0, 214, 203, 0.4));
+}
+
+.roi-preview-title {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-black);
+  color: var(--color-text-primary);
+  font-family: var(--font-secondary);
+  margin: 0;
+}
+
+.roi-preview-description {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  max-width: 700px;
+  margin: 0;
+}
+
+.roi-preview-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+.roi-highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: var(--glass-bg-ultra-light);
+  backdrop-filter: var(--glass-blur-sm);
+  -webkit-backdrop-filter: var(--glass-blur-sm);
+  border: 1px solid var(--color-primary-alpha-15);
+  box-shadow: var(--glow-subtle);
+  border-radius: var(--radius-base);
+  font-size: 1rem;
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-medium);
+  transition: all 0.25s ease;
+}
+
+.roi-highlight-item svg {
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 4px rgba(0, 214, 203, 0.5));
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .roi-preview-title {
+    font-size: 2rem;
+  }
+
+  .roi-preview-description {
+    font-size: 1rem;
+  }
+
+  .roi-preview-content {
+    padding: 1.5rem;
+  }
+
+  .roi-highlight-item {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .roi-preview-title {
+    font-size: 1.75rem;
+  }
+
+  .roi-preview-description {
+    font-size: 0.95rem;
+  }
+
+  .roi-preview-icon svg {
+    width: 48px;
+    height: 48px;
+  }
+
+  .roi-highlight-item {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .roi-highlight-item svg {
+    width: 20px;
+    height: 20px;
+  }
+}
