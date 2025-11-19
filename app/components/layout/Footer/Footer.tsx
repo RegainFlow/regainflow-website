@@ -30,11 +30,26 @@ export default function Footer() {
           {/* Column 1: Services */}
           <div className="footer-block">
             <div className="title-small">Services</div>
-            <Link to="/services/c2c-contracting" className="footer-link">
-              C2C Contracting
+            <Link to="/services" className="footer-link">
+              All Services
             </Link>
-            <Link to="/services/c2c-contracting" className="footer-link">
-              Project Consulting
+            <Link to="/services/ai-automation" className="footer-link">
+              AI Automation
+            </Link>
+            <Link to="/services/rag-search" className="footer-link">
+              RAG & Search
+            </Link>
+            <Link to="/services/data-validation" className="footer-link">
+              Data Validation
+            </Link>
+            <Link to="/services/system-integration" className="footer-link">
+              System Integration
+            </Link>
+            <Link to="/services/full-stack-engineering" className="footer-link">
+              Full-Stack Engineering
+            </Link>
+            <Link to="/services/devops" className="footer-link">
+              DevOps
             </Link>
           </div>
 
@@ -45,7 +60,7 @@ export default function Footer() {
               Our Engineers
             </Link>
             <Link to="/projects" className="footer-link">
-              Client Results
+              Projects
             </Link>
             <a
               href="https://form.typeform.com/to/SOXnbS4E"
@@ -60,6 +75,9 @@ export default function Footer() {
           {/* Column 3: Resources */}
           <div className="footer-block">
             <div className="title-small">Resources</div>
+            <Link to="/roi-calculator" className="footer-link">
+              ROI Calculator
+            </Link>
             <Link to="/terms" className="footer-link">
               Terms & Conditions
             </Link>
