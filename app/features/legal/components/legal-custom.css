@@ -4,61 +4,105 @@
    ========================================================================== */
 
 .legal-container {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  color: #e0e0e0;
+  padding: 4rem 1rem;
+  color: var(--color-text-primary);
   max-width: 1400px;
   margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
   font-family: var(--font-primary);
 }
 
 .legal-title {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 3rem;
+  font-weight: var(--font-weight-bold);
   margin-bottom: 1rem;
   color: var(--color-primary);
   text-align: center;
+  text-shadow: var(--glow-subtle);
 }
 
 .legal-subtitle {
   text-align: center;
   font-size: 1rem;
-  margin-bottom: 2rem;
-  color: var(--color-text-muted);
+  margin-bottom: 3rem;
+  color: var(--color-text-secondary);
 }
 
 .legal-block {
-  margin-bottom: 2rem;
-  padding: 1rem;
-  background-color: var(--card-bg);
-  border: var(--border-base);
-  border-radius: var(--border-radius);
-  box-shadow: var(--card-shadow);
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: var(--glass-bg-medium);
+  backdrop-filter: var(--glass-blur-md);
+  -webkit-backdrop-filter: var(--glass-blur-md);
+  border: 1px solid var(--glass-border-accent);
+  border-radius: var(--radius-base);
+  box-shadow: var(--glow-subtle);
+  transition: all 0.25s ease;
+}
+
+.legal-block:hover {
+  border-color: var(--glass-border-accent-hover);
+  box-shadow: var(--glow-medium);
 }
 
 .legal-block h2 {
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   color: var(--color-primary);
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: 0.75rem;
 }
 
 .legal-block p {
   font-size: 1rem;
   line-height: 1.7;
-  color: #e8e8e8;
+  color: var(--color-text-secondary);
   margin: 0;
 }
 
+/* Responsive */
 @media screen and (max-width: 768px) {
-  .legal-title {
-    font-size: 2rem;
+  .legal-container {
+    padding: 3rem 1rem;
   }
 
+  .legal-title {
+    font-size: 2.25rem;
+  }
+
+  .legal-subtitle {
+    margin-bottom: 2rem;
+  }
+
+  .legal-block {
+    padding: 1.25rem;
+  }
+
+  .legal-block h2 {
+    font-size: 1.1rem;
+  }
+
+  .legal-block p {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
   .legal-container {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding: 2rem 1rem;
+  }
+
+  .legal-title {
+    font-size: 1.75rem;
+  }
+
+  .legal-block {
+    padding: 1rem;
+  }
+
+  .legal-block h2 {
+    font-size: 1rem;
+  }
+
+  .legal-block p {
+    font-size: 0.9rem;
   }
 }

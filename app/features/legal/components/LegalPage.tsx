@@ -7,17 +7,15 @@ export default function LegalPage({
 }: Props) {
   return (
     <section className="legal-container">
-      <div className="container-3">
-        <h1 className="legal-title">{pageTitle}</h1>
-        <p className="legal-subtitle">Effective Date: {effectiveDate}</p>
+      <h1 className="legal-title">{pageTitle}</h1>
+      <p className="legal-subtitle">Effective Date: {effectiveDate}</p>
 
-        {sections.map((section, idx) => (
-          <div className="legal-block" key={idx}>
-            <h2>{section.title}</h2>
-            <p>{section.body}</p>
-          </div>
-        ))}
-      </div>
+      {sections.map((section, idx) => (
+        <div className="legal-block" key={idx}>
+          <h2>{section.title}</h2>
+          <p>{section.body}</p>
+        </div>
+      ))}
     </section>
   );
 }

@@ -41,7 +41,7 @@
 .engineer-profile-pic {
   width: 250px;
   height: 250px;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   object-fit: cover;
   border: 3px solid rgba(0, 214, 203, 0.5);
   box-shadow: 0 0 20px rgba(0, 214, 203, 0.3);
@@ -50,7 +50,7 @@
 .engineer-availability-badge {
   background: rgba(0, 255, 8, 0.1);
   border: 2px solid rgba(0, 255, 8, 0.5);
-  border-radius:;
+  border-radius: var(--radius-base);
   padding: 12px 20px;
   text-align: center;
   width: 100%;

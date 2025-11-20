@@ -298,6 +298,7 @@
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 1rem;
+  max-width: 100%;
 }
 
 .card-tag {
@@ -310,6 +311,10 @@
   font-weight: 600;
   font-family: var(--projects-font);
   transition: all 0.25s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .case-study-card:hover .card-tag {
@@ -427,8 +432,19 @@
   }
 
   .card-metric-badge {
-    font-size: 0.75rem;
-    padding: 0.4rem 0.8rem;
+    font-size: 0.7rem;
+    padding: 0.35rem 0.6rem;
+    top: 0.75rem;
+    right: 0.75rem;
+    max-width: 45%;
+  }
+
+  .card-industry-label {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.6rem;
+    top: 0.75rem;
+    left: 0.75rem;
+    max-width: 45%;
   }
 
   .metric-value {
@@ -454,6 +470,33 @@
   .category-tab {
     padding: 0.5rem 0.8rem;
     font-size: 0.75rem;
+  }
+
+  .card-metric-badge {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .card-industry-label {
+    font-size: 0.6rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .card-content-wrapper {
+    padding: 3rem 1rem 1rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-description {
+    font-size: 0.875rem;
+  }
+
+  .card-tag {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
   }
 }
 
@@ -490,4 +533,292 @@
 }
 .case-study-card:nth-child(6) {
   animation-delay: 0.6s;
+}
+
+/* ========================================
+   INDUSTRY-BASED COLOR SCHEME
+======================================== */
+
+/* HCM - Cyan */
+.case-study-card[data-category='hcm'] {
+  border-color: rgba(0, 214, 203, 0.3);
+}
+
+.case-study-card[data-category='hcm']:hover {
+  border-color: rgba(0, 214, 203, 0.6);
+  box-shadow: 0 16px 48px rgba(0, 214, 203, 0.25);
+}
+
+.case-study-card[data-category='hcm'] .card-title {
+  color: #00d6cb;
+}
+
+.case-study-card[data-category='hcm'] .card-tag {
+  background: rgba(0, 214, 203, 0.12);
+  border-color: rgba(0, 214, 203, 0.25);
+  color: #00d6cb;
+}
+
+.case-study-card[data-category='hcm']:hover .card-tag {
+  background: rgba(0, 214, 203, 0.2);
+  border-color: rgba(0, 214, 203, 0.5);
+}
+
+/* Aerospace - Blue */
+.case-study-card[data-category='aerospace'] {
+  border-color: rgba(0, 191, 255, 0.3);
+}
+
+.case-study-card[data-category='aerospace']:hover {
+  border-color: rgba(0, 191, 255, 0.6);
+  box-shadow: 0 16px 48px rgba(0, 191, 255, 0.25);
+}
+
+.case-study-card[data-category='aerospace'] .card-title {
+  color: #00bfff;
+}
+
+.case-study-card[data-category='aerospace'] .card-tag {
+  background: rgba(0, 191, 255, 0.12);
+  border-color: rgba(0, 191, 255, 0.25);
+  color: #00bfff;
+}
+
+.case-study-card[data-category='aerospace']:hover .card-tag {
+  background: rgba(0, 191, 255, 0.2);
+  border-color: rgba(0, 191, 255, 0.5);
+}
+
+/* SaaS - Purple */
+.case-study-card[data-category='saas'] {
+  border-color: rgba(162, 112, 241, 0.3);
+}
+
+.case-study-card[data-category='saas']:hover {
+  border-color: rgba(162, 112, 241, 0.6);
+  box-shadow: 0 16px 48px rgba(162, 112, 241, 0.25);
+}
+
+.case-study-card[data-category='saas'] .card-title {
+  color: #a270f1;
+}
+
+.case-study-card[data-category='saas'] .card-tag {
+  background: rgba(162, 112, 241, 0.12);
+  border-color: rgba(162, 112, 241, 0.25);
+  color: #a270f1;
+}
+
+.case-study-card[data-category='saas']:hover .card-tag {
+  background: rgba(162, 112, 241, 0.2);
+  border-color: rgba(162, 112, 241, 0.5);
+}
+
+/* Cyber - Red */
+.case-study-card[data-category='cyber'] {
+  border-color: rgba(255, 56, 100, 0.3);
+}
+
+.case-study-card[data-category='cyber']:hover {
+  border-color: rgba(255, 56, 100, 0.6);
+  box-shadow: 0 16px 48px rgba(255, 56, 100, 0.25);
+}
+
+.case-study-card[data-category='cyber'] .card-title {
+  color: #ff3864;
+}
+
+.case-study-card[data-category='cyber'] .card-tag {
+  background: rgba(255, 56, 100, 0.12);
+  border-color: rgba(255, 56, 100, 0.25);
+  color: #ff3864;
+}
+
+.case-study-card[data-category='cyber']:hover .card-tag {
+  background: rgba(255, 56, 100, 0.2);
+  border-color: rgba(255, 56, 100, 0.5);
+}
+
+/* Robotics - Green */
+.case-study-card[data-category='robotics'] {
+  border-color: rgba(0, 255, 159, 0.3);
+}
+
+.case-study-card[data-category='robotics']:hover {
+  border-color: rgba(0, 255, 159, 0.6);
+  box-shadow: 0 16px 48px rgba(0, 255, 159, 0.25);
+}
+
+.case-study-card[data-category='robotics'] .card-title {
+  color: #00ff9f;
+}
+
+.case-study-card[data-category='robotics'] .card-tag {
+  background: rgba(0, 255, 159, 0.12);
+  border-color: rgba(0, 255, 159, 0.25);
+  color: #00ff9f;
+}
+
+.case-study-card[data-category='robotics']:hover .card-tag {
+  background: rgba(0, 255, 159, 0.2);
+  border-color: rgba(0, 255, 159, 0.5);
+}
+
+/* Automation - Orange */
+.case-study-card[data-category='automation'] {
+  border-color: rgba(255, 140, 66, 0.3);
+}
+
+.case-study-card[data-category='automation']:hover {
+  border-color: rgba(255, 140, 66, 0.6);
+  box-shadow: 0 16px 48px rgba(255, 140, 66, 0.25);
+}
+
+.case-study-card[data-category='automation'] .card-title {
+  color: #ff8c42;
+}
+
+.case-study-card[data-category='automation'] .card-tag {
+  background: rgba(255, 140, 66, 0.12);
+  border-color: rgba(255, 140, 66, 0.25);
+  color: #ff8c42;
+}
+
+.case-study-card[data-category='automation']:hover .card-tag {
+  background: rgba(255, 140, 66, 0.2);
+  border-color: rgba(255, 140, 66, 0.5);
+}
+
+/* ========================================
+   PAGINATION CONTROLS
+======================================== */
+.pagination-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pagination-btn {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-base);
+  padding: 0.75rem 1.25rem;
+  color: #bff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: var(--projects-font);
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(0, 214, 203, 0.4);
+  color: var(--projects-accent);
+  transform: translateY(-2px);
+}
+
+.pagination-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.pagination-btn-icon {
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 1rem;
+  font-family: var(--projects-font);
+}
+
+.pagination-current {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--projects-accent);
+}
+
+.pagination-separator {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.pagination-total {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #bff;
+}
+
+.pagination-showing {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--projects-font);
+}
+
+/* Pagination Responsive */
+@media (max-width: 768px) {
+  .pagination-controls {
+    gap: 0.35rem;
+  }
+
+  .pagination-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .pagination-btn-icon {
+    padding: 0.6rem;
+  }
+
+  .pagination-info {
+    padding: 0 0.75rem;
+  }
+
+  .pagination-current {
+    font-size: 1.1rem;
+  }
+
+  .pagination-showing {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagination-btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .pagination-btn-icon {
+    padding: 0.5rem;
+  }
+
+  .pagination-info {
+    padding: 0 0.5rem;
+  }
+
+  .pagination-current {
+    font-size: 1rem;
+  }
+
+  .pagination-total {
+    font-size: 0.9rem;
+  }
 }
