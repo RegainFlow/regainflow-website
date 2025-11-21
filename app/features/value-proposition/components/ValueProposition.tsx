@@ -11,7 +11,7 @@ import {
 } from 'react-icons/pi';
 import type { IconType } from 'react-icons';
 import { useScrollAnimation } from '~/hooks/useScrollAnimation';
-import { Carousel } from '~/features/hero';
+
 
 const iconMap: Record<string, IconType> = {
   UserCheck: PiUserCheckDuotone,

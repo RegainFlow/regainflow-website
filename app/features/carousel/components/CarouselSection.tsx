@@ -16,7 +16,7 @@ export default function CarouselSection() {
   const allLogos = [...logos, ...logos, ...logos];
 
   return (
-    <div className="section-tech-stack">
+    <section className="section-tech-stack">
       <div className="carousel-wrapper">
         <div className="carousel-track">
           {allLogos.map((logo, idx) => (
@@ -29,6 +29,6 @@ export default function CarouselSection() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

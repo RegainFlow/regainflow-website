@@ -18,19 +18,19 @@ export default function AnimatedSection({
 }: AnimatedSectionProps) {
   const { ref, isVisible } = useScrollAnimation({
     threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px',
+    rootMargin: '0px 0px -50px 0px',
     triggerOnce: true
   });
 
   const delayClass = delay > 0 ? `delay-${delay}` : '';
 
   return (
-    <section
+    <div
       id={id}
-      ref={ref as React.RefObject<HTMLElement>}
+      ref={ref as React.RefObject<HTMLDivElement>}
       className={`animate-on-scroll ${animation} ${delayClass} ${isVisible ? 'visible' : ''} ${className}`.trim()}
     >
       {children}
-    </section>
+    </div>
   );
 }
