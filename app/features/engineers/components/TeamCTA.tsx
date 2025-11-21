@@ -29,7 +29,7 @@ export default function TeamCTA() {
             </a>
 
             <a
-              href="/projects"
+              href="/client-results"
               className="neon-button-glass neon-button-secondary"
             >
               <PiFileTextDuotone size={24} />

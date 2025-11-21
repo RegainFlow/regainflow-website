@@ -86,9 +86,16 @@ export default function CaseStudiesGrid() {
                 ))}
               </div>
 
-              {/* NDA Badge */}
-              {item.actionType === 'nda' && (
-                <div className="card-nda-badge">NDA Protected</div>
+              {/* DEMO Button */}
+              {item.actionType === 'demo' && item.link && (
+                <a
+                  href={item.link}
+                  className="card-demo-button"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  DEMO
+                </a>
               )}
             </div>
           </div>

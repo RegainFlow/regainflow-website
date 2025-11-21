@@ -28,9 +28,7 @@ export default function projects() {
             Client <span className="text-highlight">Results</span>
           </h1>
           <p className="projects-subtitle">
-            Enterprise automation and data infrastructure delivered by senior
-            engineers. Real projects, measured impact, production-scale
-            outcomes.
+            Real projects, measured impact, production-scale outcomes delivered by senior engineers.
           </p>
         </div>
 

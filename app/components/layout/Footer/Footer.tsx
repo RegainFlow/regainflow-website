@@ -59,7 +59,7 @@ export default function Footer() {
             <Link to="/engineers" className="footer-link">
               Our Engineers
             </Link>
-            <Link to="/projects" className="footer-link">
+            <Link to="/client-results" className="footer-link">
               Projects
             </Link>
             <a

@@ -2,37 +2,37 @@ export const projectsItems = [
   {
     title: 'Multi-Agent Payroll Validation System',
     description:
-      'Autonomous validation engine replacing months of manual SAP payroll quality checks. Multi-agent architecture orchestrating SQL validation, flat-file comparisons, and AI-generated logic across legacy systems.',
+      'A multi-agent validation engine that automates SAP payroll quality checks. Agents run SQL validation, flat-file comparisons, and AI-generated rules to detect issues across legacy systems.',
     image: '/images/projects/payroll_validation_mvp.png',
     tags: [
-      '$8M+ Value Generated',
-      '90-Day to 3-Day Turnaround',
-      'Production-Grade LangGraph'
+      '90→3 Day Cycle Time',
+      'Multi-Agent Architecture',
+      'Enterprise-Scale Automation'
     ],
-    industry: 'HCM Automation',
-    category: 'hcm',
-    primaryMetric: '$8M+ Saved',
-    actionType: 'nda',
+    industry: 'AI ENGINEERING',
+    category: 'ai',
+    primaryMetric: '12 FTEs Saved',
+    actionType: 'none',
     capabilities: ['data-validation', 'ai-automation']
   },
   {
-    title: 'Enterprise Workforce Data Integrity Platform',
+    title: 'HCM Interoperability Platform',
     description:
-      'End-to-end validation pipeline across TE, GL, Payroll, and HRIS systems. Schema normalization, deterministic rule engines, and AI-augmented validation processing 300+ tables and 70+ interface files.',
+      'End-to-end validation pipeline across TE, GL, Payroll, and HRIS systems. Schema normalization, deterministic rule engines, and reconciliation logic spanning 300+ tables and over 100 legacy interfaces mapped and validated against the modernized SAP integration layer.',
     image: '/images/projects/payroll_validation_mvp.png',
     tags: [
-      '300+ Tables Validated',
-      '70+ Interface Files',
-      'Cross-System Data Quality'
+      'Legacy → SAP Migration',
+      'Multi-System Reconciliation',
+      'Operational Continuity'
     ],
-    industry: 'HCM Automation',
-    category: 'hcm',
-    primaryMetric: '300+ Tables',
-    actionType: 'nda',
+    industry: 'DATA ENGINEERING',
+    category: 'data',
+    primaryMetric: '$8M+ SAVED',
+    actionType: 'none',
     capabilities: ['data-validation', 'system-integration']
   },
   {
-    title: 'Hybrid RAG for Aerospace Engineering Search',
+    title: 'Enterprise Engineering RAG',
     description:
       'Production search engine using ELSER V2 and Elasticsearch serving 6,000+ daily users. Hybrid semantic + keyword retrieval over millions of engineering documents with domain-specific accuracy.',
     image: '/images/projects/rag_search_engine.png',
@@ -41,14 +41,14 @@ export const projectsItems = [
       'Millions of Records',
       'ELSER V2 Semantic Search'
     ],
-    industry: 'Aerospace Engineering',
-    category: 'aerospace',
+    industry: 'AI ENGINEERING',
+    category: 'ai',
     primaryMetric: '6K+ Users',
-    actionType: 'nda',
+    actionType: 'none',
     capabilities: ['rag-search', 'ai-automation']
   },
   {
-    title: 'Enterprise Engineering Search Modernization',
+    title: 'Corporate HR RAG',
     description:
       'Rebuilt legacy search platform with modern BM25, hybrid vector retrieval, and RRF ranking. Improved query relevance, reduced ingestion time, and decreased operational overhead for engineering teams.',
     image: '/images/projects/rag_search_engine.png',
@@ -57,42 +57,42 @@ export const projectsItems = [
       'Improved Query Relevance',
       'Reduced Ops Overhead'
     ],
-    industry: 'Aerospace Engineering',
-    category: 'aerospace',
-    primaryMetric: 'Modern Search',
-    actionType: 'nda',
+    industry: 'AI ENGINEERING',
+    category: 'ai',
+    primaryMetric: '3× Faster Insights',
+    actionType: 'none',
     capabilities: ['rag-search', 'system-integration']
   },
   {
     title: 'Real-Time Satellite Telemetry Anomaly Detection',
     description:
-      'Streaming analytics platform monitoring 5,000+ sensor channels. Elasticsearch-backed ingestion with automated anomaly detection reduced manual operator review by 80%, enabling faster incident response.',
+      'We built an automated system that detects anomalies in satellite sensor data. By cleaning historical telemetry and training a custom model, then deploying it into a live dashboard, the solution cut manual operator review by 80% and enabled much faster incident response.',
     image: '/images/projects/sat_anomaly_dashboard.png',
     tags: [
       '5K+ Sensor Streams',
       '80% Manual Review Reduction',
       'Real-Time Dashboards'
     ],
-    industry: 'Aerospace Engineering',
-    category: 'aerospace',
-    primaryMetric: '5K+ Sensors',
-    actionType: 'nda',
+    industry: 'AI ENGINEERING',
+    category: 'ai',
+    primaryMetric: '3× Faster Insights',
+    actionType: 'none',
     capabilities: ['data-validation', 'system-integration']
   },
   {
-    title: 'C# Elasticsearch Data Pipeline for Engineering Systems',
+    title: 'Multi-Format Engineering ETL Pipeline',
     description:
-      'High-volume data pipelines converting raw engineering artifacts into indexed, searchable formats. Streaming ingestion supporting millions of records per job with complex transformation logic.',
+      'We created a C# backend that loads many file types, converts them to PDFs, sends them to a Python parser that extracts text, chunks content, summarizes tables, and then indexes the processed data into Elasticsearch so engineering teams can search it quickly.',
     image: '/images/projects/rag_search_engine.png',
     tags: [
-      'Millions of Records/Job',
-      'Streaming Ingestion',
-      'Complex ETL Logic'
+      'Reusable + Scalable ETL Pipeline',
+      'VLM + OCR Enabled',
+      'Modernized Data Access'
     ],
-    industry: 'Aerospace Engineering',
-    category: 'aerospace',
-    primaryMetric: 'Millions/Job',
-    actionType: 'nda',
+    industry: 'DATA ENGINEERING',
+    category: 'data',
+    primaryMetric: '5× Indexing Throughput',
+    actionType: 'none',
     capabilities: ['system-integration', 'devops']
   },
   {
@@ -105,42 +105,42 @@ export const projectsItems = [
       'Multi-Agent AI Logic',
       'Hours to Minutes'
     ],
-    industry: 'Enterprise Automation',
-    category: 'automation',
-    primaryMetric: 'License Free',
-    actionType: 'nda',
+    industry: 'DATA ENGINEERING',
+    category: 'data',
+    primaryMetric: 'Zero Vendor Lock-In',
+    actionType: 'none',
     capabilities: ['ai-automation', 'system-integration']
   },
   {
-    title: 'Aerospace UI Performance Overhaul',
+    title: 'UI Modernization Overhaul',
     description:
-      'Led Angular-to-modern framework migration for large-scale aerospace application. Achieved 35% performance improvement, reduced build times, and improved long-term maintainability for multi-team environment.',
+      'Modernized a large Angular application by migrating to a faster, modern framework, improving performance by 35%, reducing build times, and upgrading the delivery pipeline to a scalable GitLab + Kubernetes workflow.',
     image: '/images/projects/rag_search_engine.png',
     tags: [
+      'Legacy → Modern Migration',
       '35% Performance Gain',
-      'Reduced Build Time',
       'Multi-Team Scalability'
     ],
-    industry: 'Aerospace Engineering',
-    category: 'aerospace',
+    industry: 'FULLSTACK ENGINEERING',
+    category: 'fullstack',
     primaryMetric: '35% Faster',
-    actionType: 'nda',
+    actionType: 'none',
     capabilities: ['full-stack-engineering']
   },
   {
-    title: 'Enterprise CI/CD Pipeline Redesign',
+    title: 'Self-Service PaaS Environment Builder',
     description:
-      'Overhauled build and deployment infrastructure reducing release cycles by 40%. Improved deployment reliability and multi-team collaboration for mission-critical engineering platforms.',
+      'Developed a PaaS-style automation platform that uses Terraform, Ansible, and Kubernetes to generate complete engineering environments from a simple UI request. Automated provisioning, configuration, and HighSide PXE-based bootstraps dramatically reduced deployment overhead and DevOps involvement.',
     image: '/images/projects/rag_search_engine.png',
     tags: [
-      '40% Faster Releases',
-      'Improved Reliability',
-      'Multi-Team Pipeline'
+      'Reduced DevOps Overhead',
+      'Environment-as-a-Service',
+      'Reduced Analyst Overhead'
     ],
-    industry: 'Aerospace Engineering',
-    category: 'aerospace',
-    primaryMetric: '40% Faster',
-    actionType: 'nda',
+    industry: 'DEVOPS ENGINEERING',
+    category: 'devops',
+    primaryMetric: '10× Faster Environment Setup',
+    actionType: 'none',
     capabilities: ['devops']
   },
   {
@@ -149,27 +149,79 @@ export const projectsItems = [
       'Secure automation tools and threat-emulation utilities for Red/Blue Team exercises. Rapid data processing, adversarial simulation, and analysis scripts supporting operational readiness and training.',
     image: '/images/projects/sat_anomaly_dashboard.png',
     tags: [
-      'Red/Blue Team Tools',
-      'Adversarial Simulation',
-      'Operational Readiness'
+      'Automated Ops Readiness',
+      'Environment-as-a-Service',
+      'Lower Operational Cost'
     ],
-    industry: 'Defense Cyber',
-    category: 'cyber',
-    primaryMetric: 'Red/Blue Ready',
-    actionType: 'nda',
+    industry: 'FULLSTACK ENGINEERING',
+    category: 'fullstack',
+    primaryMetric: 'Accelerated Ops Readiness',
+    actionType: 'none',
     capabilities: ['ai-automation', 'devops']
   },
   {
-    title: 'Remote Robotics Control System',
+    title: 'AI-Powered Document Retrieval Platform',
     description:
-      'Low-latency tele-operated robot control using WebRTC streaming, Flask-SocketIO signaling, and Raspberry Pi hardware integration. Prototyped real-time remote control with sub-second response times.',
+      'Built a full-stack platform using .NET, C3, and IBM Watson for AI-assisted document retrieval, automated data synchronization, and scheduled task execution. Delivered a modern UI that improved accessibility while ensuring compatibility with legacy systems.',
     image: '/images/projects/automation_demo.png',
-    tags: ['WebRTC Low-Latency', 'Real-Time Control', 'Edge Computing'],
-    industry: 'Robotics',
-    category: 'robotics',
-    primaryMetric: 'Sub-Second',
-    actionType: 'nda',
-    capabilities: ['system-integration', 'full-stack-engineering']
+    tags: [
+      'Improved Insight Delivery',
+      'AI-Enhanced Processing',
+      'Legacy System Modernization'
+    ],
+    industry: 'FULLSTACK ENGINEERING',
+    category: 'fullstack',
+    primaryMetric: '2× Faster Information Access',
+    actionType: 'none',
+    capabilities: ['full-stack-engineering', 'ai-automation']
+  },
+  {
+    title: 'Digital Program Hardware/Software Upload System',
+    description:
+      'Developed an Angular + .NET platform for teams to upload non-standard Excel sheets, automatically normalize the data, and populate a centralized SQL Server repository. Enabled consistent formatting and reliable ingestion to support downstream systems.',
+    image: '/images/projects/automation_demo.png',
+    tags: [
+      'Automated Data Normalization',
+      'Angular + .NET Pipeline',
+      'Consistent Program Data'
+    ],
+    industry: 'FULLSTACK ENGINEERING',
+    category: 'fullstack',
+    primaryMetric: '90% Manual Cleanup Reduced',
+    actionType: 'none',
+    capabilities: ['full-stack-engineering', 'system-integration']
+  },
+  {
+    title: 'Acquisition Insights & Cost Analysis Platform',
+    description:
+      'Built a Blazor + .NET system providing acquisition insights, vendor intelligence, and proposal support. Integrated with upstream data sources such as DPHSL to generate detailed, itemized cost breakdowns and streamline proposal workflows.',
+    image: '/images/projects/automation_demo.png',
+    tags: [
+      'Accelerated Proposal Creation',
+      'Blazor + .NET',
+      'Data-Driven Decision Support'
+    ],
+    industry: 'FULLSTACK ENGINEERING',
+    category: 'fullstack',
+    primaryMetric: '4× Faster Cost Analysis',
+    actionType: 'none',
+    capabilities: ['full-stack-engineering']
+  },
+  {
+    title: 'Subcontractor Risk & Opportunity Scorecard',
+    description:
+      'Delivered an Angular + .NET scorecard platform that evaluates subcontractor risk, opportunities, and performance factors. Provided a centralized QA system to support vendor approval, quality assurance, and acquisition readiness.',
+    image: '/images/projects/automation_demo.png',
+    tags: [
+      'Improved Vendor Evaluation',
+      'Angular + .NET',
+      'Quality Assurance Platform'
+    ],
+    industry: 'FULLSTACK ENGINEERING',
+    category: 'fullstack',
+    primaryMetric: '70% Faster Vendor Assessment',
+    actionType: 'none',
+    capabilities: ['full-stack-engineering']
   },
   {
     title: 'Marketing Automation for Distribution Network',
@@ -178,64 +230,25 @@ export const projectsItems = [
     image: '/images/projects/automation_demo.png',
     link: 'https://advocare-dashboard.regainflow.com',
     tags: ['25 Hours/Week Saved', '90% Workflow Automation', '4x Sales Growth'],
-    industry: 'Retail Distribution',
-    category: 'saas',
+    industry: 'FULLSTACK ENGINEERING',
+    category: 'fullstack',
     primaryMetric: '4x Growth',
-    actionType: 'link',
+    actionType: 'demo',
     capabilities: ['ai-automation', 'system-integration']
-  },
-  {
-    title: 'AI-Powered Financial Report Generation',
-    description:
-      'Automated reporting pipeline reducing per-report effort from 6 hours to 2 hours. LLM-assisted data extraction and formatting standardized outputs across multiple data sources, contributing to 32% profit increase.',
-    image: '/images/projects/report_demo.png',
-    tags: [
-      '4 Hours/Report Saved',
-      '32% YoY Profit Increase',
-      'Multi-Source Integration'
-    ],
-    industry: 'Enterprise SaaS',
-    category: 'saas',
-    primaryMetric: '32% Profit+',
-    actionType: 'nda',
-    capabilities: ['ai-automation', 'rag-search']
-  },
-  {
-    title: 'Full-Stack SaaS Analytics Platform',
-    description:
-      'Complete SaaS product with web scraping pipelines, marketing automation, multi-agent email generation, and customer analytics. Delivered end-to-end distributor growth platform from backend to frontend.',
-    image: '/images/projects/automation_demo.png',
-    link: 'https://advocare-dashboard.regainflow.com',
-    tags: [
-      'Full SaaS Product',
-      'Multi-Agent Automation',
-      'Complete Stack Ownership'
-    ],
-    industry: 'Enterprise SaaS',
-    category: 'saas',
-    primaryMetric: 'Full Stack',
-    actionType: 'link',
-    capabilities: [
-      'full-stack-engineering',
-      'ai-automation',
-      'system-integration'
-    ]
   }
 ];
 
 export const categories = [
-  { id: 'all', label: 'All Projects', count: 14 },
-  { id: 'aerospace', label: 'Aerospace', count: 6 },
-  { id: 'hcm', label: 'HCM Automation', count: 2 },
-  { id: 'saas', label: 'Enterprise SaaS', count: 3 },
-  { id: 'cyber', label: 'Defense & Cyber', count: 1 },
-  { id: 'robotics', label: 'Robotics', count: 1 },
-  { id: 'automation', label: 'RPA & Automation', count: 1 }
+  { id: 'all', label: 'ALL PROJECTS', count: 15 },
+  { id: 'ai', label: 'AI ENGINEERING', count: 5 },
+  { id: 'devops', label: 'DEVOPS ENGINEERING', count: 1 },
+  { id: 'data', label: 'DATA ENGINEERING', count: 3 },
+  { id: 'fullstack', label: 'FULLSTACK ENGINEERING', count: 7 }
 ];
 
 export const metrics = [
-  { label: 'Hours Saved', value: '5000+' },
-  { label: 'Business Users Impacted', value: '50+' },
-  { label: 'Enterprise Automations Delivered', value: '20+' },
-  { label: 'Estimated Value Created', value: '$8M+' }
+  { label: 'Estimated Value Created', value: '$8M+' },
+  { label: 'Engineering Hours Saved', value: '5,000+' },
+  { label: 'Enterprise Automations Delivered', value: '15+' },
+  { label: 'Business Users Impacted', value: '6,000+' }
 ];

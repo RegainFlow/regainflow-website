@@ -33,7 +33,7 @@ export default function ServicesCTA() {
             </a>
 
             <Link
-              to="/projects"
+              to="/client-results"
               className="neon-button-glass neon-button-secondary"
             >
               <PiArrowRightBold size={20} />

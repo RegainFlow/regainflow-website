@@ -192,11 +192,11 @@ export default function Navbar() {
               </li>
               <li>
                 <Link
-                  to="/projects"
+                  to="/client-results"
                   className="button-link"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  PROJECTS
+                  CLIENT RESULTS
                 </Link>
               </li>
             </ul>
