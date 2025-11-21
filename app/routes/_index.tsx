@@ -67,6 +67,7 @@ export function meta({ }: Route.MetaArgs) {
 
 const sections = [
   { id: 'hero', label: 'Home' },
+  { id: 'carousel', label: 'Tech Stack' },
   { id: 'value', label: 'Value' },
   { id: 'process', label: 'Process' },
   { id: 'roi', label: 'ROI' },
@@ -81,11 +82,13 @@ export default function Index() {
       <ScrollProgress />
       <SectionTracker sections={sections} />
 
-      <AnimatedSection id="hero" animation="fade-in">
+      <section id="hero">
         <HeroSection />
-      </AnimatedSection>
+      </section>
 
-      <CarouselSection />
+      <AnimatedSection id="carousel" animation="fade-up">
+        <CarouselSection />
+      </AnimatedSection>
 
       <AnimatedSection id="value" animation="fade-up">
         <ValueProposition />

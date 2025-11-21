@@ -16,19 +16,19 @@ export default function CarouselSection() {
   const allLogos = [...logos, ...logos, ...logos];
 
   return (
-    // <div className="section-tech-stack">
-    <div className="carousel-wrapper">
-      <div className="carousel-track">
-        {allLogos.map((logo, idx) => (
-          <div key={idx} className="carousel-slide">
-            <img
-              src={`/images/home/carousel/${logo}`}
-              alt={logo.replace('.svg', '')}
-            />
-          </div>
-        ))}
+    <div className="section-tech-stack">
+      <div className="carousel-wrapper">
+        <div className="carousel-track">
+          {allLogos.map((logo, idx) => (
+            <div key={idx} className="carousel-slide">
+              <img
+                src={`/images/home/carousel/${logo}`}
+                alt={logo.replace('.svg', '')}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
-    // </div>
   );
 }
