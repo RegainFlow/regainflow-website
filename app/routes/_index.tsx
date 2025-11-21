@@ -8,6 +8,9 @@ import { RoiPreview } from '~/features/roi-preview';
 import { CaseStudiesPreview } from '~/features/case-studies-preview';
 import { FAQ } from '~/features/faq';
 import { FinalCTA } from '~/features/final-cta';
+import { SectionTracker } from '~/components/layout/SectionTracker';
+import { ScrollProgress } from '~/components/layout/ScrollProgress';
+import { AnimatedSection } from '~/components/AnimatedSection';
 
 import heroStyles from '~/features/hero/components/hero-custom.css?url';
 import statsStyles from '~/features/stats-bar/components/stats.css?url';
@@ -17,6 +20,9 @@ import roiPreviewStyles from '~/features/roi-preview/components/roi-preview.css?
 import caseStudiesPreviewStyles from '~/features/case-studies-preview/components/case-studies-preview.css?url';
 import faqStyles from '~/features/faq/components/faq.css?url';
 import finalCtaStyles from '~/features/final-cta/components/final-cta.css?url';
+import sectionTrackerStyles from '~/components/layout/SectionTracker/section-tracker.css?url';
+import scrollProgressStyles from '~/components/layout/ScrollProgress/scroll-progress.css?url';
+import scrollAnimationsStyles from '~/styles/scroll-animations.css?url';
 
 export const links: Route.LinksFunction = () => [
   { rel: 'stylesheet', href: heroStyles },
@@ -26,7 +32,10 @@ export const links: Route.LinksFunction = () => [
   { rel: 'stylesheet', href: roiPreviewStyles },
   { rel: 'stylesheet', href: caseStudiesPreviewStyles },
   { rel: 'stylesheet', href: faqStyles },
-  { rel: 'stylesheet', href: finalCtaStyles }
+  { rel: 'stylesheet', href: finalCtaStyles },
+  { rel: 'stylesheet', href: sectionTrackerStyles },
+  { rel: 'stylesheet', href: scrollProgressStyles },
+  { rel: 'stylesheet', href: scrollAnimationsStyles }
 ];
 
 export function meta({}: Route.MetaArgs) {
@@ -56,17 +65,54 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
+const sections = [
+  { id: 'hero', label: 'Home' },
+  { id: 'stats', label: 'Stats' },
+  { id: 'value', label: 'Value' },
+  { id: 'process', label: 'Process' },
+  { id: 'roi', label: 'ROI' },
+  { id: 'case-studies', label: 'Projects' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'cta', label: 'Contact' }
+];
+
 export default function Index() {
   return (
     <>
-      <HeroSection />
-      <StatsBar />
-      <ValueProposition />
-      <HowItWorks />
-      <RoiPreview />
-      <CaseStudiesPreview />
-      <FAQ />
-      <FinalCTA />
+      <ScrollProgress />
+      <SectionTracker sections={sections} />
+
+      <AnimatedSection id="hero" animation="fade-in">
+        <HeroSection />
+      </AnimatedSection>
+
+      <AnimatedSection id="stats" animation="fade-up">
+        <StatsBar />
+      </AnimatedSection>
+
+      <AnimatedSection id="value" animation="fade-up">
+        <ValueProposition />
+      </AnimatedSection>
+
+      <AnimatedSection id="process" animation="fade-up">
+        <HowItWorks />
+      </AnimatedSection>
+
+      <AnimatedSection id="roi" animation="fade-up">
+        <RoiPreview />
+      </AnimatedSection>
+
+      <AnimatedSection id="case-studies" animation="fade-up">
+        <CaseStudiesPreview />
+      </AnimatedSection>
+
+      <AnimatedSection id="faq" animation="fade-up">
+        <FAQ />
+      </AnimatedSection>
+
+      <AnimatedSection id="cta" animation="scale-up">
+        <FinalCTA />
+      </AnimatedSection>
     </>
   );
 }
