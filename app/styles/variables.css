@@ -218,17 +218,18 @@
   /* ==================== Background Video ==================== */
 
   /* Video Opacity & Effects */
-  --hero-video-opacity: 0.2;
+  --hero-video-opacity: 0.3;
   --hero-video-blur: blur(2px);
 
   /* Video Overlay Gradients */
-  --hero-video-overlay-start: rgba(18, 18, 19, 0.7);
-  --hero-video-overlay-end: rgba(18, 18, 19, 0.9);
+  --hero-video-overlay-start: rgba(18, 18, 19, 0.65);
+  --hero-video-overlay-end: rgba(18, 18, 19, 0.85);
 
   /* Z-index for Video Layers */
   --z-below: -1;
   --z-base: 0;
   --z-above: 1;
+  --z-content: 2;
 
   /* ==================== Layout ==================== */
 

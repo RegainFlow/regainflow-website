@@ -28,64 +28,94 @@
   max-width: var(--hero-container-max);
   margin: 0 auto;
   position: relative;
-  overflow: hidden;
+  /* Remove overflow hidden to allow full-width video */
 }
 
 /* ==========================================================================
    Background Video Layer (Glass Morphism Compatible)
    ========================================================================== */
 
-/* Video background container - lowest layer */
+/* Video background container - full viewport width, lowest layer */
 .hero-video-background {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
   height: 100%;
-  z-index: var(--z-below);
+  z-index: 0;
   overflow: hidden;
   pointer-events: none;
 }
 
-/* Video element */
+/* Video element - enhanced for cinematic effect */
 .hero-video {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 100%;
   height: 100%;
+  min-width: 100vw;
+  min-height: 100%;
   object-fit: cover;
-  transform: translate(-50%, -50%);
-  opacity: var(--hero-video-opacity);
+  transform: translate(-50%, -50%) scale(1.05);
+  opacity: 0.3;
   filter: var(--hero-video-blur);
+  animation: subtle-zoom 20s ease-in-out infinite alternate;
 }
 
-/* Dark overlay for contrast and glass morphism blend */
+@keyframes subtle-zoom {
+  0% {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+}
+
+/* Enhanced overlay with multi-layer gradients for depth */
 .hero-video-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(
-    circle at center,
-    var(--hero-video-overlay-start),
-    var(--hero-video-overlay-end)
-  );
-  z-index: var(--z-base);
+  background:
+    /* Center spotlight */
+    radial-gradient(
+      ellipse 80% 60% at 50% 40%,
+      rgba(18, 18, 19, 0.65),
+      rgba(18, 18, 19, 0.85)
+    ),
+    /* Edge vignette */
+    radial-gradient(
+      circle at center,
+      transparent 0%,
+      transparent 40%,
+      rgba(18, 18, 19, 0.9) 100%
+    ),
+    /* Subtle cyan tint overlay */
+    linear-gradient(
+      135deg,
+      rgba(0, 214, 203, 0.03) 0%,
+      transparent 50%,
+      rgba(0, 214, 203, 0.02) 100%
+    );
+  z-index: 1;
   pointer-events: none;
 }
 
-/* Content container - ensure it sits above video */
+/* Content container - ensure it sits above video and overlay */
 .container-10 {
   position: relative;
-  z-index: var(--z-above);
+  z-index: 2;
 }
 
 /* Accessibility: Disable video for users preferring reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .hero-video {
-    animation-play-state: paused;
+    animation: none;
+    transform: translate(-50%, -50%) scale(1.05);
     display: none;
   }
 
@@ -100,8 +130,11 @@
   line-height: 2rem;
   margin: 1.5rem auto 2.5rem auto;
   max-width: 900px;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
   text-align: center;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .landing-header {
@@ -111,6 +144,9 @@
   margin-bottom: 1rem;
   text-align: center;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
 .text-highlight {
@@ -122,16 +158,28 @@
   font-size: var(--font-size-2xl);
   margin-bottom: var(--spacing-3xl);
   padding: 1.5rem 2rem;
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: var(--glass-blur-md);
-  -webkit-backdrop-filter: var(--glass-blur-md);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-base);
   display: inline-block;
   min-width: 400px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(0, 214, 203, 0.1) inset;
   position: relative;
-  z-index: var(--z-above);
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.typed-text:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(0, 214, 203, 0.3);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(0, 214, 203, 0.2) inset,
+    0 0 20px rgba(0, 214, 203, 0.1);
 }
 
 .typed-highlight {
@@ -144,6 +192,8 @@
   margin: 0 auto;
   overflow-x: hidden;
   width: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .carousel-wrapper {
@@ -163,12 +213,14 @@
 }
 
 .carousel-slide {
-  background: var(--glass-bg-light);
-  backdrop-filter: var(--glass-blur-md);
-  -webkit-backdrop-filter: var(--glass-blur-md);
-  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--carousel-slide-radius);
-  box-shadow: 0 4px 12px rgba(0, 214, 203, 0.1);
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(0, 214, 203, 0.05) inset;
   width: var(--carousel-slide-size);
   height: var(--carousel-slide-size);
   object-fit: contain;
@@ -178,13 +230,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.3s ease;
 }
 
 .carousel-slide:hover {
-  transform: translateY(-4px);
-  border-color: var(--glass-border-accent);
-  box-shadow: 0 8px 20px rgba(0, 214, 203, 0.15);
+  transform: translateY(-6px) scale(1.05);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(0, 214, 203, 0.4);
+  box-shadow:
+    0 12px 24px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(0, 214, 203, 0.2) inset,
+    0 0 20px rgba(0, 214, 203, 0.15);
 }
 
 .carousel-slide img {
