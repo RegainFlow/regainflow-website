@@ -215,6 +215,21 @@
     0 0 6px rgba(0, 214, 203, 0.6), 0 0 2px rgba(0, 214, 203, 0.4);
   --glow-hover: 0 0 12px rgba(0, 214, 203, 0.3);
 
+  /* ==================== Background Video ==================== */
+
+  /* Video Opacity & Effects */
+  --hero-video-opacity: 0.2;
+  --hero-video-blur: blur(2px);
+
+  /* Video Overlay Gradients */
+  --hero-video-overlay-start: rgba(18, 18, 19, 0.7);
+  --hero-video-overlay-end: rgba(18, 18, 19, 0.9);
+
+  /* Z-index for Video Layers */
+  --z-below: -1;
+  --z-base: 0;
+  --z-above: 1;
+
   /* ==================== Layout ==================== */
 
   /* Container Widths */

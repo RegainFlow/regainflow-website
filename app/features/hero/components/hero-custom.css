@@ -28,6 +28,70 @@
   max-width: var(--hero-container-max);
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Background Video Layer (Glass Morphism Compatible)
+   ========================================================================== */
+
+/* Video background container - lowest layer */
+.hero-video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: var(--z-below);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Video element */
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  opacity: var(--hero-video-opacity);
+  filter: var(--hero-video-blur);
+}
+
+/* Dark overlay for contrast and glass morphism blend */
+.hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    var(--hero-video-overlay-start),
+    var(--hero-video-overlay-end)
+  );
+  z-index: var(--z-base);
+  pointer-events: none;
+}
+
+/* Content container - ensure it sits above video */
+.container-10 {
+  position: relative;
+  z-index: var(--z-above);
+}
+
+/* Accessibility: Disable video for users preferring reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero-video {
+    animation-play-state: paused;
+    display: none;
+  }
+
+  .hero-video-background {
+    background: var(--color-bg-primary);
+  }
 }
 
 .hero-subhead {
@@ -58,14 +122,16 @@
   font-size: var(--font-size-2xl);
   margin-bottom: var(--spacing-3xl);
   padding: 1.5rem 2rem;
-  background: var(--glass-bg-ultra-light);
+  background: rgba(255, 255, 255, 0.06);
   backdrop-filter: var(--glass-blur-md);
   -webkit-backdrop-filter: var(--glass-blur-md);
-  border: 1px solid var(--glass-border-subtle);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius-base);
   display: inline-block;
   min-width: 400px;
-  box-shadow: 0 4px 12px rgba(0, 214, 203, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: var(--z-above);
 }
 
 .typed-highlight {
@@ -147,6 +213,15 @@
 @media (max-width: 768px) {
   .hero-section {
     padding: 3rem 1rem 2rem;
+  }
+
+  /* Hide video on mobile for performance */
+  .hero-video {
+    display: none;
+  }
+
+  .hero-video-background {
+    background: var(--color-bg-primary);
   }
 
   .section-tech-stack {
