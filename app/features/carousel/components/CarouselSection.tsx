@@ -1,4 +1,4 @@
-export default function Carousel() {
+export default function CarouselSection() {
   const logos = [
     'typescript-icon.svg',
     'python.svg',
@@ -16,6 +16,7 @@ export default function Carousel() {
   const allLogos = [...logos, ...logos, ...logos];
 
   return (
+    // <div className="section-tech-stack">
     <div className="carousel-wrapper">
       <div className="carousel-track">
         {allLogos.map((logo, idx) => (
@@ -28,5 +29,6 @@ export default function Carousel() {
         ))}
       </div>
     </div>
+    // </div>
   );
 }

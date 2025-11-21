@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router';
 import Typed from 'typed.js';
-import Carousel from '~/features/hero/components/Carousel';
 import { PiRocketLaunchDuotone } from 'react-icons/pi';
 
 export default function HeroSection() {
@@ -117,10 +116,6 @@ export default function HeroSection() {
             <span id="typed" ref={typedRef}></span>
           </div>
         </div>
-      </div>
-
-      <div className="section-tech-stack">
-        <Carousel />
       </div>
     </section>
   );

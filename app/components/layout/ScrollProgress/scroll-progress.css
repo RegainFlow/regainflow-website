@@ -15,12 +15,10 @@
 
 .scroll-progress-bar {
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    var(--color-primary) 0%,
-    var(--color-primary-light) 50%,
-    var(--color-primary) 100%
-  );
+  background: linear-gradient(90deg,
+      var(--color-primary) 0%,
+      var(--color-primary-light) 50%,
+      var(--color-primary) 100%);
   box-shadow:
     0 0 10px rgba(0, 214, 203, 0.5),
     0 0 20px rgba(0, 214, 203, 0.3);
@@ -30,10 +28,12 @@
 }
 
 @keyframes progress-pulse {
+
   0%,
   100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.8;
   }
@@ -47,11 +47,9 @@
   right: 0;
   width: 100px;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.3)
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.3));
   animation: shimmer 2s ease-in-out infinite;
 }
 
@@ -59,6 +57,7 @@
   0% {
     transform: translateX(-100%);
   }
+
   100% {
     transform: translateX(100%);
   }

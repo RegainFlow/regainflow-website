@@ -10,7 +10,8 @@
       "mcp__magic__21st_magic_component_inspiration",
       "Bash(git add:*)",
       "Bash(git commit -m \"$(cat <<''EOF''\nfeat(value-prop): enhance card images with glass morphism effects\n\nVISUAL ENHANCEMENTS:\n- Enhanced glass container with frosted background\n- Added 16px backdrop blur for depth\n- Multi-layer box shadows for elevation\n- Cyan neon glow effects matching brand\n\nFLOATING/DEPTH EFFECT:\n- Base transform: translateY(-8px) for lift\n- Deep shadow: 0 12px 40px rgba(0, 0, 0, 0.4)\n- Cyan glow: 0 0 30px rgba(0, 214, 203, 0.15)\n- Inset border highlight for 3D depth\n\nINTERACTIVE HOVER STATES:\n- Smooth 0.4s cubic-bezier transitions\n- Scale: 1.02 on container, 1.03 on image\n- Enhanced lift: translateY(-12px)\n- Brighter glow: 0 0 40px rgba(0, 214, 203, 0.3)\n- Border brightens to rgba(0, 214, 203, 0.6)\n\nIMAGE STYLING:\n- Added 2rem padding around images\n- Drop shadow filter for depth\n- object-fit: contain for proper scaling\n- max-width: 500px maintained\n\nRESPONSIVE REFINEMENTS:\n- Tablet (768px): Reduced padding to 1.5rem, gentler transforms\n- Mobile (468px): Minimal padding (1rem), subtle transforms\n- Maintained glass effect across all breakpoints\n- Adjusted shadow intensity for smaller screens\n\nDESIGN CONSISTENCY:\n- Uses design system tokens (--radius-lg, --color-primary)\n- Matches existing glass morphism aesthetic\n- Cohesive cyan neon accent integration\n- Premium floating card appearance\nEOF\n)\")",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []

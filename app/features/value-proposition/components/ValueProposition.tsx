@@ -11,6 +11,7 @@ import {
 } from 'react-icons/pi';
 import type { IconType } from 'react-icons';
 import { useScrollAnimation } from '~/hooks/useScrollAnimation';
+import { Carousel } from '~/features/hero';
 
 const iconMap: Record<string, IconType> = {
   UserCheck: PiUserCheckDuotone,
@@ -50,9 +51,8 @@ export default function ValueProposition() {
             >
               <div
                 ref={imageRefs[idx] as React.RefObject<HTMLDivElement>}
-                className={`vp-image scroll-animate ${
-                  service.imageFirst ? 'fade-from-right' : 'fade-from-left'
-                } ${imageVisibilities[idx] ? 'visible' : ''}`}
+                className={`vp-image scroll-animate ${service.imageFirst ? 'fade-from-right' : 'fade-from-left'
+                  } ${imageVisibilities[idx] ? 'visible' : ''}`}
               >
                 <img src={service.image} alt="value-prop" loading="lazy" />
               </div>

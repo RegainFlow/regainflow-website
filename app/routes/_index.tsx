@@ -1,6 +1,7 @@
 import type { Route } from './+types/_index';
 
 import { HeroSection } from '~/features/hero';
+import { CarouselSection } from '~/features/carousel';
 import { ValueProposition } from '~/features/value-proposition';
 import { HowItWorks } from '~/features/how-it-works';
 import { RoiPreview } from '~/features/roi-preview';
@@ -11,6 +12,7 @@ import { SectionTracker } from '~/components/layout/SectionTracker';
 import { ScrollProgress } from '~/components/layout/ScrollProgress';
 import { AnimatedSection } from '~/components/AnimatedSection';
 
+import carouselStyles from '~/features/carousel/components/carousel-custom.css?url';
 import heroStyles from '~/features/hero/components/hero-custom.css?url';
 import valuePropStyles from '~/features/value-proposition/components/value-custom.css?url';
 import howItWorksStyles from '~/features/how-it-works/components/how-it-works.css?url';
@@ -24,6 +26,7 @@ import scrollAnimationsStyles from '~/styles/scroll-animations.css?url';
 
 export const links: Route.LinksFunction = () => [
   { rel: 'stylesheet', href: heroStyles },
+  { rel: 'stylesheet', href: carouselStyles },
   { rel: 'stylesheet', href: valuePropStyles },
   { rel: 'stylesheet', href: howItWorksStyles },
   { rel: 'stylesheet', href: roiPreviewStyles },
@@ -81,6 +84,8 @@ export default function Index() {
       <AnimatedSection id="hero" animation="fade-in">
         <HeroSection />
       </AnimatedSection>
+
+      <CarouselSection />
 
       <AnimatedSection id="value" animation="fade-up">
         <ValueProposition />
