@@ -10,6 +10,8 @@ import {
   PiCloudArrowUpDuotone
 } from 'react-icons/pi';
 import type { IconType } from 'react-icons';
+import { useScrollAnimation } from '~/hooks/useScrollAnimation';
+
 
 const iconMap: Record<string, IconType> = {
   UserCheck: PiUserCheckDuotone,
@@ -21,6 +23,18 @@ const iconMap: Record<string, IconType> = {
 };
 
 export default function ValueProposition() {
+  // Scroll animation hooks for each image
+  const { ref: imageRef1, isVisible: imageVisible1 } = useScrollAnimation({
+    threshold: 0.2,
+    rootMargin: '0px 0px -50px 0px'
+  });
+  const { ref: imageRef2, isVisible: imageVisible2 } = useScrollAnimation({
+    threshold: 0.2,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  const imageRefs = [imageRef1, imageRef2];
+  const imageVisibilities = [imageVisible1, imageVisible2];
   return (
     <section id="value-prop" className="value-proposition-section">
       <div className="vp-container">
@@ -32,11 +46,14 @@ export default function ValueProposition() {
         {valuePropData.map((service, idx) => (
           <div className="vp-card" key={idx}>
             <div
-              className={`vp-content-wrapper ${
-                service.imageFirst ? 'row-reverse' : ''
-              }`}
+              className={`vp-content-wrapper ${service.imageFirst ? 'row-reverse' : ''
+                }`}
             >
-              <div className="vp-image">
+              <div
+                ref={imageRefs[idx] as React.RefObject<HTMLDivElement>}
+                className={`vp-image scroll-animate ${service.imageFirst ? 'fade-from-right' : 'fade-from-left'
+                  } ${imageVisibilities[idx] ? 'visible' : ''}`}
+              >
                 <img src={service.image} alt="value-prop" loading="lazy" />
               </div>
               <div className="vp-text">

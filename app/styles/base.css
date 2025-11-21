@@ -30,6 +30,8 @@ html {
   -moz-text-size-adjust: 100%;
   text-size-adjust: 100%;
   scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+  scroll-padding-top: 80px;
 }
 
 html,
@@ -89,6 +91,13 @@ h6 {
 
 p {
   margin-bottom: var(--spacing-sm);
+}
+
+/* ==================== Sections ==================== */
+
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
 }
 
 /* ==================== Links ==================== */

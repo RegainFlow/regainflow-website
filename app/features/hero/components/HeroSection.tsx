@@ -1,11 +1,11 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router';
 import Typed from 'typed.js';
-import Carousel from '~/features/hero/components/Carousel';
 import { PiRocketLaunchDuotone } from 'react-icons/pi';
 
 export default function HeroSection() {
   const typedRef = useRef<HTMLSpanElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     if (!typedRef.current) return;
@@ -21,8 +21,31 @@ export default function HeroSection() {
     return () => typed.destroy();
   }, []);
 
+  useEffect(() => {
+    // Slow down video playback for ambient effect
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.75;
+    }
+  }, []);
+
   return (
     <section className="hero-section">
+      {/* Video background layer */}
+      <div className="hero-video-background">
+        <video
+          ref={videoRef}
+          className="hero-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/images/hero-poster.jpg"
+        >
+          <source src="/videos/hero-bg.mp4" type="video/mp4" />
+          <source src="/videos/hero-bg.webm" type="video/webm" />
+        </video>
+        <div className="hero-video-overlay" />
+      </div>
       <div id="typed-strings" style={{ display: 'none' }}>
         <p>
           We build your <span className="typed-highlight">AI pipelines.</span>
@@ -93,10 +116,6 @@ export default function HeroSection() {
             <span id="typed" ref={typedRef}></span>
           </div>
         </div>
-      </div>
-
-      <div className="section-tech-stack">
-        <Carousel />
       </div>
     </section>
   );

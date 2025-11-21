@@ -69,17 +69,28 @@
   --font-mono: 'Courier New', Courier, monospace;
 
   /* Font Sizes */
-  --font-size-xs: 0.75rem; /* 12px */
-  --font-size-sm: 0.875rem; /* 14px */
-  --font-size-base: 1rem; /* 16px */
-  --font-size-md: 1.125rem; /* 18px */
-  --font-size-lg: 1.25rem; /* 20px */
-  --font-size-xl: 1.5rem; /* 24px */
-  --font-size-2xl: 2rem; /* 32px */
-  --font-size-3xl: 2.5rem; /* 40px */
-  --font-size-4xl: 3rem; /* 48px */
-  --font-size-5xl: 4rem; /* 64px */
-  --font-size-6xl: 6rem; /* 96px */
+  --font-size-xs: 0.75rem;
+  /* 12px */
+  --font-size-sm: 0.875rem;
+  /* 14px */
+  --font-size-base: 1rem;
+  /* 16px */
+  --font-size-md: 1.125rem;
+  /* 18px */
+  --font-size-lg: 1.25rem;
+  /* 20px */
+  --font-size-xl: 1.5rem;
+  /* 24px */
+  --font-size-2xl: 2rem;
+  /* 32px */
+  --font-size-3xl: 2.5rem;
+  /* 40px */
+  --font-size-4xl: 3rem;
+  /* 48px */
+  --font-size-5xl: 4rem;
+  /* 64px */
+  --font-size-6xl: 6rem;
+  /* 96px */
 
   /* Font Weights */
   --font-weight-light: 300;
@@ -104,13 +115,20 @@
 
   /* ==================== Spacing ==================== */
 
-  --spacing-xs: 0.5rem; /* 8px */
-  --spacing-sm: 1rem; /* 16px */
-  --spacing-md: 1.5rem; /* 24px */
-  --spacing-lg: 2rem; /* 32px */
-  --spacing-xl: 3rem; /* 48px */
-  --spacing-2xl: 4rem; /* 64px */
-  --spacing-3xl: 6rem; /* 96px */
+  --spacing-xs: 0.5rem;
+  /* 8px */
+  --spacing-sm: 1rem;
+  /* 16px */
+  --spacing-md: 1.5rem;
+  /* 24px */
+  --spacing-lg: 2rem;
+  /* 32px */
+  --spacing-xl: 3rem;
+  /* 48px */
+  --spacing-2xl: 4rem;
+  /* 64px */
+  --spacing-3xl: 6rem;
+  /* 96px */
 
   /* ==================== Borders ==================== */
 
@@ -121,12 +139,18 @@
 
   /* Border Radius */
   --radius-none: 0;
-  --radius-sm: 0.25rem; /* 4px */
-  --radius-base: 0.5rem; /* 8px */
-  --radius-md: 0.75rem; /* 12px */
-  --radius-lg: 1rem; /* 16px */
-  --radius-xl: 1.5rem; /* 24px */
-  --radius-2xl: 2rem; /* 32px */
+  --radius-sm: 0.25rem;
+  /* 4px */
+  --radius-base: 0.5rem;
+  /* 8px */
+  --radius-md: 0.75rem;
+  /* 12px */
+  --radius-lg: 1rem;
+  /* 16px */
+  --radius-xl: 1.5rem;
+  /* 24px */
+  --radius-2xl: 2rem;
+  /* 32px */
   --radius-full: 9999px;
 
   /* Border Definitions */
@@ -214,6 +238,22 @@
   --glow-text-logo:
     0 0 6px rgba(0, 214, 203, 0.6), 0 0 2px rgba(0, 214, 203, 0.4);
   --glow-hover: 0 0 12px rgba(0, 214, 203, 0.3);
+
+  /* ==================== Background Video ==================== */
+
+  /* Video Opacity & Effects */
+  --hero-video-opacity: 0.1;
+  --hero-video-blur: blur(1px);
+
+  /* Video Overlay Gradients */
+  --hero-video-overlay-start: rgba(18, 18, 19, 0.05);
+  --hero-video-overlay-end: rgba(18, 18, 19, 0.10);
+
+  /* Z-index for Video Layers */
+  --z-below: -1;
+  --z-base: 0;
+  --z-above: 1;
+  --z-content: 2;
 
   /* ==================== Layout ==================== */
 

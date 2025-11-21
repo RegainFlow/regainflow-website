@@ -4,13 +4,6 @@
 
 /* Hero-specific component variables (using global design tokens) */
 :root {
-  /* Carousel Variables */
-  --carousel-slide-size: 100px;
-  --carousel-slide-radius: var(--radius-base);
-  --carousel-slide-margin: 20px;
-  --carousel-slide-size-md: 80px;
-  --carousel-slide-size-sm: 60px;
-
   /* Hero Typography */
   --hero-header-size: 70px;
   --hero-header-line-height: 90px;
@@ -28,6 +21,83 @@
   max-width: var(--hero-container-max);
   margin: 0 auto;
   position: relative;
+  /* Remove overflow hidden to allow full-width video */
+}
+
+/* ==========================================================================
+   Background Video Layer (Glass Morphism Compatible)
+   ========================================================================== */
+
+/* Video background container - full viewport width, lowest layer */
+.hero-video-background {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Video element - enhanced for cinematic effect */
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  min-width: 100vw;
+  min-height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%) scale(1.05);
+  opacity: 0.3;
+  filter: var(--hero-video-blur);
+  animation: subtle-zoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes subtle-zoom {
+  0% {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+}
+
+/* Enhanced overlay with multi-layer gradients for depth */
+.hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center,
+      var(--hero-video-overlay-start),
+      var(--hero-video-overlay-end));
+  z-index: var(--z-base);
+  pointer-events: none;
+}
+
+/* Content container - ensure it sits above video and overlay */
+.container-10 {
+  position: relative;
+  z-index: 2;
+}
+
+/* Accessibility: Disable video for users preferring reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero-video {
+    animation: none;
+    transform: translate(-50%, -50%) scale(1.05);
+    display: none;
+  }
+
+  .hero-video-background {
+    background: var(--color-bg-primary);
+  }
 }
 
 .hero-subhead {
@@ -36,8 +106,11 @@
   line-height: 2rem;
   margin: 1.5rem auto 2.5rem auto;
   max-width: 900px;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
   text-align: center;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .landing-header {
@@ -47,6 +120,9 @@
   margin-bottom: 1rem;
   text-align: center;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
 .text-highlight {
@@ -58,87 +134,33 @@
   font-size: var(--font-size-2xl);
   margin-bottom: var(--spacing-3xl);
   padding: 1.5rem 2rem;
-  background: var(--glass-bg-ultra-light);
-  backdrop-filter: var(--glass-blur-md);
-  -webkit-backdrop-filter: var(--glass-blur-md);
-  border: 1px solid var(--glass-border-subtle);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-base);
   display: inline-block;
   min-width: 400px;
-  box-shadow: 0 4px 12px rgba(0, 214, 203, 0.08);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(0, 214, 203, 0.1) inset;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.typed-text:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(0, 214, 203, 0.3);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(0, 214, 203, 0.2) inset,
+    0 0 20px rgba(0, 214, 203, 0.1);
 }
 
 .typed-highlight {
   color: var(--color-primary);
   text-shadow: var(--glow-text);
-}
-
-.section-tech-stack {
-  max-width: var(--hero-container-max);
-  margin: 0 auto;
-  overflow-x: hidden;
-  width: 100%;
-}
-
-.carousel-wrapper {
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-  margin-top: 50px;
-}
-
-.carousel-track {
-  display: flex;
-  animation: carousel-scroll 20s linear infinite;
-  flex-wrap: nowrap;
-  white-space: nowrap;
-  will-change: transform;
-  width: max-content;
-}
-
-.carousel-slide {
-  background: var(--glass-bg-light);
-  backdrop-filter: var(--glass-blur-md);
-  -webkit-backdrop-filter: var(--glass-blur-md);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--carousel-slide-radius);
-  box-shadow: 0 4px 12px rgba(0, 214, 203, 0.1);
-  width: var(--carousel-slide-size);
-  height: var(--carousel-slide-size);
-  object-fit: contain;
-  padding: 10px;
-  margin-right: var(--carousel-slide-margin);
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.25s ease-in-out;
-}
-
-.carousel-slide:hover {
-  transform: translateY(-4px);
-  border-color: var(--glass-border-accent);
-  box-shadow: 0 8px 20px rgba(0, 214, 203, 0.15);
-}
-
-.carousel-slide img {
-  width: 80%;
-  height: 80%;
-  object-fit: contain;
-}
-
-.carousel-slide:last-child {
-  margin-right: 0;
-}
-
-/* Keyframe animation */
-@keyframes carousel-scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-33.333%));
-  }
 }
 
 /* --------------------------------------------------------------------------
@@ -149,21 +171,13 @@
     padding: 3rem 1rem 2rem;
   }
 
-  .section-tech-stack {
-    overflow-x: visible !important;
+  /* Hide video on mobile for performance */
+  .hero-video {
+    display: none;
   }
 
-  .carousel-slide {
-    width: var(--carousel-slide-size-md);
-    height: var(--carousel-slide-size-md);
-    margin-right: calc(var(--carousel-slide-margin) * 0.75);
-  }
-
-  .carousel-wrapper {
-    width: auto !important;
-    left: auto !important;
-    transform: none !important;
-    overflow-x: hidden;
+  .hero-video-background {
+    background: var(--color-bg-primary);
   }
 
   .typed-text {
@@ -231,12 +245,6 @@
     width: 20px;
     height: 20px;
     margin-right: 8px;
-  }
-
-  .carousel-slide {
-    width: var(--carousel-slide-size-sm);
-    height: var(--carousel-slide-size-sm);
-    margin-right: calc(var(--carousel-slide-margin) * 0.5);
   }
 
   .hero-subhead {
