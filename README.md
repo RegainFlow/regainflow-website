@@ -77,7 +77,6 @@ app/
 │   ├── case-studies-preview/
 │   ├── faq/             # FAQ accordion
 │   ├── final-cta/       # Call-to-action section
-│   ├── stats-bar/       # Statistics display
 │   └── legal/           # Privacy & terms pages
 ├── hooks/               # Custom React hooks
 ├── lib/                 # Utility functions

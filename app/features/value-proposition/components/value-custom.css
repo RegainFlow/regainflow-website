@@ -116,6 +116,53 @@
 }
 
 /* --------------------------------------------------------------------------
+     Scroll-Triggered Animation States
+     -------------------------------------------------------------------------- */
+.vp-image.scroll-animate {
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vp-image.scroll-animate.fade-from-right {
+  transform: translateX(60px) translateY(-8px);
+}
+
+.vp-image.scroll-animate.fade-from-left {
+  transform: translateX(-60px) translateY(-8px);
+}
+
+.vp-image.scroll-animate.visible {
+  opacity: 1;
+  transform: translateX(0) translateY(-8px);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.4),
+    0 0 35px rgba(0, 214, 203, 0.25),
+    0 0 0 1px rgba(0, 214, 203, 0.15) inset;
+}
+
+.vp-image.scroll-animate.visible:hover {
+  transform: translateX(0) translateY(-12px) scale(1.02);
+  box-shadow:
+    0 16px 48px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(0, 214, 203, 0.3),
+    0 0 0 1px rgba(0, 214, 203, 0.2) inset;
+}
+
+/* Accessibility: Disable scroll animations for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .vp-image.scroll-animate {
+    opacity: 1;
+    transform: translateY(-8px);
+    transition: none;
+  }
+
+  .vp-image.scroll-animate.fade-from-right,
+  .vp-image.scroll-animate.fade-from-left {
+    transform: translateY(-8px);
+  }
+}
+
+/* --------------------------------------------------------------------------
      Text Content
      -------------------------------------------------------------------------- */
 .vp-text {

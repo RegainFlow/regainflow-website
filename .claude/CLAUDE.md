@@ -36,7 +36,7 @@ app/features/{feature-name}/
 
 ### Complete Feature List
 
-The project contains **13 feature modules**:
+The project contains **12 feature modules**:
 
 | Feature | Purpose | Key Components |
 |---------|---------|----------------|
@@ -51,7 +51,6 @@ The project contains **13 feature modules**:
 | `case-studies-preview/` | Featured case studies | CaseStudiesPreview |
 | `faq/` | FAQ accordion | FAQ |
 | `final-cta/` | Call-to-action section | FinalCTA |
-| `stats-bar/` | Statistics display | StatsBar |
 | `legal/` | Privacy & terms pages | PrivacyPage, TermsPage |
 
 ### Feature Module Pattern

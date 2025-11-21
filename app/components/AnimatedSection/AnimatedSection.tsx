@@ -1,8 +1,8 @@
-import { ReactNode } from 'react';
+import React from 'react';
 import { useScrollAnimation } from '~/hooks/useScrollAnimation';
 
 interface AnimatedSectionProps {
-  children: ReactNode;
+  children: React.ReactNode;
   id: string;
   animation?: 'fade-up' | 'fade-down' | 'fade-left' | 'fade-right' | 'scale-up' | 'fade-in';
   className?: string;

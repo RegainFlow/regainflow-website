@@ -1,7 +1,6 @@
 import type { Route } from './+types/_index';
 
 import { HeroSection } from '~/features/hero';
-import { StatsBar } from '~/features/stats-bar';
 import { ValueProposition } from '~/features/value-proposition';
 import { HowItWorks } from '~/features/how-it-works';
 import { RoiPreview } from '~/features/roi-preview';
@@ -13,7 +12,6 @@ import { ScrollProgress } from '~/components/layout/ScrollProgress';
 import { AnimatedSection } from '~/components/AnimatedSection';
 
 import heroStyles from '~/features/hero/components/hero-custom.css?url';
-import statsStyles from '~/features/stats-bar/components/stats.css?url';
 import valuePropStyles from '~/features/value-proposition/components/value-custom.css?url';
 import howItWorksStyles from '~/features/how-it-works/components/how-it-works.css?url';
 import roiPreviewStyles from '~/features/roi-preview/components/roi-preview.css?url';
@@ -26,7 +24,6 @@ import scrollAnimationsStyles from '~/styles/scroll-animations.css?url';
 
 export const links: Route.LinksFunction = () => [
   { rel: 'stylesheet', href: heroStyles },
-  { rel: 'stylesheet', href: statsStyles },
   { rel: 'stylesheet', href: valuePropStyles },
   { rel: 'stylesheet', href: howItWorksStyles },
   { rel: 'stylesheet', href: roiPreviewStyles },
@@ -38,7 +35,7 @@ export const links: Route.LinksFunction = () => [
   { rel: 'stylesheet', href: scrollAnimationsStyles }
 ];
 
-export function meta({}: Route.MetaArgs) {
+export function meta({ }: Route.MetaArgs) {
   const title = 'RegainFlow | Senior AI/ML Engineers for C2C Contracts';
   const description =
     'Contract-ready senior engineers specializing in AI/ML, RAG, and intelligent automation. Full-stack capabilities across backend, frontend, DevOps, and solution architecture. Available for long-term C2C contracts or project consulting.';
@@ -67,7 +64,6 @@ export function meta({}: Route.MetaArgs) {
 
 const sections = [
   { id: 'hero', label: 'Home' },
-  { id: 'stats', label: 'Stats' },
   { id: 'value', label: 'Value' },
   { id: 'process', label: 'Process' },
   { id: 'roi', label: 'ROI' },
@@ -84,10 +80,6 @@ export default function Index() {
 
       <AnimatedSection id="hero" animation="fade-in">
         <HeroSection />
-      </AnimatedSection>
-
-      <AnimatedSection id="stats" animation="fade-up">
-        <StatsBar />
       </AnimatedSection>
 
       <AnimatedSection id="value" animation="fade-up">
