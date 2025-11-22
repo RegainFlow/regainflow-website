@@ -46,6 +46,7 @@ export default function HeroSection() {
         </video>
         <div className="hero-video-overlay" />
       </div>
+
       <div id="typed-strings" style={{ display: 'none' }}>
         <p>
           We build your <span className="typed-highlight">AI pipelines.</span>
@@ -94,6 +95,12 @@ export default function HeroSection() {
           engagements or project consulting
         </p>
 
+        <div className="div-block-33">
+          <div className="typed-text">
+            <span id="typed" ref={typedRef}></span>
+          </div>
+        </div>
+
         <Link
           to="/engineers"
           className="button-primary-2 animated-button btn-neon w-button"
@@ -110,12 +117,6 @@ export default function HeroSection() {
             View Engineer Profiles
           </div>
         </Link>
-
-        <div className="div-block-33">
-          <div className="typed-text">
-            <span id="typed" ref={typedRef}></span>
-          </div>
-        </div>
       </div>
     </section>
   );

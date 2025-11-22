@@ -3,12 +3,10 @@
    ========================================================================== */
 
 export type CapabilitySlug =
-  | 'ai-automation'
-  | 'rag-search'
-  | 'data-validation'
-  | 'system-integration'
+  | 'ai-engineering'
+  | 'data-engineering'
   | 'full-stack-engineering'
-  | 'devops';
+  | 'devops-engineering';
 
 /* ==========================================================================
    Capability Page Types

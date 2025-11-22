@@ -66,9 +66,6 @@ export default function CaseStudiesGrid() {
               <div className="card-gradient-overlay" />
             </div>
 
-            {/* Metrics Badge */}
-            <div className="card-metric-badge">{item.primaryMetric}</div>
-
             {/* Industry Label */}
             <div className="card-industry-label">{item.industry}</div>
 
@@ -76,6 +73,9 @@ export default function CaseStudiesGrid() {
             <div className="card-content-wrapper">
               <h3 className="card-title">{item.title}</h3>
               <p className="card-description">{item.description}</p>
+
+              {/* Metrics Badge */}
+              <div className="card-metric-badge">{item.primaryMetric}</div>
 
               {/* Tags */}
               <div className="card-tags">
@@ -86,9 +86,16 @@ export default function CaseStudiesGrid() {
                 ))}
               </div>
 
-              {/* NDA Badge */}
-              {item.actionType === 'nda' && (
-                <div className="card-nda-badge">NDA Protected</div>
+              {/* DEMO Button */}
+              {item.actionType === 'demo' && item.link && (
+                <a
+                  href={item.link}
+                  className="card-demo-button"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  DEMO
+                </a>
               )}
             </div>
           </div>

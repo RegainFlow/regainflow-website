@@ -190,25 +190,23 @@ Set in `.env` file:
 The `services/` feature supports a modern capability-based structure:
 
 **Route Structure:**
-- `/services` - Overview page with hero, 6 capability cards, process steps, metrics, case studies, CTA
-- `/services/:capability` - Individual capability pages (6 total)
-  - `ai-automation` - AI Automation
-  - `rag-search` - RAG & Search Systems
-  - `data-validation` - Data Validation
-  - `system-integration` - System Integration
+- `/services` - Overview page with hero, 4 capability cards, process steps, metrics, case studies, CTA
+- `/services/:capability` - Individual capability pages (4 total)
+  - `ai-engineering` - AI Engineering (combines multi-agent automation + RAG/semantic search)
+  - `data-engineering` - Data Engineering (combines data validation + system integration)
   - `full-stack-engineering` - Full-Stack Engineering
-  - `devops` - DevOps & Infrastructure
+  - `devops-engineering` - DevOps Engineering
 
 **Navigation:**
 - Services dropdown in navbar provides access to all capabilities
-- Click "SERVICES" to reveal dropdown with "All Services" + 6 capability links
+- Click "SERVICES" to reveal dropdown with "All Services" + 4 capability links
 - Dropdown uses glass morphism styling with animated caret icon
 - Auto-closes on navigation and route changes
 
 **Data Structure:**
-- `capabilitiesData.ts` - Comprehensive data for all 6 capabilities (problems, approach, tech stack)
+- `capabilitiesData.ts` - Comprehensive data for all 4 capabilities (problems, approach, tech stack)
 - `servicesOverviewData.ts` - Overview page data (hero, process steps, metrics, capability cards)
-- Projects case studies tagged with `capabilities` field for cross-referencing
+- Projects case studies tagged with `capabilities` field for cross-referencing with new capability names
 
 **Components:**
 - **Overview Page**: `ServicesOverview` (orchestrator) + 6 sub-components (Hero, Grid, Metrics, Process, Preview, CTA)

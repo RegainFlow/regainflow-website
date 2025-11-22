@@ -49,7 +49,7 @@ export default function CaseStudiesPreview() {
         </div>
 
         <div className="case-studies-cta">
-          <Link to="/projects" className="neon-button-glass">
+          <Link to="/client-results" className="neon-button-glass">
             View All Case Studies
           </Link>
         </div>

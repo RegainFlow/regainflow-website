@@ -1,334 +1,210 @@
 import type { Capability } from '../types/service.types';
 
 /* ==========================================================================
-   Capabilities Data - 6 Core Service Offerings
+   Capabilities Data - 4 Core Service Offerings
    ========================================================================== */
 
 export const capabilitiesData: Capability[] = [
   // ========================================
-  // 1. AI Automation
+  // 1. AI Engineering
   // ========================================
   {
-    slug: 'ai-automation',
-    title: 'AI Automation',
-    subtitle: 'Intelligent workflows that eliminate manual processes and scale operations',
+    slug: 'ai-engineering',
+    title: 'AI Engineering',
+    subtitle: 'Production AI systems from multi-agent automation to semantic search over millions of documents',
     heroImage: '/images/services/ai-automation/hero.png',
     description:
-      'Transform repetitive, time-consuming workflows into intelligent, autonomous systems. Our AI automation solutions combine LLM-powered decision making, multi-agent architectures, and production-grade orchestration to eliminate manual bottlenecks while maintaining accuracy and reliability.',
+      'Build intelligent systems that autonomously handle complex workflows, deliver instant answers from massive document repositories, and scale operations without proportional hiring. Our AI solutions combine multi-agent architectures, production RAG pipelines, and LLM-powered decision making proven across 6,000+ daily users and enterprise-scale deployments.',
     problems: [
       {
         icon: 'PiClockCountdownDuotone',
-        problem: 'Teams spending hours on repetitive manual tasks',
+        problem: 'Manual validation processes taking 90 days blocking critical operations',
         solution:
-          'Multi-agent AI systems that autonomously handle validation, data processing, and decision workflows'
+          'Multi-agent validation systems reducing 90-day cycles to 3 days with autonomous SQL checks, flat-file comparisons, and AI-generated rules'
       },
       {
-        icon: 'PiWarningDiamondDuotone',
-        problem: 'High error rates and inconsistency in manual processes',
+        icon: 'PiMagnifyingGlassDuotone',
+        problem: 'Legacy keyword search missing 40-60% of relevant documents',
         solution:
-          'Deterministic validation engines combined with AI-augmented logic ensuring 99.9%+ accuracy'
+          'Hybrid semantic + keyword retrieval with ELSER V2 achieving 90%+ recall across millions of engineering documents'
+      },
+      {
+        icon: 'PiLightbulbDuotone',
+        problem: 'Users can\'t get direct answers, only document lists',
+        solution:
+          'Production RAG systems serving 6K+ daily users with cited, summarized answers and source traceability'
       },
       {
         icon: 'PiChartLineDuotone',
-        problem: 'Inability to scale operations without proportional hiring',
+        problem: 'Manual operator review bottlenecks in satellite telemetry analysis',
         solution:
-          'Production-grade automation handling 10x-100x workload increases with zero additional headcount'
+          'Real-time anomaly detection reducing manual review by 80% across 5K+ sensor streams'
       }
     ],
     approach: [
       {
         step: 1,
-        title: 'Process Analysis & Opportunity Mapping',
+        title: 'Use Case Assessment & Architecture Design',
         description:
-          'Deep dive into your current workflows to identify automation opportunities with highest ROI. We map manual touchpoints, decision trees, and exception handling patterns.'
+          'Deep dive into your workflows and document repositories. We map automation opportunities, data sources, and access patterns to design multi-agent systems or RAG architectures optimized for your scale.'
       },
       {
         step: 2,
-        title: 'Hybrid Architecture Design',
+        title: 'Pipeline Development & Validation',
         description:
-          'Design multi-agent systems combining deterministic rules with LLM intelligence. We ensure fail-safes, human-in-the-loop checkpoints, and graceful degradation for mission-critical workflows.'
+          'Build robust ingestion pipelines, embeddings generation, and multi-agent orchestration. We implement hybrid retrieval (BM25 + vector search), deterministic validation rules, and LLM integration with full audit trails.'
       },
       {
         step: 3,
-        title: 'Incremental Deployment & Validation',
+        title: 'Incremental Deployment & Accuracy Validation',
         description:
-          'Deploy automations incrementally with parallel validation against existing processes. We prove accuracy before full cutover, eliminating risk of business disruption.'
+          'Deploy with parallel validation against existing processes. We prove accuracy before full cutover, implement human-in-the-loop checkpoints, and ensure graceful degradation for mission-critical workflows.'
       },
       {
         step: 4,
         title: 'Monitoring, Optimization & Scaling',
         description:
-          'Implement observability dashboards, error tracking, and continuous improvement loops. We optimize agent performance and scale to additional workflows.'
+          'Implement observability dashboards tracking agent performance, search recall, and SLA compliance. We continuously optimize retrieval relevance, agent decision logic, and scale to additional workflows or document sources.'
       }
     ],
     techStack: [
       { name: 'LangChain', category: 'AI / LLM Frameworks' },
       { name: 'LangGraph', category: 'AI / LLM Frameworks' },
       { name: 'OpenAI GPT-4', category: 'AI / LLM Frameworks' },
-      { name: 'Python', category: 'Programming Languages' },
-      { name: 'FastAPI', category: 'Backend / APIs' },
-      { name: 'PostgreSQL', category: 'Databases' },
-      { name: 'Redis', category: 'Databases' },
-      { name: 'Docker', category: 'DevOps / Automation' }
-    ],
-    ctaTitle: 'Ready to Eliminate Manual Bottlenecks?',
-    ctaDescription:
-      'Schedule a free consultation to discuss your automation opportunities. We\'ll map your workflows, identify high-ROI automation targets, and show you exactly how AI can transform your operations.',
-    ctaButtonText: 'Schedule Free Consultation',
-    ctaButtonLink: 'https://form.typeform.com/to/SOXnbS4E'
-  },
-
-  // ========================================
-  // 2. RAG/Search
-  // ========================================
-  {
-    slug: 'rag-search',
-    title: 'RAG & Semantic Search',
-    subtitle:
-      'Production-grade retrieval systems delivering instant, accurate answers from massive document repositories',
-    heroImage: '/images/services/rag-search/hero.png',
-    description:
-      'Build intelligent search and retrieval systems that understand context, semantics, and domain-specific nuances. Our RAG implementations combine hybrid vector search, reranking algorithms, and LLM-powered summarization to deliver Google-quality search over your private data.',
-    problems: [
-      {
-        icon: 'PiMagnifyingGlassDuotone',
-        problem: 'Legacy keyword search missing 40-60% of relevant documents',
-        solution:
-          'Hybrid semantic + keyword retrieval with ELSER V2 or dense embeddings achieving 90%+ recall'
-      },
-      {
-        icon: 'PiDatabaseDuotone',
-        problem: 'Millions of documents across silos making knowledge inaccessible',
-        solution:
-          'Unified search ingestion pipelines processing millions of records with domain-specific chunking and metadata extraction'
-      },
-      {
-        icon: 'PiLightbulbDuotone',
-        problem: 'Users can\'t get direct answers, only document lists',
-        solution:
-          'RAG-powered Q&A systems providing cited, summarized answers with source traceability'
-      }
-    ],
-    approach: [
-      {
-        step: 1,
-        title: 'Data Assessment & Architecture Design',
-        description:
-          'Audit your document repositories, data sources, and access patterns. We design ingestion pipelines, chunking strategies, and vector database architectures optimized for your scale and query patterns.'
-      },
-      {
-        step: 2,
-        title: 'Indexing Pipeline & Embedding Generation',
-        description:
-          'Build robust ETL pipelines converting raw documents into indexed, searchable formats. We implement semantic embeddings, metadata extraction, and incremental update strategies.'
-      },
-      {
-        step: 3,
-        title: 'Hybrid Retrieval & Reranking',
-        description:
-          'Implement BM25 keyword search combined with vector similarity for best-of-both-worlds retrieval. Add reranking layers (RRF, LLM-based) to optimize result relevance.'
-      },
-      {
-        step: 4,
-        title: 'RAG Integration & User Experience',
-        description:
-          'Connect retrieval to LLMs for conversational Q&A, summarization, and multi-turn dialogues. Build intuitive UIs with faceted filters, relevance feedback, and answer citations.'
-      }
-    ],
-    techStack: [
       { name: 'Elasticsearch', category: 'Search / Vector DBs' },
       { name: 'ELSER V2', category: 'AI / LLM Frameworks' },
       { name: 'Pinecone', category: 'Search / Vector DBs' },
       { name: 'Chroma', category: 'Search / Vector DBs' },
-      { name: 'LangChain', category: 'AI / LLM Frameworks' },
       { name: 'OpenAI Embeddings', category: 'AI / LLM Frameworks' },
       { name: 'Python', category: 'Programming Languages' },
-      { name: 'TypeScript', category: 'Programming Languages' }
+      { name: 'FastAPI', category: 'Backend / APIs' },
+      { name: 'PostgreSQL', category: 'Databases' },
+      { name: 'Redis', category: 'Databases' }
     ],
-    ctaTitle: 'Transform Your Enterprise Search',
+    ctaTitle: 'Ready to Build Production AI Systems?',
     ctaDescription:
-      'Let\'s discuss your search challenges and document repositories. We\'ll design a retrieval architecture that delivers accurate, fast answers while scaling to millions of documents.',
-    ctaButtonText: 'Get Search Architecture Consultation',
+      'Schedule a free consultation to discuss your AI engineering needs. Whether you need multi-agent automation, enterprise RAG, or intelligent search, we\'ll design a solution proven at scale.',
+    ctaButtonText: 'Schedule AI Engineering Consultation',
     ctaButtonLink: 'https://form.typeform.com/to/SOXnbS4E'
   },
 
   // ========================================
-  // 3. Data Validation
+  // 2. Data Engineering
   // ========================================
   {
-    slug: 'data-validation',
-    title: 'Data Validation & Quality Engineering',
-    subtitle:
-      'Autonomous validation engines ensuring data integrity across complex enterprise systems',
+    slug: 'data-engineering',
+    title: 'Data Engineering',
+    subtitle: 'End-to-end data pipelines from schema normalization to multi-system integration at enterprise scale',
     heroImage: '/images/services/data-validation/hero.png',
     description:
-      'Eliminate manual data quality checks with intelligent validation systems. Our solutions combine deterministic rule engines, schema normalization, cross-system reconciliation, and AI-augmented anomaly detection to ensure 99.9%+ data accuracy at scale.',
+      'Eliminate manual data quality checks and integration bottlenecks with intelligent data systems. Our solutions combine schema normalization across 300+ tables, cross-system validation engines, ETL pipelines processing millions of records, and API layers connecting legacy systems to modern platforms—delivering $8M+ in saved costs and 5× throughput improvements.',
     problems: [
       {
         icon: 'PiFileXDuotone',
-        problem: 'Manual validation taking weeks while blocking critical processes',
+        problem: 'Manual validation taking weeks while blocking SAP migrations and critical processes',
         solution:
-          'Autonomous multi-agent validation reducing 90-day cycles to 3 days with full audit trails'
-      },
-      {
-        icon: 'PiWarningCircleDuotone',
-        problem: 'Data quality issues discovered only after costly downstream failures',
-        solution:
-          'Real-time validation at ingestion points catching errors before they propagate across systems'
+          'Autonomous multi-agent validation reducing 90-day cycles to 3 days with deterministic rules and full audit trails'
       },
       {
         icon: 'PiShuffleDuotone',
         problem: 'Inconsistent data across TE, GL, Payroll, HRIS creating reconciliation nightmares',
         solution:
-          'Cross-system validation engines processing 300+ tables with deterministic business rules and exception handling'
+          'Cross-system validation engines processing 300+ tables with schema normalization and exception handling saving $8M+'
+      },
+      {
+        icon: 'PiPlugsConnectedDuotone',
+        problem: 'Data trapped in silos across CRM, ERP, legacy systems blocking automation',
+        solution:
+          'Real-time bidirectional sync with custom API layers, conflict resolution, and data lineage tracking'
+      },
+      {
+        icon: 'PiArrowsClockwiseDuotone',
+        problem: 'Multi-format data ingestion (PDFs, Excel, legacy files) creating throughput bottlenecks',
+        solution:
+          'Scalable ETL pipelines with VLM + OCR processing achieving 5× indexing throughput improvements'
       }
     ],
     approach: [
       {
         step: 1,
-        title: 'Validation Requirements & Rule Discovery',
+        title: 'Data Landscape Mapping & Requirements Discovery',
         description:
-          'Work with domain experts to document business rules, validation logic, and exception scenarios. We map data lineage across systems to identify critical validation checkpoints.'
+          'Document your data flows, systems, validation rules, and integration requirements. We map data lineage across TE, GL, Payroll, HRIS, and legacy systems to identify critical validation checkpoints and API needs.'
       },
       {
         step: 2,
-        title: 'Schema Normalization & Rule Engine Design',
+        title: 'Schema Design & Validation Engine Construction',
         description:
-          'Build deterministic validation engines with configurable rules, threshold management, and audit logging. We handle schema differences, data type conversions, and temporal logic.'
+          'Build deterministic validation engines with configurable rules, schema normalization, and data type conversions. We develop robust ETL pipelines, API layers for legacy systems, and automated reconciliation logic.'
       },
       {
         step: 3,
-        title: 'Multi-Agent Orchestration & Automation',
+        title: 'Pipeline Deployment & Integration Testing',
         description:
-          'Deploy multi-agent architectures coordinating SQL validation, flat-file comparisons, and cross-system reconciliation. Agents autonomously handle retries, error categorization, and escalation workflows.'
+          'Deploy multi-agent orchestration coordinating SQL validation, flat-file processing, and cross-system sync. Comprehensive testing including edge cases, failure scenarios, and data consistency validation.'
       },
       {
         step: 4,
-        title: 'Monitoring, Dashboards & Continuous Improvement',
+        title: 'Monitoring, Optimization & Continuous Improvement',
         description:
-          'Implement real-time validation dashboards showing pass/fail rates, error distributions, and SLA compliance. We continuously refine rules based on false positive analysis.'
+          'Implement real-time dashboards showing pass/fail rates, error distributions, throughput metrics, and SLA compliance. We optimize pipeline performance, refine validation rules, and scale to additional data sources.'
       }
     ],
     techStack: [
       { name: 'Python', category: 'Programming Languages' },
       { name: 'SQL Server', category: 'Databases' },
       { name: 'PostgreSQL', category: 'Databases' },
-      { name: 'LangGraph', category: 'AI / LLM Frameworks' },
       { name: 'Pandas', category: 'ML / DL Frameworks' },
       { name: 'Apache Airflow', category: 'DevOps / Automation' },
       { name: 'Great Expectations', category: 'Data Validation' },
-      { name: 'Elasticsearch', category: 'Search / Vector DBs' }
-    ],
-    ctaTitle: 'Ensure Data Integrity at Scale',
-    ctaDescription:
-      'Schedule a free consultation to discuss your data validation challenges. We\'ll map your data flows, identify validation bottlenecks, and design automated quality assurance systems.',
-    ctaButtonText: 'Schedule Data Quality Assessment',
-    ctaButtonLink: 'https://form.typeform.com/to/SOXnbS4E'
-  },
-
-  // ========================================
-  // 4. System Integration
-  // ========================================
-  {
-    slug: 'system-integration',
-    title: 'System Integration & API Development',
-    subtitle:
-      'Seamless connectivity between disparate systems enabling real-time data flow and process automation',
-    heroImage: '/images/services/system-integration/hero.png',
-    description:
-      'Connect legacy systems, modern SaaS platforms, and custom applications into cohesive, automated workflows. Our integration solutions handle complex data transformations, real-time synchronization, error handling, and API development to eliminate data silos and manual data entry.',
-    problems: [
-      {
-        icon: 'PiPlugsConnectedDuotone',
-        problem: 'Data trapped in silos across CRM, ERP, HRIS, and legacy systems',
-        solution:
-          'Real-time bidirectional sync with conflict resolution, deduplication, and data lineage tracking'
-      },
-      {
-        icon: 'PiArrowsClockwiseDuotone',
-        problem: 'Manual data export/import between systems creating lag and errors',
-        solution:
-          'Automated ETL pipelines processing millions of records with retry logic, idempotency, and monitoring'
-      },
-      {
-        icon: 'PiLinkBreakDuotone',
-        problem: 'No APIs available for legacy systems blocking automation initiatives',
-        solution:
-          'Custom API layers wrapping legacy databases, file systems, and mainframes with modern REST/GraphQL interfaces'
-      }
-    ],
-    approach: [
-      {
-        step: 1,
-        title: 'System Landscape Mapping & Integration Design',
-        description:
-          'Document your technology stack, data flows, and integration requirements. We design integration architectures balancing real-time sync, batch processing, and event-driven patterns.'
-      },
-      {
-        step: 2,
-        title: 'API Development & Data Pipeline Construction',
-        description:
-          'Build robust APIs, webhooks, and ETL pipelines with authentication, rate limiting, and error handling. We implement data validation, transformation logic, and schema mapping between systems.'
-      },
-      {
-        step: 3,
-        title: 'Testing, Monitoring & Error Handling',
-        description:
-          'Comprehensive integration testing including edge cases, failure scenarios, and data consistency validation. We deploy monitoring, alerting, and dead letter queues for production reliability.'
-      },
-      {
-        step: 4,
-        title: 'Optimization & Scaling',
-        description:
-          'Performance tuning for throughput, latency, and resource utilization. We implement caching strategies, batch optimization, and horizontal scaling as data volumes grow.'
-      }
-    ],
-    techStack: [
-      { name: 'Python', category: 'Programming Languages' },
-      { name: 'Node.js', category: 'Programming Languages' },
       { name: 'FastAPI', category: 'Backend / APIs' },
-      { name: 'Express.js', category: 'Backend / APIs' },
       { name: 'GraphQL', category: 'Backend / APIs' },
       { name: 'Apache Kafka', category: 'System Integration' },
       { name: 'RabbitMQ', category: 'System Integration' },
-      { name: 'Redis', category: 'Databases' }
+      { name: 'LangGraph', category: 'AI / LLM Frameworks' },
+      { name: 'C#', category: 'Programming Languages' }
     ],
-    ctaTitle: 'Connect Your Systems Seamlessly',
+    ctaTitle: 'Transform Your Data Infrastructure',
     ctaDescription:
-      'Let\'s map your integration challenges and design a scalable architecture. We\'ll show you how to eliminate data silos, automate workflows, and achieve real-time visibility across your tech stack.',
-    ctaButtonText: 'Get Integration Consultation',
+      'Schedule a free consultation to discuss your data challenges. We\'ll map your validation needs, integration requirements, and design scalable data systems proven to save millions.',
+    ctaButtonText: 'Schedule Data Engineering Consultation',
     ctaButtonLink: 'https://form.typeform.com/to/SOXnbS4E'
   },
 
   // ========================================
-  // 5. Full-Stack Engineering
+  // 3. Full-Stack Engineering
   // ========================================
   {
     slug: 'full-stack-engineering',
     title: 'Full-Stack Engineering',
-    subtitle:
-      'End-to-end application development from database to frontend with modern frameworks and best practices',
+    subtitle: 'Production web applications from legacy modernization to greenfield SaaS platforms',
     heroImage: '/images/services/full-stack-engineering/hero.png',
     description:
-      'Build production-ready web applications, SaaS platforms, and internal tools with modern tech stacks. Our full-stack engineers deliver complete solutions including database design, API development, frontend interfaces, authentication, and deployment infrastructure.',
+      'Build production-ready web applications, internal tools, and SaaS platforms with modern frameworks. Our full-stack engineers have delivered 35% performance improvements through UI modernization, 4× faster cost analysis platforms, 90% workflow automation, and systems serving thousands of daily users—all with clean architecture, automated testing, and scalable deployment infrastructure.',
     problems: [
       {
         icon: 'PiDevicesDuotone',
-        problem: 'Legacy applications with poor UX hampering productivity',
+        problem: 'Legacy Angular applications with poor UX hampering productivity',
         solution:
-          'Modern React/Next.js frontends with responsive design achieving 35%+ performance improvements'
+          'Modern framework migration achieving 35% performance gains with improved build times and scalable GitLab + Kubernetes workflows'
       },
       {
-        icon: 'PiCodeDuotone',
-        problem: 'Technical debt and fragmented codebase slowing feature delivery',
+        icon: 'PiTableDuotone',
+        problem: 'Manual data normalization from non-standard Excel sheets blocking downstream systems',
         solution:
-          'Clean architecture refactoring with TypeScript, automated testing, and CI/CD reducing release cycles by 40%'
+          'Angular + .NET platforms with automated normalization reducing 90% of manual cleanup work'
       },
       {
-        icon: 'PiRocketLaunchDuotone',
-        problem: 'Need to ship MVP quickly to validate market hypotheses',
+        icon: 'PiChartLineUpDuotone',
+        problem: 'No vendor evaluation or cost analysis tools slowing acquisition workflows',
         solution:
-          'Rapid prototyping with proven tech stacks delivering production-ready MVPs in 4-8 weeks'
+          'Blazor + .NET systems with DPHSL integration delivering 4× faster cost analysis and 70% faster vendor assessment'
+      },
+      {
+        icon: 'PiArrowsClockwiseDuotone',
+        problem: 'Marketing and CRM workflow bottlenecks wasting 25 hours/week',
+        solution:
+          '90% workflow automation integrating CRM + inventory systems enabling 4× sales growth'
       }
     ],
     approach: [
@@ -360,47 +236,56 @@ export const capabilitiesData: Capability[] = [
     techStack: [
       { name: 'React', category: 'Frontend' },
       { name: 'Next.js', category: 'Frontend' },
+      { name: 'Angular', category: 'Frontend' },
+      { name: 'Blazor', category: 'Frontend' },
       { name: 'TypeScript', category: 'Programming Languages' },
       { name: 'Node.js', category: 'Programming Languages' },
-      { name: 'Python', category: 'Programming Languages' },
+      { name: '.NET', category: 'Programming Languages' },
+      { name: 'C#', category: 'Programming Languages' },
       { name: 'PostgreSQL', category: 'Databases' },
+      { name: 'SQL Server', category: 'Databases' },
       { name: 'Tailwind CSS', category: 'Frontend' },
       { name: 'Remix', category: 'Frontend' }
     ],
     ctaTitle: 'Build Your Next Application',
     ctaDescription:
-      'Schedule a consultation to discuss your application requirements. We\'ll design a tech stack, estimate timelines, and show you how we deliver production-ready applications fast.',
+      'Schedule a consultation to discuss your application requirements. We\'ll design a tech stack, estimate timelines, and show you how we deliver production-ready applications with proven results.',
     ctaButtonText: 'Get Development Estimate',
     ctaButtonLink: 'https://form.typeform.com/to/SOXnbS4E'
   },
 
   // ========================================
-  // 6. DevOps & Infrastructure
+  // 4. DevOps Engineering
   // ========================================
   {
-    slug: 'devops',
-    title: 'DevOps & Cloud Infrastructure',
-    subtitle:
-      'Scalable, secure infrastructure with automated deployments and comprehensive monitoring',
+    slug: 'devops-engineering',
+    title: 'DevOps Engineering',
+    subtitle: 'Infrastructure automation from manual provisioning to self-service PaaS platforms',
     heroImage: '/images/services/devops/hero.png',
     description:
-      'Modernize your deployment pipelines, cloud infrastructure, and operational practices. Our DevOps services deliver CI/CD automation, infrastructure as code, container orchestration, and production monitoring to accelerate releases while improving reliability.',
+      'Modernize your deployment pipelines, cloud infrastructure, and operational practices. Our DevOps solutions have delivered 10× faster environment setup through self-service PaaS platforms, automated provisioning with Terraform + Kubernetes, and reduced DevOps overhead by enabling engineering teams to manage their own infrastructure—all with zero-downtime deployments and comprehensive monitoring.',
     problems: [
       {
-        icon: 'PiGitBranchDuotone',
-        problem: 'Manual deployments taking hours and causing frequent downtime',
+        icon: 'PiClockDuotone',
+        problem: 'Manual environment provisioning taking hours/days blocking engineering teams',
         solution:
-          'Automated CI/CD pipelines reducing release cycles by 40% with zero-downtime blue/green deployments'
+          'Self-service PaaS platforms using Terraform + Kubernetes + Ansible enabling 10× faster environment setup'
+      },
+      {
+        icon: 'PiGitBranchDuotone',
+        problem: 'DevOps team bottlenecks preventing engineering teams from self-service',
+        solution:
+          'Automated PXE-based bootstraps and UI-driven environment generation dramatically reducing DevOps involvement'
       },
       {
         icon: 'PiCloudDuotone',
         problem: 'Infrastructure drift and configuration inconsistencies across environments',
         solution:
-          'Infrastructure as Code with Terraform/Pulumi ensuring reproducible, versioned infrastructure across dev, staging, prod'
+          'Infrastructure as Code with Terraform ensuring reproducible, versioned infrastructure across dev, staging, prod'
       },
       {
         icon: 'PiChartLineUpDuotone',
-        problem: 'No visibility into production performance or errors',
+        problem: 'No visibility into production performance or deployment health',
         solution:
           'Comprehensive observability with Datadog, Grafana, or CloudWatch providing real-time metrics, logs, and traces'
       }
@@ -410,19 +295,19 @@ export const capabilitiesData: Capability[] = [
         step: 1,
         title: 'Infrastructure Audit & Modernization Planning',
         description:
-          'Assess current deployment processes, infrastructure, and pain points. We design modernization roadmaps balancing quick wins with strategic improvements.'
+          'Assess current deployment processes, infrastructure, and pain points. We design modernization roadmaps balancing quick wins with strategic improvements like self-service platforms.'
       },
       {
         step: 2,
-        title: 'CI/CD Pipeline Implementation',
+        title: 'CI/CD Pipeline & IaC Implementation',
         description:
-          'Build automated build, test, and deployment pipelines with GitHub Actions, GitLab CI, or Jenkins. We implement quality gates, security scanning, and rollback mechanisms.'
+          'Build automated build, test, and deployment pipelines with GitHub Actions, GitLab CI. Implement Infrastructure as Code with Terraform or Pulumi with quality gates and security scanning.'
       },
       {
         step: 3,
-        title: 'Infrastructure as Code & Container Orchestration',
+        title: 'Container Orchestration & Self-Service Platforms',
         description:
-          'Migrate to IaC patterns with Terraform or Pulumi. Deploy containerized applications with Docker, Kubernetes, or ECS with auto-scaling and load balancing.'
+          'Deploy containerized applications with Docker, Kubernetes with auto-scaling. Build PaaS-style platforms enabling engineering teams to provision complete environments from simple UI requests.'
       },
       {
         step: 4,
@@ -435,7 +320,10 @@ export const capabilitiesData: Capability[] = [
       { name: 'Docker', category: 'DevOps / Automation' },
       { name: 'Kubernetes', category: 'DevOps / Automation' },
       { name: 'Terraform', category: 'DevOps / Automation' },
+      { name: 'Ansible', category: 'DevOps / Automation' },
+      { name: 'Pulumi', category: 'DevOps / Automation' },
       { name: 'GitHub Actions', category: 'DevOps / Automation' },
+      { name: 'GitLab CI', category: 'DevOps / Automation' },
       { name: 'AWS', category: 'Cloud / AI Services' },
       { name: 'Azure', category: 'Cloud / AI Services' },
       { name: 'Datadog', category: 'DevOps / Automation' },
@@ -443,7 +331,7 @@ export const capabilitiesData: Capability[] = [
     ],
     ctaTitle: 'Modernize Your Infrastructure',
     ctaDescription:
-      'Let\'s discuss your deployment challenges and infrastructure goals. We\'ll design a DevOps transformation plan that accelerates releases while improving reliability and reducing costs.',
+      'Let\'s discuss your deployment challenges and infrastructure goals. We\'ll design a DevOps transformation plan that accelerates releases, enables self-service, and reduces operational overhead.',
     ctaButtonText: 'Get DevOps Assessment',
     ctaButtonLink: 'https://form.typeform.com/to/SOXnbS4E'
   }
@@ -455,9 +343,7 @@ export const getCapabilityBySlug = (slug: string): Capability | undefined => {
 };
 
 // Export individual capabilities for convenience
-export const aiAutomationCapability = capabilitiesData[0];
-export const ragSearchCapability = capabilitiesData[1];
-export const dataValidationCapability = capabilitiesData[2];
-export const systemIntegrationCapability = capabilitiesData[3];
-export const fullStackCapability = capabilitiesData[4];
-export const devOpsCapability = capabilitiesData[5];
+export const aiEngineeringCapability = capabilitiesData[0];
+export const dataEngineeringCapability = capabilitiesData[1];
+export const fullStackCapability = capabilitiesData[2];
+export const devOpsEngineeringCapability = capabilitiesData[3];

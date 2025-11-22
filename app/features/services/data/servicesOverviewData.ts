@@ -67,46 +67,32 @@ export const servicesOverviewData: ServicesOverview = {
   // Capability Cards - Core Services
   capabilityCards: [
     {
-      slug: 'ai-automation',
+      slug: 'ai-engineering',
       icon: 'PiRobotDuotone',
-      title: 'AI Automation',
+      title: 'AI Engineering',
       description:
-        'Multi-agent systems eliminating manual processes. Autonomous workflows handling validation, data processing, and decision-making at scale.'
+        'Production AI systems from multi-agent automation to semantic search. Proven across 6K+ daily users with 90-day to 3-day cycle reductions and 90%+ recall.'
     },
     {
-      slug: 'rag-search',
-      icon: 'PiMagnifyingGlassDuotone',
-      title: 'RAG & Semantic Search',
+      slug: 'data-engineering',
+      icon: 'PiDatabaseDuotone',
+      title: 'Data Engineering',
       description:
-        'Production-grade retrieval systems with hybrid vector search. Instant, accurate answers from millions of documents with LLM-powered Q&A.'
-    },
-    {
-      slug: 'data-validation',
-      icon: 'PiShieldCheckDuotone',
-      title: 'Data Validation',
-      description:
-        'Autonomous validation engines ensuring 99.9%+ accuracy. Cross-system reconciliation processing 300+ tables with deterministic rules.'
-    },
-    {
-      slug: 'system-integration',
-      icon: 'PiPlugsConnectedDuotone',
-      title: 'System Integration',
-      description:
-        'Seamless connectivity between legacy and modern systems. Real-time sync, ETL pipelines, and custom APIs eliminating data silos.'
+        'End-to-end data pipelines from schema normalization to multi-system integration. Processing 300+ tables with $8M+ savings and 5× throughput gains.'
     },
     {
       slug: 'full-stack-engineering',
       icon: 'PiCodeDuotone',
       title: 'Full-Stack Engineering',
       description:
-        'Modern web applications with React, Next.js, and TypeScript. Complete solutions from database design to responsive frontends.'
+        'Modern web applications with React, Angular, Blazor. Delivered 35% performance improvements, 4× faster workflows, and 90% automation.'
     },
     {
-      slug: 'devops',
+      slug: 'devops-engineering',
       icon: 'PiGitBranchDuotone',
-      title: 'DevOps & Infrastructure',
+      title: 'DevOps Engineering',
       description:
-        'CI/CD automation, infrastructure as code, and container orchestration. Accelerate releases while improving reliability and reducing costs.'
+        'Infrastructure automation and self-service PaaS platforms. 10× faster environment setup with Terraform + Kubernetes reducing DevOps overhead.'
     }
   ]
 };
