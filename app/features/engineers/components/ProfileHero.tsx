@@ -8,21 +8,6 @@ interface ProfileHeroProps {
 }
 
 export default function ProfileHero({ member }: ProfileHeroProps) {
-  const getAvailabilityBadge = () => {
-    const status = member.availability?.status || 'available';
-    const statusText = {
-      available: 'Available Now',
-      limited: 'Limited Availability',
-      booked: 'Fully Booked'
-    }[status];
-
-    return (
-      <span className={`availability-badge availability-${status}`}>
-        {statusText}
-      </span>
-    );
-  };
-
   return (
     <section className="profile-hero-section glass-section">
       <div className="profile-hero-container">
@@ -40,7 +25,6 @@ export default function ProfileHero({ member }: ProfileHeroProps) {
           <div className="profile-hero-header">
             <h1 className="profile-hero-name">{member.name}</h1>
             <p className="profile-hero-role">{member.role}</p>
-            {getAvailabilityBadge()}
           </div>
 
           <p className="profile-hero-bio">{member.bio}</p>

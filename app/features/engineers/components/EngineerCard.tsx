@@ -12,10 +12,7 @@ export default function EngineerCard({ member }: EngineerCardProps) {
   // Get profile URL slug (first name lowercase)
   const profileSlug = member.name.split(' ')[0].toLowerCase();
 
-  // Get top 3 expertise areas
-  const topExpertise = member.primaryExpertise?.slice(0, 3) || [];
-
-  // Get 2-3 key stats for quick view
+  // Get 2 key stats for quick view
   const keyStats = member.stats.slice(0, 2);
 
   return (
@@ -36,16 +33,6 @@ export default function EngineerCard({ member }: EngineerCardProps) {
       </div>
 
       <p className="engineer-card-bio">{member.bio}</p>
-
-      {topExpertise.length > 0 && (
-        <div className="engineer-card-expertise">
-          {topExpertise.map((exp, idx) => (
-            <span key={idx} className="expertise-badge">
-              {exp}
-            </span>
-          ))}
-        </div>
-      )}
 
       {keyStats.length > 0 && (
         <div className="engineer-card-stats">

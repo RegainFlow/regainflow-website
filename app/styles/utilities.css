@@ -253,7 +253,7 @@
 }
 
 .text-free-highlight {
-  color: var(--color-secondary-accent);
+  color: var(--color-text-muted);
 }
 
 /* Font Weights */

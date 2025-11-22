@@ -3,8 +3,8 @@ import type { TeamMember } from '../types/engineer.types';
 export const teamMembers: TeamMember[] = [
   {
     name: 'Leonardo J. Ramirez',
-    role: 'Senior Fullstack Engineer & Founder',
-    bio: 'Staff-level full-stack and AI systems engineer specializing in secure RAG pipelines, agentic automation, \
+    role: 'Senior Solutions Architect & Founder',
+    bio: 'Senior Solutions Architect and AI/ML Engineer specializing in secure RAG pipelines, agentic automation, \
 data-quality validation, and enterprise integrations. Delivers high-impact engineering for mission-critical systems \
 across space, defense, and large-scale operations. Proven ability to architect, build, and deploy production-grade \
 LLM systems, DevOps pipelines, and complex backend platforms.',
@@ -12,40 +12,7 @@ LLM systems, DevOps pipelines, and complex backend platforms.',
 
     stats: [
       { label: 'Years Experience', value: '7+' },
-      { label: 'Enterprise Systems Delivered', value: '10+' },
-      { label: 'Mission-Critical AI/RAG Systems', value: '5+' }
-    ],
-
-    techStack: [
-      {
-        name: 'LangGraph / LangChain',
-        level: 95,
-        category: 'AI / LLM Frameworks'
-      },
-      { name: 'LlamaIndex', level: 85, category: 'AI / LLM Frameworks' },
-
-      { name: 'Python', level: 95, category: 'AI / LLM Frameworks' },
-      {
-        name: 'JavaScript / TypeScript',
-        level: 85,
-        category: 'Programming Languages'
-      },
-      { name: 'C#', level: 80, category: 'Programming Languages' },
-
-      { name: 'Elasticsearch', level: 90, category: 'Search / Vector DBs' },
-      { name: 'Redis', level: 75, category: 'Search / Vector DBs' },
-
-      { name: 'React / Remix.js', level: 85, category: 'Frontend' },
-      { name: 'Node.js / Express', level: 80, category: 'Backend / APIs' },
-
-      {
-        name: 'Docker / Kubernetes',
-        level: 80,
-        category: 'DevOps / Automation'
-      },
-      { name: 'OpenShift', level: 75, category: 'DevOps / Automation' },
-
-      { name: 'PenTest+ / CEH', level: 90, category: 'Security / Cyber Ops' }
+      { label: 'Enterprise Systems Delivered', value: '10+' }
     ],
 
     socials: [
@@ -93,51 +60,20 @@ LLM systems, DevOps pipelines, and complex backend platforms.',
       '7+ Years Enterprise Engineering',
       '10+ Production AI/RAG Systems',
       'Security Certified (PenTest+, CEH)'
-    ],
-    availability: {
-      status: 'available'
-    }
+    ]
   },
 
   {
     name: 'William J. Baltus',
     role: 'Senior AI/ML Engineer & Founder',
-    bio: 'Senior AI/ML and automation engineer experienced in production LLM integrations, RPA development, \
+    bio: 'Senior Fullstack Engineer and AI/ML engineer experienced in production LLM integrations, RPA development, \
 agentic workflows, and enterprise data pipelines. Delivers scalable automation, ML solutions, and full-stack \
-builds for Fortune 500 environments. Strong background in operational AI, MLOps, and enterprise automation.',
+builds for enterprise environments. Strong background in operational AI, MLOps, and enterprise automation.',
     profilePic: '/images/about-us/william_j_baltus_headshot.png',
 
     stats: [
       { label: 'AI/ML Projects Delivered', value: '10+' },
-      { label: 'RPA Builds', value: '40+' },
-      { label: 'Enterprise Clients', value: '10+' }
-    ],
-
-    techStack: [
-      {
-        name: 'LangGraph / LangChain',
-        level: 90,
-        category: 'AI / LLM Frameworks'
-      },
-      { name: 'TensorFlow', level: 85, category: 'AI / LLM Frameworks' },
-      { name: 'PyTorch', level: 80, category: 'AI / LLM Frameworks' },
-
-      { name: 'Python', level: 90, category: 'Programming Languages' },
-      { name: 'C#', level: 80, category: 'Programming Languages' },
-
-      { name: 'UiPath', level: 85, category: 'RPA / Automation' },
-      { name: 'Blue Prism', level: 75, category: 'RPA / Automation' },
-
-      { name: 'AWS Bedrock', level: 70, category: 'Cloud / AI Services' },
-
-      {
-        name: 'Docker / Kubernetes',
-        level: 80,
-        category: 'DevOps / Automation'
-      },
-
-      { name: 'Elasticsearch', level: 75, category: 'Search / Vector DBs' },
-      { name: 'Streamlit', level: 80, category: 'Frontend / Apps' }
+      { label: 'RPA Builds', value: '40+' }
     ],
 
     socials: [
@@ -181,9 +117,6 @@ builds for Fortune 500 environments. Strong background in operational AI, MLOps,
       '10+ AI/ML Projects Delivered',
       '40+ RPA Automation Builds',
       'Fortune 500 Enterprise Experience'
-    ],
-    availability: {
-      status: 'available'
-    }
+    ]
   }
 ];
