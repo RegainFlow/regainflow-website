@@ -3,9 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router';
 import {
   PiCaretDownBold,
   PiRobotDuotone,
-  PiMagnifyingGlassDuotone,
-  PiShieldCheckDuotone,
-  PiPlugsConnectedDuotone,
+  PiDatabaseDuotone,
   PiCodeDuotone,
   PiGitBranchDuotone
 } from 'react-icons/pi';
@@ -121,45 +119,23 @@ export default function Navbar() {
                   }`}
                 >
                   <Link
-                    to="/services/ai-automation"
+                    to="/services/ai-engineering"
                     className="nav-dropdown-item"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <PiRobotDuotone size={24} className="nav-dropdown-icon" />
-                    <span>AI Automation</span>
+                    <span>AI Engineering</span>
                   </Link>
                   <Link
-                    to="/services/rag-search"
+                    to="/services/data-engineering"
                     className="nav-dropdown-item"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    <PiMagnifyingGlassDuotone
+                    <PiDatabaseDuotone
                       size={24}
                       className="nav-dropdown-icon"
                     />
-                    <span>RAG & Search</span>
-                  </Link>
-                  <Link
-                    to="/services/data-validation"
-                    className="nav-dropdown-item"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    <PiShieldCheckDuotone
-                      size={24}
-                      className="nav-dropdown-icon"
-                    />
-                    <span>Data Validation</span>
-                  </Link>
-                  <Link
-                    to="/services/system-integration"
-                    className="nav-dropdown-item"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    <PiPlugsConnectedDuotone
-                      size={24}
-                      className="nav-dropdown-icon"
-                    />
-                    <span>System Integration</span>
+                    <span>Data Engineering</span>
                   </Link>
                   <Link
                     to="/services/full-stack-engineering"
@@ -167,10 +143,10 @@ export default function Navbar() {
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <PiCodeDuotone size={24} className="nav-dropdown-icon" />
-                    <span>Full-Stack</span>
+                    <span>Full-Stack Engineering</span>
                   </Link>
                   <Link
-                    to="/services/devops"
+                    to="/services/devops-engineering"
                     className="nav-dropdown-item"
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -178,7 +154,7 @@ export default function Navbar() {
                       size={24}
                       className="nav-dropdown-icon"
                     />
-                    <span>DevOps</span>
+                    <span>DevOps Engineering</span>
                   </Link>
                   <div className="dropdown-divider" />
                   <Link

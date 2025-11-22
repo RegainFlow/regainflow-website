@@ -5,7 +5,7 @@ export const projectsItems = [
       'A multi-agent validation engine that automates SAP payroll quality checks. Agents run SQL validation, flat-file comparisons, and AI-generated rules to detect issues across legacy systems.',
     image: '/images/projects/payroll_validation_mvp.png',
     tags: [
-      '90→3 Day Cycle Time',
+      '90 → 3 Day Cycle Time',
       'Multi-Agent Architecture',
       'Enterprise-Scale Automation'
     ],
@@ -13,7 +13,7 @@ export const projectsItems = [
     category: 'ai',
     primaryMetric: '12 FTEs Saved',
     actionType: 'none',
-    capabilities: ['data-validation', 'ai-automation']
+    capabilities: ['data-engineering', 'ai-engineering']
   },
   {
     title: 'HCM Interoperability Platform',
@@ -29,7 +29,7 @@ export const projectsItems = [
     category: 'data',
     primaryMetric: '$8M+ SAVED',
     actionType: 'none',
-    capabilities: ['data-validation', 'system-integration']
+    capabilities: ['data-engineering']
   },
   {
     title: 'Enterprise Engineering RAG',
@@ -45,7 +45,7 @@ export const projectsItems = [
     category: 'ai',
     primaryMetric: '6K+ Users',
     actionType: 'none',
-    capabilities: ['rag-search', 'ai-automation']
+    capabilities: ['ai-engineering']
   },
   {
     title: 'Corporate HR RAG',
@@ -61,7 +61,7 @@ export const projectsItems = [
     category: 'ai',
     primaryMetric: '3× Faster Insights',
     actionType: 'none',
-    capabilities: ['rag-search', 'system-integration']
+    capabilities: ['ai-engineering', 'data-engineering']
   },
   {
     title: 'Real-Time Satellite Telemetry Anomaly Detection',
@@ -77,7 +77,7 @@ export const projectsItems = [
     category: 'ai',
     primaryMetric: '3× Faster Insights',
     actionType: 'none',
-    capabilities: ['data-validation', 'system-integration']
+    capabilities: ['data-engineering']
   },
   {
     title: 'Multi-Format Engineering ETL Pipeline',
@@ -93,7 +93,7 @@ export const projectsItems = [
     category: 'data',
     primaryMetric: '5× Indexing Throughput',
     actionType: 'none',
-    capabilities: ['system-integration', 'devops']
+    capabilities: ['data-engineering', 'devops-engineering']
   },
   {
     title: 'Legacy RPA Modernization with Python & LangGraph',
@@ -109,7 +109,7 @@ export const projectsItems = [
     category: 'data',
     primaryMetric: 'Zero Vendor Lock-In',
     actionType: 'none',
-    capabilities: ['ai-automation', 'system-integration']
+    capabilities: ['ai-engineering', 'data-engineering']
   },
   {
     title: 'UI Modernization Overhaul',
@@ -141,7 +141,7 @@ export const projectsItems = [
     category: 'devops',
     primaryMetric: '10× Faster Environment Setup',
     actionType: 'none',
-    capabilities: ['devops']
+    capabilities: ['devops-engineering']
   },
   {
     title: 'Cyber Operations Automation Tools',
@@ -157,7 +157,7 @@ export const projectsItems = [
     category: 'fullstack',
     primaryMetric: 'Accelerated Ops Readiness',
     actionType: 'none',
-    capabilities: ['ai-automation', 'devops']
+    capabilities: ['ai-engineering', 'devops-engineering']
   },
   {
     title: 'AI-Powered Document Retrieval Platform',
@@ -173,7 +173,7 @@ export const projectsItems = [
     category: 'fullstack',
     primaryMetric: '2× Faster Information Access',
     actionType: 'none',
-    capabilities: ['full-stack-engineering', 'ai-automation']
+    capabilities: ['full-stack-engineering', 'ai-engineering']
   },
   {
     title: 'Digital Program Hardware/Software Upload System',
@@ -189,7 +189,7 @@ export const projectsItems = [
     category: 'fullstack',
     primaryMetric: '90% Manual Cleanup Reduced',
     actionType: 'none',
-    capabilities: ['full-stack-engineering', 'system-integration']
+    capabilities: ['full-stack-engineering', 'data-engineering']
   },
   {
     title: 'Acquisition Insights & Cost Analysis Platform',
@@ -234,13 +234,13 @@ export const projectsItems = [
     category: 'fullstack',
     primaryMetric: '4x Growth',
     actionType: 'demo',
-    capabilities: ['ai-automation', 'system-integration']
+    capabilities: ['ai-engineering', 'data-engineering']
   }
 ];
 
 export const categories = [
   { id: 'all', label: 'ALL PROJECTS', count: 15 },
-  { id: 'ai', label: 'AI ENGINEERING', count: 5 },
+  { id: 'ai', label: 'AI ENGINEERING', count: 4 },
   { id: 'devops', label: 'DEVOPS ENGINEERING', count: 1 },
   { id: 'data', label: 'DATA ENGINEERING', count: 3 },
   { id: 'fullstack', label: 'FULLSTACK ENGINEERING', count: 7 }
