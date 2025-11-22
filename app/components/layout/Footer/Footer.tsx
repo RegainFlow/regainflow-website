@@ -75,8 +75,8 @@ export default function Footer() {
           {/* Column 3: Resources */}
           <div className="footer-block">
             <div className="title-small">Resources</div>
-            <Link to="/roi-calculator" className="footer-link">
-              ROI Calculator
+            <Link to="/w2-vs-c2c" className="footer-link">
+              W2 vs C2C Calculator
             </Link>
             <Link to="/terms" className="footer-link">
               Terms & Conditions

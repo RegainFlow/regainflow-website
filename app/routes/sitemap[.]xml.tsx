@@ -24,7 +24,7 @@ export function loader({}: Route.LoaderArgs) {
     { path: '/services/devops', changefreq: 'monthly', priority: 0.8 },
     { path: '/engineers', changefreq: 'weekly', priority: 0.9 },
     { path: '/client-results', changefreq: 'monthly', priority: 0.7 },
-    { path: '/roi-calculator', changefreq: 'monthly', priority: 0.7 },
+    { path: '/w2-vs-c2c', changefreq: 'monthly', priority: 0.7 },
     { path: '/contact-us', changefreq: 'monthly', priority: 0.8 }
   ];
 

@@ -38,7 +38,7 @@ export default function RoiPreview() {
             </div>
           </div>
 
-          <Link to="/roi-calculator" className="neon-button-glass">
+          <Link to="/w2-vs-c2c" className="neon-button-glass">
             Calculate Your <span className="text-free-highlight">Savings</span>
           </Link>
         </div>

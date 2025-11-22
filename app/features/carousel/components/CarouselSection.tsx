@@ -1,16 +1,33 @@
 export default function CarouselSection() {
-  const logos = [
-    'typescript-icon.svg',
-    'python.svg',
-    'dotnet.svg',
-    'redis.svg',
-    'elasticsearch.svg',
-    'angular-icon.svg',
-    'javascript.svg',
-    'google-gemini.svg',
-    'anthropic-icon.svg',
-    'hugging-face-icon.svg'
-  ];
+const logos = [
+  'typescript-icon.svg',
+  'javascript.svg',
+  'python.svg',
+  'java.svg',
+  'c_sharp.svg',
+  'redis.svg',
+  'elasticsearch.svg',
+  'google-gemini.svg',
+  'claude.svg',
+  'openai.svg',
+  'hugging-face-icon.svg',
+  'langgraph.svg',
+  'tensorflow.svg',
+  'pytorch.svg',
+  'dotnet.svg',
+  'react.svg',
+  'vuejs.svg',
+  'nextjs.svg',
+  'angular-icon.svg',
+  'streamlit.svg',
+  'nodejs.svg',
+  'aws.svg',
+  'azure.svg',
+  'gcp.svg',
+  'docker.svg',
+  'kubernetes.svg',
+  'fastapi.svg',
+];
 
   // Triple the logos for a smoother infinite scroll
   const allLogos = [...logos, ...logos, ...logos];
