@@ -9,16 +9,14 @@ export const valuePropData = [
       },
       {
         icon: 'RocketLaunch',
-        text: 'Production-ready from day one — no ramp-up time'
+        text: 'Hit the ground running with experienced engineers'
       },
       {
         icon: 'Stack',
         text: 'AI/ML, full-stack, DevOps, and security expertise'
       }
     ],
-    ctaLink: '/engineers',
-    image: '/images/home/value-prop/vp1_solutions_image.png',
-    imageFirst: true
+    ctaLink: '/engineers'
   },
   {
     title: 'Project-Based Consulting',
@@ -38,8 +36,6 @@ export const valuePropData = [
         text: 'Deploy production-grade solutions on your stack'
       }
     ],
-    ctaLink: '/engineers',
-    image: '/images/home/value-prop/vp2_solutions_image.png',
-    imageFirst: false
+    ctaLink: '/engineers'
   }
 ];

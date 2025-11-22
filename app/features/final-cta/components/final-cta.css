@@ -63,9 +63,10 @@
 
 .final-cta-note {
   font-size: 0.95rem;
-  color: var(--color-text-muted);
+  color: #4a4a4a;
   font-style: italic;
   margin: 0;
+  letter-spacing: 0.05em;
 }
 
 /* Responsive */

@@ -38,11 +38,7 @@ export default function FinalCTA() {
           </div>
 
           <p className="final-cta-note">
-            <span className="text-free-highlight">Free consultation</span> ·{' '}
-            <span className="text-free-highlight">No commitment</span> ·{' '}
-            <span className="text-free-highlight">
-              Flexible engagement terms
-            </span>
+            Free consultation · No commitment · Flexible engagement terms
           </p>
         </div>
       </div>

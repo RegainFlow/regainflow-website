@@ -7,10 +7,10 @@ import {
   PiStackDuotone,
   PiFlowArrowDuotone,
   PiArrowsClockwiseDuotone,
-  PiCloudArrowUpDuotone
+  PiCloudArrowUpDuotone,
+  PiCalendarCheckDuotone
 } from 'react-icons/pi';
 import type { IconType } from 'react-icons';
-import { useScrollAnimation } from '~/hooks/useScrollAnimation';
 
 
 const iconMap: Record<string, IconType> = {
@@ -23,18 +23,6 @@ const iconMap: Record<string, IconType> = {
 };
 
 export default function ValueProposition() {
-  // Scroll animation hooks for each image
-  const { ref: imageRef1, isVisible: imageVisible1 } = useScrollAnimation({
-    threshold: 0.2,
-    rootMargin: '0px 0px -50px 0px'
-  });
-  const { ref: imageRef2, isVisible: imageVisible2 } = useScrollAnimation({
-    threshold: 0.2,
-    rootMargin: '0px 0px -50px 0px'
-  });
-
-  const imageRefs = [imageRef1, imageRef2];
-  const imageVisibilities = [imageVisible1, imageVisible2];
   return (
     <section id="value-prop" className="value-proposition-section">
       <div className="vp-container">
@@ -45,17 +33,7 @@ export default function ValueProposition() {
 
         {valuePropData.map((service, idx) => (
           <div className="vp-card" key={idx}>
-            <div
-              className={`vp-content-wrapper ${service.imageFirst ? 'row-reverse' : ''
-                }`}
-            >
-              <div
-                ref={imageRefs[idx] as React.RefObject<HTMLDivElement>}
-                className={`vp-image scroll-animate ${service.imageFirst ? 'fade-from-right' : 'fade-from-left'
-                  } ${imageVisibilities[idx] ? 'visible' : ''}`}
-              >
-                <img src={service.image} alt="value-prop" loading="lazy" />
-              </div>
+            <div className="vp-content-wrapper">
               <div className="vp-text">
                 <h2 className="vp-title">
                   <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -87,9 +65,24 @@ export default function ValueProposition() {
                     );
                   })}
                 </ul>
-                <a href={service.ctaLink} className="vp-button">
-                  View <span className="text-free-highlight">Engineers</span>
-                </a>
+                <div className="vp-buttons">
+                  <a
+                    href="https://form.typeform.com/to/SOXnbS4E"
+                    className="neon-button-glass"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <PiCalendarCheckDuotone size={24} />
+                    Schedule Consultation
+                  </a>
+                  <a
+                    href="/engineers"
+                    className="neon-button-glass neon-button-secondary"
+                  >
+                    <PiRocketLaunchDuotone size={24} />
+                    View Engineer Profiles
+                  </a>
+                </div>
               </div>
             </div>
           </div>

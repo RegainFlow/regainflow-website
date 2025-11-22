@@ -174,9 +174,11 @@
     padding: 3rem 1rem 2rem;
   }
 
-  /* Hide video on mobile for performance */
+  /* Keep video visible on mobile with optimized settings */
   .hero-video {
-    display: none;
+    opacity: 0.3;
+    animation: none;
+    transform: translate(-50%, -50%) scale(1.05);
   }
 
   .hero-video-background {
