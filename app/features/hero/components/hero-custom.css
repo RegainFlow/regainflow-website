@@ -52,7 +52,7 @@
   min-height: 100%;
   object-fit: cover;
   transform: translate(-50%, -50%) scale(1.05);
-  opacity: 0.3;
+  /* opacity: 0.3; */
   filter: var(--hero-video-blur);
   animation: subtle-zoom 20s ease-in-out infinite alternate;
 }
@@ -74,12 +74,15 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at center,
-      var(--hero-video-overlay-start),
-      var(--hero-video-overlay-end));
+  background: radial-gradient(
+    circle at center,
+    var(--hero-video-overlay-start),
+    var(--hero-video-overlay-end)
+  );
   z-index: var(--z-base);
   pointer-events: none;
 }
+*/
 
 /* Content container - ensure it sits above video and overlay */
 .container-10 {

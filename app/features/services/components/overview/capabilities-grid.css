@@ -21,7 +21,6 @@
 .capability-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
   padding: 2.5rem 2rem;

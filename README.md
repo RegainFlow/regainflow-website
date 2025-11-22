@@ -69,11 +69,11 @@ app/
 │   ├── services/        # Services overview + 6 capabilities
 │   ├── engineers/       # Team profiles and expertise
 │   ├── projects/        # Case studies portfolio
-│   ├── roi-calculator/  # ROI calculation tool
+│   ├── w2-vs-c2c/       # W2 vs C2C calculation tool
 │   ├── hero/            # Landing page hero section
 │   ├── value-proposition/
 │   ├── how-it-works/    # Process methodology
-│   ├── roi-preview/     # ROI section preview
+│   ├── w2-vs-c2c-preview/ # W2 vs C2C section preview
 │   ├── case-studies-preview/
 │   ├── faq/             # FAQ accordion
 │   ├── final-cta/       # Call-to-action section
@@ -175,17 +175,17 @@ See [docs/STYLING.md](docs/STYLING.md) for the complete design system guide incl
 
 ## Routes
 
-| Path | Description |
-|------|-------------|
-| `/` | Homepage |
-| `/services` | Services overview (all 6 capabilities) |
-| `/services/:capability` | Individual capability pages |
-| `/engineers` | Team overview |
-| `/engineers/:name` | Individual engineer profiles |
-| `/projects` | Case studies & portfolio |
-| `/roi-calculator` | ROI calculator tool |
-| `/privacy` | Privacy policy |
-| `/terms` | Terms of service |
+| Path                    | Description                            |
+| ----------------------- | -------------------------------------- |
+| `/`                     | Homepage                               |
+| `/services`             | Services overview (all 6 capabilities) |
+| `/services/:capability` | Individual capability pages            |
+| `/engineers`            | Team overview                          |
+| `/engineers/:name`      | Individual engineer profiles           |
+| `/projects`             | Case studies & portfolio               |
+| `/w2-vs-c2c`            | w2-vs-c2c calculator tool              |
+| `/privacy`              | Privacy policy                         |
+| `/terms`                | Terms of service                       |
 
 ### Capability Routes
 

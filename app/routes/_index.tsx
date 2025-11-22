@@ -38,7 +38,7 @@ export const links: Route.LinksFunction = () => [
   { rel: 'stylesheet', href: scrollAnimationsStyles }
 ];
 
-export function meta({ }: Route.MetaArgs) {
+export function meta({}: Route.MetaArgs) {
   const title = 'RegainFlow | Senior AI/ML Engineers for C2C Contracts';
   const description =
     'Contract-ready senior engineers specializing in AI/ML, RAG, and intelligent automation. Full-stack capabilities across backend, frontend, DevOps, and solution architecture. Available for long-term C2C contracts or project consulting.';
@@ -67,11 +67,9 @@ export function meta({ }: Route.MetaArgs) {
 
 const sections = [
   { id: 'hero', label: 'Home' },
-  { id: 'carousel', label: 'Tech Stack' },
   { id: 'value', label: 'Value' },
-  { id: 'process', label: 'Process' },
-  { id: 'roi', label: 'ROI' },
   { id: 'case-studies', label: 'Projects' },
+  { id: 'process', label: 'Process' },
   { id: 'faq', label: 'FAQ' },
   { id: 'cta', label: 'Contact' }
 ];
@@ -94,16 +92,12 @@ export default function Index() {
         <ValueProposition />
       </AnimatedSection>
 
-      <AnimatedSection id="process" animation="fade-up">
-        <HowItWorks />
-      </AnimatedSection>
-
-      <AnimatedSection id="roi" animation="fade-up">
-        <RoiPreview />
-      </AnimatedSection>
-
       <AnimatedSection id="case-studies" animation="fade-up">
         <CaseStudiesPreview />
+      </AnimatedSection>
+
+      <AnimatedSection id="process" animation="fade-up">
+        <HowItWorks />
       </AnimatedSection>
 
       <AnimatedSection id="faq" animation="fade-up">
