@@ -8,7 +8,7 @@ Built with **React Router v7**, **TypeScript**, and a custom **Glass Morphism + 
 
 - **Services Overview** - 6 capability pages (AI Automation, RAG & Search, Data Validation, System Integration, Full-Stack Engineering, DevOps)
 - **Engineer Profiles** - Team member showcases with tech stacks, project highlights, and expertise areas
-- **ROI Calculator** - Interactive C2C vs W2 cost comparison tool
+- **W2 vs C2C Calculator** - Interactive cost comparison tool for W2 employees vs C2C contractors
 - **Projects Portfolio** - Case studies with capability tagging for cross-referencing
 - **Responsive Design** - Mobile-first approach with glass morphism aesthetic
 - **SEO Optimized** - Meta tags, sitemap, and robots.txt included
@@ -183,7 +183,7 @@ See [docs/STYLING.md](docs/STYLING.md) for the complete design system guide incl
 | `/engineers`            | Team overview                          |
 | `/engineers/:name`      | Individual engineer profiles           |
 | `/projects`             | Case studies & portfolio               |
-| `/w2-vs-c2c`            | w2-vs-c2c calculator tool              |
+| `/w2-vs-c2c`            | W2 vs C2C cost calculator              |
 | `/privacy`              | Privacy policy                         |
 | `/terms`                | Terms of service                       |
 

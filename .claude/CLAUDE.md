@@ -43,7 +43,7 @@ The project contains **12 feature modules**:
 | `services/` | Service capabilities (6 pages + overview) | ServicesOverview, CapabilityPage, CapabilitiesGrid |
 | `engineers/` | Team profiles and expertise | EngineersLanding, EngineerProfile, EngineerCard |
 | `projects/` | Case studies portfolio | CaseStudiesGrid |
-| `roi-calculator/` | Interactive ROI tool | ROICalculator |
+| `roi-calculator/` | W2 vs C2C calculator tool | ROICalculator |
 | `hero/` | Landing page hero section | HeroSection |
 | `value-proposition/` | Value proposition cards | ValueProposition |
 | `how-it-works/` | Process methodology | HowItWorks |
@@ -80,7 +80,7 @@ Uses React Router v7 file-based routing in `app/routes/`:
 - `engineers._index/route.tsx` - Engineers landing page (team overview)
 - `engineers.$name/route.tsx` - Dynamic engineer profile pages
 - `projects.tsx` - Projects page (case studies grid)
-- `roi-calculator.tsx` - ROI calculator page
+- `w2-vs-c2c.tsx` - W2 vs C2C calculator page
 - `privacy.tsx` - Privacy policy page
 - `terms.tsx` - Terms of service page
 - `404.tsx` - Not found page

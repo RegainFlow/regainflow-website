@@ -41,29 +41,6 @@ export default function Navbar() {
     };
   }, [isServicesDropdownOpen]);
 
-  const handleScrollToROI = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    // first thing: always close the menu
-    setIsMenuOpen(false);
-
-    // if we're on homepage, smooth-scroll
-    if (pathname === '/') {
-      e.preventDefault();
-      const target = document.getElementById('ROI-Section');
-      if (target) {
-        const yOffset = -80; // adjust if you have a sticky header
-        const y =
-          target.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({ top: y, behavior: 'smooth' });
-      }
-    } else {
-      // otherwise go to /roi-calulator
-      e.preventDefault();
-      navigate('/roi-calulator');
-      // optional: close the mobile menu if open
-      setIsMenuOpen(false);
-    }
-  };
-
   return (
     <div className="navbar-logo-left" role="banner">
       <div className="container">

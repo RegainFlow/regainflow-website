@@ -27,7 +27,7 @@ export const faqData: FAQItem[] = [
   {
     question: 'How does pricing work?',
     answer:
-      'Pricing is negotiated based on engineer seniority, project scope, and engagement length. C2C contracts are typically billed hourly or on monthly retainers. Project consulting uses fixed-price or milestone-based billing. Use our ROI Calculator to estimate cost savings versus hiring full-time employees. Contact us for custom quotes.'
+      'Pricing is negotiated based on engineer seniority, project scope, and engagement length. C2C contracts are typically billed hourly or on monthly retainers. Project consulting uses fixed-price or milestone-based billing. Contact us for custom quotes.'
   },
   {
     question: 'What if the engineer isn\'t a good fit?',
