@@ -65,31 +65,33 @@ h6 {
   margin-bottom: var(--spacing-sm);
 }
 
+/* Fluid Typography - Scales smoothly from 320px to desktop */
 h1 {
-  font-size: var(--font-size-5xl);
+  font-size: clamp(2rem, 5vw + 1rem, 4rem); /* 32px → 64px */
 }
 
 h2 {
-  font-size: var(--font-size-4xl);
+  font-size: clamp(1.75rem, 4vw + 0.5rem, 3rem); /* 28px → 48px */
 }
 
 h3 {
-  font-size: var(--font-size-3xl);
+  font-size: clamp(1.5rem, 3vw + 0.5rem, 2.5rem); /* 24px → 40px */
 }
 
 h4 {
-  font-size: var(--font-size-2xl);
+  font-size: clamp(1.25rem, 2vw + 0.5rem, 2rem); /* 20px → 32px */
 }
 
 h5 {
-  font-size: var(--font-size-xl);
+  font-size: clamp(1.125rem, 1.5vw + 0.5rem, 1.5rem); /* 18px → 24px */
 }
 
 h6 {
-  font-size: var(--font-size-lg);
+  font-size: clamp(1rem, 1vw + 0.5rem, 1.25rem); /* 16px → 20px */
 }
 
 p {
+  font-size: clamp(0.95rem, 1vw + 0.5rem, 1.125rem); /* 15.2px → 18px */
   margin-bottom: var(--spacing-sm);
 }
 
@@ -280,62 +282,5 @@ th {
 }
 
 /* ==================== Responsive Typography ==================== */
-
-@media (max-width: 991px) {
-  h1 {
-    font-size: var(--font-size-4xl);
-  }
-
-  h2 {
-    font-size: var(--font-size-3xl);
-  }
-
-  h3 {
-    font-size: var(--font-size-2xl);
-  }
-
-  h4 {
-    font-size: var(--font-size-xl);
-  }
-}
-
-@media (max-width: 767px) {
-  h1 {
-    font-size: var(--font-size-3xl);
-  }
-
-  h2 {
-    font-size: var(--font-size-2xl);
-  }
-
-  h3 {
-    font-size: var(--font-size-xl);
-  }
-
-  h4 {
-    font-size: var(--font-size-lg);
-  }
-
-  h5,
-  h6 {
-    font-size: var(--font-size-base);
-  }
-}
-
-@media (max-width: 479px) {
-  h1 {
-    font-size: var(--font-size-2xl);
-  }
-
-  h2 {
-    font-size: var(--font-size-xl);
-  }
-
-  h3 {
-    font-size: var(--font-size-lg);
-  }
-
-  p {
-    font-size: 0.95rem;
-  }
-}
+/* Typography now uses fluid clamp() - no stepped breakpoints needed */
+/* Optimized for 360px, tested at 320px squeeze test */

@@ -40,7 +40,7 @@ The project contains **12 feature modules**:
 
 | Feature | Purpose | Key Components |
 |---------|---------|----------------|
-| `services/` | Service capabilities (6 pages + overview) | ServicesOverview, CapabilityPage, CapabilitiesGrid |
+| `services/` | Service capabilities (4 pages + overview) | ServicesOverview, CapabilityPage, CapabilitiesGrid |
 | `engineers/` | Team profiles and expertise | EngineersLanding, EngineerProfile, EngineerCard |
 | `projects/` | Case studies portfolio | CaseStudiesGrid |
 | `roi-calculator/` | W2 vs C2C calculator tool | ROICalculator |
@@ -75,8 +75,8 @@ Import features using the path alias: `import { Component } from '~/features/fea
 Uses React Router v7 file-based routing in `app/routes/`:
 
 - `_index.tsx` - Homepage
-- `services._index/route.tsx` - Services overview page (shows all 6 capabilities)
-- `services.$slug/route.tsx` - Dynamic capability pages
+- `services._index/route.tsx` - Services overview page (shows all 4 capabilities)
+- `services.$slug/route.tsx` - Dynamic capability pages (4 total)
 - `engineers._index/route.tsx` - Engineers landing page (team overview)
 - `engineers.$name/route.tsx` - Dynamic engineer profile pages
 - `projects.tsx` - Projects page (case studies grid)
@@ -89,7 +89,7 @@ Uses React Router v7 file-based routing in `app/routes/`:
 **Dynamic routes** use `$` prefix (e.g., `$slug`, `$name`) and access params via `useParams()` from `react-router`.
 
 **Navigation Patterns:**
-- Services dropdown in navbar (7 links: overview + 6 capabilities)
+- Services dropdown in navbar (5 links: overview + 4 capabilities)
 - Engineers landing page with team grid linking to individual profiles
 - Projects case studies filtered by capability tags
 
@@ -302,6 +302,53 @@ The `legal/` feature handles privacy and terms pages:
 - Update `docs/STYLING.md` when adding new design patterns
 - Add feature architecture details for complex features
 
+### Route Change Protocol
+
+**CRITICAL**: Whenever you add, remove, or modify routes, you MUST follow this checklist to ensure consistency across the entire application. Failing to update all related files can lead to broken links and navigation issues.
+
+**Checklist for Route Changes:**
+
+When adding, removing, or modifying routes in `app/routes/`, complete ALL of the following steps:
+
+1. **Update Navigation Components:**
+   - [ ] Update `app/components/layout/Navbar/Navbar.tsx` with new route links
+   - [ ] Update services dropdown menu if adding/removing service capabilities
+   - [ ] Verify all navigation links resolve correctly
+
+2. **Update Footer:**
+   - [ ] Update `app/components/layout/Footer/Footer.tsx` with new route links
+   - [ ] Ensure service links match current capability structure (4 capabilities: AI Engineering, Data Engineering, Full-Stack Engineering, DevOps Engineering)
+   - [ ] Verify footer link categories (Services, Company, Resources) are up-to-date
+
+3. **Update SEO & Sitemap:**
+   - [ ] Update `app/routes/sitemap[.]xml.tsx` with new route URLs
+   - [ ] Update `app/routes/robots[.]txt.tsx` if needed
+   - [ ] Verify all routes are included in sitemap generation
+
+4. **Update Documentation:**
+   - [ ] Update routing table in this CLAUDE.md file (Routing section, lines 75-87)
+   - [ ] Update feature list table if adding new feature (lines 38-54)
+   - [ ] Update feature architecture details if adding complex feature
+   - [ ] Update navigation patterns documentation (lines 91-94)
+
+5. **Update Cross-References:**
+   - [ ] Update any internal links in feature data files (e.g., `capabilitiesData.ts`, `projectsData.ts`)
+   - [ ] Update any redirect logic or route guards
+   - [ ] Verify related pages link to the new/modified route
+
+6. **Test Navigation Flows:**
+   - [ ] Test all navbar links navigate correctly
+   - [ ] Test all footer links navigate correctly
+   - [ ] Test breadcrumbs (if applicable)
+   - [ ] Test dynamic routes with valid and invalid params
+   - [ ] Verify 404 page shows for non-existent routes
+
+**Example Scenarios:**
+
+- **Adding a new service capability**: Update Navbar dropdown, Footer services list, sitemap, CLAUDE.md routing table, and service count in feature description
+- **Removing a route**: Remove from Navbar, Footer, sitemap, and CLAUDE.md; verify no broken internal links remain
+- **Renaming a route**: Update all navigation components, footer, sitemap, CLAUDE.md, and test all links
+
 ## Design & Frontend Patterns
 
 ### Design System - Glass Morphism + Neon Aesthetic
@@ -448,3 +495,72 @@ This project follows architecture patterns from the [Bulletproof React](https://
 - Keep components focused and composable
 - Use meaningful variable and function names
 - Add JSDoc comments for complex functions
+
+## Mobile Responsiveness & Typography
+
+### Responsive Design Strategy
+
+The project uses a **fluid-first responsive approach** optimized for screen widths from 320px to desktop (1920px+).
+
+**Testing Breakpoints:**
+- **320px** - Squeeze test (smallest modern phones)
+- **360px** - Primary mobile optimization target (most Android devices)
+- **768px** - Tablet portrait (layout transitions)
+- **1024px** - Tablet landscape / small desktop (navbar switches to desktop mode)
+- **1280px+** - Desktop (full layout)
+
+**Key Responsive Patterns:**
+- Fluid typography using `clamp()` for smooth scaling across all screen sizes
+- Mobile-first CSS with progressive enhancement for larger screens
+- Accordion-style navigation on mobile (Services dropdown expands inline)
+- Grid layouts: 3-4 columns (desktop) → 2 columns (tablet) → 1 column (mobile)
+- Touch-friendly button sizes (minimum 44px height on mobile)
+
+### Fluid Typography System
+
+All typography uses CSS `clamp()` for smooth, viewport-responsive scaling. **No stepped breakpoints** for font sizes.
+
+**Typography Scale (defined in `app/styles/base.css`):**
+```css
+h1: clamp(2rem, 5vw + 1rem, 4rem);        /* 32px → 64px */
+h2: clamp(1.75rem, 4vw + 0.5rem, 3rem);   /* 28px → 48px */
+h3: clamp(1.5rem, 3vw + 0.5rem, 2.5rem);  /* 24px → 40px */
+h4: clamp(1.25rem, 2vw + 0.5rem, 2rem);   /* 20px → 32px */
+h5: clamp(1.125rem, 1.5vw + 0.5rem, 1.5rem); /* 18px → 24px */
+h6: clamp(1rem, 1vw + 0.5rem, 1.25rem);   /* 16px → 20px */
+p:  clamp(0.95rem, 1vw + 0.5rem, 1.125rem); /* 15.2px → 18px */
+```
+
+**Typography Utility Classes (in `app/styles/utilities.css`):**
+- `.subheading` - Subheading text with fluid sizing (16px → 20px)
+- `.caption` - Caption/small text with fluid sizing (12px → 14px)
+
+**Responsive Visibility Utilities:**
+- `.mobile-hidden` - Hidden on mobile (< 768px), visible on tablet/desktop
+- `.desktop-hidden` - Hidden on desktop (> 1024px), visible on mobile/tablet
+- `.tablet-hidden` - Hidden on tablet (768px - 1024px) only
+- `.mobile-only` - Visible only on mobile (< 768px)
+- `.desktop-only` - Visible only on desktop (> 1024px)
+
+### Mobile Navigation Patterns
+
+**Navbar (< 1024px):**
+- Hamburger menu with explicit 16px minimum gap from logo
+- Accordion-style Services dropdown (expands inline, pushes other items down)
+- Custom hybrid glass styling:
+  - Background: `rgba(18, 18, 19, 0.9)` (heavier glass)
+  - Border: `2px solid rgba(0, 214, 203, 0.4)` (stronger neon)
+  - Backdrop blur: 24px (`var(--glass-blur-xl)`)
+  - Enhanced shadow + cyan glow
+
+**Services Dropdown Mobile Behavior:**
+- On mobile: Services button toggles accordion expansion
+- Submenu slides down with smooth height transition (max-height + opacity)
+- Slightly lighter background than main menu for visual hierarchy
+- Auto-collapses when navigating to a service page
+
+**320px Squeeze Test Optimizations:**
+- Logo reduces to 20px font size (from 32px)
+- Hamburger button reduces to 36px (from 40px)
+- Horizontal margins reduce to 8px (from 20px)
+- Minimum 8px gap between logo and hamburger maintained
