@@ -18,6 +18,11 @@
   margin-top: 3rem;
 }
 
+/* Center lone item in incomplete row (4th item when alone) */
+.capability-card:nth-child(3n+1):nth-last-child(1) {
+  grid-column: 2 / 3;
+}
+
 .capability-card {
   display: flex;
   flex-direction: column;

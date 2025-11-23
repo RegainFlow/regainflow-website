@@ -96,7 +96,11 @@ export default function CapabilityPage({ capability }: CapabilityPageProps) {
 
           <div className="tech-stack-grid">
             {capability.techStack.map((tech, idx) => (
-              <div key={idx} className="tech-badge glass-card">
+              <div
+                key={idx}
+                className="tech-badge glass-card"
+                data-category={tech.category || ''}
+              >
                 <span className="tech-badge-name">{tech.name}</span>
                 {tech.category && (
                   <span className="tech-badge-category">{tech.category}</span>
@@ -173,7 +177,7 @@ export default function CapabilityPage({ capability }: CapabilityPageProps) {
                 to="/services"
                 className="neon-button-glass neon-button-secondary"
               >
-                View All Capabilities
+                View All Services
               </Link>
             </div>
           </div>

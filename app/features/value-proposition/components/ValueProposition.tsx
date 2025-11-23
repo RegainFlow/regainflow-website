@@ -12,7 +12,6 @@ import {
 } from 'react-icons/pi';
 import type { IconType } from 'react-icons';
 
-
 const iconMap: Record<string, IconType> = {
   UserCheck: PiUserCheckDuotone,
   RocketLaunch: PiRocketLaunchDuotone,
@@ -67,7 +66,7 @@ export default function ValueProposition() {
                 </ul>
                 <div className="vp-buttons">
                   <a
-                    href="https://form.typeform.com/to/SOXnbS4E"
+                    href="https://cal.com/regainflow/30min"
                     className="neon-button-glass"
                     target="_blank"
                     rel="noopener noreferrer"

@@ -194,14 +194,6 @@
   overflow: hidden;
 }
 
-.card-bg-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.22;
-  transition: transform 0.5s ease;
-}
-
 .card-gradient-overlay {
   position: absolute;
   top: 0;

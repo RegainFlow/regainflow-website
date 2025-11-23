@@ -3,23 +3,23 @@ import * as PiIcons from 'react-icons/pi';
 import type { CapabilityCard } from '../../types/service.types';
 import capabilitiesGridStyles from './capabilities-grid.css?url';
 
-export const links = () => [{ rel: 'stylesheet', href: capabilitiesGridStyles }];
+export const links = () => [
+  { rel: 'stylesheet', href: capabilitiesGridStyles }
+];
 
 interface CapabilitiesGridProps {
   capabilities: CapabilityCard[];
 }
 
-export default function CapabilitiesGrid({ capabilities }: CapabilitiesGridProps) {
+export default function CapabilitiesGrid({
+  capabilities
+}: CapabilitiesGridProps) {
   return (
     <section className="capabilities-grid-section glass-section">
       <div className="capabilities-grid-container">
         <h2 className="section-title">
-          Our <span className="text-highlight">Capabilities</span>
+          Our <span className="text-highlight">Services</span>
         </h2>
-
-        <p className="section-subtitle">
-          Production-grade engineering services delivering measurable ROI
-        </p>
 
         <div className="capabilities-grid">
           {capabilities.map((capability) => {
@@ -35,10 +35,10 @@ export default function CapabilitiesGrid({ capabilities }: CapabilitiesGridProps
                   {IconComponent && <IconComponent size={48} />}
                 </div>
                 <h3 className="capability-card-title">{capability.title}</h3>
-                <p className="capability-card-description">{capability.description}</p>
-                <span className="capability-card-link">
-                  Learn More →
-                </span>
+                <p className="capability-card-description">
+                  {capability.description}
+                </p>
+                <span className="capability-card-link">Learn More →</span>
               </Link>
             );
           })}

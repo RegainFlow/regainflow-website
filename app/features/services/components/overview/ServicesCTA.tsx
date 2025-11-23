@@ -23,7 +23,7 @@ export default function ServicesCTA() {
 
           <div className="services-cta-buttons">
             <a
-              href="https://form.typeform.com/to/SOXnbS4E"
+              href="https://cal.com/regainflow/30min"
               className="neon-button-glass"
               target="_blank"
               rel="noopener noreferrer"
