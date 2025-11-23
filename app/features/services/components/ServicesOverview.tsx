@@ -20,9 +20,6 @@ export default function ServicesOverview() {
       {/* 2. Capabilities Grid */}
       <CapabilitiesGrid capabilities={servicesOverviewData.capabilityCards} />
 
-      {/* 3. Service Metrics */}
-      <ServiceMetrics metrics={servicesOverviewData.metrics} />
-
       {/* 4. Process Steps - How It Works */}
       <ProcessSteps steps={servicesOverviewData.processSteps} />
 

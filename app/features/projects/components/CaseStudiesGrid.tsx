@@ -74,6 +74,8 @@ export default function CaseStudiesGrid() {
               <h3 className="card-title">{item.title}</h3>
               <p className="card-description">{item.description}</p>
 
+              <img src={item.image} alt="" />
+
               {/* Metrics Badge */}
               <div className="card-metric-badge">{item.primaryMetric}</div>
 

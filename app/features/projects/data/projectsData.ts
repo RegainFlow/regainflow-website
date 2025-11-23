@@ -3,7 +3,7 @@ export const projectsItems = [
     title: 'Multi-Agent Payroll Validation System',
     description:
       'A multi-agent validation engine that automates SAP payroll quality checks. Agents run SQL validation, flat-file comparisons, and AI-generated rules to detect issues across legacy systems.',
-    image: '/images/projects/payroll_validation_mvp.png',
+    image: '/images/projects/payroll_validation_mvp1.png',
     tags: [
       '90 → 3 Day Cycle Time',
       'Multi-Agent Architecture',
@@ -13,13 +13,13 @@ export const projectsItems = [
     category: 'ai',
     primaryMetric: '12 FTEs Saved',
     actionType: 'none',
-    capabilities: ['data-engineering', 'ai-engineering']
+    capabilities: ['ai-engineering']
   },
   {
     title: 'HCM Interoperability Platform',
     description:
       'End-to-end validation pipeline across TE, GL, Payroll, and HRIS systems. Schema normalization, deterministic rule engines, and reconciliation logic spanning 300+ tables and over 100 legacy interfaces mapped and validated against the modernized SAP integration layer.',
-    image: '/images/projects/payroll_validation_mvp.png',
+    image: '/images/projects/payroll_validation_mvp2.png',
     tags: [
       'Legacy → SAP Migration',
       'Multi-System Reconciliation',
@@ -61,7 +61,7 @@ export const projectsItems = [
     category: 'ai',
     primaryMetric: '3× Faster Insights',
     actionType: 'none',
-    capabilities: ['ai-engineering', 'data-engineering']
+    capabilities: ['ai-engineering']
   },
   {
     title: 'Real-Time Satellite Telemetry Anomaly Detection',
@@ -77,7 +77,7 @@ export const projectsItems = [
     category: 'ai',
     primaryMetric: '3× Faster Insights',
     actionType: 'none',
-    capabilities: ['data-engineering']
+    capabilities: ['ai-engineering']
   },
   {
     title: 'Multi-Format Engineering ETL Pipeline',
@@ -93,7 +93,7 @@ export const projectsItems = [
     category: 'data',
     primaryMetric: '5× Indexing Throughput',
     actionType: 'none',
-    capabilities: ['data-engineering', 'devops-engineering']
+    capabilities: ['data-engineering']
   },
   {
     title: 'Legacy RPA Modernization with Python & LangGraph',
@@ -109,7 +109,7 @@ export const projectsItems = [
     category: 'data',
     primaryMetric: 'Zero Vendor Lock-In',
     actionType: 'none',
-    capabilities: ['ai-engineering', 'data-engineering']
+    capabilities: ['data-engineering']
   },
   {
     title: 'UI Modernization Overhaul',
@@ -157,7 +157,7 @@ export const projectsItems = [
     category: 'fullstack',
     primaryMetric: 'Accelerated Ops Readiness',
     actionType: 'none',
-    capabilities: ['ai-engineering', 'devops-engineering']
+    capabilities: ['full-stack-engineering']
   },
   {
     title: 'AI-Powered Document Retrieval Platform',
@@ -173,7 +173,7 @@ export const projectsItems = [
     category: 'fullstack',
     primaryMetric: '2× Faster Information Access',
     actionType: 'none',
-    capabilities: ['full-stack-engineering', 'ai-engineering']
+    capabilities: ['full-stack-engineering']
   },
   {
     title: 'Digital Program Hardware/Software Upload System',
@@ -189,7 +189,7 @@ export const projectsItems = [
     category: 'fullstack',
     primaryMetric: '90% Manual Cleanup Reduced',
     actionType: 'none',
-    capabilities: ['full-stack-engineering', 'data-engineering']
+    capabilities: ['full-stack-engineering']
   },
   {
     title: 'Acquisition Insights & Cost Analysis Platform',
@@ -234,7 +234,7 @@ export const projectsItems = [
     category: 'fullstack',
     primaryMetric: '4x Growth',
     actionType: 'demo',
-    capabilities: ['ai-engineering', 'data-engineering']
+    capabilities: ['full-stack-engineering']
   }
 ];
 

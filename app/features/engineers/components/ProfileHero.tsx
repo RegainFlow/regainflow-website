@@ -45,7 +45,7 @@ export default function ProfileHero({ member }: ProfileHeroProps) {
 
           <div className="profile-hero-cta">
             <a
-              href="https://form.typeform.com/to/SOXnbS4E"
+              href="https://cal.com/regainflow/30min"
               className="neon-button-glass"
               target="_blank"
               rel="noopener noreferrer"

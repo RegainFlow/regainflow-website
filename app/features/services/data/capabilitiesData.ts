@@ -11,14 +11,16 @@ export const capabilitiesData: Capability[] = [
   {
     slug: 'ai-engineering',
     title: 'AI Engineering',
-    subtitle: 'Production AI systems from multi-agent automation to semantic search over millions of documents',
+    subtitle:
+      'Production AI systems from multi-agent automation to semantic search over millions of documents',
     heroImage: '/images/services/ai-automation/hero.png',
     description:
       'Build intelligent systems that autonomously handle complex workflows, deliver instant answers from massive document repositories, and scale operations without proportional hiring. Our AI solutions combine multi-agent architectures, production RAG pipelines, and LLM-powered decision making proven across 6,000+ daily users and enterprise-scale deployments.',
     problems: [
       {
         icon: 'PiClockCountdownDuotone',
-        problem: 'Manual validation processes taking 90 days blocking critical operations',
+        problem:
+          'Manual validation processes taking 90 days blocking critical operations',
         solution:
           'Multi-agent validation systems reducing 90-day cycles to 3 days with autonomous SQL checks, flat-file comparisons, and AI-generated rules'
       },
@@ -30,13 +32,14 @@ export const capabilitiesData: Capability[] = [
       },
       {
         icon: 'PiLightbulbDuotone',
-        problem: 'Users can\'t get direct answers, only document lists',
+        problem: "Users can't get direct answers, only document lists",
         solution:
           'Production RAG systems serving 6K+ daily users with cited, summarized answers and source traceability'
       },
       {
         icon: 'PiChartLineDuotone',
-        problem: 'Manual operator review bottlenecks in satellite telemetry analysis',
+        problem:
+          'Manual operator review bottlenecks in satellite telemetry analysis',
         solution:
           'Real-time anomaly detection reducing manual review by 80% across 5K+ sensor streams'
       }
@@ -83,9 +86,9 @@ export const capabilitiesData: Capability[] = [
     ],
     ctaTitle: 'Ready to Build Production AI Systems?',
     ctaDescription:
-      'Schedule a free consultation to discuss your AI engineering needs. Whether you need multi-agent automation, enterprise RAG, or intelligent search, we\'ll design a solution proven at scale.',
+      "Schedule a free consultation to discuss your AI engineering needs. Whether you need multi-agent automation, enterprise RAG, or intelligent search, we'll design a solution proven at scale.",
     ctaButtonText: 'Schedule AI Engineering Consultation',
-    ctaButtonLink: 'https://form.typeform.com/to/SOXnbS4E'
+    ctaButtonLink: 'https://cal.com/regainflow/30min'
   },
 
   // ========================================
@@ -94,32 +97,30 @@ export const capabilitiesData: Capability[] = [
   {
     slug: 'data-engineering',
     title: 'Data Engineering',
-    subtitle: 'End-to-end data pipelines from schema normalization to multi-system integration at enterprise scale',
+    subtitle:
+      'End-to-end data pipelines from schema normalization to multi-system integration at enterprise scale',
     heroImage: '/images/services/data-validation/hero.png',
     description:
       'Eliminate manual data quality checks and integration bottlenecks with intelligent data systems. Our solutions combine schema normalization across 300+ tables, cross-system validation engines, ETL pipelines processing millions of records, and API layers connecting legacy systems to modern platforms—delivering $8M+ in saved costs and 5× throughput improvements.',
     problems: [
       {
-        icon: 'PiFileXDuotone',
-        problem: 'Manual validation taking weeks while blocking SAP migrations and critical processes',
-        solution:
-          'Autonomous multi-agent validation reducing 90-day cycles to 3 days with deterministic rules and full audit trails'
-      },
-      {
         icon: 'PiShuffleDuotone',
-        problem: 'Inconsistent data across TE, GL, Payroll, HRIS creating reconciliation nightmares',
+        problem:
+          'Inconsistent data across TE, GL, Payroll, HRIS creating reconciliation nightmares',
         solution:
           'Cross-system validation engines processing 300+ tables with schema normalization and exception handling saving $8M+'
       },
       {
         icon: 'PiPlugsConnectedDuotone',
-        problem: 'Data trapped in silos across CRM, ERP, legacy systems blocking automation',
+        problem:
+          'Data trapped in silos across CRM, ERP, legacy systems blocking automation',
         solution:
           'Real-time bidirectional sync with custom API layers, conflict resolution, and data lineage tracking'
       },
       {
         icon: 'PiArrowsClockwiseDuotone',
-        problem: 'Multi-format data ingestion (PDFs, Excel, legacy files) creating throughput bottlenecks',
+        problem:
+          'Multi-format data ingestion (PDFs, Excel, legacy files) creating throughput bottlenecks',
         solution:
           'Scalable ETL pipelines with VLM + OCR processing achieving 5× indexing throughput improvements'
       }
@@ -166,9 +167,9 @@ export const capabilitiesData: Capability[] = [
     ],
     ctaTitle: 'Transform Your Data Infrastructure',
     ctaDescription:
-      'Schedule a free consultation to discuss your data challenges. We\'ll map your validation needs, integration requirements, and design scalable data systems proven to save millions.',
+      "Schedule a free consultation to discuss your data challenges. We'll map your validation needs, integration requirements, and design scalable data systems proven to save millions.",
     ctaButtonText: 'Schedule Data Engineering Consultation',
-    ctaButtonLink: 'https://form.typeform.com/to/SOXnbS4E'
+    ctaButtonLink: 'https://cal.com/regainflow/30min'
   },
 
   // ========================================
@@ -177,26 +178,30 @@ export const capabilitiesData: Capability[] = [
   {
     slug: 'full-stack-engineering',
     title: 'Full-Stack Engineering',
-    subtitle: 'Production web applications from legacy modernization to greenfield SaaS platforms',
+    subtitle:
+      'Production web applications from legacy modernization to greenfield SaaS platforms',
     heroImage: '/images/services/full-stack-engineering/hero.png',
     description:
       'Build production-ready web applications, internal tools, and SaaS platforms with modern frameworks. Our full-stack engineers have delivered 35% performance improvements through UI modernization, 4× faster cost analysis platforms, 90% workflow automation, and systems serving thousands of daily users—all with clean architecture, automated testing, and scalable deployment infrastructure.',
     problems: [
       {
         icon: 'PiDevicesDuotone',
-        problem: 'Legacy Angular applications with poor UX hampering productivity',
+        problem:
+          'Legacy Angular applications with poor UX hampering productivity',
         solution:
           'Modern framework migration achieving 35% performance gains with improved build times and scalable GitLab + Kubernetes workflows'
       },
       {
         icon: 'PiTableDuotone',
-        problem: 'Manual data normalization from non-standard Excel sheets blocking downstream systems',
+        problem:
+          'Manual data normalization from non-standard Excel sheets blocking downstream systems',
         solution:
           'Angular + .NET platforms with automated normalization reducing 90% of manual cleanup work'
       },
       {
         icon: 'PiChartLineUpDuotone',
-        problem: 'No vendor evaluation or cost analysis tools slowing acquisition workflows',
+        problem:
+          'No vendor evaluation or cost analysis tools slowing acquisition workflows',
         solution:
           'Blazor + .NET systems with DPHSL integration delivering 4× faster cost analysis and 70% faster vendor assessment'
       },
@@ -205,6 +210,20 @@ export const capabilitiesData: Capability[] = [
         problem: 'Marketing and CRM workflow bottlenecks wasting 25 hours/week',
         solution:
           '90% workflow automation integrating CRM + inventory systems enabling 4× sales growth'
+      },
+      {
+        icon: 'PiFilePdfDuotone',
+        problem:
+          'No document retrieval or classification systems for operational efficiency',
+        solution:
+          'AI-powered platform with vector search + GPT classification reducing document search time by 85%'
+      },
+      {
+        icon: 'PiShieldCheckDuotone',
+        problem:
+          'Manual cyber operations workflows causing delays and inconsistencies',
+        solution:
+          'Full-stack automation tools streamlining 90% of operational tasks with RBAC security'
       }
     ],
     approach: [
@@ -249,9 +268,9 @@ export const capabilitiesData: Capability[] = [
     ],
     ctaTitle: 'Build Your Next Application',
     ctaDescription:
-      'Schedule a consultation to discuss your application requirements. We\'ll design a tech stack, estimate timelines, and show you how we deliver production-ready applications with proven results.',
+      "Schedule a consultation to discuss your application requirements. We'll design a tech stack, estimate timelines, and show you how we deliver production-ready applications with proven results.",
     ctaButtonText: 'Get Development Estimate',
-    ctaButtonLink: 'https://form.typeform.com/to/SOXnbS4E'
+    ctaButtonLink: 'https://cal.com/regainflow/30min'
   },
 
   // ========================================
@@ -260,32 +279,37 @@ export const capabilitiesData: Capability[] = [
   {
     slug: 'devops-engineering',
     title: 'DevOps Engineering',
-    subtitle: 'Infrastructure automation from manual provisioning to self-service PaaS platforms',
+    subtitle:
+      'Infrastructure automation from manual provisioning to self-service PaaS platforms',
     heroImage: '/images/services/devops/hero.png',
     description:
       'Modernize your deployment pipelines, cloud infrastructure, and operational practices. Our DevOps solutions have delivered 10× faster environment setup through self-service PaaS platforms, automated provisioning with Terraform + Kubernetes, and reduced DevOps overhead by enabling engineering teams to manage their own infrastructure—all with zero-downtime deployments and comprehensive monitoring.',
     problems: [
       {
         icon: 'PiClockDuotone',
-        problem: 'Manual environment provisioning taking hours/days blocking engineering teams',
+        problem:
+          'Manual environment provisioning taking hours/days blocking engineering teams',
         solution:
           'Self-service PaaS platforms using Terraform + Kubernetes + Ansible enabling 10× faster environment setup'
       },
       {
         icon: 'PiGitBranchDuotone',
-        problem: 'DevOps team bottlenecks preventing engineering teams from self-service',
+        problem:
+          'DevOps team bottlenecks preventing engineering teams from self-service',
         solution:
           'Automated PXE-based bootstraps and UI-driven environment generation dramatically reducing DevOps involvement'
       },
       {
         icon: 'PiCloudDuotone',
-        problem: 'Infrastructure drift and configuration inconsistencies across environments',
+        problem:
+          'Infrastructure drift and configuration inconsistencies across environments',
         solution:
           'Infrastructure as Code with Terraform ensuring reproducible, versioned infrastructure across dev, staging, prod'
       },
       {
         icon: 'PiChartLineUpDuotone',
-        problem: 'No visibility into production performance or deployment health',
+        problem:
+          'No visibility into production performance or deployment health',
         solution:
           'Comprehensive observability with Datadog, Grafana, or CloudWatch providing real-time metrics, logs, and traces'
       }
@@ -327,13 +351,14 @@ export const capabilitiesData: Capability[] = [
       { name: 'AWS', category: 'Cloud / AI Services' },
       { name: 'Azure', category: 'Cloud / AI Services' },
       { name: 'Datadog', category: 'DevOps / Automation' },
-      { name: 'Grafana', category: 'DevOps / Automation' }
+      { name: 'Grafana', category: 'DevOps / Automation' },
+      { name: 'Elasticsearch', category: 'DevOps / Automation' }
     ],
     ctaTitle: 'Modernize Your Infrastructure',
     ctaDescription:
-      'Let\'s discuss your deployment challenges and infrastructure goals. We\'ll design a DevOps transformation plan that accelerates releases, enables self-service, and reduces operational overhead.',
+      "Let's discuss your deployment challenges and infrastructure goals. We'll design a DevOps transformation plan that accelerates releases, enables self-service, and reduces operational overhead.",
     ctaButtonText: 'Get DevOps Assessment',
-    ctaButtonLink: 'https://form.typeform.com/to/SOXnbS4E'
+    ctaButtonLink: 'https://cal.com/regainflow/30min'
   }
 ];
 
