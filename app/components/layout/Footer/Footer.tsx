@@ -33,23 +33,17 @@ export default function Footer() {
             <Link to="/services" className="footer-link">
               All Services
             </Link>
-            <Link to="/services/ai-automation" className="footer-link">
-              AI Automation
+            <Link to="/services/ai-engineering" className="footer-link">
+              AI Engineering
             </Link>
-            <Link to="/services/rag-search" className="footer-link">
-              RAG & Search
-            </Link>
-            <Link to="/services/data-validation" className="footer-link">
-              Data Validation
-            </Link>
-            <Link to="/services/system-integration" className="footer-link">
-              System Integration
+            <Link to="/services/data-engineering" className="footer-link">
+              Data Engineering
             </Link>
             <Link to="/services/full-stack-engineering" className="footer-link">
               Full-Stack Engineering
             </Link>
-            <Link to="/services/devops" className="footer-link">
-              DevOps
+            <Link to="/services/devops-engineering" className="footer-link">
+              DevOps Engineering
             </Link>
           </div>
 
