@@ -11,11 +11,6 @@
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.08) 0%,
-    rgba(255, 255, 255, 0.02) 100%
-  );
 }
 
 .final-cta-content {
@@ -27,16 +22,16 @@
 }
 
 .final-cta-title {
-  font-size: 3rem;
+  font-size: clamp(1.875rem, 4vw + 0.5rem, 3rem);
   font-weight: var(--font-weight-black);
   color: var(--color-text-primary);
   font-family: var(--font-secondary);
-  line-height: 1.2;
+  line-height: var(--line-height-tight);
   margin: 0;
 }
 
 .final-cta-description {
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 1.5vw + 0.5rem, 1.25rem);
   color: var(--color-text-secondary);
   line-height: var(--line-height-relaxed);
   max-width: 700px;
@@ -63,7 +58,7 @@
 
 .final-cta-note {
   font-size: 0.95rem;
-  color: #4a4a4a;
+  color: var(--color-text-muted);
   font-style: italic;
   margin: 0;
   letter-spacing: 0.05em;
@@ -73,14 +68,6 @@
 @media (max-width: 768px) {
   .final-cta-section {
     padding-bottom: 4rem;
-  }
-
-  .final-cta-title {
-    font-size: 2.25rem;
-  }
-
-  .final-cta-description {
-    font-size: 1.1rem;
   }
 
   .final-cta-content {
@@ -99,19 +86,7 @@
 }
 
 @media (max-width: 480px) {
-  .final-cta-title {
-    font-size: 1.875rem;
-  }
-
-  .final-cta-description {
-    font-size: 1rem;
-  }
-
   .final-cta-content {
     padding: 2rem 1.25rem;
-  }
-
-  .final-cta-note {
-    font-size: 0.875rem;
   }
 }

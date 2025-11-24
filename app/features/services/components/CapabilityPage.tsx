@@ -28,7 +28,20 @@ export default function CapabilityPage({ capability }: CapabilityPageProps) {
         </div>
       </section>
 
-      {/* 2. Description */}
+      {/* 2. Preview Hero - Large Image Showcase */}
+      <section className="capability-preview-section glass-section-sm">
+        <div className="capability-preview-container">
+          <div className="capability-preview-image-wrapper glass-card">
+            <img
+              src={capability.heroImage}
+              alt={`${capability.title} preview`}
+              className="capability-preview-image"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Description */}
       <section className="capability-description-section glass-section-sm">
         <div className="capability-description-container glass-card">
           <p className="capability-description-text">
@@ -37,7 +50,7 @@ export default function CapabilityPage({ capability }: CapabilityPageProps) {
         </div>
       </section>
 
-      {/* 3. Problems Solved */}
+      {/* 4. Problems Solved */}
       <section className="problems-solved-section glass-section">
         <div className="problems-solved-container">
           <h2 className="section-title">
@@ -64,7 +77,7 @@ export default function CapabilityPage({ capability }: CapabilityPageProps) {
         </div>
       </section>
 
-      {/* 4. Our Approach */}
+      {/* 5. Our Approach */}
       <section className="our-approach-section glass-section">
         <div className="our-approach-container">
           <h2 className="section-title">
@@ -87,7 +100,7 @@ export default function CapabilityPage({ capability }: CapabilityPageProps) {
         </div>
       </section>
 
-      {/* 5. Tech Stack */}
+      {/* 6. Tech Stack */}
       <section className="tech-stack-section glass-section">
         <div className="tech-stack-container">
           <h2 className="section-title">
@@ -111,7 +124,7 @@ export default function CapabilityPage({ capability }: CapabilityPageProps) {
         </div>
       </section>
 
-      {/* 6. Relevant Case Studies */}
+      {/* 7. Relevant Case Studies */}
       {relevantCaseStudies.length > 0 && (
         <section className="relevant-cases-section glass-section">
           <div className="relevant-cases-container">
@@ -156,7 +169,7 @@ export default function CapabilityPage({ capability }: CapabilityPageProps) {
         </section>
       )}
 
-      {/* 7. Capability CTA */}
+      {/* 8. Capability CTA */}
       <section className="capability-cta-section glass-section">
         <div className="capability-cta-container glass-card">
           <div className="capability-cta-content">

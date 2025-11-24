@@ -38,10 +38,10 @@
 }
 
 .carousel-slide {
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: var(--glass-bg-light);
+  backdrop-filter: var(--glass-blur-md);
+  -webkit-backdrop-filter: var(--glass-blur-md);
+  border: 1px solid var(--glass-border);
   border-radius: var(--carousel-slide-radius);
   box-shadow:
     0 4px 12px rgba(0, 0, 0, 0.3),
@@ -59,9 +59,9 @@
 }
 
 .carousel-slide:hover {
-  transform: translateY(-6px) scale(1.05);
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(0, 214, 203, 0.4);
+  transform: translateY(-6px) scale(1.05) rotate(2deg);
+  background: var(--glass-bg-medium);
+  border-color: var(--glass-border-accent);
   box-shadow:
     0 12px 24px rgba(0, 0, 0, 0.4),
     0 0 0 1px rgba(0, 214, 203, 0.2) inset,

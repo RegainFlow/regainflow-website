@@ -750,6 +750,44 @@
   padding: 6rem var(--spacing-md);
 }
 
+.glass-section-xl {
+  padding: 8rem var(--spacing-md);
+}
+
+.glass-section-2xl {
+  padding: 10rem var(--spacing-md);
+}
+
+/* Section Divider - Visual separation between major sections */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--glass-border-accent) 50%,
+    transparent
+  );
+  margin: var(--spacing-3xl) auto;
+  max-width: 600px;
+}
+
+.section-divider-lg {
+  margin: 6rem auto;
+}
+
+/* Section Spacer - Invisible vertical spacing */
+.section-spacer {
+  height: var(--spacing-3xl);
+}
+
+.section-spacer-sm {
+  height: var(--spacing-2xl);
+}
+
+.section-spacer-lg {
+  height: 6rem;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .glass-card,
@@ -790,6 +828,30 @@
 
   .glass-section-lg {
     padding: 4rem var(--spacing-sm);
+  }
+
+  .glass-section-xl {
+    padding: 5rem var(--spacing-sm);
+  }
+
+  .glass-section-2xl {
+    padding: 6rem var(--spacing-sm);
+  }
+
+  .section-divider {
+    margin: var(--spacing-2xl) auto;
+  }
+
+  .section-divider-lg {
+    margin: 4rem auto;
+  }
+
+  .section-spacer {
+    height: var(--spacing-2xl);
+  }
+
+  .section-spacer-lg {
+    height: 4rem;
   }
 }
 
