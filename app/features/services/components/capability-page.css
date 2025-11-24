@@ -33,7 +33,56 @@
 }
 
 /* --------------------------------------------------------------------------
-   2. Description Section
+   2. Preview Hero - Large Image Showcase
+   -------------------------------------------------------------------------- */
+.capability-preview-section {
+  background: transparent;
+}
+
+.capability-preview-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.capability-preview-image-wrapper {
+  position: relative;
+  padding: 1rem;
+  background: var(--glass-bg-ultra-light);
+  backdrop-filter: var(--glass-blur-md);
+  -webkit-backdrop-filter: var(--glass-blur-md);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(0, 214, 203, 0.1);
+  transition: all var(--transition-base);
+  overflow: hidden;
+}
+
+.capability-preview-image-wrapper:hover {
+  transform: translateY(-4px);
+  border-color: var(--glass-border-accent);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(0, 214, 203, 0.2);
+}
+
+.capability-preview-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: var(--radius-base);
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+  transition: transform var(--transition-base);
+}
+
+.capability-preview-image-wrapper:hover .capability-preview-image {
+  transform: scale(1.01);
+}
+
+/* --------------------------------------------------------------------------
+   3. Description Section
    -------------------------------------------------------------------------- */
 .capability-description-section {
   background: transparent;
@@ -54,7 +103,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   3. Problems Solved
+   4. Problems Solved
    -------------------------------------------------------------------------- */
 .problems-solved-section {
   background: transparent;
@@ -73,7 +122,7 @@
 }
 
 /* Center lone item in incomplete row (4th, 7th, 10th items when alone) */
-.problem-card:nth-child(3n+1):nth-last-child(1) {
+.problem-card:nth-child(3n + 1):nth-last-child(1) {
   grid-column: 2 / 3;
 }
 
@@ -130,7 +179,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   4. Our Approach
+   5. Our Approach
    -------------------------------------------------------------------------- */
 .our-approach-section {
   background: transparent;
@@ -162,7 +211,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-primary-light)
+  );
   border-radius: var(--radius-full);
   font-size: 1.75rem;
   font-weight: var(--font-weight-black);
@@ -191,7 +244,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   5. Tech Stack
+   6. Tech Stack
    -------------------------------------------------------------------------- */
 .tech-stack-section {
   background: transparent;
@@ -241,165 +294,165 @@
 .tech-badge[data-category='AI / LLM Frameworks'] {
   border-color: rgba(0, 214, 203, 0.5);
   box-shadow:
-    0 0 20px rgba(0, 214, 203, 0.3),
-    inset 0 0 20px rgba(0, 214, 203, 0.1);
+    0 0 10px rgba(0, 214, 203, 0.3),
+    inset 0 0 10px rgba(0, 214, 203, 0.1);
 }
 
 .tech-badge[data-category='AI / LLM Frameworks']:hover {
   border-color: rgba(0, 214, 203, 0.8);
   box-shadow:
-    0 0 30px rgba(0, 214, 203, 0.5),
-    inset 0 0 30px rgba(0, 214, 203, 0.15);
+    0 0 20px rgba(0, 214, 203, 0.5),
+    inset 0 0 20px rgba(0, 214, 203, 0.15);
 }
 
 /* Programming Languages - Blue Glow */
 .tech-badge[data-category='Programming Languages'] {
   border-color: rgba(0, 191, 255, 0.5);
   box-shadow:
-    0 0 20px rgba(0, 191, 255, 0.3),
-    inset 0 0 20px rgba(0, 191, 255, 0.1);
+    0 0 10px rgba(0, 191, 255, 0.3),
+    inset 0 0 10px rgba(0, 191, 255, 0.1);
 }
 
 .tech-badge[data-category='Programming Languages']:hover {
   border-color: rgba(0, 191, 255, 0.8);
   box-shadow:
-    0 0 30px rgba(0, 191, 255, 0.5),
-    inset 0 0 30px rgba(0, 191, 255, 0.15);
+    0 0 20px rgba(0, 191, 255, 0.5),
+    inset 0 0 20px rgba(0, 191, 255, 0.15);
 }
 
 /* Search / Vector DBs - Purple Glow */
 .tech-badge[data-category='Search / Vector DBs'] {
   border-color: rgba(162, 112, 241, 0.5);
   box-shadow:
-    0 0 20px rgba(162, 112, 241, 0.3),
-    inset 0 0 20px rgba(162, 112, 241, 0.1);
+    0 0 10px rgba(162, 112, 241, 0.3),
+    inset 0 0 10px rgba(162, 112, 241, 0.1);
 }
 
 .tech-badge[data-category='Search / Vector DBs']:hover {
   border-color: rgba(162, 112, 241, 0.8);
   box-shadow:
-    0 0 30px rgba(162, 112, 241, 0.5),
-    inset 0 0 30px rgba(162, 112, 241, 0.15);
+    0 0 20px rgba(162, 112, 241, 0.5),
+    inset 0 0 20px rgba(162, 112, 241, 0.15);
 }
 
 /* Frontend - Green Glow */
 .tech-badge[data-category='Frontend'] {
   border-color: rgba(0, 255, 159, 0.5);
   box-shadow:
-    0 0 20px rgba(0, 255, 159, 0.3),
-    inset 0 0 20px rgba(0, 255, 159, 0.1);
+    0 0 10px rgba(0, 255, 159, 0.3),
+    inset 0 0 10px rgba(0, 255, 159, 0.1);
 }
 
 .tech-badge[data-category='Frontend']:hover {
   border-color: rgba(0, 255, 159, 0.8);
   box-shadow:
-    0 0 30px rgba(0, 255, 159, 0.5),
-    inset 0 0 30px rgba(0, 255, 159, 0.15);
+    0 0 20px rgba(0, 255, 159, 0.5),
+    inset 0 0 20px rgba(0, 255, 159, 0.15);
 }
 
 /* Backend / APIs - Yellow Glow */
 .tech-badge[data-category='Backend / APIs'] {
   border-color: rgba(255, 247, 64, 0.5);
   box-shadow:
-    0 0 20px rgba(255, 247, 64, 0.3),
-    inset 0 0 20px rgba(255, 247, 64, 0.1);
+    0 0 10px rgba(255, 247, 64, 0.3),
+    inset 0 0 10px rgba(255, 247, 64, 0.1);
 }
 
 .tech-badge[data-category='Backend / APIs']:hover {
   border-color: rgba(255, 247, 64, 0.8);
   box-shadow:
-    0 0 30px rgba(255, 247, 64, 0.5),
-    inset 0 0 30px rgba(255, 247, 64, 0.15);
+    0 0 20px rgba(255, 247, 64, 0.5),
+    inset 0 0 20px rgba(255, 247, 64, 0.15);
 }
 
 /* DevOps / Automation - Orange Glow */
 .tech-badge[data-category='DevOps / Automation'] {
   border-color: rgba(255, 140, 66, 0.5);
   box-shadow:
-    0 0 20px rgba(255, 140, 66, 0.3),
-    inset 0 0 20px rgba(255, 140, 66, 0.1);
+    0 0 10px rgba(255, 140, 66, 0.3),
+    inset 0 0 10px rgba(255, 140, 66, 0.1);
 }
 
 .tech-badge[data-category='DevOps / Automation']:hover {
   border-color: rgba(255, 140, 66, 0.8);
   box-shadow:
-    0 0 30px rgba(255, 140, 66, 0.5),
-    inset 0 0 30px rgba(255, 140, 66, 0.15);
+    0 0 20px rgba(255, 140, 66, 0.5),
+    inset 0 0 20px rgba(255, 140, 66, 0.15);
 }
 
 /* Cloud / AI Services - Gold Glow */
 .tech-badge[data-category='Cloud / AI Services'] {
   border-color: rgba(255, 200, 55, 0.5);
   box-shadow:
-    0 0 20px rgba(255, 200, 55, 0.3),
-    inset 0 0 20px rgba(255, 200, 55, 0.1);
+    0 0 10px rgba(255, 200, 55, 0.3),
+    inset 0 0 10px rgba(255, 200, 55, 0.1);
 }
 
 .tech-badge[data-category='Cloud / AI Services']:hover {
   border-color: rgba(255, 200, 55, 0.8);
   box-shadow:
-    0 0 30px rgba(255, 200, 55, 0.5),
-    inset 0 0 30px rgba(255, 200, 55, 0.15);
+    0 0 20px rgba(255, 200, 55, 0.5),
+    inset 0 0 20px rgba(255, 200, 55, 0.15);
 }
 
 /* Databases - Pink Glow */
 .tech-badge[data-category='Databases'] {
   border-color: rgba(255, 107, 157, 0.5);
   box-shadow:
-    0 0 20px rgba(255, 107, 157, 0.3),
-    inset 0 0 20px rgba(255, 107, 157, 0.1);
+    0 0 10px rgba(255, 107, 157, 0.3),
+    inset 0 0 10px rgba(255, 107, 157, 0.1);
 }
 
 .tech-badge[data-category='Databases']:hover {
   border-color: rgba(255, 107, 157, 0.8);
   box-shadow:
-    0 0 30px rgba(255, 107, 157, 0.5),
-    inset 0 0 30px rgba(255, 107, 157, 0.15);
+    0 0 20px rgba(255, 107, 157, 0.5),
+    inset 0 0 20px rgba(255, 107, 157, 0.15);
 }
 
 /* Data Validation - Silver Glow */
 .tech-badge[data-category='Data Validation'] {
   border-color: rgba(192, 192, 192, 0.5);
   box-shadow:
-    0 0 20px rgba(192, 192, 192, 0.3),
-    inset 0 0 20px rgba(192, 192, 192, 0.1);
+    0 0 10px rgba(192, 192, 192, 0.3),
+    inset 0 0 10px rgba(192, 192, 192, 0.1);
 }
 
 .tech-badge[data-category='Data Validation']:hover {
   border-color: rgba(192, 192, 192, 0.8);
   box-shadow:
-    0 0 30px rgba(192, 192, 192, 0.5),
-    inset 0 0 30px rgba(192, 192, 192, 0.15);
+    0 0 20px rgba(192, 192, 192, 0.5),
+    inset 0 0 20px rgba(192, 192, 192, 0.15);
 }
 
 /* System Integration - Mint Glow */
 .tech-badge[data-category='System Integration'] {
   border-color: rgba(105, 240, 174, 0.5);
   box-shadow:
-    0 0 20px rgba(105, 240, 174, 0.3),
-    inset 0 0 20px rgba(105, 240, 174, 0.1);
+    0 0 10px rgba(105, 240, 174, 0.3),
+    inset 0 0 10px rgba(105, 240, 174, 0.1);
 }
 
 .tech-badge[data-category='System Integration']:hover {
   border-color: rgba(105, 240, 174, 0.8);
   box-shadow:
-    0 0 30px rgba(105, 240, 174, 0.5),
-    inset 0 0 30px rgba(105, 240, 174, 0.15);
+    0 0 20px rgba(105, 240, 174, 0.5),
+    inset 0 0 20px rgba(105, 240, 174, 0.15);
 }
 
 /* ML / DL Frameworks - Red Glow */
 .tech-badge[data-category='ML / DL Frameworks'] {
   border-color: rgba(255, 56, 100, 0.5);
   box-shadow:
-    0 0 20px rgba(255, 56, 100, 0.3),
-    inset 0 0 20px rgba(255, 56, 100, 0.1);
+    0 0 10px rgba(255, 56, 100, 0.3),
+    inset 0 0 10px rgba(255, 56, 100, 0.1);
 }
 
 .tech-badge[data-category='ML / DL Frameworks']:hover {
   border-color: rgba(255, 56, 100, 0.8);
   box-shadow:
-    0 0 30px rgba(255, 56, 100, 0.5),
-    inset 0 0 30px rgba(255, 56, 100, 0.15);
+    0 0 20px rgba(255, 56, 100, 0.5),
+    inset 0 0 20px rgba(255, 56, 100, 0.15);
 }
 
 /* Tech Stack Category Colors (matching engineers page) */
@@ -459,7 +512,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   6. Relevant Case Studies
+   7. Relevant Case Studies
    -------------------------------------------------------------------------- */
 .relevant-cases-section {
   background: transparent;
@@ -552,7 +605,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   7. Capability CTA
+   8. Capability CTA
    -------------------------------------------------------------------------- */
 .capability-cta-section {
   background: transparent;
@@ -624,6 +677,10 @@
     font-size: 1.15rem;
   }
 
+  .capability-preview-image-wrapper {
+    padding: 1.5rem;
+  }
+
   .capability-description-container {
     padding: 1.5rem;
   }
@@ -674,6 +731,10 @@
 
   .capability-hero-subtitle {
     font-size: 1rem;
+  }
+
+  .capability-preview-image-wrapper {
+    padding: 1rem;
   }
 
   .capability-description-text {

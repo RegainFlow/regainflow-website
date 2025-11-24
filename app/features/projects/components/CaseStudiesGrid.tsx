@@ -3,11 +3,31 @@ import {
   PiCaretLeftBold,
   PiCaretRightBold,
   PiCaretDoubleLeftBold,
-  PiCaretDoubleRightBold
+  PiCaretDoubleRightBold,
+  PiRobotDuotone,
+  PiDatabaseDuotone,
+  PiCodeDuotone,
+  PiGitBranchDuotone
 } from 'react-icons/pi';
 import { projectsItems, categories } from '../data/projectsData';
 
 const ITEMS_PER_PAGE = 3;
+
+// Get decorative icon based on project category
+const getCategoryIcon = (category: string) => {
+  switch (category) {
+    case 'ai':
+      return <PiRobotDuotone size={64} />;
+    case 'data':
+      return <PiDatabaseDuotone size={64} />;
+    case 'fullstack':
+      return <PiCodeDuotone size={64} />;
+    case 'devops':
+      return <PiGitBranchDuotone size={64} />;
+    default:
+      return <PiCodeDuotone size={64} />;
+  }
+};
 
 export default function CaseStudiesGrid() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -58,7 +78,7 @@ export default function CaseStudiesGrid() {
         {currentItems.map((item, i) => (
           <div
             key={`${item.category}-${i}`}
-            className="case-study-card"
+            className={`case-study-card ${!item.image ? 'card-compact' : ''}`}
             data-category={item.category}
           >
             {/* Background Image with Gradient Overlay */}
@@ -74,7 +94,20 @@ export default function CaseStudiesGrid() {
               <h3 className="card-title">{item.title}</h3>
               <p className="card-description">{item.description}</p>
 
-              <img src={item.image} alt="" />
+              {/* Image Showcase - 16:9 Aspect Ratio OR Decorative Placeholder */}
+              {item.image ? (
+                <div className="card-image-showcase">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="card-showcase-image"
+                  />
+                </div>
+              ) : (
+                <div className="card-decorative-placeholder">
+                  <div className="placeholder-icon">{getCategoryIcon(item.category)}</div>
+                </div>
+              )}
 
               {/* Metrics Badge */}
               <div className="card-metric-badge">{item.primaryMetric}</div>
@@ -88,8 +121,8 @@ export default function CaseStudiesGrid() {
                 ))}
               </div>
 
-              {/* DEMO Button */}
-              {item.actionType === 'demo' && item.link && (
+              {/* DEMO Button or Footer Badge */}
+              {item.actionType === 'demo' && item.link ? (
                 <a
                   href={item.link}
                   className="card-demo-button"
@@ -98,6 +131,8 @@ export default function CaseStudiesGrid() {
                 >
                   DEMO
                 </a>
+              ) : (
+                <div className="card-footer-badge">CASE STUDY</div>
               )}
             </div>
           </div>

@@ -13,7 +13,7 @@ export const capabilitiesData: Capability[] = [
     title: 'AI Engineering',
     subtitle:
       'Production AI systems from multi-agent automation to semantic search over millions of documents',
-    heroImage: '/images/services/ai-automation/hero.png',
+    heroImage: '/images/services/ai-engineering/hero.png',
     description:
       'Build intelligent systems that autonomously handle complex workflows, deliver instant answers from massive document repositories, and scale operations without proportional hiring. Our AI solutions combine multi-agent architectures, production RAG pipelines, and LLM-powered decision making proven across 6,000+ daily users and enterprise-scale deployments.',
     problems: [
@@ -99,7 +99,7 @@ export const capabilitiesData: Capability[] = [
     title: 'Data Engineering',
     subtitle:
       'End-to-end data pipelines from schema normalization to multi-system integration at enterprise scale',
-    heroImage: '/images/services/data-validation/hero.png',
+    heroImage: '/images/services/data-engineering/hero.png',
     description:
       'Eliminate manual data quality checks and integration bottlenecks with intelligent data systems. Our solutions combine schema normalization across 300+ tables, cross-system validation engines, ETL pipelines processing millions of records, and API layers connecting legacy systems to modern platforms—delivering $8M+ in saved costs and 5× throughput improvements.',
     problems: [
@@ -281,7 +281,7 @@ export const capabilitiesData: Capability[] = [
     title: 'DevOps Engineering',
     subtitle:
       'Infrastructure automation from manual provisioning to self-service PaaS platforms',
-    heroImage: '/images/services/devops/hero.png',
+    heroImage: '/images/services/devops-engineering/hero.png',
     description:
       'Modernize your deployment pipelines, cloud infrastructure, and operational practices. Our DevOps solutions have delivered 10× faster environment setup through self-service PaaS platforms, automated provisioning with Terraform + Kubernetes, and reduced DevOps overhead by enabling engineering teams to manage their own infrastructure—all with zero-downtime deployments and comprehensive monitoring.',
     problems: [
