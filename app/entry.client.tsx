@@ -1,14 +1,19 @@
 import { startTransition, StrictMode } from 'react';
 import { hydrateRoot } from 'react-dom/client';
 import { HydratedRouter } from 'react-router/dom';
-import { getClarityScript } from '~/lib/analytics';
+import { getClarityScript, getApolloScript } from '~/lib/analytics';
+import { siteConfig } from '~/config/site.config';
 
 startTransition(() => {
-  const clarityId = 'your_id_here';
+  // Initialize Microsoft Clarity
+  const clarityScript = document.createElement('script');
+  clarityScript.innerHTML = getClarityScript(siteConfig.clarity.id);
+  document.head.appendChild(clarityScript);
 
-  const script = document.createElement('script');
-  script.innerHTML = getClarityScript(clarityId);
-  document.head.appendChild(script);
+  // Initialize Apollo.io tracking
+  const apolloScript = document.createElement('script');
+  apolloScript.innerHTML = getApolloScript('685ed0bcf661750021862ff4');
+  document.head.appendChild(apolloScript);
 
   hydrateRoot(
     document,
