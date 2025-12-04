@@ -1,5 +1,6 @@
 import { PiCalendarCheckDuotone, PiFileTextDuotone } from 'react-icons/pi';
 import teamCtaStyles from './team-cta.css?url';
+import { bookingUrl } from '~/config/site.config';
 
 export const links = () => [{ rel: 'stylesheet', href: teamCtaStyles }];
 
@@ -19,13 +20,13 @@ export default function TeamCTA() {
 
           <div className="team-cta-buttons">
             <a
-              href="https://cal.com/regainflow/cto-strategy"
+              href={bookingUrl}
               className="neon-button-glass"
               target="_blank"
               rel="noopener noreferrer"
             >
               <PiCalendarCheckDuotone size={24} />
-              Schedule Consultation
+              Schedule Free Consultation
             </a>
 
             <a

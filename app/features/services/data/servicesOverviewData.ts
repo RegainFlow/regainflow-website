@@ -1,4 +1,5 @@
 import type { ServicesOverview } from '../types/service.types';
+import { bookingUrl } from '~/config/site.config';
 
 /* ==========================================================================
    Services Overview Page Data
@@ -10,7 +11,7 @@ export const servicesOverviewData: ServicesOverview = {
   heroSubtitle:
     'We build production-grade automation, search systems, and full-stack applications that scale. From multi-agent AI workflows to DevOps transformation, we deliver engineering solutions that eliminate bottlenecks and drive measurable ROI.',
   heroCtaText: 'Schedule Free Consultation',
-  heroCtaLink: 'https://cal.com/regainflow/cto-strategy',
+  heroCtaLink: bookingUrl,
 
   // Process Steps - How It Works
   processSteps: [

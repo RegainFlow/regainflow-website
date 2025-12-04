@@ -1,4 +1,5 @@
 import type { Capability } from '../types/service.types';
+import { bookingUrl } from '~/config/site.config';
 
 /* ==========================================================================
    Capabilities Data - 4 Core Service Offerings
@@ -88,7 +89,7 @@ export const capabilitiesData: Capability[] = [
     ctaDescription:
       "Schedule a free consultation to discuss your AI engineering needs. Whether you need multi-agent automation, enterprise RAG, or intelligent search, we'll design a solution proven at scale.",
     ctaButtonText: 'Schedule AI Engineering Consultation',
-    ctaButtonLink: 'https://cal.com/regainflow/cto-strategy'
+    ctaButtonLink: bookingUrl
   },
 
   // ========================================
@@ -169,7 +170,7 @@ export const capabilitiesData: Capability[] = [
     ctaDescription:
       "Schedule a free consultation to discuss your data challenges. We'll map your validation needs, integration requirements, and design scalable data systems proven to save millions.",
     ctaButtonText: 'Schedule Data Engineering Consultation',
-    ctaButtonLink: 'https://cal.com/regainflow/cto-strategy'
+    ctaButtonLink: bookingUrl
   },
 
   // ========================================
@@ -270,7 +271,7 @@ export const capabilitiesData: Capability[] = [
     ctaDescription:
       "Schedule a consultation to discuss your application requirements. We'll design a tech stack, estimate timelines, and show you how we deliver production-ready applications with proven results.",
     ctaButtonText: 'Get Development Estimate',
-    ctaButtonLink: 'https://cal.com/regainflow/cto-strategy'
+    ctaButtonLink: bookingUrl
   },
 
   // ========================================
@@ -358,7 +359,7 @@ export const capabilitiesData: Capability[] = [
     ctaDescription:
       "Let's discuss your deployment challenges and infrastructure goals. We'll design a DevOps transformation plan that accelerates releases, enables self-service, and reduces operational overhead.",
     ctaButtonText: 'Get DevOps Assessment',
-    ctaButtonLink: 'https://cal.com/regainflow/cto-strategy'
+    ctaButtonLink: bookingUrl
   }
 ];
 

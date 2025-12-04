@@ -10,6 +10,7 @@
   0% {
     left: -100%;
   }
+
   50%,
   100% {
     left: 100%;
@@ -20,6 +21,7 @@
   0% {
     top: -100%;
   }
+
   50%,
   100% {
     top: 100%;
@@ -30,6 +32,7 @@
   0% {
     right: -100%;
   }
+
   50%,
   100% {
     right: 100%;
@@ -40,6 +43,7 @@
   0% {
     bottom: -100%;
   }
+
   50%,
   100% {
     bottom: 100%;
@@ -52,6 +56,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -61,6 +66,7 @@
   from {
     opacity: 1;
   }
+
   to {
     opacity: 0;
   }
@@ -71,6 +77,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -82,6 +89,7 @@
     opacity: 0;
     transform: translateY(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -94,6 +102,7 @@
   from {
     transform: translateX(-100%);
   }
+
   to {
     transform: translateX(0);
   }
@@ -103,6 +112,7 @@
   from {
     transform: translateX(100%);
   }
+
   to {
     transform: translateX(0);
   }
@@ -112,6 +122,7 @@
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-100%);
   }
@@ -121,6 +132,7 @@
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(100%);
   }
@@ -133,6 +145,7 @@
     transform: scale(0.9);
     opacity: 0;
   }
+
   to {
     transform: scale(1);
     opacity: 1;
@@ -144,6 +157,7 @@
     transform: scale(1);
     opacity: 1;
   }
+
   to {
     transform: scale(0.9);
     opacity: 0;
@@ -153,11 +167,13 @@
 /* ==================== Glow Animations ==================== */
 
 @keyframes glow {
+
   0%,
   100% {
     text-shadow: 0 0 10px var(--color-primary), 0 0 20px var(--color-primary),
       0 0 30px var(--color-primary);
   }
+
   50% {
     text-shadow: 0 0 20px var(--color-primary), 0 0 30px var(--color-primary),
       0 0 40px var(--color-primary), 0 0 50px var(--color-primary);
@@ -165,10 +181,12 @@
 }
 
 @keyframes glow-pulse {
+
   0%,
   100% {
     box-shadow: 0 0 5px var(--color-primary), 0 0 10px var(--color-primary);
   }
+
   50% {
     box-shadow: 0 0 10px var(--color-primary), 0 0 20px var(--color-primary),
       0 0 30px var(--color-primary);
@@ -178,20 +196,24 @@
 /* ==================== Pulse Animations ==================== */
 
 @keyframes pulse {
+
   0%,
   100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.5;
   }
 }
 
 @keyframes pulse-scale {
+
   0%,
   100% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.05);
   }
@@ -200,10 +222,12 @@
 /* ==================== Bounce Animations ==================== */
 
 @keyframes bounce {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -214,13 +238,16 @@
     opacity: 0;
     transform: scale(0.3);
   }
+
   50% {
     opacity: 1;
     transform: scale(1.05);
   }
+
   70% {
     transform: scale(0.9);
   }
+
   100% {
     transform: scale(1);
   }
@@ -232,6 +259,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -241,6 +269,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -249,10 +278,12 @@
 /* ==================== Shake Animation ==================== */
 
 @keyframes shake {
+
   0%,
   100% {
     transform: translateX(0);
   }
+
   10%,
   30%,
   50%,
@@ -260,6 +291,7 @@
   90% {
     transform: translateX(-10px);
   }
+
   20%,
   40%,
   60%,
@@ -274,6 +306,7 @@
   0% {
     background-position: -1000px 0;
   }
+
   100% {
     background-position: 1000px 0;
   }
@@ -282,10 +315,12 @@
 /* ==================== Float Animation ==================== */
 
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-20px);
   }
@@ -297,9 +332,11 @@
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -308,18 +345,22 @@
 /* ==================== Loading Animations ==================== */
 
 @keyframes loading-dots {
+
   0%,
   20% {
     color: rgba(255, 255, 255, 0);
     text-shadow: 0.25em 0 0 rgba(255, 255, 255, 0), 0.5em 0 0 rgba(255, 255, 255, 0);
   }
+
   40% {
     color: white;
     text-shadow: 0.25em 0 0 rgba(255, 255, 255, 0), 0.5em 0 0 rgba(255, 255, 255, 0);
   }
+
   60% {
     text-shadow: 0.25em 0 0 white, 0.5em 0 0 rgba(255, 255, 255, 0);
   }
+
   80%,
   100% {
     text-shadow: 0.25em 0 0 white, 0.5em 0 0 white;
@@ -330,6 +371,7 @@
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -363,6 +405,14 @@
 
 .animate-scale-in {
   animation: scale-in var(--transition-base);
+}
+
+.animate-slide-up {
+  animation: fade-in-up 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.animate-scale-up {
+  animation: scale-in 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
 .animate-glow {
@@ -452,6 +502,7 @@
 /* ==================== Reduced Motion Support ==================== */
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {

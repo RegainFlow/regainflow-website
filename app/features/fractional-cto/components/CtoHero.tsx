@@ -18,7 +18,7 @@ export default function CtoHero({ data }: CtoHeroProps) {
             <a href={data.primaryCta.href} className="neon-button-glass">
               {data.primaryCta.text}
             </a>
-            <a href={data.secondaryCta.href} className="button-secondary">
+            <a href={data.secondaryCta.href} className="neon-button-glass neon-button-secondary">
               {data.secondaryCta.text}
             </a>
           </div>

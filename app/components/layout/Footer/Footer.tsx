@@ -33,6 +33,9 @@ export default function Footer() {
             <Link to="/services" className="footer-link">
               All Services
             </Link>
+            <Link to="/fractional-cto" className="footer-link">
+              Fractional CTO
+            </Link>
             <Link to="/services/ai-engineering" className="footer-link">
               AI Engineering
             </Link>

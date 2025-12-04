@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { Link } from 'react-router';
 import Typed from 'typed.js';
 import { PiRocketLaunchDuotone } from 'react-icons/pi';
+import { bookingUrl } from '~/config/site.config';
 
 export default function HeroSection() {
   const typedRef = useRef<HTMLSpanElement>(null);
@@ -95,8 +96,8 @@ export default function HeroSection() {
         </div>
 
         <div className="hero-cta-buttons">
-          <Link
-            to="/fractional-cto"
+          <a
+            href={bookingUrl}
             className="button-primary-2 animated-button btn-neon w-button"
           >
             {/* these four spans drive the four edge animations */}
@@ -111,13 +112,9 @@ export default function HeroSection() {
                 size={25}
                 style={{ marginRight: '10px' }}
               />
-              Explore Fractional CTO
+              Schedule Free Consultation
             </div>
-          </Link>
-
-          <Link to="/services" className="button-secondary-hero">
-            View Engineering Services
-          </Link>
+          </a>
         </div>
       </div>
     </section>

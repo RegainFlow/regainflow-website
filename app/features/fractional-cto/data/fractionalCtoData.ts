@@ -13,6 +13,7 @@ import {
   PiRocketLaunchDuotone,
   PiTargetDuotone
 } from 'react-icons/pi';
+import { bookingUrl } from '~/config/site.config';
 
 export interface FractionalCtoHero {
   title: string;
@@ -51,15 +52,6 @@ export interface TargetCustomer {
   outcomes: string[];
 }
 
-export interface PricingTier {
-  name: string;
-  priceRange: string;
-  description: string;
-  includes: string[];
-  ideal: string;
-  note?: string;
-}
-
 export interface FaqItem {
   question: string;
   answer: string;
@@ -79,11 +71,11 @@ export const fractionalCtoHero: FractionalCtoHero = {
     'Strategic technology leadership combined with senior engineering execution. Get the architecture, roadmap, and team leadership of a CTO - plus the hands-on delivery of battle-tested senior engineers.',
   primaryCta: {
     text: 'Book CTO Strategy Session',
-    href: 'https://cal.com/regainflow/cto-strategy'
+    href: bookingUrl
   },
   secondaryCta: {
-    text: 'View Pricing',
-    href: '/pricing'
+    text: 'View Our Engineers',
+    href: '/engineers'
   }
 };
 
@@ -267,41 +259,6 @@ export const targetCustomers: TargetCustomer[] = [
   }
 ];
 
-// Pricing Information
-export const pricingTiers: PricingTier[] = [
-  {
-    name: 'Fractional CTO Starter',
-    priceRange: '$8,000 - $10,000/month',
-    description:
-      'Strategic advisory for early-stage startups and SMBs with small teams (3-10 people).',
-    includes: [
-      '10 hours/month strategic advisory',
-      'Bi-weekly technical check-ins (30 min)',
-      'Technology roadmap & architecture guidance',
-      'Unlimited async communication (Slack/Email)',
-      'Quarterly strategic planning sessions'
-    ],
-    ideal: 'Early-stage startups, small teams needing strategic guidance',
-    note: '3-month minimum commitment. Hands-on engineering billed separately.'
-  },
-  {
-    name: 'Fractional CTO Growth',
-    priceRange: '$10,000 - $14,000/month',
-    description:
-      'Comprehensive CTO leadership for scaling companies with larger teams (10-25 people).',
-    includes: [
-      '15-20 hours/month strategic advisory',
-      'Weekly technical leadership meetings (60 min)',
-      'Architecture reviews & code reviews',
-      'Team mentorship & hiring support',
-      'Sprint planning & execution oversight',
-      'Unlimited async communication'
-    ],
-    ideal: 'Series A/B startups, mid-market companies scaling engineering',
-    note: '6-month minimum commitment. Includes hands-on sprint participation.'
-  }
-];
-
 // Outcomes
 export const outcomes: Outcome[] = [
   {
@@ -401,11 +358,11 @@ export const ctaSection = {
   ],
   primaryCta: {
     text: 'Book Free CTO Strategy Session',
-    href: 'https://cal.com/regainflow/cto-strategy'
+    href: bookingUrl
   },
   secondaryCta: {
-    text: 'View Pricing & Packages',
-    href: '/pricing'
+    text: 'View Our Engineers',
+    href: '/engineers'
   }
 };
 
@@ -448,7 +405,6 @@ export const getAllFractionalCtoData = () => ({
   valuePillars,
   engagementPhases,
   targetCustomers,
-  pricingTiers,
   outcomes,
   faq: faqData,
   cta: ctaSection,

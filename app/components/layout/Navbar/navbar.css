@@ -8,6 +8,7 @@
 .call-to-action.mobile-only {
   display: none;
 }
+
 .call-to-action.desktop-only {
   display: inline-flex;
 }
@@ -39,9 +40,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: var(
-    --spacing-sm
-  ); /* Minimum 1rem (16px) gap between logo and hamburger */
+  gap: var(--spacing-sm);
+  /* Minimum 1rem (16px) gap between logo and hamburger */
   padding: 10px 0;
   margin: 0 20px;
 }
@@ -195,6 +195,8 @@
 .nav-dropdown-list.w--open {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 1rem;
 }
 
 /* Dropdown items with icons - card style */
@@ -218,6 +220,64 @@
   border-color: var(--glass-border-accent);
   box-shadow: var(--glow-subtle);
   transform: translateY(-2px);
+}
+
+/* Featured Fractional CTO button - spans 2 rows */
+.nav-dropdown-item-featured {
+  background: linear-gradient(135deg,
+      rgba(139, 92, 246, 0.15) 0%,
+      rgba(79, 70, 229, 0.1) 100%);
+  border: 2px solid rgba(139, 92, 246, 0.4);
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(139, 92, 246, 0.3);
+  padding: 1.5rem 1rem;
+  justify-content: center;
+  align-items: center;
+  font-weight: var(--font-weight-bold);
+}
+
+.nav-dropdown-item-featured:hover {
+  border-color: #a855f7;
+  box-shadow:
+    0 0 20px rgba(168, 85, 247, 0.8),
+    0 0 40px rgba(168, 85, 247, 0.5),
+    inset 0 0 10px rgba(168, 85, 247, 0.3);
+  transform: scale(1.05);
+  background: linear-gradient(135deg,
+      rgba(168, 85, 247, 0.5) 0%,
+      rgba(126, 34, 206, 0.5) 100%);
+}
+
+.electric-click {
+  animation: electric-burst 0.6s ease-out forwards;
+}
+
+@keyframes electric-burst {
+  0% {
+    box-shadow: 0 0 0 0 rgba(168, 85, 247, 0.7);
+    transform: scale(1.05);
+  }
+
+  50% {
+    box-shadow: 0 0 50px 20px rgba(168, 85, 247, 0);
+    transform: scale(1.1);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(168, 85, 247, 0);
+    transform: scale(1.05);
+  }
+}
+
+.nav-dropdown-item-featured .nav-dropdown-icon {
+  font-size: 2rem;
+  color: rgba(139, 92, 246, 1);
+  filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.5));
+}
+
+.nav-dropdown-item-featured span {
+  color: var(--color-text-primary);
 }
 
 /* Dropdown icons */
@@ -364,9 +424,11 @@
   .call-to-action.desktop-only {
     display: none;
   }
+
   .call-to-action.mobile-only {
     display: inline-flex;
   }
+
   /* Mobile Menu - Custom Hybrid Glass Approach */
   .nav-menu-wrapper {
     display: none;
@@ -533,6 +595,7 @@
 }
 
 @media (max-width: 479px) {
+
   .button-link,
   .button-drop-down-wrapper {
     padding: 8px 10px;
@@ -581,32 +644,41 @@
    ========================================================================== */
 @media (max-width: 360px) {
   .navbar-wrapper {
-    margin: 0 12px; /* Reduce horizontal margins */
-    gap: 0.75rem; /* Reduce gap slightly */
+    margin: 0 12px;
+    /* Reduce horizontal margins */
+    gap: 0.75rem;
+    /* Reduce gap slightly */
   }
 
   .logo-link {
-    font-size: 1.5rem; /* 24px - reduce from 32px */
+    font-size: 1.5rem;
+    /* 24px - reduce from 32px */
   }
 
   .menu-button {
-    width: 36px; /* Reduce from 40px */
+    width: 36px;
+    /* Reduce from 40px */
     height: 36px;
   }
 
   .menu-button span {
-    left: 6px; /* Adjust for smaller button */
-    width: 22px; /* Reduce from 24px */
+    left: 6px;
+    /* Adjust for smaller button */
+    width: 22px;
+    /* Reduce from 24px */
   }
 }
 
 @media (max-width: 320px) {
   .navbar-wrapper {
-    margin: 0 8px; /* Further reduce margins for smallest screens */
-    gap: 0.5rem; /* Minimum 8px gap */
+    margin: 0 8px;
+    /* Further reduce margins for smallest screens */
+    gap: 0.5rem;
+    /* Minimum 8px gap */
   }
 
   .logo-link {
-    font-size: 1.25rem; /* 20px - further reduction */
+    font-size: 1.25rem;
+    /* 20px - further reduction */
   }
 }

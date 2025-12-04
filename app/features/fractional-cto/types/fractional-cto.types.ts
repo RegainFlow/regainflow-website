@@ -37,15 +37,6 @@ export interface TargetCustomer {
   outcomes: string[];
 }
 
-export interface PricingTier {
-  name: string;
-  priceRange: string;
-  description: string;
-  includes: string[];
-  ideal: string;
-  note?: string;
-}
-
 export interface FaqItem {
   question: string;
   answer: string;

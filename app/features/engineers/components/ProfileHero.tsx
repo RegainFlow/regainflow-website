@@ -1,5 +1,6 @@
 import type { TeamMember } from '../types/engineer.types';
 import profileHeroStyles from './profile-hero.css?url';
+import { bookingUrl } from '~/config/site.config';
 
 export const links = () => [{ rel: 'stylesheet', href: profileHeroStyles }];
 
@@ -45,7 +46,7 @@ export default function ProfileHero({ member }: ProfileHeroProps) {
 
           <div className="profile-hero-cta">
             <a
-              href="https://cal.com/regainflow/cto-strategy"
+              href={bookingUrl}
               className="neon-button-glass"
               target="_blank"
               rel="noopener noreferrer"

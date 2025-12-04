@@ -36,22 +36,23 @@ app/features/{feature-name}/
 
 ### Complete Feature List
 
-The project contains **12 feature modules**:
+The project contains **13 feature modules**:
 
-| Feature | Purpose | Key Components |
-|---------|---------|----------------|
-| `services/` | Service capabilities (4 pages + overview) | ServicesOverview, CapabilityPage, CapabilitiesGrid |
-| `engineers/` | Team profiles and expertise | EngineersLanding, EngineerProfile, EngineerCard |
-| `projects/` | Case studies portfolio | CaseStudiesGrid |
-| `roi-calculator/` | W2 vs C2C calculator tool | ROICalculator |
-| `hero/` | Landing page hero section | HeroSection |
-| `value-proposition/` | Value proposition cards | ValueProposition |
-| `how-it-works/` | Process methodology | HowItWorks |
-| `roi-preview/` | ROI section preview | RoiPreview |
-| `case-studies-preview/` | Featured case studies | CaseStudiesPreview |
-| `faq/` | FAQ accordion | FAQ |
-| `final-cta/` | Call-to-action section | FinalCTA |
-| `legal/` | Privacy & terms pages | PrivacyPage, TermsPage |
+| Feature                 | Purpose                                     | Key Components                                                                      |
+| ----------------------- | ------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `fractional-cto/`       | Fractional CTO services page                | FractionalCtoPage, CtoHero, CtoValueProps, CtoApproach, CtoOutcomes, CtoFAQ, CtoCTA |
+| `services/`             | Service capabilities (4 pages + overview)   | ServicesOverview, CapabilityPage, CapabilitiesGrid                                  |
+| `engineers/`            | Team profiles and expertise                 | EngineersLanding, EngineerProfile, EngineerCard                                     |
+| `projects/`             | Case studies portfolio                      | CaseStudiesGrid                                                                     |
+| `roi-calculator/`       | W2 vs C2C calculator tool                   | ROICalculator                                                                       |
+| `hero/`                 | Landing page hero section                   | HeroSection                                                                         |
+| `value-proposition/`    | Value proposition cards                     | ValueProposition                                                                    |
+| `how-it-works/`         | Process methodology                         | HowItWorks                                                                          |
+| `roi-preview/`          | ROI section preview                         | RoiPreview                                                                          |
+| `case-studies-preview/` | Featured case studies                       | CaseStudiesPreview                                                                  |
+| `faq/`                  | FAQ accordion                               | FAQ                                                                                 |
+| `final-cta/`            | Call-to-action section                      | FinalCTA                                                                            |
+| `legal/`                | Privacy & terms pages                       | PrivacyPage, TermsPage                                                              |
 
 ### Feature Module Pattern
 
@@ -75,6 +76,7 @@ Import features using the path alias: `import { Component } from '~/features/fea
 Uses React Router v7 file-based routing in `app/routes/`:
 
 - `_index.tsx` - Homepage
+- `fractional-cto.tsx` - Fractional CTO services page
 - `services._index/route.tsx` - Services overview page (shows all 4 capabilities)
 - `services.$slug/route.tsx` - Dynamic capability pages (4 total)
 - `engineers._index/route.tsx` - Engineers landing page (team overview)
@@ -89,7 +91,7 @@ Uses React Router v7 file-based routing in `app/routes/`:
 **Dynamic routes** use `$` prefix (e.g., `$slug`, `$name`) and access params via `useParams()` from `react-router`.
 
 **Navigation Patterns:**
-- Services dropdown in navbar (5 links: overview + 4 capabilities)
+- Services dropdown in navbar uses 3×2 grid layout with Fractional CTO as featured button (purple gradient) spanning 2 rows × 1 column, plus 4 capability links (AI Engineering, Data Engineering, Full-Stack Engineering, DevOps Engineering)
 - Engineers landing page with team grid linking to individual profiles
 - Projects case studies filtered by capability tags
 
@@ -129,6 +131,47 @@ The `?url` suffix is required for CSS imports in React Router v7.
 - `app/hooks/` - Custom React hooks
 - `app/utils/` - General utilities
 - `app/types/` - Shared TypeScript types
+
+### Centralized Configuration
+
+#### Booking URL
+
+All consultation booking CTAs across the site use a **centralized booking URL** configured in `app/config/site.config.ts`:
+
+```typescript
+export const bookingUrl = 'https://cal.com/regainflow/consultation';
+```
+
+**Usage:**
+```typescript
+import { bookingUrl } from '~/config/site.config';
+
+// In components
+<a href={bookingUrl}>Schedule Free Consultation</a>
+
+// In data files
+{
+  ctaText: 'Book Consultation',
+  ctaHref: bookingUrl
+}
+```
+
+**Why Centralized:**
+- Single source of truth for all 32+ booking CTAs across the site
+- Easy to update URL in one place when Cal.com event changes
+- Consistent booking experience across all pages
+- No hardcoded URLs scattered throughout components/data files
+
+**Locations Using bookingUrl:**
+- Homepage: FinalCTA, ValueProposition
+- Services: ServicesCTA, all 4 capability pages
+- Engineers: TeamCTA, ProfileHero, ProfileCTA (all profiles)
+- Fractional CTO: CtoHero, CtoCTA
+- ROI Calculator: CostComparison
+- Projects: client-results page
+
+**Historical Context:**
+Previously used 2 separate Cal.com URLs (`/cto-strategy` and `/pricing-consultation`). Consolidated to single unified consultation URL for simplicity and consistent user experience. The standalone /pricing page has been removed from the site.
 
 ## Key Technical Patterns
 

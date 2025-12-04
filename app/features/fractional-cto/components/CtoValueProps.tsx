@@ -6,28 +6,33 @@ interface CtoValuePropsProps {
 
 export default function CtoValueProps({ data }: CtoValuePropsProps) {
   return (
-    <section className="cto-value-props">
-      <div className="container">
-        <div className="cto-value-props__header">
-          <h2 className="section-title">4 Pillars of Fractional CTO Leadership</h2>
-          <p className="subheading">
-            Strategic technology guidance combined with hands-on engineering execution—not just
-            advice.
-          </p>
-        </div>
-        <div className="cto-value-props__grid">
-          {data.map((pillar, index) => (
-            <div key={index} className="glass-card cto-value-prop-card">
-              <div className="cto-value-prop-card__icon">
-                <pillar.icon size={48} />
+    <section className="cto-value-props glass-section">
+      <div className="cto-value-props__container">
+        <h2 className="section-title">
+          4 Pillars of <span className="text-highlight">Fractional CTO</span> Leadership
+        </h2>
+        <p className="section-subtitle">
+          Strategic technology guidance combined with hands-on engineering execution—not just advice
+        </p>
+
+        <div className="cto-pillars-grid">
+          {data.map((pillar, idx) => (
+            <div key={idx} className="cto-pillar-card glass-card">
+              <div className="cto-pillar-card__accent" />
+              <div className="cto-pillar-card__icon-wrapper">
+                <pillar.icon size={48} className="cto-pillar-card__icon" />
               </div>
-              <h3 className="cto-value-prop-card__title">{pillar.title}</h3>
-              <p className="cto-value-prop-card__description">{pillar.description}</p>
-              <ul className="cto-value-prop-card__details">
-                {pillar.details.map((detail, i) => (
-                  <li key={i}>{detail}</li>
-                ))}
-              </ul>
+              <h3 className="cto-pillar-card__title">{pillar.title}</h3>
+              <p className="cto-pillar-card__description">{pillar.description}</p>
+
+              <div className="cto-pillar-card__details">
+                <h4>What You Get:</h4>
+                <ul>
+                  {pillar.details.map((detail, i) => (
+                    <li key={i}>{detail}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
           ))}
         </div>

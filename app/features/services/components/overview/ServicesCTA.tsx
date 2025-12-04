@@ -1,6 +1,7 @@
 import { Link } from 'react-router';
 import { PiCalendarCheckDuotone, PiArrowRightBold } from 'react-icons/pi';
 import servicesCtaStyles from './services-cta.css?url';
+import { bookingUrl } from '~/config/site.config';
 
 export const links = () => [{ rel: 'stylesheet', href: servicesCtaStyles }];
 
@@ -23,7 +24,7 @@ export default function ServicesCTA() {
 
           <div className="services-cta-buttons">
             <a
-              href="https://cal.com/regainflow/cto-strategy"
+              href={bookingUrl}
               className="neon-button-glass"
               target="_blank"
               rel="noopener noreferrer"

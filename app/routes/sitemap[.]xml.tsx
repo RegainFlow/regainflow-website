@@ -7,6 +7,7 @@ export function loader({}: Route.LoaderArgs) {
   // URL list for sitemap
   const pages = [
     { path: '/', changefreq: 'daily', priority: 1.0 },
+    { path: '/fractional-cto', changefreq: 'monthly', priority: 0.9 },
     { path: '/services', changefreq: 'monthly', priority: 0.9 },
     {
       path: '/services/ai-engineering',

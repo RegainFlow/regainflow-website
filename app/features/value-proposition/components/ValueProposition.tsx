@@ -11,6 +11,7 @@ import {
   PiCalendarCheckDuotone
 } from 'react-icons/pi';
 import type { IconType } from 'react-icons';
+import { bookingUrl } from '~/config/site.config';
 
 const iconMap: Record<string, IconType> = {
   UserCheck: PiUserCheckDuotone,
@@ -66,13 +67,13 @@ export default function ValueProposition() {
                 </ul>
                 <div className="vp-buttons">
                   <a
-                    href="https://cal.com/regainflow/cto-strategy"
+                    href={bookingUrl}
                     className="neon-button-glass"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <PiCalendarCheckDuotone size={24} />
-                    Schedule Consultation
+                    Schedule Free Consultation
                   </a>
                   <a
                     href="/engineers"
