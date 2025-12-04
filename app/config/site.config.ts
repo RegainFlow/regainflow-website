@@ -1,3 +1,6 @@
+// Unified booking URL for all consultation CTAs
+export const bookingUrl = 'https://cal.com/regainflow/consultation';
+
 export const siteConfig = {
   name: 'RegainFlow',
   title: 'RegainFlow | Senior AI/ML Engineers for C2C Contracts',
@@ -5,7 +8,7 @@ export const siteConfig = {
   url: 'https://www.regainflow.com',
   ogImage: 'https://www.regainflow.com/images/og/og-home.png',
   links: {
-    cal: 'https://cal.com/regainflow/30min',
+    cal: bookingUrl, // Updated to use unified consultation URL
     typeform: 'https://form.typeform.com/to/SOXnbS4E',
   },
   clarity: {

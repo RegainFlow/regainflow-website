@@ -66,7 +66,7 @@ export default function CaseStudiesPreview() {
 
         <div className="case-studies-cta">
           <Link
-            to="/projects"
+            to="/client-results"
             className="neon-button-glass neon-button-secondary"
           >
             View All Case Studies

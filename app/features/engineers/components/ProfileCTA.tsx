@@ -1,5 +1,6 @@
 import { PiCalendarCheckDuotone, PiUsersDuotone } from 'react-icons/pi';
 import profileCtaStyles from './profile-cta.css?url';
+import { bookingUrl } from '~/config/site.config';
 
 export const links = () => [{ rel: 'stylesheet', href: profileCtaStyles }];
 
@@ -26,13 +27,13 @@ export default function ProfileCTA({ engineerName }: ProfileCTAProps) {
 
           <div className="profile-cta-buttons">
             <a
-              href="https://cal.com/regainflow/30min"
+              href={bookingUrl}
               className="neon-button-glass"
               target="_blank"
               rel="noopener noreferrer"
             >
               <PiCalendarCheckDuotone size={24} />
-              Schedule Consultation
+              Schedule Free Consultation
             </a>
 
             <a

@@ -2,12 +2,13 @@ import type { Route } from './+types/projects';
 import { metrics } from '~/features/projects';
 import CaseStudiesGrid from '~/features/projects/components/CaseStudiesGrid';
 import projectsStyles from '~/features/projects/components/projects.css?url';
+import { bookingUrl } from '~/config/site.config';
 
 export const links: Route.LinksFunction = () => [
   { rel: 'stylesheet', href: projectsStyles }
 ];
 
-export function meta({}: Route.MetaArgs) {
+export function meta({ }: Route.MetaArgs) {
   return [
     { title: 'Client Results | RegainFlow Engineering Consultancy' },
     {
@@ -17,6 +18,8 @@ export function meta({}: Route.MetaArgs) {
     }
   ];
 }
+
+import ScrollAnimation from '~/components/layout/ScrollAnimation';
 
 export default function projects() {
   return (
@@ -44,20 +47,24 @@ export default function projects() {
       </section>
 
       {/* CASE STUDIES GRID WITH TABS */}
-      <CaseStudiesGrid />
+      <ScrollAnimation animation="slide-up">
+        <CaseStudiesGrid />
+      </ScrollAnimation>
 
       {/* CTA SECTION */}
-      <section className="projects-cta">
-        <p>Want results like these?</p>
-        <a
-          href="https://cal.com/regainflow/30min"
-          className="projects-cta-btn"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Book a Call
-        </a>
-      </section>
+      <ScrollAnimation animation="scale-up">
+        <section className="projects-cta">
+          <p>Want results like these?</p>
+          <a
+            href={bookingUrl}
+            className="projects-cta-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Book a Call
+          </a>
+        </section>
+      </ScrollAnimation>
     </>
   );
 }

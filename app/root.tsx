@@ -5,7 +5,8 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  isRouteErrorResponse
+  isRouteErrorResponse,
+  useLocation
 } from 'react-router';
 import Navbar from '~/components/layout/Navbar/Navbar';
 import Footer from '~/components/layout/Footer/Footer';
@@ -78,6 +79,9 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const location = useLocation();
+  const isFractionalCto = location.pathname === '/fractional-cto';
+
   return (
     <html lang="en">
       <head>
@@ -89,7 +93,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
       <body>
         <ScrollToTop />
-        <div className="background-wrapper">
+        <div className={`background-wrapper ${isFractionalCto ? 'theme-purple' : ''}`}>
           <Navbar />
           {children}
           <Footer />

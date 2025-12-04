@@ -159,7 +159,7 @@ export default function CapabilityPage({ capability }: CapabilityPageProps) {
 
             <div className="relevant-cases-link">
               <Link
-                to="/projects"
+                to="/client-results"
                 className="neon-button-glass neon-button-secondary"
               >
                 View All Case Studies →
