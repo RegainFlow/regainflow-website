@@ -45,7 +45,7 @@ export default function ProfileHero({ member }: ProfileHeroProps) {
 
           <div className="profile-hero-cta">
             <a
-              href="https://cal.com/regainflow/30min"
+              href="https://cal.com/regainflow/cto-strategy"
               className="neon-button-glass"
               target="_blank"
               rel="noopener noreferrer"

@@ -190,7 +190,7 @@ export default function CostComparison({ results }: CostComparisonProps) {
       <div className="roi-cta-section">
         <h3 className="cta-title">Ready to reduce your engineering costs?</h3>
         <a
-          href="https://cal.com/regainflow/30min"
+          href="https://cal.com/regainflow/cto-strategy"
           className="neon-button-glass roi-cta-button"
           target="_blank"
           rel="noopener noreferrer"

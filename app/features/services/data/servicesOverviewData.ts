@@ -10,7 +10,7 @@ export const servicesOverviewData: ServicesOverview = {
   heroSubtitle:
     'We build production-grade automation, search systems, and full-stack applications that scale. From multi-agent AI workflows to DevOps transformation, we deliver engineering solutions that eliminate bottlenecks and drive measurable ROI.',
   heroCtaText: 'Schedule Free Consultation',
-  heroCtaLink: 'https://cal.com/regainflow/30min',
+  heroCtaLink: 'https://cal.com/regainflow/cto-strategy',
 
   // Process Steps - How It Works
   processSteps: [

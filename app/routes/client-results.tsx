@@ -50,7 +50,7 @@ export default function projects() {
       <section className="projects-cta">
         <p>Want results like these?</p>
         <a
-          href="https://cal.com/regainflow/30min"
+          href="https://cal.com/regainflow/cto-strategy"
           className="projects-cta-btn"
           target="_blank"
           rel="noopener noreferrer"

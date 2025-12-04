@@ -5,7 +5,7 @@ export const siteConfig = {
   url: 'https://www.regainflow.com',
   ogImage: 'https://www.regainflow.com/images/og/og-home.png',
   links: {
-    cal: 'https://cal.com/regainflow/30min',
+    cal: 'https://cal.com/regainflow/cto-strategy',
     typeform: 'https://form.typeform.com/to/SOXnbS4E',
   },
   clarity: {

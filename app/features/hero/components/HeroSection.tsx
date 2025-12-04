@@ -49,50 +49,43 @@ export default function HeroSection() {
 
       <div id="typed-strings" style={{ display: 'none' }}>
         <p>
-          We build your <span className="typed-highlight">AI pipelines.</span>
+          We design your{' '}
+          <span className="typed-highlight">technology roadmap.</span>
         </p>
         <p>
-          We modernize your{' '}
-          <span className="typed-highlight">legacy systems.</span>
+          We architect your <span className="typed-highlight">AI systems.</span>
+        </p>
+        <p>
+          We lead your{' '}
+          <span className="typed-highlight">engineering team.</span>
         </p>
         <p>
           We ship{' '}
           <span className="typed-highlight">production-ready code.</span>
         </p>
         <p>
-          We integrate{' '}
-          <span className="typed-highlight">complex data flows.</span>
+          We modernize your{' '}
+          <span className="typed-highlight">data pipelines.</span>
         </p>
         <p>
-          We deploy{' '}
-          <span className="typed-highlight">reliable automation.</span>
-        </p>
-        <p>
-          We solve your <span className="typed-highlight">technical debt.</span>
-        </p>
-        <p>
-          We accelerate your <span className="typed-highlight">roadmap.</span>
+          We accelerate your{' '}
+          <span className="typed-highlight">time-to-market.</span>
         </p>
       </div>
 
       <div className="container-10">
         <h1 className="landing-header">
-          Senior Engineers
-          <br />
-          <span className="text-highlight">Ready to Ship</span>
+          Fractional CTO + <br />
+          <span className="text-highlight">Senior Engineering</span>
         </h1>
+        <p className="hero-subtitle-secondary">Strategy Meets Execution</p>
 
         <p className="hero-subhead">
-          Senior engineers specializing in{' '}
-          <span className="text-highlight">AI/ML</span>,{' '}
-          <span className="text-highlight">RAG</span>, and intelligent
-          automation
-          <br />
-          Full-stack capabilities: backend · frontend · DevOps · solution
-          architecture
-          <br />
-          <span className="text-highlight">Contract-ready</span> for long-term
-          engagements or project consulting
+          Technology leadership for growth companies: strategic roadmaps,
+          architecture decisions, and team mentorship-
+          <span className="text-highlight">PLUS</span> hands-on delivery in{' '}
+          <span className="text-highlight">AI/ML</span>, data pipelines, and
+          full-stack engineering.
         </p>
 
         <div className="div-block-33">
@@ -101,22 +94,31 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <Link
-          to="/engineers"
-          className="button-primary-2 animated-button btn-neon w-button"
-        >
-          {/* these four spans drive the four edge animations */}
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+        <div className="hero-cta-buttons">
+          <Link
+            to="/fractional-cto"
+            className="button-primary-2 animated-button btn-neon w-button"
+          >
+            {/* these four spans drive the four edge animations */}
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
 
-          {/* your existing content */}
-          <div className="btn-content">
-            <PiRocketLaunchDuotone size={25} style={{ marginRight: '10px' }} />
-            View Engineer Profiles
-          </div>
-        </Link>
+            {/* your existing content */}
+            <div className="btn-content">
+              <PiRocketLaunchDuotone
+                size={25}
+                style={{ marginRight: '10px' }}
+              />
+              Explore Fractional CTO
+            </div>
+          </Link>
+
+          <Link to="/services" className="button-secondary-hero">
+            View Engineering Services
+          </Link>
+        </div>
       </div>
     </section>
   );

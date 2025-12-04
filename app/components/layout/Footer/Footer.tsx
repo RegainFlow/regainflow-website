@@ -54,7 +54,7 @@ export default function Footer() {
               Our Engineers
             </Link>
             <Link to="/client-results" className="footer-link">
-              Projects
+              Client Results
             </Link>
             <a
               href="https://form.typeform.com/to/SOXnbS4E"

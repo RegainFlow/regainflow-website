@@ -23,7 +23,7 @@ export default function ServicesCTA() {
 
           <div className="services-cta-buttons">
             <a
-              href="https://cal.com/regainflow/30min"
+              href="https://cal.com/regainflow/cto-strategy"
               className="neon-button-glass"
               target="_blank"
               rel="noopener noreferrer"
