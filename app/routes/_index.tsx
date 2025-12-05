@@ -10,7 +10,7 @@ import { FAQ } from '~/features/faq';
 import { FinalCTA } from '~/features/final-cta';
 import { SectionTracker } from '~/components/layout/SectionTracker';
 import { ScrollProgress } from '~/components/layout/ScrollProgress';
-import { AnimatedSection } from '~/components/AnimatedSection';
+
 
 import carouselStyles from '~/features/carousel/components/carousel-custom.css?url';
 import heroStyles from '~/features/hero/components/hero-custom.css?url';
@@ -38,7 +38,7 @@ export const links: Route.LinksFunction = () => [
   { rel: 'stylesheet', href: scrollAnimationsStyles }
 ];
 
-export function meta({}: Route.MetaArgs) {
+export function meta({ }: Route.MetaArgs) {
   const title = 'RegainFlow | Senior AI/ML Engineers for C2C Contracts';
   const description =
     'Contract-ready senior engineers specializing in AI/ML, RAG, and intelligent automation. Full-stack capabilities across backend, frontend, DevOps, and solution architecture. Available for long-term C2C contracts or project consulting.';
@@ -74,6 +74,8 @@ const sections = [
   { id: 'cta', label: 'Contact' }
 ];
 
+import ScrollAnimation from '~/components/layout/ScrollAnimation';
+
 export default function Index() {
   return (
     <>
@@ -84,29 +86,41 @@ export default function Index() {
         <HeroSection />
       </section>
 
-      <AnimatedSection id="carousel" animation="fade-up">
-        <CarouselSection />
-      </AnimatedSection>
+      <ScrollAnimation animation="slide-up">
+        <section id="carousel">
+          <CarouselSection />
+        </section>
+      </ScrollAnimation>
 
-      <AnimatedSection id="value" animation="fade-up">
-        <ValueProposition />
-      </AnimatedSection>
+      <ScrollAnimation animation="slide-up">
+        <section id="value">
+          <ValueProposition />
+        </section>
+      </ScrollAnimation>
 
-      <AnimatedSection id="case-studies" animation="fade-up">
-        <CaseStudiesPreview />
-      </AnimatedSection>
+      <ScrollAnimation animation="slide-up">
+        <section id="case-studies">
+          <CaseStudiesPreview />
+        </section>
+      </ScrollAnimation>
 
-      <AnimatedSection id="process" animation="fade-up">
-        <HowItWorks />
-      </AnimatedSection>
+      <ScrollAnimation animation="slide-up">
+        <section id="process">
+          <HowItWorks />
+        </section>
+      </ScrollAnimation>
 
-      <AnimatedSection id="faq" animation="fade-up">
-        <FAQ />
-      </AnimatedSection>
+      <ScrollAnimation animation="slide-up">
+        <section id="faq">
+          <FAQ />
+        </section>
+      </ScrollAnimation>
 
-      <AnimatedSection id="cta" animation="scale-up">
-        <FinalCTA />
-      </AnimatedSection>
+      <ScrollAnimation animation="scale-up">
+        <section id="cta">
+          <FinalCTA />
+        </section>
+      </ScrollAnimation>
     </>
   );
 }

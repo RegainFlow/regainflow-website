@@ -299,3 +299,48 @@
   --card-padding-base: var(--spacing-lg);
   --card-padding-lg: var(--spacing-xl);
 }
+
+/* ==================== Theme Overrides ==================== */
+
+/* Purple Theme (Fractional CTO) */
+.theme-purple {
+  /* Primary Brand Colors */
+  --color-primary: #8b5cf6;
+  /* Violet-500 */
+  --color-primary-light: #a78bfa;
+  /* Violet-400 */
+  --color-primary-dark: #7c3aed;
+  /* Violet-600 */
+
+  /* Alpha Variations - Override hardcoded cyan values */
+  --color-primary-alpha-10: rgba(139, 92, 246, 0.1);
+  --color-primary-alpha-15: rgba(139, 92, 246, 0.15);
+  --color-primary-alpha-20: rgba(139, 92, 246, 0.2);
+  --color-primary-alpha-25: rgba(139, 92, 246, 0.25);
+  --color-primary-alpha-30: rgba(139, 92, 246, 0.3);
+  --color-primary-alpha-40: rgba(139, 92, 246, 0.4);
+  --color-primary-alpha-50: rgba(139, 92, 246, 0.5);
+  --color-primary-alpha-60: rgba(139, 92, 246, 0.6);
+  --color-primary-alpha-70: rgba(139, 92, 246, 0.7);
+  --color-primary-alpha-80: rgba(139, 92, 246, 0.8);
+
+  /* Shadows - Override hardcoded cyan values */
+  --shadow-neon: 0 0 5px var(--color-primary), 0 0 10px var(--color-primary), 0 0 15px var(--color-primary);
+  --shadow-neon-lg: 0 0 10px var(--color-primary), 0 0 20px var(--color-primary), 0 0 30px var(--color-primary);
+  --shadow-text-glow: 0 0 8px var(--color-primary), 0 0 1px var(--color-primary);
+
+  /* Glass Borders - Override hardcoded cyan values */
+  --glass-border-accent: rgba(139, 92, 246, 0.3);
+  --glass-border-accent-hover: rgba(139, 92, 246, 0.6);
+
+  /* Glows - Override hardcoded cyan values */
+  --glow-subtle: 0 0 4px rgba(139, 92, 246, 0.3);
+  --glow-medium: 0 0 8px rgba(139, 92, 246, 0.4);
+  --glow-text: 0 0 4px rgba(139, 92, 246, 0.5);
+  --glow-text-logo: 0 0 6px rgba(139, 92, 246, 0.6), 0 0 2px rgba(139, 92, 246, 0.4);
+  --glow-hover: 0 0 12px rgba(139, 92, 246, 0.3);
+
+  /* Tech Category Colors - Adjust for harmony */
+  --color-category-ai: #c084fc;
+  --color-category-ml: #a78bfa;
+}

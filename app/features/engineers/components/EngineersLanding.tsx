@@ -1,3 +1,4 @@
+import ScrollAnimation from '~/components/layout/ScrollAnimation';
 import { teamMembers } from '../data/teamData';
 import EngineerCard from './EngineerCard';
 import TeamCTA from './TeamCTA';
@@ -19,16 +20,20 @@ export default function EngineersLanding() {
       </section>
 
       {/* Section 2: Engineers Grid */}
-      <section className="engineers-grid-section glass-section-sm">
-        <div className="engineers-grid-container">
-          {teamMembers.map((member, idx) => (
-            <EngineerCard key={idx} member={member} />
-          ))}
-        </div>
-      </section>
+      <ScrollAnimation animation="slide-up">
+        <section className="engineers-grid-section glass-section-sm">
+          <div className="engineers-grid-container">
+            {teamMembers.map((member, idx) => (
+              <EngineerCard key={idx} member={member} />
+            ))}
+          </div>
+        </section>
+      </ScrollAnimation>
 
       {/* Section 3: Team CTA */}
-      <TeamCTA />
+      <ScrollAnimation animation="scale-up">
+        <TeamCTA />
+      </ScrollAnimation>
     </>
   );
 }

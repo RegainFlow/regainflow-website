@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import {
   PiCaretDownBold,
+  PiStrategyDuotone,
   PiRobotDuotone,
   PiDatabaseDuotone,
   PiCodeDuotone,
@@ -18,6 +19,7 @@ export default function Navbar() {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const [isElectricClick, setIsElectricClick] = useState(false);
   const navigate = useNavigate();
   const dropdownRef = useRef<HTMLLIElement>(null);
 
@@ -51,9 +53,8 @@ export default function Navbar() {
 
           <nav
             role="navigation"
-            className={`nav-menu-wrapper w-nav-menu ${
-              isMenuOpen ? 'open' : ''
-            }`}
+            className={`nav-menu-wrapper w-nav-menu ${isMenuOpen ? 'open' : ''
+              }`}
           >
             <ul className="nav-menu-two">
               <li>
@@ -84,17 +85,38 @@ export default function Navbar() {
                 >
                   <span className="button-drop-down-link">SERVICES</span>
                   <PiCaretDownBold
-                    className={`dropdown-icon ${
-                      isServicesDropdownOpen ? 'rotate' : ''
-                    }`}
+                    className={`dropdown-icon ${isServicesDropdownOpen ? 'rotate' : ''
+                      }`}
                     size={16}
                   />
                 </button>
                 <div
-                  className={`nav-dropdown-list ${
-                    isServicesDropdownOpen ? 'w--open' : ''
-                  }`}
+                  className={`nav-dropdown-list ${isServicesDropdownOpen ? 'w--open' : ''
+                    }`}
                 >
+                  {/* Special Fractional CTO button - spans row 1-2, col 1 */}
+                  <Link
+                    to="/fractional-cto"
+                    className={`nav-dropdown-item nav-dropdown-item-featured ${isElectricClick ? 'electric-click' : ''
+                      }`}
+                    style={{ gridRow: '1 / 3', gridColumn: '1 / 2' }}
+                    onClick={(e) => {
+                      setIsElectricClick(true);
+                      // Let animation play briefly
+                      setTimeout(() => {
+                        setIsElectricClick(false);
+                        setIsMenuOpen(false);
+                      }, 600);
+                    }}
+                  >
+                    <PiStrategyDuotone
+                      size={32}
+                      className="nav-dropdown-icon"
+                    />
+                    <span>Fractional CTO</span>
+                  </Link>
+
+                  {/* Row 1, Column 2 */}
                   <Link
                     to="/services/ai-engineering"
                     className="nav-dropdown-item"
@@ -103,6 +125,8 @@ export default function Navbar() {
                     <PiRobotDuotone size={24} className="nav-dropdown-icon" />
                     <span>AI Engineering</span>
                   </Link>
+
+                  {/* Row 1, Column 3 */}
                   <Link
                     to="/services/data-engineering"
                     className="nav-dropdown-item"
@@ -114,6 +138,8 @@ export default function Navbar() {
                     />
                     <span>Data Engineering</span>
                   </Link>
+
+                  {/* Row 2, Column 2 */}
                   <Link
                     to="/services/full-stack-engineering"
                     className="nav-dropdown-item"
@@ -122,6 +148,8 @@ export default function Navbar() {
                     <PiCodeDuotone size={24} className="nav-dropdown-icon" />
                     <span>Full-Stack Engineering</span>
                   </Link>
+
+                  {/* Row 2, Column 3 */}
                   <Link
                     to="/services/devops-engineering"
                     className="nav-dropdown-item"
@@ -133,6 +161,7 @@ export default function Navbar() {
                     />
                     <span>DevOps Engineering</span>
                   </Link>
+
                   <div className="dropdown-divider" />
                   <Link
                     to="/services"
@@ -156,7 +185,7 @@ export default function Navbar() {
             <div className="mobile-menu-cta">
               <a
                 href="https://form.typeform.com/to/SOXnbS4E"
-                className="button w-button"
+                className="neon-button-glass"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsMenuOpen(false)}
@@ -169,7 +198,7 @@ export default function Navbar() {
           <div className="call-to-action desktop-only">
             <a
               href="https://form.typeform.com/to/SOXnbS4E"
-              className="button w-button"
+              className="neon-button-glass"
               target="_blank"
               rel="noopener"
             >

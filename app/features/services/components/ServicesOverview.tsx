@@ -6,6 +6,8 @@ import CaseStudiesPreview from './overview/CaseStudiesPreview';
 import ServicesCTA from './overview/ServicesCTA';
 import { servicesOverviewData } from '../data/servicesOverviewData';
 
+import ScrollAnimation from '~/components/layout/ScrollAnimation';
+
 export default function ServicesOverview() {
   return (
     <div className="services-overview-wrapper">
@@ -18,19 +20,29 @@ export default function ServicesOverview() {
       />
 
       {/* 2. Capabilities Grid */}
-      <CapabilitiesGrid capabilities={servicesOverviewData.capabilityCards} />
+      <ScrollAnimation animation="slide-up">
+        <CapabilitiesGrid capabilities={servicesOverviewData.capabilityCards} />
+      </ScrollAnimation>
 
       {/* 3. Service Metrics - Key Stats */}
-      <ServiceMetrics metrics={servicesOverviewData.metrics} />
+      <ScrollAnimation animation="slide-up">
+        <ServiceMetrics metrics={servicesOverviewData.metrics} />
+      </ScrollAnimation>
 
       {/* 4. Process Steps - How It Works */}
-      <ProcessSteps steps={servicesOverviewData.processSteps} />
+      <ScrollAnimation animation="slide-up">
+        <ProcessSteps steps={servicesOverviewData.processSteps} />
+      </ScrollAnimation>
 
       {/* 5. Case Studies Preview */}
-      <CaseStudiesPreview />
+      <ScrollAnimation animation="slide-up">
+        <CaseStudiesPreview />
+      </ScrollAnimation>
 
       {/* 6. Final CTA */}
-      <ServicesCTA />
+      <ScrollAnimation animation="scale-up">
+        <ServicesCTA />
+      </ScrollAnimation>
     </div>
   );
 }
