@@ -162,7 +162,7 @@ export const projectsItems = [
   {
     title: 'AI-Powered Document Retrieval Platform',
     description:
-      'Built a full-stack platform using .NET, C3, and IBM Watson for AI-assisted document retrieval, automated data synchronization, and scheduled task execution. Delivered a modern UI that improved accessibility while ensuring compatibility with legacy systems.',
+      'Built a full-stack platform using Java, SpringBoot, and IBM Watson for AI-assisted document retrieval, automated data synchronization, and scheduled task execution. Delivered a modern UI that improved accessibility while ensuring compatibility with legacy systems.',
     tags: [
       'Improved Insight Delivery',
       'AI-Enhanced Processing',
