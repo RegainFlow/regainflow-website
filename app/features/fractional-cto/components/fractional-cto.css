@@ -49,6 +49,7 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 3rem;
+  padding: 0 1rem;
 }
 
 .cto-pillar-card {
@@ -158,6 +159,68 @@
 @media (max-width: 768px) {
   .cto-pillars-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .cto-pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+  }
+
+  .cto-pillar-card {
+    padding: 1.75rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .cto-pillars-grid {
+    gap: 1.25rem;
+  }
+
+  .cto-pillar-card {
+    padding: 1.5rem;
+  }
+
+  .cto-pillar-card__icon-wrapper {
+    width: 64px;
+    height: 64px;
+  }
+
+  .cto-pillar-card__title {
+    font-size: 1.15rem;
+  }
+
+  .cto-pillar-card__description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .cto-pillars-grid {
+    gap: 1rem;
+  }
+
+  .cto-pillar-card {
+    padding: 1.25rem;
+  }
+
+  .cto-pillar-card__icon-wrapper {
+    width: 56px;
+    height: 56px;
+  }
+
+  .cto-pillar-card__title {
+    font-size: 1.05rem;
+  }
+
+  .cto-pillar-card__description {
+    font-size: 0.85rem;
+  }
+
+  .cto-pillar-card__details li {
+    font-size: 0.85rem;
   }
 }
 

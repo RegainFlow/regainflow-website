@@ -22,6 +22,7 @@ export default function Navbar() {
   const [isElectricClick, setIsElectricClick] = useState(false);
   const navigate = useNavigate();
   const dropdownRef = useRef<HTMLLIElement>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -43,6 +44,28 @@ export default function Navbar() {
     };
   }, [isServicesDropdownOpen]);
 
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Node;
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(target) &&
+        !(event.target as HTMLElement).closest('.menu-button')
+      ) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isMenuOpen]);
+
   return (
     <div className="navbar-logo-left" role="banner">
       <div className="container">
@@ -55,6 +78,7 @@ export default function Navbar() {
             role="navigation"
             className={`nav-menu-wrapper w-nav-menu ${isMenuOpen ? 'open' : ''
               }`}
+            ref={menuRef}
           >
             <ul className="nav-menu-two">
               <li>

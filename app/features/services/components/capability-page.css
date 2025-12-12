@@ -140,7 +140,7 @@
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-base);
   color: #ff6b9d;
-  margin-bottom: 1.5rem;
+  margin: 0 auto 1.5rem auto;
 }
 
 .problem-title {
@@ -151,6 +151,7 @@
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing-wide);
   margin: 0 0 0.75rem 0;
+  text-align: center;
 }
 
 .problem-text {
@@ -656,7 +657,12 @@
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
   .problems-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+  }
+
+  /* Disable centering selector on mobile - not needed for 1-column layout */
+  .problem-card:nth-child(3n + 1):nth-last-child(1) {
+    grid-column: auto;
   }
 
   .relevant-cases-grid {
@@ -690,8 +696,13 @@
   }
 
   .problems-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     gap: 1.5rem;
+  }
+
+  /* Ensure centering is disabled at this breakpoint too */
+  .problem-card:nth-child(3n + 1):nth-last-child(1) {
+    grid-column: auto !important;
   }
 
   .approach-step {
@@ -741,6 +752,11 @@
     font-size: 1rem;
   }
 
+  .problems-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem;
+  }
+
   .problem-card {
     padding: 1.5rem 1.25rem;
   }
@@ -755,6 +771,23 @@
     font-size: 1.5rem;
   }
 
+  .tech-stack-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .tech-badge {
+    padding: 1rem 0.875rem;
+  }
+
+  .tech-badge-name {
+    font-size: 0.9rem;
+  }
+
+  .tech-badge-category {
+    font-size: 0.75rem;
+  }
+
   .capability-cta-title {
     font-size: 1.75rem;
   }
@@ -765,5 +798,43 @@
 
   .capability-cta-content {
     padding: 2rem 1.25rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .tech-stack-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 0.625rem;
+  }
+
+  .tech-badge {
+    padding: 0.875rem 0.75rem;
+  }
+
+  .tech-badge-name {
+    font-size: 0.85rem;
+  }
+
+  .tech-badge-category {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .tech-stack-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .tech-badge {
+    padding: 0.75rem 0.625rem;
+  }
+
+  .tech-badge-name {
+    font-size: 0.8rem;
+  }
+
+  .tech-badge-category {
+    font-size: 0.65rem;
   }
 }
