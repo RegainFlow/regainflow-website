@@ -1,12 +1,12 @@
 export default function CarouselSection() {
 const logos = [
+  //Programming Languages
   'typescript-icon.svg',
   'javascript.svg',
   'python.svg',
   'java.svg',
   'c_sharp.svg',
-  'redis.svg',
-  'elasticsearch.svg',
+  // AI/ML Frameworks and Platforms
   'google-gemini.svg',
   'claude.svg',
   'openai.svg',
@@ -14,19 +14,31 @@ const logos = [
   'langgraph.svg',
   'tensorflow.svg',
   'pytorch.svg',
+  //Web Frameworks and Libraries
   'dotnet.svg',
   'react.svg',
   'vuejs.svg',
   'nextjs.svg',
   'angular-icon.svg',
+  'spring_boot.svg',
   'streamlit.svg',
   'nodejs.svg',
+  'fastapi.svg',
+  //Databases and Data Management
+  'postgres.svg',
+  'redis.svg',
+  'elasticsearch.svg',
+  //Cloud Platforms
   'aws.svg',
   'azure.svg',
   'gcp.svg',
+  //DevOps
   'docker.svg',
   'kubernetes.svg',
-  'fastapi.svg',
+  'terraform.svg',
+  'ansible.svg',
+  'packer.svg',
+  'openshift.svg',
 ];
 
   // Triple the logos for a smoother infinite scroll
