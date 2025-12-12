@@ -3,6 +3,7 @@ export const projectsItems = [
     title: 'Multi-Agent Payroll Validation System',
     description:
       'A multi-agent validation engine that automates SAP payroll quality checks. Agents run SQL validation, flat-file comparisons, and AI-generated rules to detect issues across legacy systems.',
+    image: '/images/projects/multi-agent-payroll-validation.png',
     tags: [
       '90 → 3 Day Cycle Time',
       'Multi-Agent Architecture',
@@ -57,6 +58,7 @@ export const projectsItems = [
       'Improved Query Relevance',
       'Reduced Ops Overhead'
     ],
+    image: '/images/projects/corporate-hr-rag.png',
     industry: 'AI ENGINEERING',
     category: 'ai',
     primaryMetric: '3× Faster Insights',
@@ -101,6 +103,8 @@ export const projectsItems = [
     title: 'Legacy RPA Modernization with Python & LangGraph',
     description:
       'Converted Blue Prism legacy automations into modern Python workflows with multi-agent AI orchestration. Eliminated licensing costs, improved reliability, and reduced multi-hour processes to minutes.',
+
+    image: '/images/projects/legacy-rpa-modernization.png',
     tags: [
       'Eliminated RPA Licensing',
       'Multi-Agent AI Logic',
@@ -116,7 +120,8 @@ export const projectsItems = [
     title: 'UI Modernization Overhaul',
     description:
       'Modernized a large Angular application by migrating to a faster, modern framework, improving performance by 35%, reducing build times, and upgrading the delivery pipeline to a scalable GitLab + Kubernetes workflow.',
-    tags: [
+      image: '/images/projects/ui-overhaul.png',
+      tags: [
       'Legacy → Modern Migration',
       '35% Performance Gain',
       'Multi-Team Scalability'
@@ -148,6 +153,7 @@ export const projectsItems = [
     title: 'Cyber Operations Automation Tools',
     description:
       'Secure automation tools and threat-emulation utilities for Red/Blue Team exercises. Rapid data processing, adversarial simulation, and analysis scripts supporting operational readiness and training.',
+    image: '/images/projects/cyber-operations-automation.png',
     tags: [
       'Automated Ops Readiness',
       'Environment-as-a-Service',
@@ -163,6 +169,7 @@ export const projectsItems = [
     title: 'AI-Powered Document Retrieval Platform',
     description:
       'Built a full-stack platform using Java, SpringBoot, and IBM Watson for AI-assisted document retrieval, automated data synchronization, and scheduled task execution. Delivered a modern UI that improved accessibility while ensuring compatibility with legacy systems.',
+    image: '/images/projects/ai-document-retrieval.png',
     tags: [
       'Improved Insight Delivery',
       'AI-Enhanced Processing',

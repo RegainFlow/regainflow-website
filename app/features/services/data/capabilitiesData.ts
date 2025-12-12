@@ -181,7 +181,7 @@ export const capabilitiesData: Capability[] = [
     title: 'Full-Stack Engineering',
     subtitle:
       'Production web applications from legacy modernization to greenfield SaaS platforms',
-    heroImage: '/images/services/full-stack-engineering/hero.png',
+    heroImage: '/images/projects/ui-overhaul.png',
     description:
       'Build production-ready web applications, internal tools, and SaaS platforms with modern frameworks. Our full-stack engineers have delivered 35% performance improvements through UI modernization, 4× faster cost analysis platforms, 90% workflow automation, and systems serving thousands of daily users—all with clean architecture, automated testing, and scalable deployment infrastructure.',
     problems: [
