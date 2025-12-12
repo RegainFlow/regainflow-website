@@ -82,10 +82,10 @@ export default function HeroSection() {
         <p className="hero-subtitle-secondary">Strategy Meets Execution</p>
 
         <p className="hero-subhead">
-          Technology leadership for growth companies: strategic roadmaps,
-          architecture decisions, and team mentorship-
-          <span className="text-highlight">PLUS</span> hands-on delivery in{' '}
-          <span className="text-highlight">AI/ML</span>, data pipelines, and
+          Technology <span className="text-highlight">leadership </span> for your company - strategic roadmaps,
+          architecture decisions, and team mentorship.
+           PLUS hands-on <span className="text-highlight">execution</span> in{' '}
+          AI/ML, data interopability, and
           full-stack engineering.
         </p>
 
