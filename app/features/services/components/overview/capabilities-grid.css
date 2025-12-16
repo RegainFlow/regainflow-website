@@ -13,14 +13,9 @@
 
 .capabilities-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin-top: 3rem;
-}
-
-/* Center lone item in incomplete row (4th item when alone) */
-.capability-card:nth-child(3n+1):nth-last-child(1) {
-  grid-column: 2 / 3;
 }
 
 .capability-card {
@@ -90,13 +85,6 @@
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
-  .capabilities-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-}
-
 @media (max-width: 768px) {
   .capabilities-grid {
     grid-template-columns: 1fr;
