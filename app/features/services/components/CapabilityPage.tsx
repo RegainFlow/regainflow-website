@@ -12,11 +12,11 @@ interface CapabilityPageProps {
 
 export default function CapabilityPage({ capability }: CapabilityPageProps) {
   // Filter case studies by this capability's slug
-  const relevantCaseStudies = projectsItems
-    .filter((caseStudy) =>
-      (caseStudy as any).capabilities?.includes(capability.slug)
-    )
-    .slice(0, 3);
+  // const relevantCaseStudies = projectsItems
+  //   .filter((caseStudy) =>
+  //     (caseStudy as any).capabilities?.includes(capability.slug)
+  //   )
+  //   .slice(0, 3);
 
   return (
     <div className="capability-page-wrapper">
@@ -125,7 +125,7 @@ export default function CapabilityPage({ capability }: CapabilityPageProps) {
       </section>
 
       {/* 7. Relevant Case Studies */}
-      {relevantCaseStudies.length > 0 && (
+      {/* {relevantCaseStudies.length > 0 && (
         <section className="relevant-cases-section glass-section">
           <div className="relevant-cases-container">
             <h2 className="section-title">
@@ -167,7 +167,7 @@ export default function CapabilityPage({ capability }: CapabilityPageProps) {
             </div>
           </div>
         </section>
-      )}
+      )} */}
 
       {/* 8. Capability CTA */}
       <section className="capability-cta-section glass-section">

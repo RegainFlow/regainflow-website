@@ -2,7 +2,7 @@ import ServicesHero from './overview/ServicesHero';
 import CapabilitiesGrid from './overview/CapabilitiesGrid';
 import ProcessSteps from './overview/ProcessSteps';
 import ServiceMetrics from './overview/ServiceMetrics';
-import CaseStudiesPreview from './overview/CaseStudiesPreview';
+// import CaseStudiesPreview from './overview/CaseStudiesPreview';
 import ServicesCTA from './overview/ServicesCTA';
 import { servicesOverviewData } from '../data/servicesOverviewData';
 
@@ -35,9 +35,9 @@ export default function ServicesOverview() {
       </ScrollAnimation>
 
       {/* 5. Case Studies Preview */}
-      <ScrollAnimation animation="slide-up">
+      {/* <ScrollAnimation animation="slide-up">
         <CaseStudiesPreview />
-      </ScrollAnimation>
+      </ScrollAnimation> */}
 
       {/* 6. Final CTA */}
       <ScrollAnimation animation="scale-up">

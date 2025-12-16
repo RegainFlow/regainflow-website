@@ -56,9 +56,9 @@ export default function Footer() {
             <Link to="/engineers" className="footer-link">
               Our Engineers
             </Link>
-            <Link to="/client-results" className="footer-link">
+            {/* <Link to="/client-results" className="footer-link">
               Client Results
-            </Link>
+            </Link> */}
             <a
               href="https://form.typeform.com/to/SOXnbS4E"
               className="footer-link"
