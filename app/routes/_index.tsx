@@ -5,7 +5,7 @@ import { CarouselSection } from '~/features/carousel';
 import { ValueProposition } from '~/features/value-proposition';
 import { HowItWorks } from '~/features/how-it-works';
 import { RoiPreview } from '~/features/roi-preview';
-// import { CaseStudiesPreview } from '~/features/case-studies-preview';
+import { CaseStudiesPreview } from '~/features/case-studies-preview';
 import { FAQ } from '~/features/faq';
 import { FinalCTA } from '~/features/final-cta';
 import { SectionTracker } from '~/components/layout/SectionTracker';
@@ -17,7 +17,7 @@ import heroStyles from '~/features/hero/components/hero-custom.css?url';
 import valuePropStyles from '~/features/value-proposition/components/value-custom.css?url';
 import howItWorksStyles from '~/features/how-it-works/components/how-it-works.css?url';
 import roiPreviewStyles from '~/features/roi-preview/components/roi-preview.css?url';
-// import caseStudiesPreviewStyles from '~/features/case-studies-preview/components/case-studies-preview.css?url';
+import caseStudiesPreviewStyles from '~/features/case-studies-preview/components/case-studies-preview.css?url';
 import faqStyles from '~/features/faq/components/faq.css?url';
 import finalCtaStyles from '~/features/final-cta/components/final-cta.css?url';
 import sectionTrackerStyles from '~/components/layout/SectionTracker/section-tracker.css?url';
@@ -30,7 +30,7 @@ export const links: Route.LinksFunction = () => [
   { rel: 'stylesheet', href: valuePropStyles },
   { rel: 'stylesheet', href: howItWorksStyles },
   { rel: 'stylesheet', href: roiPreviewStyles },
-  // { rel: 'stylesheet', href: caseStudiesPreviewStyles },
+  { rel: 'stylesheet', href: caseStudiesPreviewStyles },
   { rel: 'stylesheet', href: faqStyles },
   { rel: 'stylesheet', href: finalCtaStyles },
   { rel: 'stylesheet', href: sectionTrackerStyles },
@@ -98,11 +98,11 @@ export default function Index() {
         </section>
       </ScrollAnimation>
 
-      {/* <ScrollAnimation animation="slide-up">
+      <ScrollAnimation animation="slide-up">
         <section id="case-studies">
           <CaseStudiesPreview />
         </section>
-      </ScrollAnimation> */}
+      </ScrollAnimation>
 
       <ScrollAnimation animation="slide-up">
         <section id="process">
