@@ -196,7 +196,7 @@ export default function Navbar() {
                   </Link>
                 </div>
               </li>
-              {/* <li>
+              <li>
                 <Link
                   to="/client-results"
                   className="button-link"
@@ -204,7 +204,7 @@ export default function Navbar() {
                 >
                   CLIENT RESULTS
                 </Link>
-              </li> */}
+              </li>
             </ul>
             <div className="mobile-menu-cta">
               <a
