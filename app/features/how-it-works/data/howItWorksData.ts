@@ -1,8 +1,4 @@
-export interface HowItWorksStep {
-  number: string;
-  title: string;
-  description: string;
-}
+import type { HowItWorksStep } from '../types/how-it-works.types';
 
 export const howItWorksData: HowItWorksStep[] = [
   {
