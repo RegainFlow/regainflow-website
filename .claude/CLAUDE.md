@@ -69,6 +69,30 @@ export type { TypeName } from './types/feature.types';
 export { dataObject, helperFunction } from './data/featureData';
 ```
 
+**Type Definitions (`types/` folder):**
+
+Features should have a dedicated `types/` folder when they meet any of these criteria:
+
+1. **Complex data structures** - Multiple nested interfaces or union types (e.g., `roi-calculator`, `projects`)
+2. **Shared across multiple files** - Types used by components, data, and utilities (e.g., `engineers`, `services`)
+3. **Domain-specific types** - Business logic types beyond simple props (e.g., `legal`, `fractional-cto`)
+4. **Consistency** - Even simple features benefit from centralized type definitions (e.g., `faq`, `how-it-works`)
+
+**Features with `types/` folders:**
+- `engineers/` - Engineer profiles with tech stacks, expertise, projects
+- `fractional-cto/` - CTO service sections, outcomes, FAQ
+- `legal/` - Complex nested legal document structure
+- `services/` - Service capabilities, metrics, process steps
+- `roi-calculator/` - Calculator inputs and results (7 inputs, 12 results)
+- `projects/` - Project categories, tags, action types
+- `case-studies-preview/` - Featured case study structure
+- `value-proposition/` - Value props with icon bullets
+- `faq/` - FAQ Q&A pairs
+- `how-it-works/` - Process methodology steps
+
+**Features without `types/` folders:**
+- Simple features with no data structures (e.g., `hero`, `final-cta`, `roi-preview`, `carousel`)
+
 Import features using the path alias: `import { Component } from '~/features/feature-name'`
 
 ### Routing

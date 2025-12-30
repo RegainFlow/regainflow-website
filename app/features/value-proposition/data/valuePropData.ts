@@ -1,4 +1,6 @@
-export const valuePropData = [
+import type { ValueProp } from '../types/value-proposition.types';
+
+export const valuePropData: ValueProp[] = [
   {
     title: 'Long-Term C2C Contracts',
     subtitle: 'Senior engineers who integrate seamlessly into your team for 6-12+ month engagements.',

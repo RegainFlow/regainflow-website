@@ -1,11 +1,4 @@
-export interface FeaturedCaseStudy {
-  title: string;
-  description: string;
-  image: string;
-  tags: string[];
-  industry: string;
-  primaryMetric: string;
-}
+import type { FeaturedCaseStudy } from '../types/case-studies-preview.types';
 
 export const featuredCaseStudies: FeaturedCaseStudy[] = [
   {
