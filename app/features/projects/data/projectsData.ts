@@ -18,16 +18,16 @@ export const projectsItems = [
   {
     title: 'HCM Interoperability Platform',
     description:
-      'End-to-end validation pipeline across TE, GL, Payroll, and HRIS systems. Schema normalization, deterministic rule engines, and reconciliation logic spanning 300+ tables and over 100 legacy interfaces mapped and validated against the modernized SAP integration layer.',
+      'Cross-functional data validation pipeline integrating payroll, finance, timekeeping, and benefits systems. Automated schema mapping, deterministic reconciliation logic, and enterprise-scale validation across legacy HRIS platforms migrating to modern ERP infrastructure.',
     image: '/images/projects/hcm-interop-platform.png',
     tags: [
-      'Legacy → SAP Migration',
-      'Multi-System Reconciliation',
-      'Operational Continuity'
+      'Multi-System Integration',
+      'Data Quality & Reconciliation',
+      'Enterprise ERP Migration'
     ],
     industry: 'DATA ENGINEERING',
     category: 'data',
-    primaryMetric: '$8M+ SAVED',
+    primaryMetric: 'Significant Cost Reduction Through Automation',
     link: 'https://hcm-interoperability-platform.vercel.app/',
     actionType: 'demo',
     capabilities: ['data-engineering']
