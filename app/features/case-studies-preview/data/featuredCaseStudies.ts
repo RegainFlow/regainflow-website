@@ -7,12 +7,12 @@ export const featuredCaseStudies: FeaturedCaseStudy[] = [
       'Autonomous validation engine replacing months of manual payroll quality checks across enterprise ERP systems. Multi-agent architecture orchestrating SQL validation, cross-system reconciliation, and AI-generated audit logic across distributed payroll platforms.',
     image: '/images/projects/multi-agent-payroll-validation.png',
     tags: [
-      '$8M+ Value Generated',
+      'Enterprise-Scale Automation',
       '10× Cycle Time Reduction',
       'Production-Grade LangGraph'
     ],
     industry: 'HCM Automation',
-    primaryMetric: '$8M+ Saved'
+    primaryMetric: '12 FTEs Saved'
   },
   {
     title: 'Hybrid RAG for Aerospace Engineering Search',
