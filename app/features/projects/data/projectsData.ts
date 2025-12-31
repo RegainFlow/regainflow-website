@@ -33,12 +33,12 @@ export const projectsItems = [
     capabilities: ['data-engineering']
   },
   {
-    title: 'Technical Documentation Search Engine',
+    title: '3D Printing Insight Engine',
     description:
-      'Production search engine using hybrid semantic search and Elasticsearch serving enterprise-scale SaaS platforms. Hybrid vector + keyword retrieval over millions of API documentation pages, technical guides, and knowledge base articles with context-aware accuracy.',
-    image: '/images/projects/rag_search_engine.png',
+      'AI-powered knowledge base for additive manufacturing patterns, material properties, and slice profiles. Helps makers and manufacturing engineers debug print failures and optimize settings.',
+    image: '/images/projects/insight-search-engine.png',
     tags: [
-      'Enterprise-Scale Deployment',
+      'Additive Manufacturing',
       'Millions of Records',
       'Hybrid Semantic Search'
     ],
@@ -46,7 +46,7 @@ export const projectsItems = [
     category: 'ai',
     primaryMetric: '5K+ Daily Users',
     actionType: 'demo',
-    link: 'https://enterprise-engineering-rag.vercel.app/',
+    link: 'https://insight-search-engine.vercel.app/',
     capabilities: ['ai-engineering']
   },
   {
@@ -66,10 +66,10 @@ export const projectsItems = [
     capabilities: ['ai-engineering']
   },
   {
-    title: 'Real-Time IoT Sensor Anomaly Detection',
+    title: 'Grid Infrastructure Analytics Platform',
     description:
-      'Built an automated system that detects anomalies in factory floor IoT sensor data for smart manufacturing. By cleaning historical sensor readings and training a custom time-series model, then deploying it into a live Grafana dashboard, the solution reduced manual quality review by 80% and enabled faster production issue response.',
-    image: '/images/projects/sat_anomaly_dashboard.png',
+      'Automated system that detects anomalies in utility and industrial grid infrastructure. Monitors thousands of sensor nodes to identify irregularities and potential failures. By cleaning historical telemetry and training a custom model, deployed into a live dashboard, it cut manual operator review by 80% and enabled faster incident response.',
+    image: '/images/projects/grid-network.png',
     tags: [
       '5K+ Sensor Streams',
       '80% Manual Review Reduction',
@@ -78,7 +78,7 @@ export const projectsItems = [
     industry: 'AI ENGINEERING',
     category: 'ai',
     primaryMetric: '3× Faster Insights',
-    link: 'https://real-time-satellite-telemetry-anoma.vercel.app/',
+    link: 'https://grid-network.vercel.app/',
     actionType: 'demo',
     capabilities: ['ai-engineering']
   },
@@ -135,17 +135,17 @@ export const projectsItems = [
   {
     title: 'Self-Service PaaS Environment Builder',
     description:
-      'Developed a PaaS-style automation platform that uses Terraform, Ansible, and Kubernetes to generate complete development environments from a simple UI request. Automated AWS EC2 provisioning, configuration management, and container orchestration dramatically reduced deployment overhead and enabled developer self-service for staging and production environments.',
-    image: '/images/projects/paas-env-builder.png',
+      'Automated environment provisioning system designed to accelerate developer velocity. Using a GitOps approach with Terraform and Ansible, developers can spin up ephemeral or persistent cloud environments in minutes rather than days. This solution standardizes cloud resource delivery across AWS, Azure, and GCP, featuring automated drift detection, cost controls, and seamless CI/CD integration for rapid iteration cycles.',
+    image: '/images/projects/paas-builder.png',
     tags: [
-      'Reduced DevOps Overhead',
-      'Environment-as-a-Service',
-      'Developer Self-Service'
+      'Developer Productivity',
+      'Infrastructure as Code (IaC)',
+      'CI/CD Automation'
     ],
     industry: 'DEVOPS ENGINEERING',
     category: 'devops',
     primaryMetric: '10× Faster Environment Setup',
-    link: 'https://self-service-paa-s-environment-buil.vercel.app/',
+    link: 'https://paas-builder.vercel.app/',
     actionType: 'demo',
     capabilities: ['devops-engineering']
   },
@@ -185,52 +185,48 @@ export const projectsItems = [
   {
     title: 'Vendor Catalog Data Normalization Platform',
     description:
-      'Developed an Angular + .NET platform for suppliers to upload non-standard product catalog Excel files, automatically normalize SKU data, pricing, and specifications, then populate a centralized SQL Server repository for e-commerce integration. Enabled consistent product data formatting and reliable ingestion across 200+ vendors.',
-    image: '/images/projects/dphsl.png',
+      'Enterprise-grade platform designed for retail and supply chain teams to ingest, normalize, and centralize non-standard vendor product catalogs. By automating the transformation of disparate Excel and CSV files into a unified SQL repository, the system ensures consistent product data for downstream procurement and e-commerce systems.',
+    image: '/images/projects/vendor-catalog.png',
     tags: [
-      'Automated Data Normalization',
+      'Supply Chain Automation',
       'Angular + .NET Pipeline',
-      'Consistent Catalog Data'
+      'Catalog Normalization'
     ],
     industry: 'FULLSTACK ENGINEERING',
     category: 'fullstack',
     primaryMetric: '90% Manual Cleanup Reduced',
     actionType: 'demo',
-    link: 'https://digital-program-hardware-software-u.vercel.app/',
+    link: 'https://vendor-catalog.vercel.app/',
     capabilities: ['full-stack-engineering']
   },
   {
     title: 'Procurement Analytics & Vendor Intelligence Platform',
     description:
-      'Built a Blazor + .NET system providing procurement cost analytics, vendor performance intelligence, and budget forecasting for manufacturing supply chains. Integrated with ERP systems and vendor pricing databases to generate detailed, itemized cost breakdowns and streamline procurement decision-making.',
-    image: '/images/projects/acqu-insight.png',
+      ' An enterprise-grade Blazor + .NET system designed to streamline procurement operations, vendor management, and cost forecasting. Integrates seamlessly with major ERP systems and external pricing APIs to generate detailed, itemized cost breakdowns and actionable financial insights.',
+    image: '/images/projects/procurement-analytics.png',
     tags: [
-      'Accelerated Budget Planning',
+      'Strategic Sourcing',
       'Blazor + .NET',
-      'Data-Driven Decision Support'
+      'Enterprise Cost Intelligence'
     ],
     industry: 'FULLSTACK ENGINEERING',
     category: 'fullstack',
     primaryMetric: '4× Faster Cost Analysis',
     actionType: 'demo',
-    link: 'https://acquisition-insights-cost-analysis.vercel.app/',
+    link: 'https://procurement-analytics.vercel.app/',
     capabilities: ['full-stack-engineering']
   },
   {
-    title: 'Supplier Risk Assessment & Performance Dashboard',
+    title: 'Vending Analytics Platform',
     description:
-      'Delivered an Angular + .NET scorecard platform that evaluates supplier risk, quality metrics, and performance factors for manufacturing supply chains. Provided a centralized quality management system to support supplier onboarding, ISO 9001 compliance tracking, and performance monitoring across 300+ suppliers.',
-    image: '/images/projects/sub_risk_oppor_scorecard.png',
-    tags: [
-      'Improved Vendor Evaluation',
-      'Angular + .NET',
-      'Quality Assurance Platform'
-    ],
+      'Automated system that optimizes vending machine fleets and supplier performance. Monitors stock levels, machine health, and sales velocity across distributed locations. By analyzing real-time telemetry and historical sales data, it reduced stockouts by 40% and improved route planning efficiency.',
+    image: '/images/projects/vending-machine-analytics.png',
+    tags: ['Real-Time Inventory', 'Angular + .NET', 'Predictive Maintenance'],
     industry: 'FULLSTACK ENGINEERING',
     category: 'fullstack',
     primaryMetric: '70% Faster Vendor Assessment',
     actionType: 'demo',
-    link: 'https://subcontractor-risk-opportunity-scor.vercel.app/',
+    link: 'https://vending-machine-analytics.vercel.app/',
     capabilities: ['full-stack-engineering']
   },
   {
