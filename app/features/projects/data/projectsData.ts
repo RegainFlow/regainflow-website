@@ -52,7 +52,7 @@ export const projectsItems = [
   {
     title: 'Corporate HR RAG',
     description:
-      'Rebuilt legacy search platform with modern BM25, hybrid vector retrieval, and RRF ranking. Improved query relevance, reduced ingestion time, and decreased operational overhead for engineering teams.',
+      'Rebuilt legacy search platform with modern BM25, hybrid vector retrieval, and RRF ranking. Improved query relevance, reduced ingestion time, and decreased operational overhead for HR teams and employees.',
     tags: [
       'Hybrid Vector + Keyword',
       'Improved Query Relevance',
