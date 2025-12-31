@@ -79,7 +79,7 @@ export const servicesOverviewData: ServicesOverview = {
       icon: 'PiDatabaseDuotone',
       title: 'Data Engineering',
       description:
-        'End-to-end data pipelines from schema normalization to multi-system integration. Processing 300+ tables with $8M+ savings and 5× throughput gains.'
+        'End-to-end data pipelines from schema normalization to multi-system integration. Enterprise-scale validation delivering significant cost savings and 5× throughput gains.'
     },
     {
       slug: 'full-stack-engineering',

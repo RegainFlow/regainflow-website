@@ -2,10 +2,10 @@ export const projectsItems = [
   {
     title: 'Multi-Agent Payroll Validation System',
     description:
-      'A multi-agent validation engine that automates SAP payroll quality checks. Agents run SQL validation, flat-file comparisons, and AI-generated rules to detect issues across legacy systems.',
+      'Multi-agent validation engine automating enterprise payroll quality checks across Workday and Oracle HCM systems. Agents execute SQL validation, cross-system reconciliation, and AI-generated audit rules to detect discrepancies across distributed payroll platforms.',
     image: '/images/projects/multi-agent-payroll-validation.png',
     tags: [
-      '90 → 3 Day Cycle Time',
+      '10× Cycle Time Reduction',
       'Multi-Agent Architecture',
       'Enterprise-Scale Automation'
     ],
@@ -18,16 +18,16 @@ export const projectsItems = [
   {
     title: 'HCM Interoperability Platform',
     description:
-      'End-to-end validation pipeline across TE, GL, Payroll, and HRIS systems. Schema normalization, deterministic rule engines, and reconciliation logic spanning 300+ tables and over 100 legacy interfaces mapped and validated against the modernized SAP integration layer.',
+      'Cross-functional data validation pipeline integrating payroll, finance, timekeeping, and benefits systems. Automated schema mapping, deterministic reconciliation logic, and enterprise-scale validation across legacy HRIS platforms migrating to modern ERP infrastructure.',
     image: '/images/projects/hcm-interop-platform.png',
     tags: [
-      'Legacy → SAP Migration',
-      'Multi-System Reconciliation',
-      'Operational Continuity'
+      'Multi-System Integration',
+      'Data Quality & Reconciliation',
+      'Enterprise ERP Migration'
     ],
     industry: 'DATA ENGINEERING',
     category: 'data',
-    primaryMetric: '$8M+ SAVED',
+    primaryMetric: 'Significant Cost Reduction Through Automation',
     link: 'https://hcm-interoperability-platform.vercel.app/',
     actionType: 'demo',
     capabilities: ['data-engineering']
@@ -52,7 +52,7 @@ export const projectsItems = [
   {
     title: 'Corporate HR RAG',
     description:
-      'Rebuilt legacy search platform with modern BM25, hybrid vector retrieval, and RRF ranking. Improved query relevance, reduced ingestion time, and decreased operational overhead for engineering teams.',
+      'Rebuilt legacy search platform with modern BM25, hybrid vector retrieval, and RRF ranking. Improved query relevance, reduced ingestion time, and decreased operational overhead for HR teams and employees.',
     tags: [
       'Hybrid Vector + Keyword',
       'Improved Query Relevance',
@@ -150,18 +150,18 @@ export const projectsItems = [
     capabilities: ['devops-engineering']
   },
   {
-    title: 'Cyber Operations Automation Tools',
+    title: 'Security Testing Automation Platform',
     description:
-      'Secure automation tools and threat-emulation utilities for Red/Blue Team exercises. Rapid data processing, adversarial simulation, and analysis scripts supporting operational readiness and training.',
+      'Automated penetration testing and vulnerability assessment platform for enterprise security teams. Streamlined security testing workflows, threat simulation, and compliance reporting scripts supporting SOC 2 and ISO 27001 certification.',
     image: '/images/projects/cyber-operations-automation.png',
     tags: [
-      'Automated Ops Readiness',
+      'Automated Security Testing',
       'Environment-as-a-Service',
-      'Lower Operational Cost'
+      'Lower Testing Costs'
     ],
     industry: 'FULLSTACK ENGINEERING',
     category: 'fullstack',
-    primaryMetric: 'Accelerated Ops Readiness',
+    primaryMetric: '3× Faster Security Assessments',
     actionType: 'none',
     capabilities: ['full-stack-engineering']
   },
@@ -244,7 +244,23 @@ export const projectsItems = [
     actionType: 'demo',
     link: 'https://marketing-automation-for-distributi.vercel.app/',
     capabilities: ['full-stack-engineering']
-  }
+  },
+  {
+  title: 'TherapeuTech: Real-Time Health Robotics Command',
+  description:
+    'Ultra-low latency control system for autonomous spherical robotics utilizing WebRTC for synchronized video, audio, and telemetry streams. Engineered a Flask-powered backend on GCP to enable real-time remote interaction, allowing hospitalized patients and remote pet owners to engage with physical environments through a self-contained, sensor-rich robotic orb.',
+  image: '/images/projects/therapeutech-demo.png',
+  tags: [
+    'WebRTC Low-Latency Control',
+    'Autonomous Spherical Drive',
+    'GCP & Flask Integration'
+  ],
+  industry: 'ROBOTICS/FULL STACK ENGINEERING',
+  category: 'fullstack',
+  primaryMetric: '< 50ms Latency',
+  actionType: 'none',
+  capabilities: ['full-stack-engineering']
+}
 ];
 
 export const categories = [

@@ -102,14 +102,14 @@ export const capabilitiesData: Capability[] = [
       'End-to-end data pipelines from schema normalization to multi-system integration at enterprise scale',
     heroImage: '/images/services/data-engineering/hero.png',
     description:
-      'Eliminate manual data quality checks and integration bottlenecks with intelligent data systems. Our solutions combine schema normalization across 300+ tables, cross-system validation engines, ETL pipelines processing millions of records, and API layers connecting legacy systems to modern platforms—delivering $8M+ in saved costs and 5× throughput improvements.',
+      'Eliminate manual data quality checks and integration bottlenecks with intelligent data systems. Our solutions combine enterprise-scale schema normalization, cross-system validation engines, ETL pipelines processing millions of records, and API layers connecting legacy systems to modern platforms—delivering significant cost reductions and 5× throughput improvements.',
     problems: [
       {
         icon: 'PiShuffleDuotone',
         problem:
-          'Inconsistent data across TE, GL, Payroll, HRIS creating reconciliation nightmares',
+          'Inconsistent data across finance, payroll, timekeeping, and HRIS creating reconciliation nightmares',
         solution:
-          'Cross-system validation engines processing 300+ tables with schema normalization and exception handling saving $8M+'
+          'Cross-system validation engines with enterprise-scale schema normalization and exception handling delivering significant cost savings'
       },
       {
         icon: 'PiPlugsConnectedDuotone',
