@@ -244,7 +244,23 @@ export const projectsItems = [
     actionType: 'demo',
     link: 'https://marketing-automation-for-distributi.vercel.app/',
     capabilities: ['full-stack-engineering']
-  }
+  },
+  {
+  title: 'TherapeuTech: Real-Time Health Robotics Command',
+  description:
+    'Ultra-low latency control system for autonomous spherical robotics utilizing WebRTC for synchronized video, audio, and telemetry streams. Engineered a Flask-powered backend on GCP to enable real-time remote interaction, allowing hospitalized patients and remote pet owners to engage with physical environments through a self-contained, sensor-rich robotic orb.',
+  image: '/images/projects/therapeutech-demo.png',
+  tags: [
+    'WebRTC Low-Latency Control',
+    'Autonomous Spherical Drive',
+    'GCP & Flask Integration'
+  ],
+  industry: 'ROBOTICS/FULL STACK ENGINEERING',
+  category: 'fullstack',
+  primaryMetric: '< 50ms Latency',
+  actionType: 'none',
+  capabilities: ['full-stack-engineering']
+}
 ];
 
 export const categories = [
