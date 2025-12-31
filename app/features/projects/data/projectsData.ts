@@ -2,10 +2,10 @@ export const projectsItems = [
   {
     title: 'Multi-Agent Payroll Validation System',
     description:
-      'A multi-agent validation engine that automates SAP payroll quality checks. Agents run SQL validation, flat-file comparisons, and AI-generated rules to detect issues across legacy systems.',
+      'A multi-agent validation engine that automates enterprise payroll quality checks across Oracle HCM and Workday systems. Agents run SQL validation, cross-system reconciliation, and AI-generated rules to detect discrepancies in distributed payroll platforms for healthcare organizations.',
     image: '/images/projects/multi-agent-payroll-validation.png',
     tags: [
-      '90 → 3 Day Cycle Time',
+      'Weeks to Days Cycle Time',
       'Multi-Agent Architecture',
       'Enterprise-Scale Automation'
     ],
@@ -18,33 +18,33 @@ export const projectsItems = [
   {
     title: 'HCM Interoperability Platform',
     description:
-      'End-to-end validation pipeline across TE, GL, Payroll, and HRIS systems. Schema normalization, deterministic rule engines, and reconciliation logic spanning 300+ tables and over 100 legacy interfaces mapped and validated against the modernized SAP integration layer.',
+      'End-to-end validation pipeline across HRIS, Payroll, Finance, and Benefits systems for a multi-facility healthcare network. Schema normalization, deterministic rule engines, and reconciliation logic ensuring data consistency across enterprise-scale HR platforms during cloud migration.',
     image: '/images/projects/hcm-interop-platform.png',
     tags: [
-      'Legacy → SAP Migration',
+      'Multi-System Integration',
       'Multi-System Reconciliation',
       'Operational Continuity'
     ],
     industry: 'DATA ENGINEERING',
     category: 'data',
-    primaryMetric: '$8M+ SAVED',
+    primaryMetric: 'Operational Efficiency Gains',
     link: 'https://hcm-interoperability-platform.vercel.app/',
     actionType: 'demo',
     capabilities: ['data-engineering']
   },
   {
-    title: 'Enterprise Engineering RAG',
+    title: 'Technical Documentation Search Engine',
     description:
-      'Production search engine using ELSER V2 and Elasticsearch serving 6,000+ daily users. Hybrid semantic + keyword retrieval over millions of engineering documents with domain-specific accuracy.',
+      'Production search engine using hybrid semantic search and Elasticsearch serving enterprise-scale SaaS platforms. Hybrid vector + keyword retrieval over millions of API documentation pages, technical guides, and knowledge base articles with context-aware accuracy.',
     image: '/images/projects/rag_search_engine.png',
     tags: [
-      '6K+ Daily Active Users',
+      'Enterprise-Scale Deployment',
       'Millions of Records',
-      'ELSER V2 Semantic Search'
+      'Hybrid Semantic Search'
     ],
     industry: 'AI ENGINEERING',
     category: 'ai',
-    primaryMetric: '6K+ Users',
+    primaryMetric: '5K+ Daily Users',
     actionType: 'demo',
     link: 'https://enterprise-engineering-rag.vercel.app/',
     capabilities: ['ai-engineering']
@@ -52,7 +52,7 @@ export const projectsItems = [
   {
     title: 'Corporate HR RAG',
     description:
-      'Rebuilt legacy search platform with modern BM25, hybrid vector retrieval, and RRF ranking. Improved query relevance, reduced ingestion time, and decreased operational overhead for engineering teams.',
+      'Rebuilt legacy search platform for a multi-state healthcare network with modern BM25, hybrid vector retrieval, and RRF ranking. Improved query relevance for HR policy lookups, reduced ingestion time, and decreased operational overhead for HR teams managing employee documentation.',
     tags: [
       'Hybrid Vector + Keyword',
       'Improved Query Relevance',
@@ -66,9 +66,9 @@ export const projectsItems = [
     capabilities: ['ai-engineering']
   },
   {
-    title: 'Real-Time Satellite Telemetry Anomaly Detection',
+    title: 'Real-Time IoT Sensor Anomaly Detection',
     description:
-      'We built an automated system that detects anomalies in satellite sensor data. By cleaning historical telemetry and training a custom model, then deploying it into a live dashboard, the solution cut manual operator review by 80% and enabled much faster incident response.',
+      'Built an automated system that detects anomalies in factory floor IoT sensor data for smart manufacturing. By cleaning historical sensor readings and training a custom time-series model, then deploying it into a live Grafana dashboard, the solution reduced manual quality review by 80% and enabled faster production issue response.',
     image: '/images/projects/sat_anomaly_dashboard.png',
     tags: [
       '5K+ Sensor Streams',
@@ -83,9 +83,9 @@ export const projectsItems = [
     capabilities: ['ai-engineering']
   },
   {
-    title: 'Multi-Format Engineering ETL Pipeline',
+    title: 'Multi-Format Document ETL Pipeline',
     description:
-      'We created a C# backend that loads many file types, converts them to PDFs, sends them to a Python parser that extracts text, chunks content, summarizes tables, and then indexes the processed data into Elasticsearch so engineering teams can search it quickly.',
+      'Created a C# backend that loads multiple file formats, converts them to PDFs, sends them to a Python parser that extracts text, chunks content, summarizes tables, and then indexes the processed data into Elasticsearch for fast enterprise knowledge base search across technical documentation.',
     image: '/images/projects/multi-format-etl-pipeline.png',
     tags: [
       'Reusable + Scalable ETL Pipeline',
@@ -102,7 +102,7 @@ export const projectsItems = [
   {
     title: 'Legacy RPA Modernization with Python & LangGraph',
     description:
-      'Converted Blue Prism legacy automations into modern Python workflows with multi-agent AI orchestration. Eliminated licensing costs, improved reliability, and reduced multi-hour processes to minutes.',
+      'Converted legacy RPA platform automations into modern Python workflows with multi-agent AI orchestration for a financial services back-office. Eliminated vendor licensing costs, improved reliability, and reduced multi-hour invoice processing to minutes with LangGraph-based decision logic.',
 
     image: '/images/projects/legacy-rpa-modernization.png',
     tags: [
@@ -135,12 +135,12 @@ export const projectsItems = [
   {
     title: 'Self-Service PaaS Environment Builder',
     description:
-      'Developed a PaaS-style automation platform that uses Terraform, Ansible, and Kubernetes to generate complete engineering environments from a simple UI request. Automated provisioning, configuration, and HighSide PXE-based bootstraps dramatically reduced deployment overhead and DevOps involvement.',
+      'Developed a PaaS-style automation platform that uses Terraform, Ansible, and Kubernetes to generate complete development environments from a simple UI request. Automated AWS EC2 provisioning, configuration management, and container orchestration dramatically reduced deployment overhead and enabled developer self-service for staging and production environments.',
     image: '/images/projects/paas-env-builder.png',
     tags: [
       'Reduced DevOps Overhead',
       'Environment-as-a-Service',
-      'Reduced Analyst Overhead'
+      'Developer Self-Service'
     ],
     industry: 'DEVOPS ENGINEERING',
     category: 'devops',
@@ -150,25 +150,25 @@ export const projectsItems = [
     capabilities: ['devops-engineering']
   },
   {
-    title: 'Cyber Operations Automation Tools',
+    title: 'Security Testing Automation Platform',
     description:
-      'Secure automation tools and threat-emulation utilities for Red/Blue Team exercises. Rapid data processing, adversarial simulation, and analysis scripts supporting operational readiness and training.',
+      'Automated security testing platform for enterprise vulnerability assessment and penetration testing. Rapid scanning, customizable test suites, and detailed reporting scripts supporting SOC 2 compliance and security audits for SaaS companies.',
     image: '/images/projects/cyber-operations-automation.png',
     tags: [
-      'Automated Ops Readiness',
-      'Environment-as-a-Service',
-      'Lower Operational Cost'
+      'Automated Security Testing',
+      'SOC 2 Compliance',
+      'Lower Testing Cost'
     ],
     industry: 'FULLSTACK ENGINEERING',
     category: 'fullstack',
-    primaryMetric: 'Accelerated Ops Readiness',
+    primaryMetric: '5× Faster Security Assessments',
     actionType: 'none',
     capabilities: ['full-stack-engineering']
   },
   {
     title: 'AI-Powered Document Retrieval Platform',
     description:
-      'Built a full-stack platform using Java, SpringBoot, and IBM Watson for AI-assisted document retrieval, automated data synchronization, and scheduled task execution. Delivered a modern UI that improved accessibility while ensuring compatibility with legacy systems.',
+      'Built a full-stack platform using Java, SpringBoot, and Claude AI for intelligent document retrieval, automated data synchronization, and scheduled task execution in legal case management. Delivered a modern UI that improved accessibility while ensuring compatibility with legacy document management systems.',
     image: '/images/projects/ai-document-retrieval.png',
     tags: [
       'Improved Insight Delivery',
@@ -182,14 +182,14 @@ export const projectsItems = [
     capabilities: ['full-stack-engineering']
   },
   {
-    title: 'Digital Program Hardware/Software Upload System',
+    title: 'Vendor Catalog Data Normalization Platform',
     description:
-      'Developed an Angular + .NET platform for teams to upload non-standard Excel sheets, automatically normalize the data, and populate a centralized SQL Server repository. Enabled consistent formatting and reliable ingestion to support downstream systems.',
+      'Developed an Angular + .NET platform for suppliers to upload non-standard product catalog Excel files, automatically normalize SKU data, pricing, and specifications, then populate a centralized SQL Server repository for e-commerce integration. Enabled consistent product data formatting and reliable ingestion across 200+ vendors.',
     image: '/images/projects/dphsl.png',
     tags: [
       'Automated Data Normalization',
       'Angular + .NET Pipeline',
-      'Consistent Program Data'
+      'Consistent Catalog Data'
     ],
     industry: 'FULLSTACK ENGINEERING',
     category: 'fullstack',
@@ -199,12 +199,12 @@ export const projectsItems = [
     capabilities: ['full-stack-engineering']
   },
   {
-    title: 'Acquisition Insights & Cost Analysis Platform',
+    title: 'Procurement Analytics & Vendor Intelligence Platform',
     description:
-      'Built a Blazor + .NET system providing acquisition insights, vendor intelligence, and proposal support. Integrated with upstream data sources such as DPHSL to generate detailed, itemized cost breakdowns and streamline proposal workflows.',
+      'Built a Blazor + .NET system providing procurement cost analytics, vendor performance intelligence, and budget forecasting for manufacturing supply chains. Integrated with ERP systems and vendor pricing databases to generate detailed, itemized cost breakdowns and streamline procurement decision-making.',
     image: '/images/projects/acqu-insight.png',
     tags: [
-      'Accelerated Proposal Creation',
+      'Accelerated Budget Planning',
       'Blazor + .NET',
       'Data-Driven Decision Support'
     ],
@@ -216,9 +216,9 @@ export const projectsItems = [
     capabilities: ['full-stack-engineering']
   },
   {
-    title: 'Subcontractor Risk & Opportunity Scorecard',
+    title: 'Supplier Risk Assessment & Performance Dashboard',
     description:
-      'Delivered an Angular + .NET scorecard platform that evaluates subcontractor risk, opportunities, and performance factors. Provided a centralized QA system to support vendor approval, quality assurance, and acquisition readiness.',
+      'Delivered an Angular + .NET scorecard platform that evaluates supplier risk, quality metrics, and performance factors for manufacturing supply chains. Provided a centralized quality management system to support supplier onboarding, ISO 9001 compliance tracking, and performance monitoring across 300+ suppliers.',
     image: '/images/projects/sub_risk_oppor_scorecard.png',
     tags: [
       'Improved Vendor Evaluation',
@@ -256,8 +256,8 @@ export const categories = [
 ];
 
 export const metrics = [
-  { label: 'Estimated Value Created', value: '$8M+' },
+  { label: 'Estimated Value Created', value: '$5M+' },
   { label: 'Engineering Hours Saved', value: '5,000+' },
   { label: 'Enterprise Automations Delivered', value: '15+' },
-  { label: 'Business Users Impacted', value: '6,000+' }
+  { label: 'Business Users Impacted', value: '5,000+' }
 ];
