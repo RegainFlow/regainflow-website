@@ -150,18 +150,18 @@ export const projectsItems = [
     capabilities: ['devops-engineering']
   },
   {
-    title: 'Cyber Operations Automation Tools',
+    title: 'Security Testing Automation Platform',
     description:
-      'Secure automation tools and threat-emulation utilities for Red/Blue Team exercises. Rapid data processing, adversarial simulation, and analysis scripts supporting operational readiness and training.',
+      'Automated penetration testing and vulnerability assessment platform for enterprise security teams. Streamlined security testing workflows, threat simulation, and compliance reporting scripts supporting SOC 2 and ISO 27001 certification.',
     image: '/images/projects/cyber-operations-automation.png',
     tags: [
-      'Automated Ops Readiness',
+      'Automated Security Testing',
       'Environment-as-a-Service',
-      'Lower Operational Cost'
+      'Lower Testing Costs'
     ],
     industry: 'FULLSTACK ENGINEERING',
     category: 'fullstack',
-    primaryMetric: 'Accelerated Ops Readiness',
+    primaryMetric: '3× Faster Security Assessments',
     actionType: 'none',
     capabilities: ['full-stack-engineering']
   },
