@@ -2,10 +2,10 @@ export const projectsItems = [
   {
     title: 'Multi-Agent Payroll Validation System',
     description:
-      'A multi-agent validation engine that automates SAP payroll quality checks. Agents run SQL validation, flat-file comparisons, and AI-generated rules to detect issues across legacy systems.',
+      'Multi-agent validation engine automating enterprise payroll quality checks across Workday and Oracle HCM systems. Agents execute SQL validation, cross-system reconciliation, and AI-generated audit rules to detect discrepancies across distributed payroll platforms.',
     image: '/images/projects/multi-agent-payroll-validation.png',
     tags: [
-      '90 → 3 Day Cycle Time',
+      '10× Cycle Time Reduction',
       'Multi-Agent Architecture',
       'Enterprise-Scale Automation'
     ],

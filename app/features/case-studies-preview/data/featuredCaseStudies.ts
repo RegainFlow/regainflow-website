@@ -4,11 +4,11 @@ export const featuredCaseStudies: FeaturedCaseStudy[] = [
   {
     title: 'Multi-Agent Payroll Validation System',
     description:
-      'Autonomous validation engine replacing months of manual SAP payroll quality checks. Multi-agent architecture orchestrating SQL validation, flat-file comparisons, and AI-generated logic across legacy systems.',
+      'Autonomous validation engine replacing months of manual payroll quality checks across enterprise ERP systems. Multi-agent architecture orchestrating SQL validation, cross-system reconciliation, and AI-generated audit logic across distributed payroll platforms.',
     image: '/images/projects/multi-agent-payroll-validation.png',
     tags: [
       '$8M+ Value Generated',
-      '90-Day to 3-Day Turnaround',
+      '10× Cycle Time Reduction',
       'Production-Grade LangGraph'
     ],
     industry: 'HCM Automation',
