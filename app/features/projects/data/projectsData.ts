@@ -270,7 +270,6 @@ export const projectsItems = [
     category: 'fullstack',
     primaryMetric: '100% User Satisfaction',
     actionType: 'none',
-    link: 'https://wedding-registry.vercel.app/',
     capabilities: ['full-stack-engineering']
   },
   {
