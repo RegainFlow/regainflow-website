@@ -2,6 +2,8 @@
 
 Thank you for your interest in contributing to RegainFlow! This guide will help you get started with the development process.
 
+RegainFlow is a software engineering agency delivering AI Engineering, Data Engineering, Full-Stack Development, and DevOps solutions.
+
 ## Table of Contents
 
 - [Getting Started](#getting-started)

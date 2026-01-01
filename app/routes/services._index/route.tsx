@@ -18,7 +18,7 @@ export const links: Route.LinksFunction = () => [
 ];
 
 export function meta({}: Route.MetaArgs) {
-  const title = 'Enterprise Engineering & AI Solutions | RegainFlow';
+  const title = 'RegainFlow | Engineering Services';
   const description =
     'Production AI engineering, data engineering, full-stack development, and DevOps solutions. From multi-agent systems to self-service PaaS platforms—we deliver engineering that scales.';
   const image = 'https://www.regainflow.com/images/og/og-services.png';

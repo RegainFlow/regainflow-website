@@ -19,7 +19,7 @@ export default function FAQ() {
           Frequently Asked <span className="text-highlight">Questions</span>
         </h2>
         <p className="section-subtitle">
-          Everything you need to know about working with Regain Flow
+          Everything you need to know about working with RegainFlow
         </p>
 
         <div className="faq-accordion">

@@ -8,9 +8,9 @@ export const links: Route.LinksFunction = () => [
   { rel: 'stylesheet', href: projectsStyles }
 ];
 
-export function meta({ }: Route.MetaArgs) {
+export function meta({}: Route.MetaArgs) {
   return [
-    { title: 'Client Results | RegainFlow Engineering Consultancy' },
+    { title: 'RegainFlow | Client Results' },
     {
       name: 'description',
       content:
@@ -31,7 +31,8 @@ export default function projects() {
             Client <span className="text-highlight">Results</span>
           </h1>
           <p className="projects-subtitle">
-            Real projects, measured impact, production-scale outcomes delivered by senior engineers.
+            Real projects, measured impact, production-scale outcomes delivered
+            by senior engineers.
           </p>
         </div>
 

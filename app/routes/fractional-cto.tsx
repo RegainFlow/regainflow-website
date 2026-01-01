@@ -6,7 +6,7 @@ export function meta({}: Route.MetaArgs) {
   return [
     {
       title:
-        'Fractional CTO Services | Strategic Technology Leadership + Hands-On Engineering'
+        'RegainFlow | Fractional CTO Services'
     },
     {
       name: 'description',
@@ -15,7 +15,7 @@ export function meta({}: Route.MetaArgs) {
     },
     {
       property: 'og:title',
-      content: 'Fractional CTO Services | RegainFlow'
+      content: 'RegainFlow | Fractional CTO Services'
     },
     {
       property: 'og:description',

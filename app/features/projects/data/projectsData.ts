@@ -2,10 +2,10 @@ export const projectsItems = [
   {
     title: 'Multi-Agent Payroll Validation System',
     description:
-      'Multi-agent validation engine automating enterprise payroll quality checks across Workday and Oracle HCM systems. Agents execute SQL validation, cross-system reconciliation, and AI-generated audit rules to detect discrepancies across distributed payroll platforms.',
+      'A multi-agent validation engine that automates enterprise payroll quality checks across Oracle HCM and Workday systems. Agents run SQL validation, cross-system reconciliation, and AI-generated rules to detect discrepancies in distributed payroll platforms for healthcare organizations.',
     image: '/images/projects/multi-agent-payroll-validation.png',
     tags: [
-      '10× Cycle Time Reduction',
+      'Weeks to Days Cycle Time',
       'Multi-Agent Architecture',
       'Enterprise-Scale Automation'
     ],
@@ -18,41 +18,41 @@ export const projectsItems = [
   {
     title: 'HCM Interoperability Platform',
     description:
-      'Cross-functional data validation pipeline integrating payroll, finance, timekeeping, and benefits systems. Automated schema mapping, deterministic reconciliation logic, and enterprise-scale validation across legacy HRIS platforms migrating to modern ERP infrastructure.',
+      'End-to-end validation pipeline across HRIS, Payroll, Finance, and Benefits systems for a multi-facility healthcare network. Schema normalization, deterministic rule engines, and reconciliation logic ensuring data consistency across enterprise-scale HR platforms during cloud migration.',
     image: '/images/projects/hcm-interop-platform.png',
     tags: [
       'Multi-System Integration',
-      'Data Quality & Reconciliation',
-      'Enterprise ERP Migration'
+      'Multi-System Reconciliation',
+      'Operational Continuity'
     ],
     industry: 'DATA ENGINEERING',
     category: 'data',
-    primaryMetric: 'Significant Cost Reduction Through Automation',
+    primaryMetric: 'Operational Efficiency Gains',
     link: 'https://hcm-interoperability-platform.vercel.app/',
     actionType: 'demo',
     capabilities: ['data-engineering']
   },
   {
-    title: 'Enterprise Engineering RAG',
+    title: '3D Printing Insight Engine',
     description:
-      'Production search engine using ELSER V2 and Elasticsearch serving 6,000+ daily users. Hybrid semantic + keyword retrieval over millions of engineering documents with domain-specific accuracy.',
-    image: '/images/projects/rag_search_engine.png',
+      'AI-powered knowledge base for additive manufacturing patterns, material properties, and slice profiles. Helps makers and manufacturing engineers debug print failures and optimize settings.',
+    image: '/images/projects/insight-search-engine.png',
     tags: [
-      '6K+ Daily Active Users',
+      'Additive Manufacturing',
       'Millions of Records',
-      'ELSER V2 Semantic Search'
+      'Hybrid Semantic Search'
     ],
     industry: 'AI ENGINEERING',
     category: 'ai',
-    primaryMetric: '6K+ Users',
+    primaryMetric: '5K+ Daily Users',
     actionType: 'demo',
-    link: 'https://enterprise-engineering-rag.vercel.app/',
+    link: 'https://insight-search-engine.vercel.app/',
     capabilities: ['ai-engineering']
   },
   {
     title: 'Corporate HR RAG',
     description:
-      'Rebuilt legacy search platform with modern BM25, hybrid vector retrieval, and RRF ranking. Improved query relevance, reduced ingestion time, and decreased operational overhead for HR teams and employees.',
+      'Rebuilt legacy search platform for a multi-state healthcare network with modern BM25, hybrid vector retrieval, and RRF ranking. Improved query relevance for HR policy lookups, reduced ingestion time, and decreased operational overhead for HR teams managing employee documentation.',
     tags: [
       'Hybrid Vector + Keyword',
       'Improved Query Relevance',
@@ -66,10 +66,10 @@ export const projectsItems = [
     capabilities: ['ai-engineering']
   },
   {
-    title: 'Real-Time Satellite Telemetry Anomaly Detection',
+    title: 'Grid Infrastructure Analytics Platform',
     description:
-      'We built an automated system that detects anomalies in satellite sensor data. By cleaning historical telemetry and training a custom model, then deploying it into a live dashboard, the solution cut manual operator review by 80% and enabled much faster incident response.',
-    image: '/images/projects/sat_anomaly_dashboard.png',
+      'Automated system that detects anomalies in utility and industrial grid infrastructure. Monitors thousands of sensor nodes to identify irregularities and potential failures. By cleaning historical telemetry and training a custom model, deployed into a live dashboard, it cut manual operator review by 80% and enabled faster incident response.',
+    image: '/images/projects/grid-network.png',
     tags: [
       '5K+ Sensor Streams',
       '80% Manual Review Reduction',
@@ -78,14 +78,14 @@ export const projectsItems = [
     industry: 'AI ENGINEERING',
     category: 'ai',
     primaryMetric: '3× Faster Insights',
-    link: 'https://real-time-satellite-telemetry-anoma.vercel.app/',
+    link: 'https://grid-network.vercel.app/',
     actionType: 'demo',
     capabilities: ['ai-engineering']
   },
   {
-    title: 'Multi-Format Engineering ETL Pipeline',
+    title: 'Multi-Format Document ETL Pipeline',
     description:
-      'We created a C# backend that loads many file types, converts them to PDFs, sends them to a Python parser that extracts text, chunks content, summarizes tables, and then indexes the processed data into Elasticsearch so engineering teams can search it quickly.',
+      'Created a C# backend that loads multiple file formats, converts them to PDFs, sends them to a Python parser that extracts text, chunks content, summarizes tables, and then indexes the processed data into Elasticsearch for fast enterprise knowledge base search across technical documentation.',
     image: '/images/projects/multi-format-etl-pipeline.png',
     tags: [
       'Reusable + Scalable ETL Pipeline',
@@ -96,14 +96,13 @@ export const projectsItems = [
     category: 'data',
     primaryMetric: '5× Indexing Throughput',
     actionType: 'demo',
-    link: 'https://multi-format-engineering-etl-pipeli.vercel.app/',
+    link: 'https://multi-format-etl-pipeline.vercel.app/',
     capabilities: ['data-engineering']
   },
   {
     title: 'Legacy RPA Modernization with Python & LangGraph',
     description:
-      'Converted Blue Prism legacy automations into modern Python workflows with multi-agent AI orchestration. Eliminated licensing costs, improved reliability, and reduced multi-hour processes to minutes.',
-
+      'Converted legacy RPA platform automations into modern Python workflows with multi-agent AI orchestration for a financial services back-office. Eliminated vendor licensing costs, improved reliability, and reduced multi-hour invoice processing to minutes with LangGraph-based decision logic.',
     image: '/images/projects/legacy-rpa-modernization.png',
     tags: [
       'Eliminated RPA Licensing',
@@ -120,8 +119,8 @@ export const projectsItems = [
     title: 'UI Modernization Overhaul',
     description:
       'Modernized a large Angular application by migrating to a faster, modern framework, improving performance by 35%, reducing build times, and upgrading the delivery pipeline to a scalable GitLab + Kubernetes workflow.',
-      image: '/images/projects/ui-overhaul.png',
-      tags: [
+    image: '/images/projects/ui-overhaul.png',
+    tags: [
       'Legacy → Modern Migration',
       '35% Performance Gain',
       'Multi-Team Scalability'
@@ -135,40 +134,40 @@ export const projectsItems = [
   {
     title: 'Self-Service PaaS Environment Builder',
     description:
-      'Developed a PaaS-style automation platform that uses Terraform, Ansible, and Kubernetes to generate complete engineering environments from a simple UI request. Automated provisioning, configuration, and HighSide PXE-based bootstraps dramatically reduced deployment overhead and DevOps involvement.',
-    image: '/images/projects/paas-env-builder.png',
+      'Automated environment provisioning system designed to accelerate developer velocity. Using a GitOps approach with Terraform and Ansible, developers can spin up ephemeral or persistent cloud environments in minutes rather than days. This solution standardizes cloud resource delivery across AWS, Azure, and GCP, featuring automated drift detection, cost controls, and seamless CI/CD integration for rapid iteration cycles.',
+    image: '/images/projects/paas-builder.png',
     tags: [
-      'Reduced DevOps Overhead',
-      'Environment-as-a-Service',
-      'Reduced Analyst Overhead'
+      'Developer Productivity',
+      'Infrastructure as Code (IaC)',
+      'CI/CD Automation'
     ],
     industry: 'DEVOPS ENGINEERING',
     category: 'devops',
     primaryMetric: '10× Faster Environment Setup',
-    link: 'https://self-service-paa-s-environment-buil.vercel.app/',
+    link: 'https://paas-builder.vercel.app/',
     actionType: 'demo',
     capabilities: ['devops-engineering']
   },
   {
     title: 'Security Testing Automation Platform',
     description:
-      'Automated penetration testing and vulnerability assessment platform for enterprise security teams. Streamlined security testing workflows, threat simulation, and compliance reporting scripts supporting SOC 2 and ISO 27001 certification.',
+      'Automated security testing platform for enterprise vulnerability assessment and penetration testing. Rapid scanning, customizable test suites, and detailed reporting scripts supporting SOC 2 compliance and security audits for SaaS companies.',
     image: '/images/projects/cyber-operations-automation.png',
     tags: [
       'Automated Security Testing',
-      'Environment-as-a-Service',
-      'Lower Testing Costs'
+      'SOC 2 Compliance',
+      'Lower Testing Cost'
     ],
     industry: 'FULLSTACK ENGINEERING',
     category: 'fullstack',
-    primaryMetric: '3× Faster Security Assessments',
+    primaryMetric: '5× Faster Security Assessments',
     actionType: 'none',
     capabilities: ['full-stack-engineering']
   },
   {
     title: 'AI-Powered Document Retrieval Platform',
     description:
-      'Built a full-stack platform using Java, SpringBoot, and IBM Watson for AI-assisted document retrieval, automated data synchronization, and scheduled task execution. Delivered a modern UI that improved accessibility while ensuring compatibility with legacy systems.',
+      'Built a full-stack platform using Java, SpringBoot, and Claude AI for intelligent document retrieval, automated data synchronization, and scheduled task execution in legal case management. Delivered a modern UI that improved accessibility while ensuring compatibility with legacy document management systems.',
     image: '/images/projects/ai-document-retrieval.png',
     tags: [
       'Improved Insight Delivery',
@@ -182,54 +181,50 @@ export const projectsItems = [
     capabilities: ['full-stack-engineering']
   },
   {
-    title: 'Digital Program Hardware/Software Upload System',
+    title: 'Vendor Catalog Data Normalization Platform',
     description:
-      'Developed an Angular + .NET platform for teams to upload non-standard Excel sheets, automatically normalize the data, and populate a centralized SQL Server repository. Enabled consistent formatting and reliable ingestion to support downstream systems.',
-    image: '/images/projects/dphsl.png',
+      'Enterprise-grade platform designed for retail and supply chain teams to ingest, normalize, and centralize non-standard vendor product catalogs. By automating the transformation of disparate Excel and CSV files into a unified SQL repository, the system ensures consistent product data for downstream procurement and e-commerce systems.',
+    image: '/images/projects/vendor-catalog.png',
     tags: [
-      'Automated Data Normalization',
+      'Supply Chain Automation',
       'Angular + .NET Pipeline',
-      'Consistent Program Data'
+      'Catalog Normalization'
     ],
     industry: 'FULLSTACK ENGINEERING',
     category: 'fullstack',
     primaryMetric: '90% Manual Cleanup Reduced',
     actionType: 'demo',
-    link: 'https://digital-program-hardware-software-u.vercel.app/',
+    link: 'https://vendor-catalog.vercel.app/',
     capabilities: ['full-stack-engineering']
   },
   {
-    title: 'Acquisition Insights & Cost Analysis Platform',
+    title: 'Procurement Analytics & Vendor Intelligence Platform',
     description:
-      'Built a Blazor + .NET system providing acquisition insights, vendor intelligence, and proposal support. Integrated with upstream data sources such as DPHSL to generate detailed, itemized cost breakdowns and streamline proposal workflows.',
-    image: '/images/projects/acqu-insight.png',
+      ' An enterprise-grade Blazor + .NET system designed to streamline procurement operations, vendor management, and cost forecasting. Integrates seamlessly with major ERP systems and external pricing APIs to generate detailed, itemized cost breakdowns and actionable financial insights.',
+    image: '/images/projects/procurement-analytics.png',
     tags: [
-      'Accelerated Proposal Creation',
+      'Strategic Sourcing',
       'Blazor + .NET',
-      'Data-Driven Decision Support'
+      'Enterprise Cost Intelligence'
     ],
     industry: 'FULLSTACK ENGINEERING',
     category: 'fullstack',
     primaryMetric: '4× Faster Cost Analysis',
     actionType: 'demo',
-    link: 'https://acquisition-insights-cost-analysis.vercel.app/',
+    link: 'https://procurement-analytics.vercel.app/',
     capabilities: ['full-stack-engineering']
   },
   {
-    title: 'Subcontractor Risk & Opportunity Scorecard',
+    title: 'Vending Analytics Platform',
     description:
-      'Delivered an Angular + .NET scorecard platform that evaluates subcontractor risk, opportunities, and performance factors. Provided a centralized QA system to support vendor approval, quality assurance, and acquisition readiness.',
-    image: '/images/projects/sub_risk_oppor_scorecard.png',
-    tags: [
-      'Improved Vendor Evaluation',
-      'Angular + .NET',
-      'Quality Assurance Platform'
-    ],
+      'Automated system that optimizes vending machine fleets and supplier performance. Monitors stock levels, machine health, and sales velocity across distributed locations. By analyzing real-time telemetry and historical sales data, it reduced stockouts by 40% and improved route planning efficiency.',
+    image: '/images/projects/vending-machine-analytics.png',
+    tags: ['Real-Time Inventory', 'Angular + .NET', 'Predictive Maintenance'],
     industry: 'FULLSTACK ENGINEERING',
     category: 'fullstack',
     primaryMetric: '70% Faster Vendor Assessment',
     actionType: 'demo',
-    link: 'https://subcontractor-risk-opportunity-scor.vercel.app/',
+    link: 'https://vending-machine-analytics.vercel.app/',
     capabilities: ['full-stack-engineering']
   },
   {
@@ -242,38 +237,72 @@ export const projectsItems = [
     category: 'fullstack',
     primaryMetric: '4x Growth',
     actionType: 'demo',
-    link: 'https://marketing-automation-for-distributi.vercel.app/',
+    link: 'https://marketing-automation-net.vercel.app/',
     capabilities: ['full-stack-engineering']
   },
   {
-  title: 'TherapeuTech: Real-Time Health Robotics Command',
-  description:
-    'Ultra-low latency control system for autonomous spherical robotics utilizing WebRTC for synchronized video, audio, and telemetry streams. Engineered a Flask-powered backend on GCP to enable real-time remote interaction, allowing hospitalized patients and remote pet owners to engage with physical environments through a self-contained, sensor-rich robotic orb.',
-  image: '/images/projects/therapeutech-demo.png',
-  tags: [
-    'WebRTC Low-Latency Control',
-    'Autonomous Spherical Drive',
-    'GCP & Flask Integration'
-  ],
-  industry: 'ROBOTICS/FULL STACK ENGINEERING',
-  category: 'fullstack',
-  primaryMetric: '< 50ms Latency',
-  actionType: 'none',
-  capabilities: ['full-stack-engineering']
-}
+    title: 'TherapeuTech: Real-Time Health Robotics Command',
+    description:
+      'Ultra-low latency control system for autonomous spherical robotics utilizing WebRTC for synchronized video, audio, and telemetry streams. Engineered a Flask-powered backend on GCP to enable real-time remote interaction, allowing hospitalized patients and remote pet owners to engage with physical environments through a self-contained, sensor-rich robotic orb.',
+    image: '/images/projects/therapeutech-demo.png',
+    tags: [
+      'WebRTC Low-Latency Control',
+      'Autonomous Spherical Drive',
+      'GCP & Flask Integration'
+    ],
+    industry: 'ROBOTICS/FULL STACK ENGINEERING',
+    category: 'fullstack',
+    primaryMetric: '< 50ms Latency',
+    actionType: 'none',
+    capabilities: ['full-stack-engineering']
+  },
+  {
+    title: 'Wedding Registry & Event Management Platform',
+    description:
+      'Full-stack event management platform built with Vue.js and Firebase serverless architecture. Integrated CRM workflows for guest tracking and Stripe payment processing for gift contributions. Real-time registry updates, automated guest notifications, and comprehensive event analytics dashboard enabling seamless coordination for couples and wedding planners.',
+    image: '/images/projects/wedding-registry.png',
+    tags: [
+      '100+ Events Managed',
+      'Seamless CRM Integration',
+      '90% Booking Conversion'
+    ],
+    industry: 'FULLSTACK ENGINEERING',
+    category: 'fullstack',
+    primaryMetric: '100% User Satisfaction',
+    actionType: 'none',
+    link: 'https://wedding-registry.vercel.app/',
+    capabilities: ['full-stack-engineering']
+  },
+  {
+    title: 'MODA: E-Commerce Fashion Platform',
+    description:
+      'Enterprise-grade e-commerce platform for fashion merchandise built with React and .NET. Leveraged AWS infrastructure including S3 for media storage, PostgreSQL RDS for transactional data, and CloudFront CDN for global content delivery. Integrated Stripe payment gateway with PCI-compliant checkout flow, inventory management system, and real-time order tracking delivering a seamless shopping experience.',
+    image: '/images/projects/moda-ecom.png',
+    tags: [
+      'AWS Cloud Architecture',
+      'Secure Payment Processing',
+      '2K+ Products Catalog'
+    ],
+    industry: 'FULLSTACK ENGINEERING',
+    category: 'fullstack',
+    primaryMetric: '99.9% Uptime',
+    actionType: 'demo',
+    link: 'https://moda-ecom.vercel.app/',
+    capabilities: ['full-stack-engineering']
+  }
 ];
 
 export const categories = [
-  { id: 'all', label: 'ALL PROJECTS', count: 15 },
+  { id: 'all', label: 'ALL PROJECTS', count: 17 },
   { id: 'ai', label: 'AI ENGINEERING', count: 4 },
   { id: 'devops', label: 'DEVOPS ENGINEERING', count: 1 },
   { id: 'data', label: 'DATA ENGINEERING', count: 3 },
-  { id: 'fullstack', label: 'FULLSTACK ENGINEERING', count: 7 }
+  { id: 'fullstack', label: 'FULLSTACK ENGINEERING', count: 9 }
 ];
 
 export const metrics = [
-  { label: 'Estimated Value Created', value: '$8M+' },
+  { label: 'Estimated Value Created', value: '$5M+' },
   { label: 'Engineering Hours Saved', value: '5,000+' },
-  { label: 'Enterprise Automations Delivered', value: '15+' },
-  { label: 'Business Users Impacted', value: '6,000+' }
+  { label: 'Enterprise Automations Delivered', value: '17+' },
+  { label: 'Business Users Impacted', value: '5,000+' }
 ];

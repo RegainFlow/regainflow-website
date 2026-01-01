@@ -9,7 +9,7 @@ export const links: Route.LinksFunction = () => [
 ];
 
 export function meta({}: Route.MetaArgs) {
-  const title = 'W2 vs C2C Calculator | Compare Costs & Save';
+  const title = 'RegainFlow | W2 vs C2C Calculator';
   const description =
     'Calculate your savings hiring senior C2C contract engineers vs full-time W2 employees. See 30-40% cost savings with our interactive W2 vs C2C calculator.';
   const image = 'https://www.regainflow.com/images/og/og-roi.png';
