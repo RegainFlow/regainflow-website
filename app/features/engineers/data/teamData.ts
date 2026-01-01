@@ -68,7 +68,7 @@ without the $300k+ executive cost—strategic roadmaps, architecture decisions, 
     name: 'William J. Baltus',
     role: 'Fractional CTO & Co-Founder',
     bio: 'Fractional CTO and AI/ML engineering leader with deep expertise in LLM integrations, multi-agent systems, and operational AI. \
-Guides companies through AI transformation, from feasibility assessments to production deployment. Specializes in RPA modernization, \
+Guides companies through AI transformation, from feasibility assessments to production deployment. Specializes in legacy system modernization, \
 enterprise automation, and ML system design. Combines strategic AI roadmapping with hands-on engineering across LangChain/LangGraph, \
 TensorFlow, and production ML pipelines. Proven ability to architect scalable AI solutions for Fortune 500 enterprises. Delivers \
 CTO-level AI strategy plus hands-on execution—from POCs to production systems serving thousands of daily users.',

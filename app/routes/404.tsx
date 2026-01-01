@@ -4,11 +4,11 @@ export { default } from '~/components/layout/NotFound/NotFound';
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: 'Page Not Found | Regain Flow' },
+    { title: 'RegainFlow | Page Not Found' },
     {
       name: 'description',
       content:
-        'This page does not exist. Navigate back to Regain Flow to discover how we can automate your operations.'
+        'This page does not exist. Navigate back to RegainFlow to discover our software engineering services.'
     }
   ];
 }

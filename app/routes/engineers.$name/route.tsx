@@ -41,30 +41,47 @@ export function loader({ params }: Route.LoaderArgs) {
   return Response.json(engineer);
 }
 
+export function meta({ data, params }: Route.MetaArgs) {
+  if (!data) {
+    return [
+      { title: 'RegainFlow | Engineer Not Found' },
+      {
+        name: 'description',
+        content: 'This engineer profile is not currently available.'
+      }
+    ];
+  }
+
+  const engineer = data as TeamMember;
+  const title = `RegainFlow | ${engineer.name}`;
+  const description = engineer.bio;
+  const url = `https://www.regainflow.com/engineers/${params.name}`;
+  const image = 'https://www.regainflow.com/images/og/og-about.png';
+
+  return [
+    { title },
+    { name: 'description', content: description },
+    { tagName: 'link', rel: 'canonical', href: url },
+
+    // OG
+    { property: 'og:title', content: title },
+    { property: 'og:description', content: description },
+    { property: 'og:image', content: image },
+    { property: 'og:url', content: url },
+    { property: 'og:type', content: 'profile' },
+
+    // Twitter
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: title },
+    { name: 'twitter:description', content: description },
+    { name: 'twitter:image', content: image }
+  ];
+}
+
 export default function EngineerProfileRoute({
   loaderData
 }: Route.ComponentProps) {
   const engineer: TeamMember = loaderData;
 
-  const title = `${engineer.name} | Senior AI/ML Engineer | C2C Available`;
-  const description = engineer.bio;
-  const url = `https://www.regainflow.com/engineers/${engineer.slug}`;
-  const image = 'https://www.regainflow.com/images/og/og-about.png';
-
-  return (
-    <>
-      {/* SEO */}
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <link rel="canonical" href={url} />
-
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-
-      {/* Page UI */}
-      <EngineerProfile engineer={engineer} />
-    </>
-  );
+  return <EngineerProfile engineer={engineer} />;
 }

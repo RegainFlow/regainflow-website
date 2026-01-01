@@ -1,12 +1,12 @@
 # RegainFlow
 
-Marketing website for RegainFlow, an AI/ML consulting company providing senior C2C contract engineers and project-based consulting.
+Marketing website for RegainFlow, a software engineering agency providing senior C2C contract engineers and project-based consulting in AI/ML, data engineering, full-stack development, and DevOps.
 
 Built with **React Router v7**, **TypeScript**, and a custom **Glass Morphism + Neon** design system.
 
 ## Features
 
-- **Services Overview** - 6 capability pages (AI Automation, RAG & Search, Data Validation, System Integration, Full-Stack Engineering, DevOps)
+- **Services Overview** - 4 capability pages (AI Engineering, Data Engineering, Full-Stack Engineering, DevOps Engineering)
 - **Engineer Profiles** - Team member showcases with tech stacks, project highlights, and expertise areas
 - **W2 vs C2C Calculator** - Interactive cost comparison tool for W2 employees vs C2C contractors
 - **Projects Portfolio** - Case studies with capability tagging for cross-referencing
@@ -65,8 +65,9 @@ app/
 ├── components/           # Shared layout components
 │   └── layout/          # Navbar, Footer, NotFound
 ├── config/              # Site configuration (URLs, analytics)
-├── features/            # 13 feature modules (self-contained)
-│   ├── services/        # Services overview + 6 capabilities
+├── features/            # 14 feature modules (self-contained)
+│   ├── fractional-cto/  # Fractional CTO services page
+│   ├── services/        # Services overview + 4 capabilities
 │   ├── engineers/       # Team profiles and expertise
 │   ├── projects/        # Case studies portfolio
 │   ├── w2-vs-c2c/       # W2 vs C2C calculation tool
@@ -189,12 +190,10 @@ See [docs/STYLING.md](docs/STYLING.md) for the complete design system guide incl
 
 ### Capability Routes
 
-- `/services/ai-automation` - AI Automation
-- `/services/rag-search` - RAG & Search Systems
-- `/services/data-validation` - Data Validation
-- `/services/system-integration` - System Integration
+- `/services/ai-engineering` - AI Engineering (multi-agent automation, RAG, semantic search)
+- `/services/data-engineering` - Data Engineering (data validation, system integration, ETL pipelines)
 - `/services/full-stack-engineering` - Full-Stack Engineering
-- `/services/devops` - DevOps & Infrastructure
+- `/services/devops-engineering` - DevOps Engineering
 
 ## Environment Variables
 

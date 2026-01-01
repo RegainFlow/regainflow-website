@@ -39,9 +39,9 @@ export const links: Route.LinksFunction = () => [
 ];
 
 export function meta({ }: Route.MetaArgs) {
-  const title = 'RegainFlow | Senior AI/ML Engineers for C2C Contracts';
+  const title = 'RegainFlow | Software Engineering Agency';
   const description =
-    'Contract-ready senior engineers specializing in AI/ML, RAG, and intelligent automation. Full-stack capabilities across backend, frontend, DevOps, and solution architecture. Available for long-term C2C contracts or project consulting.';
+    'Contract-ready senior engineers specializing in AI/ML, data engineering, full-stack development, and DevOps. Enterprise-grade engineering solutions delivered through C2C contracts or project consulting.';
   const image = 'https://www.regainflow.com/images/og/og-home.png'; // make this
   const url = 'https://www.regainflow.com/';
 

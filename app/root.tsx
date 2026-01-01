@@ -67,13 +67,13 @@ export const links: Route.LinksFunction = () => [
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: 'Regain Flow | AI Automation Consulting' },
+    { title: 'RegainFlow | Software Engineering Firm' },
     {
       name: 'description',
       content:
-        'Regain Flow helps businesses turn manual operations into automated pipelines using AI and RPA.'
+        'RegainFlow is a software engineering agency delivering AI Engineering, Data Engineering, Full-Stack Development, and DevOps solutions for modern businesses.'
     },
-    { property: 'og:site_name', content: 'Regain Flow' },
+    { property: 'og:site_name', content: 'RegainFlow' },
     { property: 'og:type', content: 'website' }
   ];
 }
@@ -93,7 +93,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
       <body>
         <ScrollToTop />
-        <div className={`background-wrapper ${isFractionalCto ? 'theme-purple' : ''}`}>
+        <div
+          className={`background-wrapper ${isFractionalCto ? 'theme-purple' : ''}`}
+        >
           <Navbar />
           {children}
           <Footer />

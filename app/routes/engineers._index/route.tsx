@@ -17,9 +17,9 @@ export const links: Route.LinksFunction = () => [
 ];
 
 export function meta({}: Route.MetaArgs) {
-  const title = 'Our Engineers | RegainFlow C2C Contractors';
+  const title = 'RegainFlow | Our Engineers';
   const description =
-    'Meet our senior AI/ML engineers available for C2C contracts. Production-proven expertise in RAG, automation, DevOps, and full-stack development.';
+    'Meet our senior engineers available for C2C contracts. Production-proven expertise in AI/ML, data engineering, DevOps, and full-stack development.';
   const image = 'https://www.regainflow.com/images/og/og-about.png';
   const url = 'https://www.regainflow.com/engineers';
 

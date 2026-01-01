@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-RegainFlow is a marketing website for an AI/ML consulting company, built with React Router v7, TypeScript, and a hybrid CSS approach (Tailwind + custom CSS modules). The codebase uses a feature-based architecture where each feature is self-contained with its own components, data, types, and styles.
+RegainFlow is a marketing website for a software engineering agency, built with React Router v7, TypeScript, and a hybrid CSS approach (Tailwind + custom CSS modules). The agency delivers AI Engineering, Data Engineering, Full-Stack Development, and DevOps solutions through C2C contracts and project-based consulting. The codebase uses a feature-based architecture where each feature is self-contained with its own components, data, types, and styles.
 
 ## Development Commands
 
@@ -36,7 +36,7 @@ app/features/{feature-name}/
 
 ### Complete Feature List
 
-The project contains **13 feature modules**:
+The project contains **14 feature modules**:
 
 | Feature                 | Purpose                                     | Key Components                                                                      |
 | ----------------------- | ------------------------------------------- | ----------------------------------------------------------------------------------- |
@@ -46,6 +46,7 @@ The project contains **13 feature modules**:
 | `projects/`             | Case studies portfolio                      | CaseStudiesGrid                                                                     |
 | `roi-calculator/`       | W2 vs C2C calculator tool                   | ROICalculator                                                                       |
 | `hero/`                 | Landing page hero section                   | HeroSection                                                                         |
+| `carousel/`             | Technology carousel showcase                | CarouselSection                                                                     |
 | `value-proposition/`    | Value proposition cards                     | ValueProposition                                                                    |
 | `how-it-works/`         | Process methodology                         | HowItWorks                                                                          |
 | `roi-preview/`          | ROI section preview                         | RoiPreview                                                                          |

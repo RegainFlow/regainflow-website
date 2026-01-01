@@ -16,11 +16,11 @@ export const links: Route.LinksFunction = () => [
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: 'Privacy Policy | Regain Flow' },
+    { title: 'RegainFlow | Privacy Policy' },
     {
       name: 'description',
       content:
-        'Learn how Regain Flow collects, uses, and protects your data when using our AI automation services.'
+        'Learn how RegainFlow collects, uses, and protects your data when using our software engineering services.'
     }
   ];
 }

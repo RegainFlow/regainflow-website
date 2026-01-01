@@ -20,7 +20,7 @@ export default function Footer() {
           </p>
           <img
             src="/images/regain_flow_logo.png"
-            alt="Regain Flow Logo"
+            alt="RegainFlow Logo"
             className="footer-logo"
           />
         </div>
@@ -87,7 +87,7 @@ export default function Footer() {
 
       {/* Bottom row */}
       <div className="footer-bottom">
-        <div className="footer-copy">© Copyright 2025, Regain Flow LLC</div>
+        <div className="footer-copy">© Copyright 2025, REGAINFLOW LLC</div>
       </div>
     </footer>
   );

@@ -96,7 +96,7 @@ export const projectsItems = [
     category: 'data',
     primaryMetric: '5× Indexing Throughput',
     actionType: 'demo',
-    link: 'https://multi-format-engineering-etl-pipeli.vercel.app/',
+    link: 'https://multi-format-etl-pipeline.vercel.app/',
     capabilities: ['data-engineering']
   },
   {
@@ -237,7 +237,7 @@ export const projectsItems = [
     category: 'fullstack',
     primaryMetric: '4x Growth',
     actionType: 'demo',
-    link: 'https://marketing-automation-for-distributi.vercel.app/',
+    link: 'https://marketing-automation-net.vercel.app/',
     capabilities: ['full-stack-engineering']
   },
   {
@@ -255,20 +255,54 @@ export const projectsItems = [
     primaryMetric: '< 50ms Latency',
     actionType: 'none',
     capabilities: ['full-stack-engineering']
+  },
+  {
+    title: 'Wedding Registry & Event Management Platform',
+    description:
+      'Full-stack event management platform built with Vue.js and Firebase serverless architecture. Integrated CRM workflows for guest tracking and Stripe payment processing for gift contributions. Real-time registry updates, automated guest notifications, and comprehensive event analytics dashboard enabling seamless coordination for couples and wedding planners.',
+    image: '/images/projects/wedding-registry.png',
+    tags: [
+      '100+ Events Managed',
+      'Seamless CRM Integration',
+      '90% Booking Conversion'
+    ],
+    industry: 'FULLSTACK ENGINEERING',
+    category: 'fullstack',
+    primaryMetric: '100% User Satisfaction',
+    actionType: 'none',
+    link: 'https://wedding-registry.vercel.app/',
+    capabilities: ['full-stack-engineering']
+  },
+  {
+    title: 'MODA: E-Commerce Fashion Platform',
+    description:
+      'Enterprise-grade e-commerce platform for fashion merchandise built with React and .NET. Leveraged AWS infrastructure including S3 for media storage, PostgreSQL RDS for transactional data, and CloudFront CDN for global content delivery. Integrated Stripe payment gateway with PCI-compliant checkout flow, inventory management system, and real-time order tracking delivering a seamless shopping experience.',
+    image: '/images/projects/moda-ecom.png',
+    tags: [
+      'AWS Cloud Architecture',
+      'Secure Payment Processing',
+      '2K+ Products Catalog'
+    ],
+    industry: 'FULLSTACK ENGINEERING',
+    category: 'fullstack',
+    primaryMetric: '99.9% Uptime',
+    actionType: 'demo',
+    link: 'https://moda-ecom.vercel.app/',
+    capabilities: ['full-stack-engineering']
   }
 ];
 
 export const categories = [
-  { id: 'all', label: 'ALL PROJECTS', count: 15 },
+  { id: 'all', label: 'ALL PROJECTS', count: 17 },
   { id: 'ai', label: 'AI ENGINEERING', count: 4 },
   { id: 'devops', label: 'DEVOPS ENGINEERING', count: 1 },
   { id: 'data', label: 'DATA ENGINEERING', count: 3 },
-  { id: 'fullstack', label: 'FULLSTACK ENGINEERING', count: 7 }
+  { id: 'fullstack', label: 'FULLSTACK ENGINEERING', count: 9 }
 ];
 
 export const metrics = [
   { label: 'Estimated Value Created', value: '$5M+' },
   { label: 'Engineering Hours Saved', value: '5,000+' },
-  { label: 'Enterprise Automations Delivered', value: '15+' },
+  { label: 'Enterprise Automations Delivered', value: '17+' },
   { label: 'Business Users Impacted', value: '5,000+' }
 ];

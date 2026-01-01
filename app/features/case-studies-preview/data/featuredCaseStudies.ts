@@ -18,7 +18,7 @@ export const featuredCaseStudies: FeaturedCaseStudy[] = [
     title: 'Hybrid RAG for Aerospace Engineering Search',
     description:
       'Production search engine using ELSER V2 and Elasticsearch serving 6,000+ daily users. Hybrid semantic + keyword retrieval over millions of engineering documents with domain-specific accuracy.',
-    image: '/images/projects/rag_search_engine.png',
+    image: '/images/projects/insight-search-engine.png',
     tags: [
       '6K+ Daily Active Users',
       'Millions of Records',
