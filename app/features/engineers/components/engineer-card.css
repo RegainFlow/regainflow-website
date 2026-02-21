@@ -1,35 +1,32 @@
-/* ==========================================================================
-   Engineer Card Component
-   ========================================================================== */
-
 .engineer-card {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  padding: 2rem;
-  min-height: 450px;
+  gap: var(--spacing-md);
+  padding: var(--spacing-xl);
+  transition: var(--transition-slow);
 }
 
 .engineer-card-header {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
 }
 
 .engineer-card-image-wrapper {
-  flex-shrink: 0;
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   border-radius: var(--radius-full);
+  border: 2px solid var(--color-primary-alpha-30);
   overflow: hidden;
-  border: 2px solid var(--glass-border-accent);
-  box-shadow: 0 4px 12px rgba(0, 214, 203, 0.2);
-  transition: all 0.3s ease;
+  box-shadow: var(--glow-primary);
+  transition: var(--transition-base);
 }
 
 .engineer-card:hover .engineer-card-image-wrapper {
-  border-color: var(--color-primary);
-  box-shadow: 0 6px 16px rgba(0, 214, 203, 0.3);
+  transform: scale(1.05);
+  border-color: var(--color-primary-light);
+  box-shadow: 0 0 25px var(--color-primary-alpha-40);
 }
 
 .engineer-card-image {
@@ -38,146 +35,133 @@
   object-fit: cover;
 }
 
-.engineer-card-info {
-  flex: 1;
-}
-
 .engineer-card-name {
-  font-size: 1.5rem;
-  font-weight: var(--font-weight-bold);
-  color: var(--color-text-primary);
-  font-family: var(--font-secondary);
-  margin: 0 0 0.5rem 0;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-black);
+  color: white;
+  margin: 0;
 }
 
 .engineer-card-role {
-  font-size: 0.95rem;
-  color: var(--color-primary);
-  font-weight: var(--font-weight-medium);
-  margin: 0;
+  color: var(--color-primary-light);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.1em;
 }
 
 .engineer-card-bio {
-  font-size: 1rem;
   color: var(--color-text-secondary);
-  line-height: var(--line-height-relaxed);
-  margin: 0;
-  flex: 1;
-}
-
-.engineer-card-expertise {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
 }
 
 .expertise-badge {
-  background: rgba(0, 214, 203, 0.12);
-  border: 1px solid rgba(0, 214, 203, 0.3);
-  color: var(--color-primary);
-  padding: 0.4rem 0.9rem;
-  border-radius: var(--radius-base);
-  font-size: 0.85rem;
-  font-weight: var(--font-weight-semibold);
-  font-family: var(--font-primary);
+  background: var(--color-primary-alpha-10);
+  border: 1px solid var(--color-primary-alpha-20);
+  color: var(--color-primary-light);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  transition: all 0.25s ease;
-}
-
-.engineer-card:hover .expertise-badge {
-  background: rgba(0, 214, 203, 0.2);
-  border-color: rgba(0, 214, 203, 0.5);
 }
 
 .engineer-card-stats {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  padding: 1rem 0;
-  border-top: 1px solid var(--glass-border-subtle);
-  border-bottom: 1px solid var(--glass-border-subtle);
+  display: flex;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) 0;
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
 }
 
 .engineer-stat-item {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  align-items: center;
+  text-align: center;
+  flex: 1;
 }
 
 .stat-value {
-  font-size: 1.5rem;
-  font-weight: var(--font-weight-bold);
-  color: var(--color-primary);
-  font-family: var(--font-secondary);
-  line-height: 1;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-black);
+  color: var(--color-primary-light);
+  font-family: var(--font-accent);
 }
 
 .stat-label {
-  font-size: 0.85rem;
+  font-size: var(--font-size-xs);
   color: var(--color-text-muted);
-  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .engineer-card-footer {
   margin-top: auto;
 }
 
-.engineer-card-btn {
+.engineer-card-footer .neon-button-glass {
   width: 100%;
   justify-content: center;
-  padding: 0.875rem 1.5rem;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .engineer-card {
-    padding: 1.5rem;
-    min-height: auto;
-  }
-
-  .engineer-card-header {
-    gap: 1rem;
-  }
-
   .engineer-card-image-wrapper {
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
   }
 
   .engineer-card-name {
-    font-size: 1.25rem;
-  }
-
-  .engineer-card-stats {
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
+    font-size: var(--font-size-lg);
   }
 }
 
 @media (max-width: 480px) {
-  .engineer-card-header {
-    flex-direction: column;
-    text-align: center;
+  .engineer-card {
+    padding: var(--spacing-lg);
+    gap: var(--spacing-sm);
   }
 
   .engineer-card-image-wrapper {
-    width: 100px;
-    height: 100px;
+    width: 65px;
+    height: 65px;
+  }
+
+  .engineer-card-header {
+    gap: var(--spacing-md);
   }
 
   .engineer-card-bio {
-    font-size: 0.95rem;
-  }
-
-  .expertise-badge {
-    font-size: 0.75rem;
-    padding: 0.35rem 0.75rem;
+    font-size: var(--font-size-sm);
   }
 
   .stat-value {
-    font-size: 1.25rem;
+    font-size: var(--font-size-xl);
+  }
+}
+
+@media (max-width: 320px) {
+  .engineer-card {
+    padding: var(--spacing-md);
+  }
+
+  .engineer-card-image-wrapper {
+    width: 55px;
+    height: 55px;
+  }
+
+  .engineer-card-header {
+    gap: var(--spacing-sm);
+  }
+
+  .engineer-card-name {
+    font-size: var(--font-size-base);
+  }
+
+  .engineer-card-role {
+    font-size: var(--font-size-xs);
   }
 }

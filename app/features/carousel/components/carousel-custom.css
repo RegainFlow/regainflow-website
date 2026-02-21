@@ -14,68 +14,48 @@
 }
 
 .section-tech-stack {
-  max-width: var(--carousel-section-max);
-  margin: 0 auto;
-  overflow-x: hidden;
-  width: 100%;
-  position: relative;
-  z-index: 0;
-}
-
-.carousel-wrapper {
-  width: 100%;
-  position: relative;
-  margin-top: 50px;
-}
-
-.carousel-track {
-  display: flex;
-  animation: carousel-scroll 20s linear infinite;
-  flex-wrap: nowrap;
-  white-space: nowrap;
-  will-change: transform;
-  width: max-content;
+  padding: var(--spacing-2xl) 0;
 }
 
 .carousel-slide {
   background: var(--glass-bg-light);
-  backdrop-filter: var(--glass-blur-md);
-  -webkit-backdrop-filter: var(--glass-blur-md);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--carousel-slide-radius);
-  box-shadow:
-    0 4px 12px rgba(0, 0, 0, 0.3),
-    0 0 0 1px rgba(0, 214, 203, 0.05) inset;
-  width: var(--carousel-slide-size);
-  height: var(--carousel-slide-size);
-  object-fit: contain;
-  padding: 10px;
-  margin-right: var(--carousel-slide-margin);
-  flex: 0 0 auto;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--border-glass-light);
+  border-radius: var(--radius-md);
+  width: 120px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  margin-right: var(--spacing-lg);
+  transition: var(--transition-base);
+  filter: grayscale(100%) opacity(0.5);
 }
 
 .carousel-slide:hover {
-  transform: translateY(-6px) scale(1.05) rotate(2deg);
-  background: var(--glass-bg-medium);
-  border-color: var(--glass-border-accent);
-  box-shadow:
-    0 12px 24px rgba(0, 0, 0, 0.4),
-    0 0 0 1px rgba(0, 214, 203, 0.2) inset,
-    0 0 20px rgba(0, 214, 203, 0.15);
+  transform: translateY(-5px) scale(1.1) rotate(-3deg);
+  filter: grayscale(0%) opacity(1);
+  background: var(--color-bg-card);
+  border-color: var(--color-primary-alpha-30);
+  box-shadow: var(--shadow-lg), var(--glow-primary);
 }
 
 .carousel-slide img {
-  width: 80%;
-  height: 80%;
+  width: 60%;
+  height: 60%;
   object-fit: contain;
 }
 
-.carousel-slide:last-child {
-  margin-right: 0;
+.carousel-wrapper {
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: carousel-scroll 40s linear infinite;
 }
 
 /* Keyframe animation */
@@ -93,10 +73,6 @@
      Responsive Breakpoints
      -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
-  .section-tech-stack {
-    overflow-x: visible !important;
-  }
-
   .carousel-slide {
     width: var(--carousel-slide-size-md);
     height: var(--carousel-slide-size-md);

@@ -10,13 +10,15 @@ interface ServiceMetricsProps {
 export default function ServiceMetrics({ metrics }: ServiceMetricsProps) {
   return (
     <section className="service-metrics-section glass-section-sm">
-      <div className="service-metrics-container">
-        {metrics.map((metric, idx) => (
-          <div key={idx} className="glass-card-stat">
-            <div className="glass-card-stat-value">{metric.value}</div>
-            <div className="glass-card-stat-label">{metric.label}</div>
-          </div>
-        ))}
+      <div className="container">
+        <div className="service-metrics-container">
+          {metrics.map((metric, idx) => (
+            <div key={idx} className="glass-card-stat">
+              <div className="glass-card-stat-value">{metric.value}</div>
+              <div className="glass-card-stat-label">{metric.label}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

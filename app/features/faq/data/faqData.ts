@@ -2,39 +2,38 @@ import type { FAQItem } from '../types/faq.types';
 
 export const faqData: FAQItem[] = [
   {
-    question: 'What is C2C (Corp-to-Corp) contracting?',
+    question: 'What types of businesses do you work with?',
     answer:
-      'C2C contracting is when your company contracts directly with our LLC (REGAINFLOW LLC). You pay our company instead of hiring individual W2 employees. This eliminates benefits, payroll taxes, and HR overhead while giving you access to senior engineering talent. Our engineers work as independent contractors through our corporate entity.'
+      'We work with small and medium businesses across industries — from local service companies and e-commerce stores to professional firms and growing startups. If your business has manual processes eating up your time or you\'re not leveraging technology to its full potential, we can help.'
   },
   {
-    question: 'How quickly can an engineer start?',
+    question: 'What is digital transformation?',
     answer:
-      "Most engineers can start within 1-2 weeks of contract signing. Since our engineers are already vetted and cleared for work, there's no lengthy hiring process. We handle onboarding documentation, and your engineer can integrate with your team immediately after contract execution and system access provisioning."
+      'Digital transformation means replacing manual, outdated processes with modern digital tools. This could be a new website that actually converts visitors, automated workflows that save your team hours per week, integrated systems that talk to each other, or marketing automation that runs on autopilot. The goal is to help your business operate more efficiently and grow faster.'
   },
   {
-    question: 'What technical stacks do your engineers support?',
+    question: 'What is AI transformation?',
     answer:
-      'Our engineers specialize in AI/ML, Python, full-stack development (React, Node.js, TypeScript), cloud platforms (AWS, Azure, GCP), DevOps, and data engineering. We have deep expertise in RAG systems, LangChain/LangGraph, vector databases, automation, and legacy system modernization. View individual engineer profiles for specific tech stacks.'
+      'AI transformation means putting artificial intelligence to work in your business. This could be chatbots that answer customer questions 24/7, intelligent document processing that eliminates data entry, predictive analytics that help you make better decisions, or automated workflows that handle repetitive tasks. We focus on practical AI applications that deliver real ROI — not buzzwords.'
   },
   {
-    question:
-      'Do you offer project-based consulting or only long-term contracts?',
+    question: 'How long do projects typically take?',
     answer:
-      "We offer both! Long-term C2C contracts (3-12+ months) are ideal for ongoing development needs. Project-based consulting works for defined deliverables like MVP development, technical audits, or system migrations. We'll recommend the best engagement model based on your requirements during the initial consultation."
+      'It depends on the scope, but most projects range from 4-12 weeks. Simple workflow automations or website builds can be done in 4-6 weeks. More complex AI implementations or full digital overhauls typically take 8-12 weeks. We always start with a free assessment to give you a realistic timeline before any commitment.'
   },
   {
-    question: 'How does pricing work?',
+    question: 'How much does it cost?',
     answer:
-      'Pricing is negotiated based on engineer seniority, project scope, and engagement length. C2C contracts are typically billed hourly or on monthly retainers. Project consulting uses fixed-price or milestone-based billing. Contact us for custom quotes.'
+      'Every business is different, so we provide custom quotes after understanding your specific needs. We offer flexible engagement models — from fixed-price projects to ongoing partnerships. Our free business assessment will give you a clear picture of costs, expected ROI, and timeline before you commit to anything.'
   },
   {
-    question: "What if the engineer isn't a good fit?",
+    question: 'Do you provide ongoing support after launch?',
     answer:
-      "Most contracts include a trial period (typically 2-4 weeks) where either party can terminate with minimal notice. If there's a mismatch in skills or culture, we'll work with you to find a better-suited engineer from our team. Client satisfaction is our priority, and we stand behind our engineers' quality."
+      'Absolutely. We believe in long-term partnerships, not one-and-done projects. After launch, we monitor performance, optimize based on real usage data, and scale your systems as your business grows. We offer flexible support plans to fit your needs and budget.'
   },
   {
-    question: 'Can engineers work remotely or on-site?',
+    question: 'Why should I choose RegainFlow over other agencies?',
     answer:
-      'Our engineers are set up for remote work by default, with secure VPN access, time-zone flexibility, and async communication tools. On-site work is available for specific projects in select locations, but most engagements are fully remote. Hybrid arrangements can be negotiated based on project needs and engineer availability.'
+      'We bring enterprise-level engineering expertise to growing businesses. Our team has built AI systems, data platforms, and web applications for Fortune 500 companies — and we apply that same rigor to every project, regardless of size. We don\'t just build what you ask for; we learn your business first and build what actually moves the needle.'
   }
 ];

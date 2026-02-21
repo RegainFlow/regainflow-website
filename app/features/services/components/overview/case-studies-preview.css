@@ -14,8 +14,8 @@
 .case-studies-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 3rem;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
 }
 
 .case-study-card {
@@ -113,7 +113,7 @@
 .case-studies-cta {
   display: flex;
   justify-content: center;
-  margin-top: 3rem;
+  margin-top: var(--spacing-xl);
 }
 
 .case-studies-cta .neon-button-glass {
@@ -184,5 +184,23 @@
   .case-studies-cta .neon-button-glass {
     width: 100%;
     justify-content: center;
+  }
+}
+
+@media (max-width: 320px) {
+  .case-study-content {
+    padding: 1rem;
+  }
+
+  .case-study-title {
+    font-size: 1rem;
+  }
+
+  .case-study-description {
+    font-size: 0.85rem;
+  }
+
+  .case-study-image-wrapper {
+    height: 140px;
   }
 }

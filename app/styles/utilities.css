@@ -773,46 +773,6 @@
   pointer-events: auto;
 }
 
-/* ==================== Container ==================== */
-
-.container {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--spacing-md);
-  padding-right: var(--spacing-md);
-}
-
-@media (min-width: 640px) {
-  .container {
-    max-width: var(--container-sm);
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: var(--container-md);
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: var(--container-lg);
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: var(--container-xl);
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: var(--container-2xl);
-  }
-}
-
 /* ==================== Typography Utilities (Fluid) ==================== */
 
 .subheading {
@@ -883,37 +843,5 @@
 @media (min-width: 1024px) {
   .desktop-only {
     display: block;
-  }
-}
-
-/* ==================== Legacy Webflow Typography ==================== */
-/* Preserved from original Webflow export for component compatibility */
-
-.heading-2 {
-  color: #fff;
-  text-align: center;
-  height: 60px;
-  margin-top: 0;
-  margin-bottom: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  font-family: var(--font-primary);
-  font-size: 70px;
-  font-weight: 700;
-  line-height: 90px;
-}
-
-/* Responsive heading adjustments */
-@media (max-width: 991px) {
-  .heading-2 {
-    font-size: 50px;
-    line-height: 50px;
-  }
-}
-
-@media (max-width: 479px) {
-  .heading-2 {
-    font-size: 30px;
-    line-height: 50px;
   }
 }

@@ -14,8 +14,8 @@
 .capabilities-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  margin-top: 3rem;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
 }
 
 .capability-card {
@@ -58,7 +58,7 @@
 }
 
 .capability-card-title {
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 2vw + 0.25rem, 1.5rem);
   font-weight: var(--font-weight-bold);
   font-family: var(--font-secondary);
   color: var(--color-text-primary);
@@ -88,28 +88,20 @@
 @media (max-width: 768px) {
   .capabilities-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: var(--spacing-md);
   }
 
   .capability-card {
-    padding: 2rem 1.5rem;
+    padding: var(--spacing-lg) var(--spacing-md);
   }
 
   .capability-card-icon {
     width: 70px;
     height: 70px;
   }
-
-  .capability-card-title {
-    font-size: 1.35rem;
-  }
 }
 
 @media (max-width: 480px) {
-  .capabilities-grid {
-    margin-top: 2rem;
-  }
-
   .capability-card {
     padding: 1.75rem 1.25rem;
   }
@@ -117,10 +109,6 @@
   .capability-card-icon {
     width: 60px;
     height: 60px;
-  }
-
-  .capability-card-title {
-    font-size: 1.25rem;
   }
 
   .capability-card-description {

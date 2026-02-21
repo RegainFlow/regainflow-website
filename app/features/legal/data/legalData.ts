@@ -62,11 +62,8 @@ export const termsSections: Section[] = [
           {
             type: 'list',
             content: [
-              'AI/ML Engineering: Multi-agent automation, enterprise RAG, semantic search, and machine learning solutions',
-              'Data Engineering: End-to-end pipelines, schema normalization, cross-system validation engines',
-              'Full-Stack Engineering: Modern web applications, robust APIs, workflow automation',
-              'DevOps Engineering: CI/CD pipelines, Infrastructure as Code, monitoring, cost optimization',
-              'Fractional CTO Services: Strategic technical leadership and architecture guidance'
+              'Digital Transformation: Custom web platforms, workflow automation, marketing systems, e-commerce solutions',
+              'AI Transformation: AI workflow automation, intelligent document processing, chatbots, data-driven insights'
             ]
           },
           {

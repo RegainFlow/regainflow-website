@@ -9,28 +9,11 @@ export const projectsItems = [
       'Multi-Agent Architecture',
       'Enterprise-Scale Automation'
     ],
-    industry: 'AI ENGINEERING',
+    industry: 'AI TRANSFORMATION',
     category: 'ai',
     primaryMetric: '12 FTEs Saved',
     actionType: 'none',
-    capabilities: ['ai-engineering']
-  },
-  {
-    title: 'HCM Interoperability Platform',
-    description:
-      'End-to-end validation pipeline across HRIS, Payroll, Finance, and Benefits systems for a multi-facility healthcare network. Schema normalization, deterministic rule engines, and reconciliation logic ensuring data consistency across enterprise-scale HR platforms during cloud migration.',
-    image: '/images/projects/hcm-interop-platform.png',
-    tags: [
-      'Multi-System Integration',
-      'Multi-System Reconciliation',
-      'Operational Continuity'
-    ],
-    industry: 'DATA ENGINEERING',
-    category: 'data',
-    primaryMetric: 'Operational Efficiency Gains',
-    link: 'https://hcm-interoperability-platform.vercel.app/',
-    actionType: 'demo',
-    capabilities: ['data-engineering']
+    capabilities: ['ai-transformation']
   },
   {
     title: '3D Printing Insight Engine',
@@ -42,12 +25,12 @@ export const projectsItems = [
       'Millions of Records',
       'Hybrid Semantic Search'
     ],
-    industry: 'AI ENGINEERING',
+    industry: 'AI TRANSFORMATION',
     category: 'ai',
     primaryMetric: '5K+ Daily Users',
     actionType: 'demo',
     link: 'https://insight-search-engine.vercel.app/',
-    capabilities: ['ai-engineering']
+    capabilities: ['ai-transformation']
   },
   {
     title: 'Corporate HR RAG',
@@ -59,11 +42,11 @@ export const projectsItems = [
       'Reduced Ops Overhead'
     ],
     image: '/images/projects/corporate-hr-rag.png',
-    industry: 'AI ENGINEERING',
+    industry: 'AI TRANSFORMATION',
     category: 'ai',
     primaryMetric: '3× Faster Insights',
     actionType: 'none',
-    capabilities: ['ai-engineering']
+    capabilities: ['ai-transformation']
   },
   {
     title: 'Grid Infrastructure Analytics Platform',
@@ -75,12 +58,12 @@ export const projectsItems = [
       '80% Manual Review Reduction',
       'Real-Time Dashboards'
     ],
-    industry: 'AI ENGINEERING',
+    industry: 'AI TRANSFORMATION',
     category: 'ai',
     primaryMetric: '3× Faster Insights',
     link: 'https://grid-network.vercel.app/',
     actionType: 'demo',
-    capabilities: ['ai-engineering']
+    capabilities: ['ai-transformation']
   },
   {
     title: 'Multi-Format Document ETL Pipeline',
@@ -92,12 +75,12 @@ export const projectsItems = [
       'VLM + OCR Enabled',
       'Modernized Data Access'
     ],
-    industry: 'DATA ENGINEERING',
-    category: 'data',
+    industry: 'AI TRANSFORMATION',
+    category: 'ai',
     primaryMetric: '5× Indexing Throughput',
     actionType: 'demo',
     link: 'https://multi-format-etl-pipeline.vercel.app/',
-    capabilities: ['data-engineering']
+    capabilities: ['ai-transformation']
   },
   {
     title: 'Legacy RPA Modernization with Python & LangGraph',
@@ -109,60 +92,11 @@ export const projectsItems = [
       'Multi-Agent AI Logic',
       'Hours to Minutes'
     ],
-    industry: 'DATA ENGINEERING',
-    category: 'data',
+    industry: 'AI TRANSFORMATION',
+    category: 'ai',
     primaryMetric: 'Zero Vendor Lock-In',
     actionType: 'none',
-    capabilities: ['data-engineering']
-  },
-  {
-    title: 'UI Modernization Overhaul',
-    description:
-      'Modernized a large Angular application by migrating to a faster, modern framework, improving performance by 35%, reducing build times, and upgrading the delivery pipeline to a scalable GitLab + Kubernetes workflow.',
-    image: '/images/projects/ui-overhaul.png',
-    tags: [
-      'Legacy → Modern Migration',
-      '35% Performance Gain',
-      'Multi-Team Scalability'
-    ],
-    industry: 'FULLSTACK ENGINEERING',
-    category: 'fullstack',
-    primaryMetric: '35% Faster',
-    actionType: 'none',
-    capabilities: ['full-stack-engineering']
-  },
-  {
-    title: 'Self-Service PaaS Environment Builder',
-    description:
-      'Automated environment provisioning system designed to accelerate developer velocity. Using a GitOps approach with Terraform and Ansible, developers can spin up ephemeral or persistent cloud environments in minutes rather than days. This solution standardizes cloud resource delivery across AWS, Azure, and GCP, featuring automated drift detection, cost controls, and seamless CI/CD integration for rapid iteration cycles.',
-    image: '/images/projects/paas-builder.png',
-    tags: [
-      'Developer Productivity',
-      'Infrastructure as Code (IaC)',
-      'CI/CD Automation'
-    ],
-    industry: 'DEVOPS ENGINEERING',
-    category: 'devops',
-    primaryMetric: '10× Faster Environment Setup',
-    link: 'https://paas-builder.vercel.app/',
-    actionType: 'demo',
-    capabilities: ['devops-engineering']
-  },
-  {
-    title: 'Security Testing Automation Platform',
-    description:
-      'Automated security testing platform for enterprise vulnerability assessment and penetration testing. Rapid scanning, customizable test suites, and detailed reporting scripts supporting SOC 2 compliance and security audits for SaaS companies.',
-    image: '/images/projects/cyber-operations-automation.png',
-    tags: [
-      'Automated Security Testing',
-      'SOC 2 Compliance',
-      'Lower Testing Cost'
-    ],
-    industry: 'FULLSTACK ENGINEERING',
-    category: 'fullstack',
-    primaryMetric: '5× Faster Security Assessments',
-    actionType: 'none',
-    capabilities: ['full-stack-engineering']
+    capabilities: ['ai-transformation']
   },
   {
     title: 'AI-Powered Document Retrieval Platform',
@@ -174,11 +108,77 @@ export const projectsItems = [
       'AI-Enhanced Processing',
       'Legacy System Modernization'
     ],
-    industry: 'FULLSTACK ENGINEERING',
-    category: 'fullstack',
+    industry: 'AI TRANSFORMATION',
+    category: 'ai',
     primaryMetric: '2× Faster Information Access',
     actionType: 'none',
-    capabilities: ['full-stack-engineering']
+    capabilities: ['ai-transformation']
+  },
+  {
+    title: 'HCM Interoperability Platform',
+    description:
+      'End-to-end validation pipeline across HRIS, Payroll, Finance, and Benefits systems for a multi-facility healthcare network. Schema normalization, deterministic rule engines, and reconciliation logic ensuring data consistency across enterprise-scale HR platforms during cloud migration.',
+    image: '/images/projects/hcm-interop-platform.png',
+    tags: [
+      'Multi-System Integration',
+      'Multi-System Reconciliation',
+      'Operational Continuity'
+    ],
+    industry: 'DIGITAL TRANSFORMATION',
+    category: 'digital',
+    primaryMetric: 'Operational Efficiency Gains',
+    link: 'https://hcm-interoperability-platform.vercel.app/',
+    actionType: 'demo',
+    capabilities: ['digital-transformation']
+  },
+  {
+    title: 'UI Modernization Overhaul',
+    description:
+      'Modernized a large Angular application by migrating to a faster, modern framework, improving performance by 35%, reducing build times, and upgrading the delivery pipeline to a scalable GitLab + Kubernetes workflow.',
+    image: '/images/projects/ui-overhaul.png',
+    tags: [
+      'Legacy → Modern Migration',
+      '35% Performance Gain',
+      'Multi-Team Scalability'
+    ],
+    industry: 'DIGITAL TRANSFORMATION',
+    category: 'digital',
+    primaryMetric: '35% Faster',
+    actionType: 'none',
+    capabilities: ['digital-transformation']
+  },
+  {
+    title: 'Self-Service PaaS Environment Builder',
+    description:
+      'Automated environment provisioning system designed to accelerate developer velocity. Using a GitOps approach with Terraform and Ansible, developers can spin up ephemeral or persistent cloud environments in minutes rather than days. This solution standardizes cloud resource delivery across AWS, Azure, and GCP, featuring automated drift detection, cost controls, and seamless CI/CD integration for rapid iteration cycles.',
+    image: '/images/projects/paas-builder.png',
+    tags: [
+      'Developer Productivity',
+      'Infrastructure as Code (IaC)',
+      'CI/CD Automation'
+    ],
+    industry: 'DIGITAL TRANSFORMATION',
+    category: 'digital',
+    primaryMetric: '10× Faster Environment Setup',
+    link: 'https://paas-builder.vercel.app/',
+    actionType: 'demo',
+    capabilities: ['digital-transformation']
+  },
+  {
+    title: 'Security Testing Automation Platform',
+    description:
+      'Automated security testing platform for enterprise vulnerability assessment and penetration testing. Rapid scanning, customizable test suites, and detailed reporting scripts supporting SOC 2 compliance and security audits for SaaS companies.',
+    image: '/images/projects/cyber-operations-automation.png',
+    tags: [
+      'Automated Security Testing',
+      'SOC 2 Compliance',
+      'Lower Testing Cost'
+    ],
+    industry: 'DIGITAL TRANSFORMATION',
+    category: 'digital',
+    primaryMetric: '5× Faster Security Assessments',
+    actionType: 'none',
+    capabilities: ['digital-transformation']
   },
   {
     title: 'Vendor Catalog Data Normalization Platform',
@@ -190,12 +190,12 @@ export const projectsItems = [
       'Angular + .NET Pipeline',
       'Catalog Normalization'
     ],
-    industry: 'FULLSTACK ENGINEERING',
-    category: 'fullstack',
+    industry: 'DIGITAL TRANSFORMATION',
+    category: 'digital',
     primaryMetric: '90% Manual Cleanup Reduced',
     actionType: 'demo',
     link: 'https://vendor-catalog.vercel.app/',
-    capabilities: ['full-stack-engineering']
+    capabilities: ['digital-transformation']
   },
   {
     title: 'Procurement Analytics & Vendor Intelligence Platform',
@@ -207,12 +207,12 @@ export const projectsItems = [
       'Blazor + .NET',
       'Enterprise Cost Intelligence'
     ],
-    industry: 'FULLSTACK ENGINEERING',
-    category: 'fullstack',
+    industry: 'DIGITAL TRANSFORMATION',
+    category: 'digital',
     primaryMetric: '4× Faster Cost Analysis',
     actionType: 'demo',
     link: 'https://procurement-analytics.vercel.app/',
-    capabilities: ['full-stack-engineering']
+    capabilities: ['digital-transformation']
   },
   {
     title: 'Vending Analytics Platform',
@@ -220,12 +220,12 @@ export const projectsItems = [
       'Automated system that optimizes vending machine fleets and supplier performance. Monitors stock levels, machine health, and sales velocity across distributed locations. By analyzing real-time telemetry and historical sales data, it reduced stockouts by 40% and improved route planning efficiency.',
     image: '/images/projects/vending-machine-analytics.png',
     tags: ['Real-Time Inventory', 'Angular + .NET', 'Predictive Maintenance'],
-    industry: 'FULLSTACK ENGINEERING',
-    category: 'fullstack',
+    industry: 'DIGITAL TRANSFORMATION',
+    category: 'digital',
     primaryMetric: '70% Faster Vendor Assessment',
     actionType: 'demo',
     link: 'https://vending-machine-analytics.vercel.app/',
-    capabilities: ['full-stack-engineering']
+    capabilities: ['digital-transformation']
   },
   {
     title: 'Marketing Automation for Distribution Network',
@@ -233,12 +233,12 @@ export const projectsItems = [
       'End-to-end workflow automation eliminating 25 hours of weekly manual tasks. Integrated CRM, inventory, and marketing platforms enabling 4x sales growth through improved response time and data accuracy.',
     image: '/images/projects/marketing_auto_net.png',
     tags: ['25 Hours/Week Saved', '90% Workflow Automation', '4x Sales Growth'],
-    industry: 'FULLSTACK ENGINEERING',
-    category: 'fullstack',
+    industry: 'DIGITAL TRANSFORMATION',
+    category: 'digital',
     primaryMetric: '4x Growth',
     actionType: 'demo',
     link: 'https://marketing-automation-net.vercel.app/',
-    capabilities: ['full-stack-engineering']
+    capabilities: ['digital-transformation']
   },
   {
     title: 'TherapeuTech: Real-Time Health Robotics Command',
@@ -250,11 +250,11 @@ export const projectsItems = [
       'Autonomous Spherical Drive',
       'GCP & Flask Integration'
     ],
-    industry: 'ROBOTICS/FULL STACK ENGINEERING',
-    category: 'fullstack',
+    industry: 'DIGITAL TRANSFORMATION',
+    category: 'digital',
     primaryMetric: '< 50ms Latency',
     actionType: 'none',
-    capabilities: ['full-stack-engineering']
+    capabilities: ['digital-transformation']
   },
   {
     title: 'Wedding Registry & Event Management Platform',
@@ -266,11 +266,11 @@ export const projectsItems = [
       'Seamless CRM Integration',
       '90% Booking Conversion'
     ],
-    industry: 'FULLSTACK ENGINEERING',
-    category: 'fullstack',
+    industry: 'DIGITAL TRANSFORMATION',
+    category: 'digital',
     primaryMetric: '100% User Satisfaction',
     actionType: 'none',
-    capabilities: ['full-stack-engineering']
+    capabilities: ['digital-transformation']
   },
   {
     title: 'MODA: E-Commerce Fashion Platform',
@@ -282,26 +282,24 @@ export const projectsItems = [
       'Secure Payment Processing',
       '2K+ Products Catalog'
     ],
-    industry: 'FULLSTACK ENGINEERING',
-    category: 'fullstack',
+    industry: 'DIGITAL TRANSFORMATION',
+    category: 'digital',
     primaryMetric: '99.9% Uptime',
     actionType: 'demo',
     link: 'https://moda-ecom.vercel.app/',
-    capabilities: ['full-stack-engineering']
+    capabilities: ['digital-transformation']
   }
 ];
 
 export const categories = [
-  { id: 'all', label: 'ALL PROJECTS', count: 17 },
-  { id: 'ai', label: 'AI ENGINEERING', count: 4 },
-  { id: 'devops', label: 'DEVOPS ENGINEERING', count: 1 },
-  { id: 'data', label: 'DATA ENGINEERING', count: 3 },
-  { id: 'fullstack', label: 'FULLSTACK ENGINEERING', count: 9 }
+  { id: 'all', label: 'ALL PROJECTS', count: 18 },
+  { id: 'ai', label: 'AI TRANSFORMATION', count: 7 },
+  { id: 'digital', label: 'DIGITAL TRANSFORMATION', count: 11 }
 ];
 
 export const metrics = [
   { label: 'Estimated Value Created', value: '$5M+' },
   { label: 'Engineering Hours Saved', value: '5,000+' },
-  { label: 'Enterprise Automations Delivered', value: '17+' },
+  { label: 'Business Transformations Delivered', value: '18+' },
   { label: 'Business Users Impacted', value: '5,000+' }
 ];

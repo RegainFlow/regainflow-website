@@ -4,44 +4,41 @@ import { HeroSection } from '~/features/hero';
 import { CarouselSection } from '~/features/carousel';
 import { ValueProposition } from '~/features/value-proposition';
 import { HowItWorks } from '~/features/how-it-works';
-import { RoiPreview } from '~/features/roi-preview';
 import { CaseStudiesPreview } from '~/features/case-studies-preview';
 import { FAQ } from '~/features/faq';
 import { FinalCTA } from '~/features/final-cta';
+import PartnershipCTA from '~/components/PartnershipCTA';
 import { SectionTracker } from '~/components/layout/SectionTracker';
-import { ScrollProgress } from '~/components/layout/ScrollProgress';
 
 
 import carouselStyles from '~/features/carousel/components/carousel-custom.css?url';
 import heroStyles from '~/features/hero/components/hero-custom.css?url';
 import valuePropStyles from '~/features/value-proposition/components/value-custom.css?url';
 import howItWorksStyles from '~/features/how-it-works/components/how-it-works.css?url';
-import roiPreviewStyles from '~/features/roi-preview/components/roi-preview.css?url';
 import caseStudiesPreviewStyles from '~/features/case-studies-preview/components/case-studies-preview.css?url';
 import faqStyles from '~/features/faq/components/faq.css?url';
 import finalCtaStyles from '~/features/final-cta/components/final-cta.css?url';
 import sectionTrackerStyles from '~/components/layout/SectionTracker/section-tracker.css?url';
-import scrollProgressStyles from '~/components/layout/ScrollProgress/scroll-progress.css?url';
 import scrollAnimationsStyles from '~/styles/scroll-animations.css?url';
+import partnershipStyles from '~/components/partnership-cta.css?url';
 
 export const links: Route.LinksFunction = () => [
   { rel: 'stylesheet', href: heroStyles },
   { rel: 'stylesheet', href: carouselStyles },
   { rel: 'stylesheet', href: valuePropStyles },
   { rel: 'stylesheet', href: howItWorksStyles },
-  { rel: 'stylesheet', href: roiPreviewStyles },
   { rel: 'stylesheet', href: caseStudiesPreviewStyles },
   { rel: 'stylesheet', href: faqStyles },
   { rel: 'stylesheet', href: finalCtaStyles },
   { rel: 'stylesheet', href: sectionTrackerStyles },
-  { rel: 'stylesheet', href: scrollProgressStyles },
-  { rel: 'stylesheet', href: scrollAnimationsStyles }
+  { rel: 'stylesheet', href: scrollAnimationsStyles },
+  { rel: 'stylesheet', href: partnershipStyles }
 ];
 
 export function meta({ }: Route.MetaArgs) {
-  const title = 'RegainFlow | Software Engineering Agency';
+  const title = 'RegainFlow | Digital & AI Transformation for Growing Businesses';
   const description =
-    'Contract-ready senior engineers specializing in AI/ML, data engineering, full-stack development, and DevOps. Enterprise-grade engineering solutions delivered through C2C contracts or project consulting.';
+    'Your digital and AI transformation partner. We learn your business, find the pain points, and build solutions that help you operate smarter and earn more.';
   const image = 'https://www.regainflow.com/images/og/og-home.png'; // make this
   const url = 'https://www.regainflow.com/';
 
@@ -79,7 +76,6 @@ import ScrollAnimation from '~/components/layout/ScrollAnimation';
 export default function Index() {
   return (
     <>
-      <ScrollProgress />
       <SectionTracker sections={sections} />
 
       <section id="hero">
@@ -113,6 +109,12 @@ export default function Index() {
       <ScrollAnimation animation="slide-up">
         <section id="faq">
           <FAQ />
+        </section>
+      </ScrollAnimation>
+
+      <ScrollAnimation animation="slide-up">
+        <section id="partnership">
+          <PartnershipCTA />
         </section>
       </ScrollAnimation>
 

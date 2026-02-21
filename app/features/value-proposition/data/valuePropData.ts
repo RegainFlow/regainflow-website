@@ -2,42 +2,42 @@ import type { ValueProp } from '../types/value-proposition.types';
 
 export const valuePropData: ValueProp[] = [
   {
-    title: 'Long-Term C2C Contracts',
-    subtitle: 'Senior engineers who integrate seamlessly into your team for 6-12+ month engagements.',
+    title: 'Digital Transformation',
+    subtitle: 'Custom web platforms, workflow automation, and marketing systems that modernize your operations and drive growth.',
     bullets: [
       {
-        icon: 'UserCheck',
-        text: 'Autonomous execution with senior-level judgment'
-      },
-      {
-        icon: 'RocketLaunch',
-        text: 'Hit the ground running with experienced engineers'
-      },
-      {
-        icon: 'Stack',
-        text: 'AI/ML, full-stack, DevOps, and security expertise'
-      }
-    ],
-    ctaLink: '/engineers'
-  },
-  {
-    title: 'Project-Based Consulting',
-    subtitle:
-      'Fixed-scope engagements for AI prototypes, automation systems, or technical debt resolution.',
-    bullets: [
-      {
-        icon: 'FlowArrow',
-        text: 'Build RAG pipelines, ML models, and agentic systems'
+        icon: 'Globe',
+        text: 'Custom websites and web apps that convert visitors into customers'
       },
       {
         icon: 'ArrowsClockwise',
-        text: 'Modernize legacy code and infrastructure'
+        text: 'Workflow automation that eliminates hours of manual tasks'
       },
       {
         icon: 'CloudArrowUp',
-        text: 'Deploy production-grade solutions on your stack'
+        text: 'Marketing automation, e-commerce, and CRM integration'
       }
     ],
-    ctaLink: '/engineers'
+    ctaLink: '/services/digital-transformation'
+  },
+  {
+    title: 'AI Transformation',
+    subtitle:
+      'AI-powered workflows, intelligent chatbots, and data insights that give your business a competitive edge.',
+    bullets: [
+      {
+        icon: 'Robot',
+        text: 'AI automation that handles repetitive tasks for you'
+      },
+      {
+        icon: 'FlowArrow',
+        text: 'Intelligent document processing and data extraction'
+      },
+      {
+        icon: 'ChartLine',
+        text: 'Data-driven insights and predictive analytics'
+      }
+    ],
+    ctaLink: '/services/ai-transformation'
   }
 ];

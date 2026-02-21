@@ -7,33 +7,21 @@ export function loader({}: Route.LoaderArgs) {
   // URL list for sitemap
   const pages = [
     { path: '/', changefreq: 'daily', priority: 1.0 },
-    { path: '/fractional-cto', changefreq: 'monthly', priority: 0.9 },
     { path: '/services', changefreq: 'monthly', priority: 0.9 },
     {
-      path: '/services/ai-engineering',
+      path: '/services/digital-transformation',
       changefreq: 'monthly',
       priority: 0.8
     },
     {
-      path: '/services/data-engineering',
-      changefreq: 'monthly',
-      priority: 0.8
-    },
-    {
-      path: '/services/full-stack-engineering',
-      changefreq: 'monthly',
-      priority: 0.8
-    },
-    {
-      path: '/services/devops-engineering',
+      path: '/services/ai-transformation',
       changefreq: 'monthly',
       priority: 0.8
     },
     { path: '/engineers', changefreq: 'weekly', priority: 0.9 },
     { path: '/engineers/leonardo', changefreq: 'monthly', priority: 0.8 },
-    { path: '/engineers/william', changefreq: 'monthky', priority: 0.8 },
+    { path: '/engineers/william', changefreq: 'monthly', priority: 0.8 },
     { path: '/client-results', changefreq: 'monthly', priority: 0.7 },
-    { path: '/w2-vs-c2c', changefreq: 'monthly', priority: 0.7 },
     { path: '/contact-us', changefreq: 'monthly', priority: 0.8 }
   ];
 

@@ -1,43 +1,36 @@
 /* Modern projects Page with Glassmorphism */
-:root {
-  --projects-accent: #00d6cb;
-  --projects-bg: #181a1b;
-  --projects-card-bg: rgba(35, 39, 43, 0.6);
-  --projects-glass-bg: rgba(255, 255, 255, 0.05);
-  --projects-glass-border: rgba(0, 214, 203, 0.2);
-  --projects-shadow: 0 8px 32px 0 rgba(0, 214, 203, 0.1);
-  --projects-font: 'Exo 2', sans-serif;
-}
 
 /* ========================================
    INTEGRATED HERO WITH METRICS
 ======================================== */
 .projects-hero-integrated {
   text-align: center;
-  padding: 4rem 2rem 3rem;
+  padding: var(--spacing-2xl) var(--spacing-lg) var(--spacing-xl);
   max-width: 1400px;
   margin: 0 auto;
 }
 
 .hero-content {
-  margin-bottom: 3rem;
+  margin-bottom: var(--spacing-xl);
 }
 
 .projects-title {
-  font-size: 4rem;
-  color: white;
-  font-weight: 900;
-  margin-bottom: 1.5rem;
-  font-family: var(--projects-font);
+  font-size: clamp(2.5rem, 5vw + 1rem, 4rem);
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-black);
+  margin-bottom: var(--spacing-md);
+  font-family: var(--font-secondary);
+  line-height: var(--line-height-tight);
+  padding: 0.25rem 0;
 }
 
 .projects-subtitle {
-  font-size: 1.25rem;
-  font-family: var(--projects-font);
-  color: #bff;
+  font-size: clamp(1rem, 1.5vw + 0.5rem, 1.25rem);
+  font-family: var(--font-primary);
+  color: var(--color-text-secondary);
   max-width: 800px;
   margin: 0 auto;
-  line-height: 1.7;
+  line-height: var(--line-height-relaxed);
 }
 
 /* Inline Metrics */
@@ -50,34 +43,34 @@
 }
 
 .projects-metric-inline {
-  background: rgba(255, 255, 255, 0.025);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--glass-bg-light);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--border-glass-light);
   border-radius: var(--radius-base);
-  padding: 1.5rem;
+  padding: var(--spacing-md);
   text-align: center;
-  transition: all 0.25s ease-in-out;
+  transition: var(--transition-base);
 }
 
 .projects-metric-inline:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 36px rgba(0, 214, 203, 0.18);
-  border-color: rgba(0, 214, 203, 0.4);
+  box-shadow: var(--shadow-lg), var(--glow-primary);
+  border-color: var(--color-primary-alpha-30);
 }
 
 .metric-value {
   font-size: 2.5rem;
-  color: var(--projects-accent);
-  font-weight: bold;
-  font-family: var(--projects-font);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-secondary);
 }
 
 .metric-label {
   font-size: 0.95rem;
-  color: #bff;
-  margin-top: 0.5rem;
-  font-family: var(--projects-font);
+  color: var(--color-text-secondary);
+  margin-top: var(--spacing-xs);
+  font-family: var(--font-primary);
 }
 
 /* ========================================
@@ -86,7 +79,7 @@
 .case-studies-section {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: var(--spacing-lg);
 }
 
 .category-tabs {
@@ -106,12 +99,12 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-base);
   padding: 0.75rem 1.5rem;
-  color: #bff;
+  color: var(--color-text-secondary);
   font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.25s ease-in-out;
-  font-family: var(--projects-font);
+  font-family: var(--font-primary);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -119,14 +112,14 @@
 .category-tab:hover {
   background: rgba(255, 255, 255, 0.05);
   border-color: rgba(0, 214, 203, 0.4);
-  color: var(--projects-accent);
+  color: var(--color-primary);
   transform: translateY(-2px);
 }
 
 .category-tab.active {
   background: rgba(255, 255, 255, 0.08);
-  border-color: var(--projects-accent);
-  color: var(--projects-accent);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
   box-shadow: 0 4px 12px rgba(0, 214, 203, 0.15);
 }
 
@@ -152,10 +145,10 @@
 ======================================== */
 .case-study-card {
   position: relative;
-  background: rgba(255, 255, 255, 0.025);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--glass-bg-light);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--border-glass-light);
   border-radius: var(--radius-base);
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -223,7 +216,7 @@
   border-radius: var(--radius-base);
   font-size: 0.85rem;
   font-weight: 700;
-  font-family: var(--projects-font);
+  font-family: var(--font-primary);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   box-shadow: 0 4px 12px rgba(0, 214, 203, 0.25);
@@ -245,7 +238,7 @@
   border-radius: var(--radius-base);
   font-size: 0.75rem;
   font-weight: 600;
-  font-family: var(--projects-font);
+  font-family: var(--font-primary);
   text-transform: uppercase;
   letter-spacing: 0.8px;
   z-index: 10;
@@ -253,7 +246,7 @@
 }
 
 .case-study-card:hover .card-industry-label {
-  color: var(--projects-accent);
+  color: var(--color-primary);
   border-color: rgba(0, 214, 203, 0.5);
   background: rgba(255, 255, 255, 0.12);
 }
@@ -269,15 +262,15 @@
 
 .card-title {
   font-size: 1.5rem;
-  color: var(--projects-accent);
+  color: var(--color-primary);
   font-weight: 700;
-  font-family: var(--projects-font);
+  font-family: var(--font-primary);
   line-height: 1.3;
   margin-bottom: 0.5rem;
 }
 
 .card-description {
-  color: #cff;
+  color: var(--color-text-secondary);
   font-size: 0.95rem;
   line-height: 1.7;
   margin-bottom: 1rem;
@@ -402,12 +395,12 @@
 .card-tag {
   background: rgba(0, 214, 203, 0.12);
   border: 1px solid rgba(0, 214, 203, 0.25);
-  color: var(--projects-accent);
+  color: var(--color-primary);
   padding: 0.4rem 0.8rem;
   border-radius: var(--radius-base);
   font-size: 0.8rem;
   font-weight: 600;
-  font-family: var(--projects-font);
+  font-family: var(--font-primary);
   transition: all 0.25s ease;
   white-space: nowrap;
   overflow: hidden;
@@ -430,7 +423,7 @@
   border-radius: var(--radius-base);
   font-size: 0.8rem;
   font-weight: 700;
-  font-family: var(--projects-font);
+  font-family: var(--font-primary);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-top: auto;
@@ -442,36 +435,14 @@
 ======================================== */
 .projects-cta {
   text-align: center;
-  padding: 4rem 1rem;
-  color: white;
-  font-size: 1.5rem;
-  font-family: var(--projects-font);
+  padding: var(--spacing-2xl) var(--spacing-sm);
+  color: var(--color-text-primary);
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-family: var(--font-primary);
 }
 
 .projects-cta-btn {
-  background: rgba(0, 214, 203, 0.15);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  color: var(--projects-accent);
-  border: 1.5px solid var(--projects-accent);
-  border-radius: var(--radius-base);
-  padding: 1rem 3rem;
-  font-weight: 700;
-  text-decoration: none;
-  text-align: center;
-  transition: all 0.25s ease-in-out;
-  text-transform: uppercase;
-  font-size: 1rem;
-  margin-top: 1rem;
-  display: inline-block;
-  font-family: var(--projects-font);
-  letter-spacing: 1px;
-}
-
-.projects-cta-btn:hover {
-  background: rgba(0, 214, 203, 0.25);
-  box-shadow: 0 10px 32px rgba(0, 214, 203, 0.3);
-  transform: translateY(-3px);
+  margin-top: var(--spacing-sm);
 }
 
 /* ========================================
@@ -486,9 +457,6 @@
     min-height: 1050px;
   }
 
-  .projects-title {
-    font-size: 3rem;
-  }
 }
 
 /* Mobile */
@@ -496,14 +464,6 @@
   .projects-metrics-inline {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-  }
-
-  .projects-title {
-    font-size: 2.5rem;
-  }
-
-  .projects-subtitle {
-    font-size: 1.1rem;
   }
 
   .case-studies-grid {
@@ -559,10 +519,6 @@
   .projects-metrics-inline {
     grid-template-columns: 1fr;
     gap: clamp(0.75rem, 3vw, 1rem);
-  }
-
-  .projects-title {
-    font-size: 2rem;
   }
 
   .category-tab {
@@ -631,20 +587,20 @@
 .card-demo-button {
   display: block;
   width: 100%;
-  background: rgba(0, 214, 203, 0.15);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  color: var(--projects-accent);
-  border: 1.5px solid var(--projects-accent);
+  background: var(--color-primary-alpha-10);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  color: var(--color-primary);
+  border: 1.5px solid var(--color-primary-alpha-30);
   border-radius: var(--radius-base);
   padding: 0.65rem 1.75rem;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   text-decoration: none;
   text-align: center;
-  transition: all 0.25s ease-in-out;
+  transition: var(--transition-base);
   text-transform: uppercase;
-  font-size: 0.85rem;
-  font-family: var(--projects-font);
+  font-size: var(--font-size-sm);
+  font-family: var(--font-primary);
   letter-spacing: 1px;
   margin-top: auto;
   align-self: stretch;
@@ -652,8 +608,8 @@
 }
 
 .card-demo-button:hover {
-  background: rgba(0, 214, 203, 0.3);
-  box-shadow: 0 8px 24px rgba(0, 214, 203, 0.35);
+  background: var(--color-primary-alpha-20);
+  box-shadow: var(--shadow-lg), var(--glow-primary);
   transform: translateY(-2px);
   color: white;
 }
@@ -673,7 +629,7 @@
   text-align: center;
   text-transform: uppercase;
   font-size: 0.8rem;
-  font-family: var(--projects-font);
+  font-family: var(--font-primary);
   letter-spacing: 1.5px;
   margin-top: auto;
   align-self: stretch;
@@ -859,18 +815,18 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-base);
   padding: 0.75rem 1.25rem;
-  color: #bff;
+  color: var(--color-text-secondary);
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.25s ease;
-  font-family: var(--projects-font);
+  font-family: var(--font-primary);
 }
 
 .pagination-btn:hover:not(:disabled) {
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(0, 214, 203, 0.4);
-  color: var(--projects-accent);
+  color: var(--color-primary);
   transform: translateY(-2px);
 }
 
@@ -892,13 +848,13 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0 1rem;
-  font-family: var(--projects-font);
+  font-family: var(--font-primary);
 }
 
 .pagination-current {
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--projects-accent);
+  color: var(--color-primary);
 }
 
 .pagination-separator {
@@ -909,13 +865,13 @@
 .pagination-total {
   font-size: 1rem;
   font-weight: 600;
-  color: #bff;
+  color: var(--color-text-secondary);
 }
 
 .pagination-showing {
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.5);
-  font-family: var(--projects-font);
+  font-family: var(--font-primary);
 }
 
 /* Pagination Responsive */

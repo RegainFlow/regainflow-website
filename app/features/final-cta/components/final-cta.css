@@ -90,3 +90,18 @@
     padding: 2rem 1.25rem;
   }
 }
+
+@media (max-width: 320px) {
+  .final-cta-section {
+    padding-bottom: 3rem;
+  }
+
+  .final-cta-content {
+    padding: 1.5rem 1rem;
+    gap: 1rem;
+  }
+
+  .final-cta-note {
+    font-size: 0.85rem;
+  }
+}

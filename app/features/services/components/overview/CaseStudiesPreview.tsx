@@ -17,7 +17,7 @@ export default function CaseStudiesPreview() {
 
   return (
     <section className="case-studies-preview-section glass-section">
-      <div className="case-studies-preview-container">
+      <div className="container">
         <h2 className="section-title">
           Recent <span className="text-highlight">Work</span>
         </h2>
@@ -67,7 +67,7 @@ export default function CaseStudiesPreview() {
         <div className="case-studies-cta">
           <Link
             to="/client-results"
-            className="neon-button-glass neon-button-secondary"
+            className="btn btn-neon btn-secondary"
           >
             View All Case Studies
             <PiArrowRightBold size={20} />

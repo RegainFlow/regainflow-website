@@ -5,9 +5,7 @@ import {
   PiCaretDoubleLeftBold,
   PiCaretDoubleRightBold,
   PiRobotDuotone,
-  PiDatabaseDuotone,
-  PiCodeDuotone,
-  PiGitBranchDuotone
+  PiGlobeDuotone
 } from 'react-icons/pi';
 import { projectsItems, categories } from '../data/projectsData';
 
@@ -18,14 +16,10 @@ const getCategoryIcon = (category: string) => {
   switch (category) {
     case 'ai':
       return <PiRobotDuotone size={64} />;
-    case 'data':
-      return <PiDatabaseDuotone size={64} />;
-    case 'fullstack':
-      return <PiCodeDuotone size={64} />;
-    case 'devops':
-      return <PiGitBranchDuotone size={64} />;
+    case 'digital':
+      return <PiGlobeDuotone size={64} />;
     default:
-      return <PiCodeDuotone size={64} />;
+      return <PiGlobeDuotone size={64} />;
   }
 };
 

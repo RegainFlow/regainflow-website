@@ -4,7 +4,7 @@
 
 .profile-cta-section {
   background: transparent;
-  padding-bottom: 4rem;
+  padding-bottom: var(--spacing-2xl);
 }
 
 .profile-cta-container {
@@ -19,15 +19,15 @@
 }
 
 .profile-cta-content {
-  padding: 3rem 2rem;
+  padding: var(--spacing-xl) var(--spacing-lg);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: var(--spacing-md);
 }
 
 .profile-cta-title {
-  font-size: 2.5rem;
+  font-size: clamp(1.75rem, 4vw + 0.5rem, 2.5rem);
   font-weight: var(--font-weight-black);
   color: var(--color-text-primary);
   font-family: var(--font-secondary);
@@ -36,7 +36,7 @@
 }
 
 .profile-cta-description {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 1vw + 0.5rem, 1.2rem);
   color: var(--color-text-secondary);
   line-height: var(--line-height-relaxed);
   max-width: 700px;
@@ -70,18 +70,6 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .profile-cta-title {
-    font-size: 2rem;
-  }
-
-  .profile-cta-description {
-    font-size: 1.1rem;
-  }
-
-  .profile-cta-content {
-    padding: 2.5rem 1.5rem;
-  }
-
   .profile-cta-buttons {
     flex-direction: column;
     width: 100%;
@@ -94,18 +82,6 @@
 }
 
 @media (max-width: 480px) {
-  .profile-cta-title {
-    font-size: 1.75rem;
-  }
-
-  .profile-cta-description {
-    font-size: 1rem;
-  }
-
-  .profile-cta-content {
-    padding: 2rem 1.25rem;
-  }
-
   .profile-cta-note {
     font-size: 0.875rem;
   }

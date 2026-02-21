@@ -11,21 +11,21 @@ export const featuredCaseStudies: FeaturedCaseStudy[] = [
       '10× Cycle Time Reduction',
       'Production-Grade LangGraph'
     ],
-    industry: 'HCM Automation',
+    industry: 'AI Transformation',
     primaryMetric: '12 FTEs Saved'
   },
   {
-    title: 'Hybrid RAG for Aerospace Engineering Search',
+    title: 'Marketing Automation for Distribution Network',
     description:
-      'Production search engine using ELSER V2 and Elasticsearch serving 6,000+ daily users. Hybrid semantic + keyword retrieval over millions of engineering documents with domain-specific accuracy.',
-    image: '/images/projects/insight-search-engine.png',
+      'End-to-end workflow automation eliminating 25 hours of weekly manual tasks. Integrated CRM, inventory, and marketing platforms enabling 4x sales growth through improved response time and data accuracy.',
+    image: '/images/projects/marketing_auto_net.png',
     tags: [
-      '6K+ Daily Active Users',
-      'Millions of Records',
-      'ELSER V2 Semantic Search'
+      '25 Hours/Week Saved',
+      '90% Workflow Automation',
+      '4x Sales Growth'
     ],
-    industry: 'Aerospace Engineering',
-    primaryMetric: '6K+ Users'
+    industry: 'Digital Transformation',
+    primaryMetric: '4x Growth'
   },
   {
     title: 'Legacy RPA Modernization with Python & LangGraph',
@@ -37,7 +37,7 @@ export const featuredCaseStudies: FeaturedCaseStudy[] = [
       'Multi-Agent AI Logic',
       'Hours to Minutes'
     ],
-    industry: 'Process Automation',
+    industry: 'AI Transformation',
     primaryMetric: 'Hours to Minutes'
   }
 ];

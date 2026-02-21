@@ -10,11 +10,11 @@ export default function EngineersLanding() {
       <section className="engineers-hero-section glass-section">
         <div className="engineers-hero-container">
           <h1 className="section-title">
-            Meet Your Senior Engineering <span className="text-highlight">Team</span>
+            Meet Our <span className="text-highlight">Team</span>
           </h1>
           <p className="section-subtitle">
-            Contract-ready senior engineers specializing in AI/ML, full-stack development, and automation.
-            Available for C2C contracts or project-based consulting.
+            Enterprise-grade engineering expertise, applied to your business.
+            Our team brings 15+ years of combined experience building AI systems, digital platforms, and automation solutions.
           </p>
         </div>
       </section>

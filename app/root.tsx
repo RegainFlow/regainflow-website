@@ -5,8 +5,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  isRouteErrorResponse,
-  useLocation
+  isRouteErrorResponse
 } from 'react-router';
 import Navbar from '~/components/layout/Navbar/Navbar';
 import Footer from '~/components/layout/Footer/Footer';
@@ -67,11 +66,11 @@ export const links: Route.LinksFunction = () => [
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: 'RegainFlow | Software Engineering Firm' },
+    { title: 'RegainFlow | Digital & AI Transformation for Growing Businesses' },
     {
       name: 'description',
       content:
-        'RegainFlow is a software engineering agency delivering AI Engineering, Data Engineering, Full-Stack Development, and DevOps solutions for modern businesses.'
+        'RegainFlow is your digital and AI transformation partner. We learn your business, find the pain points, and build solutions that help you operate smarter and earn more.'
     },
     { property: 'og:site_name', content: 'RegainFlow' },
     { property: 'og:type', content: 'website' }
@@ -79,9 +78,6 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export function Layout({ children }: { children: React.ReactNode }) {
-  const location = useLocation();
-  const isFractionalCto = location.pathname === '/fractional-cto';
-
   return (
     <html lang="en">
       <head>
@@ -93,9 +89,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
       <body>
         <ScrollToTop />
-        <div
-          className={`background-wrapper ${isFractionalCto ? 'theme-purple' : ''}`}
-        >
+        <div className="background-wrapper">
           <Navbar />
           {children}
           <Footer />

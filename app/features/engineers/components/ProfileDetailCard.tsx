@@ -12,8 +12,9 @@ interface ProfileDetailCardProps {
 export default function ProfileDetailCard({ member }: ProfileDetailCardProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const topSkills = member.techStack.slice(0, 3);
-  const remainingSkills = member.techStack.slice(3);
+  const techStack = member.techStack ?? [];
+  const topSkills = techStack.slice(0, 3);
+  const remainingSkills = techStack.slice(3);
 
   const [animateBars, setAnimateBars] = useState(false);
 
@@ -24,11 +25,11 @@ export default function ProfileDetailCard({ member }: ProfileDetailCardProps) {
   }, []);
 
   return (
-    <div className="profile-detail-card">
+    <div className="profile-detail-card glass-card">
       <div className="profile-detail-left">
         <img src={member.profilePic} alt={member.name} />
         <div className="profile-role-block">
-          <div className="profile-role-tag">{member.role}</div>
+          <div className="profile-role-tag badge">{member.role}</div>
           <div className="profile-role-links">
             {member.socials.map((social, i) => (
               <a
@@ -89,33 +90,21 @@ export default function ProfileDetailCard({ member }: ProfileDetailCardProps) {
           {remainingSkills.length > 0 && (
             <button
               onClick={() => setIsModalOpen(true)}
-              className="button-primary-2 animated-button btn-neon w-button"
+              className="btn btn-neon"
               style={{ flex: '1' }}
             >
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <div className="btn-content">
-                <PiStackDuotone size={20} style={{ marginRight: '10px' }} />
-                View Full Tech Stack
-              </div>
+              <PiStackDuotone size={20} style={{ marginRight: '10px' }} />
+              View Full Tech Stack
             </button>
           )}
 
           <Link
             to={`/engineers/${member.name.split(' ')[0].toLowerCase()}`}
-            className="button-primary-2 animated-button btn-neon w-button"
+            className="btn btn-neon"
             style={{ flex: '1' }}
           >
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <div className="btn-content">
-              <PiUserCircleDuotone size={20} style={{ marginRight: '10px' }} />
-              View Full Profile
-            </div>
+            <PiUserCircleDuotone size={20} style={{ marginRight: '10px' }} />
+            View Full Profile
           </Link>
         </div>
 
@@ -123,7 +112,7 @@ export default function ProfileDetailCard({ member }: ProfileDetailCardProps) {
           <ModalTechStack
             isOpen={isModalOpen}
             onClose={() => setIsModalOpen(false)}
-            skills={member.techStack}
+            skills={techStack}
           />
         )}
       </div>

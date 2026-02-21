@@ -1,28 +1,22 @@
 import { useState, useEffect, useRef } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router';
+import { Link, useLocation } from 'react-router';
 import {
   PiCaretDownBold,
-  PiStrategyDuotone,
   PiRobotDuotone,
-  PiDatabaseDuotone,
-  PiCodeDuotone,
-  PiGitBranchDuotone
+  PiGlobeDuotone
 } from 'react-icons/pi';
 
 export default function Navbar() {
-  // whenever the route changes, make sure the menu is closed
   const { pathname } = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLLIElement>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     setIsMenuOpen(false);
     setIsServicesDropdownOpen(false);
   }, [pathname]);
-
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
-  const [isElectricClick, setIsElectricClick] = useState(false);
-  const navigate = useNavigate();
-  const dropdownRef = useRef<HTMLLIElement>(null);
-  const menuRef = useRef<HTMLDivElement>(null);
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -44,28 +38,6 @@ export default function Navbar() {
     };
   }, [isServicesDropdownOpen]);
 
-  // Close mobile menu when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      const target = event.target as Node;
-      if (
-        menuRef.current &&
-        !menuRef.current.contains(target) &&
-        !(event.target as HTMLElement).closest('.menu-button')
-      ) {
-        setIsMenuOpen(false);
-      }
-    };
-
-    if (isMenuOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [isMenuOpen]);
-
   return (
     <div className="navbar-logo-left" role="banner">
       <div className="container">
@@ -76,143 +48,55 @@ export default function Navbar() {
 
           <nav
             role="navigation"
-            className={`nav-menu-wrapper w-nav-menu ${isMenuOpen ? 'open' : ''
-              }`}
+            className={`nav-menu-wrapper ${isMenuOpen ? 'open' : ''}`}
             ref={menuRef}
           >
             <ul className="nav-menu-two">
               <li>
-                <Link
-                  to="/"
-                  className="button-link"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  HOME
-                </Link>
+                <Link to="/" className="button-link">HOME</Link>
               </li>
               <li>
-                <Link
-                  to="/engineers"
-                  className="button-link"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  ENGINEERS
-                </Link>
+                <Link to="/engineers" className="button-link">OUR TEAM</Link>
               </li>
               <li className="dropdown" ref={dropdownRef}>
                 <button
                   className="button-drop-down-wrapper"
-                  onClick={() =>
-                    setIsServicesDropdownOpen(!isServicesDropdownOpen)
-                  }
+                  onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
                   aria-label="Toggle services menu"
                 >
                   <span className="button-drop-down-link">SERVICES</span>
                   <PiCaretDownBold
-                    className={`dropdown-icon ${isServicesDropdownOpen ? 'rotate' : ''
-                      }`}
+                    className={`dropdown-icon ${isServicesDropdownOpen ? 'rotate' : ''}`}
                     size={16}
                   />
                 </button>
-                <div
-                  className={`nav-dropdown-list ${isServicesDropdownOpen ? 'w--open' : ''
-                    }`}
-                >
-                  {/* Special Fractional CTO button - spans row 1-2, col 1 */}
-                  <Link
-                    to="/fractional-cto"
-                    className={`nav-dropdown-item nav-dropdown-item-featured ${isElectricClick ? 'electric-click' : ''
-                      }`}
-                    style={{ gridRow: '1 / 3', gridColumn: '1 / 2' }}
-                    onClick={(e) => {
-                      setIsElectricClick(true);
-                      // Let animation play briefly
-                      setTimeout(() => {
-                        setIsElectricClick(false);
-                        setIsMenuOpen(false);
-                      }, 600);
-                    }}
-                  >
-                    <PiStrategyDuotone
-                      size={32}
-                      className="nav-dropdown-icon"
-                    />
-                    <span>Fractional CTO</span>
+                <div className={`nav-dropdown-list ${isServicesDropdownOpen ? 'open' : ''}`}>
+                  <Link to="/services/digital-transformation" className="nav-dropdown-item">
+                    <PiGlobeDuotone size={24} className="nav-dropdown-icon" />
+                    <span>Digital Transformation</span>
                   </Link>
 
-                  {/* Row 1, Column 2 */}
-                  <Link
-                    to="/services/ai-engineering"
-                    className="nav-dropdown-item"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
+                  <Link to="/services/ai-transformation" className="nav-dropdown-item">
                     <PiRobotDuotone size={24} className="nav-dropdown-icon" />
-                    <span>AI Engineering</span>
-                  </Link>
-
-                  {/* Row 1, Column 3 */}
-                  <Link
-                    to="/services/data-engineering"
-                    className="nav-dropdown-item"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    <PiDatabaseDuotone
-                      size={24}
-                      className="nav-dropdown-icon"
-                    />
-                    <span>Data Engineering</span>
-                  </Link>
-
-                  {/* Row 2, Column 2 */}
-                  <Link
-                    to="/services/full-stack-engineering"
-                    className="nav-dropdown-item"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    <PiCodeDuotone size={24} className="nav-dropdown-icon" />
-                    <span>Full-Stack Engineering</span>
-                  </Link>
-
-                  {/* Row 2, Column 3 */}
-                  <Link
-                    to="/services/devops-engineering"
-                    className="nav-dropdown-item"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    <PiGitBranchDuotone
-                      size={24}
-                      className="nav-dropdown-icon"
-                    />
-                    <span>DevOps Engineering</span>
+                    <span>AI Transformation</span>
                   </Link>
 
                   <div className="dropdown-divider" />
-                  <Link
-                    to="/services"
-                    className="dropdown-view-all"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
+                  <Link to="/services" className="dropdown-view-all">
                     View All Services →
                   </Link>
                 </div>
               </li>
               <li>
-                <Link
-                  to="/client-results"
-                  className="button-link"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  CLIENT RESULTS
-                </Link>
+                <Link to="/client-results" className="button-link">CLIENT RESULTS</Link>
               </li>
             </ul>
             <div className="mobile-menu-cta">
               <a
                 href="https://form.typeform.com/to/SOXnbS4E"
-                className="neon-button-glass"
+                className="btn btn-neon"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => setIsMenuOpen(false)}
               >
                 CONTACT US
               </a>
@@ -222,16 +106,16 @@ export default function Navbar() {
           <div className="call-to-action desktop-only">
             <a
               href="https://form.typeform.com/to/SOXnbS4E"
-              className="neon-button-glass"
+              className="btn btn-neon"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               CONTACT US
             </a>
           </div>
 
           <div
-            className={`menu-button w-nav-button ${isMenuOpen ? 'open' : ''}`}
+            className={`menu-button ${isMenuOpen ? 'open' : ''}`}
             onClick={() => setIsMenuOpen((p) => !p)}
           >
             <span></span>

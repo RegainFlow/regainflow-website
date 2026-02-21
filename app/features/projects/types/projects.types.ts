@@ -3,7 +3,7 @@
  * Case studies and portfolio showcase
  */
 
-export type ProjectCategory = 'ai' | 'data' | 'fullstack' | 'devops';
+export type ProjectCategory = 'digital' | 'ai';
 export type ProjectActionType = 'demo' | 'none';
 
 export interface Project {

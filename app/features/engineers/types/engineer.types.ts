@@ -26,7 +26,7 @@ export interface TeamMember {
   bio: string;
   profilePic: string;
   stats: Stat[];
-  techStack: TechSkill[];
+  techStack?: TechSkill[];
   socials: SocialLink[];
   // New fields for modernized design
   primaryExpertise?: string[];

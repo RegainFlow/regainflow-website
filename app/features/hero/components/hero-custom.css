@@ -1,389 +1,156 @@
 /* ==========================================================================
-   Hero Section Styles - Hybrid Glass + Neon Design
+   Hero Section Styles - Neural & Sophisticated Design
    ========================================================================== */
-
-/* Hero-specific component variables (using global design tokens) */
-:root {
-  /* Hero Typography */
-  --hero-header-size: 70px;
-  --hero-header-line-height: 90px;
-
-  /* Hero Layout */
-  --hero-container-max: 1400px;
-  --hero-section-padding: 4rem 1rem 3rem;
-}
 
 .hero-section {
-  padding: var(--hero-section-padding);
+  padding: 8rem 1rem 6rem;
   text-align: center;
   color: var(--color-text-primary);
-  font-family: var(--font-primary);
-  margin: 0 auto;
   position: relative;
-  /* Remove overflow hidden to allow full-width video */
+  min-height: calc(100svh - var(--navbar-height, 72px));
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Subtle depth gradient overlay */
-.hero-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    ellipse at center,
-    transparent 0%,
-    transparent 40%,
-    rgba(0, 214, 203, 0.03) 100%
-  );
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* ==========================================================================
-   Background Video Layer (Glass Morphism Compatible)
-   ========================================================================== */
-
-/* Video background container - full viewport width, lowest layer */
+/* Cinematic Video Background */
 .hero-video-background {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw;
-  height: 100%;
-  z-index: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-/* Video element - enhanced for cinematic effect */
-.hero-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  min-width: 100vw;
-  min-height: 100%;
-  object-fit: cover;
-  transform: translate(-50%, -50%) scale(1.05);
-  /* opacity: 0.3; */
-  filter: var(--hero-video-blur);
-  animation: subtle-zoom 20s ease-in-out infinite alternate;
-}
-
-@keyframes subtle-zoom {
-  0% {
-    transform: translate(-50%, -50%) scale(1.05);
-  }
-
-  100% {
-    transform: translate(-50%, -50%) scale(1.08);
-  }
-}
-
-/* Enhanced overlay with multi-layer gradients for depth */
-.hero-video-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.15;
+  filter: blur(2px) grayscale(50%);
+  transform: scale(1.1);
+}
+
+.hero-video-overlay {
+  position: absolute;
+  inset: 0;
   background: radial-gradient(
     circle at center,
-    var(--hero-video-overlay-start),
-    var(--hero-video-overlay-end)
+    transparent 0%,
+    var(--color-bg-primary) 90%
   );
-  z-index: var(--z-base);
-  pointer-events: none;
-}
-*/
-
-/* Content container - ensure it sits above video and overlay */
-.container-10 {
-  position: relative;
-  z-index: 2;
-}
-
-/* Accessibility: Disable video for users preferring reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .hero-video {
-    animation: none;
-    transform: translate(-50%, -50%) scale(1.05);
-    display: none;
-  }
-
-  .hero-video-background {
-    background: var(--color-bg-primary);
-  }
 }
 
 .landing-header {
-  font-size: clamp(2rem, 5vw + 1rem, 4rem);
-  line-height: var(--line-height-tight);
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  text-align: center;
-  margin: 0 auto;
-  position: relative;
-  z-index: 2;
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-}
-
-.hero-subtitle-secondary {
-  font-size: clamp(1.25rem, 2vw + 0.5rem, 1.75rem);
-  font-weight: 600;
-  color: var(--color-primary);
-  text-align: center;
-  margin: 0.5rem auto 1.5rem;
-  text-shadow: 0 0 20px rgba(0, 214, 203, 0.3);
-  position: relative;
-  z-index: 2;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 2.5rem;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.04em;
 }
 
 .hero-subhead {
-  font-size: clamp(1rem, 1.5vw + 0.5rem, 1.5rem);
-  font-weight: 500;
-  line-height: var(--line-height-relaxed);
-  margin: 1.5rem auto 2.5rem auto;
-  max-width: 900px;
-  color: rgba(255, 255, 255, 0.98);
-  text-align: center;
-  position: relative;
-  z-index: 2;
-  /* Multi-layer text shadow for maximum visibility over video */
-  text-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.8),
-    0 2px 4px rgba(0, 0, 0, 0.7),
-    0 4px 8px rgba(0, 0, 0, 0.6),
-    0 8px 16px rgba(0, 0, 0, 0.5),
-    0 0 20px rgba(0, 0, 0, 0.3);
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  color: var(--color-text-secondary);
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
 }
 
-.text-highlight {
-  color: var(--color-primary);
-  text-shadow: var(--glow-text);
+.hero-section .text-highlight {
+  color: var(--color-primary-light);
+  font-weight: var(--font-weight-bold);
 }
 
-/* Enhanced visibility for highlighted text within hero subhead */
-.hero-subhead .text-highlight {
-  color: #00ffea;
-  font-weight: 600;
-  /* Multi-layer shadow: dark background + cyan glow */
-  text-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.9),
-    0 2px 4px rgba(0, 0, 0, 0.8),
-    0 4px 8px rgba(0, 0, 0, 0.7),
-    0 0 10px rgba(0, 214, 203, 0.6),
-    0 0 20px rgba(0, 214, 203, 0.4),
-    0 0 30px rgba(0, 214, 203, 0.2);
-}
-
+/* Typed Text Container */
 .typed-text {
-  font-size: var(--font-size-2xl);
-  margin-bottom: var(--spacing-3xl);
-  padding: 1.5rem 2rem;
-  background: var(--glass-bg-medium);
-  backdrop-filter: var(--glass-blur-md);
-  -webkit-backdrop-filter: var(--glass-blur-md);
-  border: 1px solid var(--glass-border-accent);
-  border-radius: var(--radius-base);
+  font-size: var(--font-size-xl);
+  font-family: var(--font-mono);
+  background: var(--glass-bg-light);
+  backdrop-filter: var(--glass-blur);
+  padding: 1rem 2rem;
+  border-radius: var(--radius-md);
+  border: var(--border-glass-light);
+  margin-bottom: 5rem;
   display: inline-block;
-  min-width: 400px;
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.5),
-    0 0 0 1px rgba(0, 214, 203, 0.1) inset;
-  position: relative;
-  z-index: 2;
-  transition: all 0.3s ease;
-}
-
-.typed-text:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(0, 214, 203, 0.3);
-  box-shadow:
-    0 12px 40px rgba(0, 0, 0, 0.6),
-    0 0 0 1px rgba(0, 214, 203, 0.2) inset,
-    0 0 20px rgba(0, 214, 203, 0.1);
 }
 
 .typed-highlight {
   color: var(--color-primary);
-  text-shadow: var(--glow-text);
+  font-weight: var(--font-weight-bold);
 }
 
-/* --------------------------------------------------------------------------
-     Responsive Breakpoints
-     -------------------------------------------------------------------------- */
-@media (max-width: 768px) {
-  .hero-section {
-    padding: 3rem 1rem 2rem;
-  }
-
-  /* Keep video visible on mobile with optimized settings */
-  .hero-video {
-    opacity: 0.3;
-    animation: none;
-    transform: translate(-50%, -50%) scale(1.05);
-  }
-
-  .hero-video-background {
-    background: var(--color-bg-primary);
-  }
-
-  .typed-text {
-    font-size: 1.5rem;
-    padding: 1.25rem 1.5rem;
-    min-width: 0;
-    width: clamp(240px, 85vw, 300px);
-    max-width: 90%;
-  }
-
-  .landing-header {
-    padding: 0 1rem;
-  }
-
-  .animated-button {
-    width: 90%;
-    max-width: 350px;
-    margin: 30px auto;
-    padding: 12px 20px;
-    font-size: 14px;
-  }
-
-  .animated-button .btn-content {
-    font-size: 14px;
-  }
-
-  .hero-subhead {
-    margin: 1rem auto 2rem auto;
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-section {
-    padding: 2.5rem 0.75rem 1.5rem;
-  }
-
-  .typed-text {
-    font-size: 1.25rem;
-    padding: 1rem 1.25rem;
-    min-width: 0;
-    width: clamp(200px, 80vw, 280px);
-    max-width: 85%;
-  }
-
-  .landing-header {
-    padding: 0 0.75rem;
-  }
-
-  .animated-button {
-    width: 90%;
-    max-width: 300px;
-    margin: 25px auto;
-    padding: 10px 16px;
-    font-size: 13px;
-  }
-
-  .animated-button .btn-content {
-    font-size: 13px;
-  }
-
-  .animated-button .btn-content svg {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-  }
-
-  .hero-subhead {
-    margin: 0.75rem auto 1.5rem auto;
-    padding: 0 0.75rem;
-  }
-}
-
-@media (max-width: 360px) {
-  .typed-text {
-    font-size: 1.15rem;
-    padding: 0.875rem 1rem;
-    min-width: 0;
-    width: clamp(260px, 85vw, 100%);
-    max-width: 90%;
-  }
-}
-
-@media (max-width: 320px) {
-  .typed-text {
-    font-size: 1.05rem;
-    padding: 0.75rem 0.875rem;
-    min-width: 0;
-    width: 90%;
-    max-width: 290px;
-  }
-}
-
-/* --------------------------------------------------------------------------
-   Neon-border animated button
-   Uses global .btn-neon class from app/styles/components.css
-   Custom overrides for hero section below
-   -------------------------------------------------------------------------- */
-.animated-button {
-  /* Extends global .btn-neon - add hero-specific overrides */
-  width: 400px;
-  margin: 40px auto;
-  letter-spacing: var(--letter-spacing-wide);
-}
-
-.animated-button .btn-content {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-}
-
-/* --------------------------------------------------------------------------
-   Dual CTA Buttons
-   -------------------------------------------------------------------------- */
 .hero-cta-buttons {
   display: flex;
   gap: 1.5rem;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
-  position: relative;
-  z-index: 2;
-  flex-wrap: wrap;
 }
 
-.button-secondary-hero {
-  display: inline-block;
-  padding: 1rem 2rem;
-  background: var(--glass-bg-light);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-base);
-  color: var(--color-text-primary);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  backdrop-filter: var(--glass-blur-md);
-  -webkit-backdrop-filter: var(--glass-blur-md);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 6rem 1rem 4rem;
+    min-height: calc(100svh - var(--navbar-height, 72px));
+  }
+
+  .hero-cta-buttons {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .hero-cta-buttons .neon-button-glass {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .typed-text {
+    font-size: var(--font-size-base);
+    padding: 0.75rem 1.5rem;
+    margin-bottom: 3rem;
+  }
 }
 
-.button-secondary-hero:hover {
-  background: var(--glass-bg-medium);
-  border-color: var(--color-primary);
-  transform: translateY(-2px);
-  box-shadow:
-    0 6px 20px rgba(0, 0, 0, 0.4),
-    0 0 15px rgba(0, 214, 203, 0.2);
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 5rem 0.75rem 3rem;
+    min-height: calc(100svh - var(--navbar-height, 72px));
+  }
+
+  .typed-text {
+    font-size: var(--font-size-sm);
+    padding: 0.625rem 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-subhead {
+    margin-bottom: 2rem;
+  }
 }
 
-/* Adjust primary button in dual CTA layout */
-.hero-cta-buttons .animated-button {
-  width: auto;
-  min-width: 280px;
-  margin: 0;
+@media (max-width: 320px) {
+  .hero-section {
+    padding: 4.5rem 0.5rem 2.5rem;
+    min-height: calc(100svh - var(--navbar-height, 72px));
+  }
+
+  .typed-text {
+    font-size: var(--font-size-xs);
+    padding: 0.5rem 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .landing-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-subhead {
+    margin-bottom: 1.5rem;
+  }
 }

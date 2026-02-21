@@ -1,4 +1,4 @@
-import type { Route } from './+types/projects';
+import type { Route } from './+types/client-results';
 import { metrics } from '~/features/projects';
 import CaseStudiesGrid from '~/features/projects/components/CaseStudiesGrid';
 import projectsStyles from '~/features/projects/components/projects.css?url';
@@ -14,7 +14,7 @@ export function meta({}: Route.MetaArgs) {
     {
       name: 'description',
       content:
-        'Enterprise automation and data infrastructure delivered by senior engineers. Real projects, measured impact, production-scale outcomes.'
+        'See what we\'ve built. Digital and AI transformation projects delivering real business impact — from workflow automation to AI-powered platforms.'
     }
   ];
 }
@@ -31,8 +31,8 @@ export default function projects() {
             Client <span className="text-highlight">Results</span>
           </h1>
           <p className="projects-subtitle">
-            Real projects, measured impact, production-scale outcomes delivered
-            by senior engineers.
+            We bring the same engineering rigor from Fortune 500 projects to
+            growing businesses. Here&apos;s what that looks like in practice.
           </p>
         </div>
 
@@ -58,7 +58,7 @@ export default function projects() {
           <p>Want results like these?</p>
           <a
             href={bookingUrl}
-            className="projects-cta-btn"
+            className="neon-button-glass projects-cta-btn"
             target="_blank"
             rel="noopener noreferrer"
           >

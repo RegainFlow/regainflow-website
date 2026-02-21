@@ -3,42 +3,40 @@ import * as PiIcons from 'react-icons/pi';
 import type { CapabilityCard } from '../../types/service.types';
 import capabilitiesGridStyles from './capabilities-grid.css?url';
 
-export const links = () => [
-  { rel: 'stylesheet', href: capabilitiesGridStyles }
-];
+export const links = () => [{ rel: 'stylesheet', href: capabilitiesGridStyles }];
 
 interface CapabilitiesGridProps {
   capabilities: CapabilityCard[];
 }
 
-export default function CapabilitiesGrid({
-  capabilities
-}: CapabilitiesGridProps) {
+export default function CapabilitiesGrid({ capabilities }: CapabilitiesGridProps) {
   return (
     <section className="capabilities-grid-section glass-section">
-      <div className="capabilities-grid-container">
+      <div className="container">
         <h2 className="section-title">
-          Our <span className="text-highlight">Services</span>
+          Our <span className="text-highlight">Capabilities</span>
         </h2>
+        <p className="section-subtitle">
+          Specialized engineering disciplines tailored for Digital & AI Transformation
+        </p>
 
         <div className="capabilities-grid">
-          {capabilities.map((capability) => {
-            const IconComponent = (PiIcons as any)[capability.icon];
-
+          {capabilities.map((cap, idx) => {
+            const IconComponent = (PiIcons as any)[cap.icon];
             return (
               <Link
-                key={capability.slug}
-                to={`/services/${capability.slug}`}
+                key={idx}
+                to={`/services/${cap.slug}`}
                 className="capability-card glass-card"
               >
                 <div className="capability-card-icon">
-                  {IconComponent && <IconComponent size={48} />}
+                  {IconComponent && <IconComponent size={40} />}
                 </div>
-                <h3 className="capability-card-title">{capability.title}</h3>
-                <p className="capability-card-description">
-                  {capability.description}
-                </p>
-                <span className="capability-card-link">Learn More →</span>
+                <h3 className="capability-card-title">{cap.title}</h3>
+                <p className="capability-card-description">{cap.description}</p>
+                <div className="capability-card-link">
+                  Explore {cap.title} →
+                </div>
               </Link>
             );
           })}

@@ -21,7 +21,7 @@
 .engineers-grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: var(--spacing-lg);
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -37,5 +37,17 @@
   .engineers-grid-container {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .engineers-grid-container {
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .engineers-grid-container {
+    gap: 1rem;
   }
 }

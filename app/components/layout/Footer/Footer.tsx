@@ -1,5 +1,6 @@
 import footerStyles from './footer.css?url';
 import { Link } from 'react-router';
+import { bookingUrl } from '~/config/site.config';
 
 export const links = () => [{ rel: 'stylesheet', href: footerStyles }];
 
@@ -14,9 +15,9 @@ export default function Footer() {
             REGAINFLOW
           </Link>
           <p className="footer-logo-blurb">
-            Senior engineers available for C2C contracts and project-based
-            consulting. Production-ready expertise in AI/ML, automation, and
-            full-stack development.
+            Your digital and AI transformation partner. We learn your business,
+            find the pain points, and build solutions that help you operate
+            smarter and earn more.
           </p>
           <img
             src="/images/regain_flow_logo.png"
@@ -33,20 +34,11 @@ export default function Footer() {
             <Link to="/services" className="footer-link">
               All Services
             </Link>
-            <Link to="/fractional-cto" className="footer-link">
-              Fractional CTO
+            <Link to="/services/digital-transformation" className="footer-link">
+              Digital Transformation
             </Link>
-            <Link to="/services/ai-engineering" className="footer-link">
-              AI Engineering
-            </Link>
-            <Link to="/services/data-engineering" className="footer-link">
-              Data Engineering
-            </Link>
-            <Link to="/services/full-stack-engineering" className="footer-link">
-              Full-Stack Engineering
-            </Link>
-            <Link to="/services/devops-engineering" className="footer-link">
-              DevOps Engineering
+            <Link to="/services/ai-transformation" className="footer-link">
+              AI Transformation
             </Link>
           </div>
 
@@ -54,7 +46,7 @@ export default function Footer() {
           <div className="footer-block">
             <div className="title-small">Company</div>
             <Link to="/engineers" className="footer-link">
-              Our Engineers
+              Our Team
             </Link>
             <Link to="/client-results" className="footer-link">
               Client Results
@@ -72,9 +64,14 @@ export default function Footer() {
           {/* Column 3: Resources */}
           <div className="footer-block">
             <div className="title-small">Resources</div>
-            <Link to="/w2-vs-c2c" className="footer-link">
-              W2 vs C2C Calculator
-            </Link>
+            <a
+              href={bookingUrl}
+              className="footer-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Free Business Assessment
+            </a>
             <Link to="/terms" className="footer-link">
               Terms & Conditions
             </Link>

@@ -14,8 +14,8 @@
 .engineer-stats-grid-modern {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
 }
 
 /* Responsive */

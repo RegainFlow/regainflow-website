@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Process Steps Section
+   Process Steps Section — Horizontal 4×1 Layout
    ========================================================================== */
 
 .process-steps-section {
@@ -7,31 +7,31 @@
 }
 
 .process-steps-container {
+  width: 100%;
   margin: 0 auto;
 }
 
 .process-steps-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  margin-top: 4rem;
-  padding-top: 1rem;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-2xl);
 }
 
 .process-step-card {
   position: relative;
-  padding: 3rem 1.5rem 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  padding: var(--spacing-lg) var(--spacing-md);
   overflow: visible;
 }
 
+/* Step number badge — sits inline above the icon */
 .process-step-number {
-  position: absolute;
-  top: -24px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,17 +41,18 @@
     var(--color-primary-light)
   );
   border-radius: var(--radius-full);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: var(--font-weight-black);
   font-family: var(--font-secondary);
   color: var(--color-bg-primary);
   box-shadow: 0 4px 16px rgba(0, 214, 203, 0.4);
-  z-index: 10;
+  flex-shrink: 0;
+  margin-bottom: var(--spacing-sm);
 }
 
 .process-step-icon {
-  width: 60px;
-  height: 60px;
+  width: 52px;
+  height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,34 +60,38 @@
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-base);
   color: var(--color-primary);
-  margin: 1.5rem auto 1rem;
+  margin-bottom: var(--spacing-sm);
 }
 
 .process-step-title {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: var(--font-weight-bold);
   font-family: var(--font-secondary);
   color: var(--color-text-primary);
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.5rem 0;
+}
+
+.process-step-body {
+  display: contents;
 }
 
 .process-step-description {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: var(--color-text-secondary);
   line-height: var(--line-height-relaxed);
   margin: 0;
 }
 
-/* Connecting arrows between steps */
+/* Connecting arrows between steps — right arrows on desktop */
 .process-step-card:not(:last-child)::after {
   content: '→';
   position: absolute;
   top: 50%;
-  right: -2rem;
+  right: calc(var(--spacing-lg) * -0.5 - 0.5rem);
   transform: translateY(-50%);
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--color-primary);
-  opacity: 0.3;
+  opacity: 0.4;
   pointer-events: none;
 }
 
@@ -94,11 +99,11 @@
 @media (max-width: 1024px) {
   .process-steps-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 3rem 2rem;
+    gap: var(--spacing-xl) var(--spacing-lg);
   }
 
-  /* Remove arrows on 2-column layout */
-  .process-step-card::after {
+  /* Hide right arrows in 2-col — they'd point into wrong cards */
+  .process-step-card:not(:last-child)::after {
     display: none;
   }
 }
@@ -106,46 +111,62 @@
 @media (max-width: 768px) {
   .process-steps-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
-    margin-top: 3rem;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
   }
 
   .process-step-card {
-    padding: 2.5rem 1.25rem 2rem 1.25rem;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1.25rem;
   }
 
-  .process-step-title {
-    font-size: 1.15rem;
+  .process-step-number {
+    margin-bottom: 0.25rem;
+  }
+
+  .process-step-icon {
+    display: none;
+  }
+
+  .process-step-body {
+    display: block;
+    flex: 1;
+    min-width: 0;
   }
 }
 
 @media (max-width: 480px) {
-  .process-steps-grid {
-    margin-top: 2.5rem;
-    gap: 2rem;
-  }
-
   .process-step-card {
-    padding: 2.5rem 1rem 1.5rem 1rem;
+    padding: 1rem;
+    gap: var(--spacing-sm);
   }
 
   .process-step-number {
-    width: 40px;
-    height: 40px;
-    font-size: 1.25rem;
-    top: -20px;
-  }
-
-  .process-step-icon {
-    width: 50px;
-    height: 50px;
-  }
-
-  .process-step-title {
+    width: 36px;
+    height: 36px;
     font-size: 1.1rem;
   }
 
+  .process-step-title {
+    font-size: 1rem;
+  }
+
   .process-step-description {
-    font-size: 0.9rem;
+    font-size: 0.82rem;
+    line-height: 1.55;
+  }
+}
+
+@media (max-width: 320px) {
+  .process-steps-grid {
+    margin-top: var(--spacing-lg);
+    gap: var(--spacing-md);
+  }
+
+  .process-step-card {
+    padding: var(--spacing-sm);
   }
 }

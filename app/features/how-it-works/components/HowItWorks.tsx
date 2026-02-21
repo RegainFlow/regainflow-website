@@ -6,12 +6,12 @@ export const links = () => [{ rel: 'stylesheet', href: howItWorksStyles }];
 export default function HowItWorks() {
   return (
     <section className="how-it-works-section glass-section">
-      <div className="how-it-works-container">
+      <div className="container">
         <h2 className="section-title">
           How It <span className="text-highlight">Works</span>
         </h2>
         <p className="section-subtitle">
-          Four simple steps to get senior engineering talent on your team
+          Four simple steps to transform your business
         </p>
 
         <div className="steps-grid">

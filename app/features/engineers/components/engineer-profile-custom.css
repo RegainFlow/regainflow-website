@@ -2,33 +2,20 @@
    Individual Engineer Profile Styles
    ========================================================================== */
 
-:root {
-  /* Button Variables */
-  --button-color: #00d6cb;
-  --button-border: rgba(0, 214, 203, 0.5);
-  --button-radius: 5px;
-  --button-padding: 10px 40px;
-  --button-font-size: 15px;
-  --button-font-weight: 700;
-  --button-line-height: 20px;
-  --button-primary-color: var(--button-color);
-  --button-primary-border: var(--button-border);
-}
-
 .engineer-profile-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 20px;
-  font-family: 'Exo 2', sans-serif;
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  font-family: var(--font-primary);
 }
 
 .engineer-profile-hero {
   display: grid;
   grid-template-columns: 300px 1fr;
-  gap: 3rem;
-  margin-bottom: 4rem;
-  padding-bottom: 3rem;
-  border-bottom: 1px solid rgba(0, 214, 203, 0.2);
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
+  padding-bottom: var(--spacing-xl);
+  border-bottom: 1px solid var(--color-primary-alpha-20);
 }
 
 .engineer-profile-sidebar {
@@ -43,8 +30,8 @@
   height: 250px;
   border-radius: var(--radius-md);
   object-fit: cover;
-  border: 3px solid rgba(0, 214, 203, 0.5);
-  box-shadow: 0 0 20px rgba(0, 214, 203, 0.3);
+  border: 3px solid var(--color-primary-alpha-30);
+  box-shadow: var(--glow-primary);
 }
 
 .engineer-availability-badge {
@@ -111,102 +98,98 @@
 }
 
 .engineer-profile-header h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #fff;
+  font-size: clamp(2rem, 4vw + 0.5rem, 2.5rem);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
   margin: 0 0 0.5rem 0;
-  font-family: 'Exo 2', sans-serif;
+  font-family: var(--font-secondary);
+  line-height: var(--line-height-tight);
 }
 
 .engineer-profile-role {
-  font-size: 1.25rem;
-  color: rgba(0, 214, 203, 1);
-  font-weight: 600;
-  margin: 0 0 1.5rem 0;
+  font-size: clamp(1rem, 1.5vw + 0.5rem, 1.25rem);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+  margin: 0 0 var(--spacing-md) 0;
 }
 
 .engineer-profile-bio {
   font-size: 1.05rem;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 1.5rem;
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-md);
 }
 
 .engineer-stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin: 2rem 0;
+  gap: var(--spacing-md);
+  margin: var(--spacing-lg) 0;
 }
 
 .engineer-stat-card {
-  background: rgba(0, 214, 203, 0.05);
-  border: 1px solid rgba(0, 214, 203, 0.2);
+  background: var(--color-primary-alpha-10);
+  border: 1px solid var(--color-primary-alpha-20);
   border-radius: var(--radius-base);
-  padding: 1.5rem;
+  padding: var(--spacing-md);
   text-align: center;
-  transition: all 0.3s ease;
+  transition: var(--transition-base);
 }
 
 .engineer-stat-card:hover {
-  background: rgba(0, 214, 203, 0.08);
-  border-color: rgba(0, 214, 203, 0.4);
+  background: var(--glass-bg-medium);
+  border-color: var(--color-primary-alpha-30);
   transform: translateY(-2px);
 }
 
 .engineer-stat-value {
   font-size: 2rem;
-  font-weight: 700;
-  color: rgba(0, 214, 203, 1);
-  margin-bottom: 0.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
 }
 
 .engineer-stat-label {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.7);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .engineer-section {
-  margin-bottom: 3rem;
+  margin-bottom: var(--spacing-xl);
 }
 
 .engineer-section-title {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 1.5rem;
+  font-size: clamp(1.5rem, 3vw + 0.5rem, 1.75rem);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-md);
   padding-bottom: 0.75rem;
-  font-family: 'Exo 2', sans-serif;
+  font-family: var(--font-secondary);
   text-align: center;
-}
-
-.engineer-section-title .text-highlight {
-  color: rgba(0, 214, 203, 1);
-  text-shadow: 0 0 10px rgba(0, 214, 203, 0.5);
 }
 
 .engineer-tech-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  gap: var(--spacing-lg);
 }
 
 .engineer-tech-category {
-  background: rgba(0, 214, 203, 0.03);
-  border: 1px solid rgba(0, 214, 203, 0.15);
+  background: var(--color-primary-alpha-10);
+  border: 1px solid var(--color-primary-alpha-20);
   border-radius: var(--radius-base);
-  padding: 1.5rem;
+  padding: var(--spacing-md);
 }
 
 .engineer-tech-category h4 {
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-sm);
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  font-family: 'Exo 2', sans-serif;
+  font-family: var(--font-secondary);
   border-bottom: 1px solid currentColor;
   padding-bottom: 0.3rem;
 }
@@ -352,30 +335,30 @@
 }
 
 .engineer-cta-section {
-  background: rgba(0, 214, 203, 0.05);
-  border: 2px solid rgba(0, 214, 203, 0.3);
-  border-radius: var(--radius-base);
-  padding: 2.5rem;
+  background: var(--color-primary-alpha-10);
+  border: 2px solid var(--color-primary-alpha-20);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
   text-align: center;
-  margin-top: 3rem;
+  margin-top: var(--spacing-xl);
 }
 
 .engineer-cta-section h3 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 1rem;
-  font-family: 'Exo 2', sans-serif;
+  font-size: clamp(1.5rem, 3vw + 0.5rem, 1.75rem);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-sm);
+  font-family: var(--font-secondary);
   text-align: center;
 }
 
 .engineer-cta-section p {
   font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.85);
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-md);
+  line-height: var(--line-height-relaxed);
   text-align: center;
-  font-family: 'Exo 2', sans-serif;
+  font-family: var(--font-primary);
 }
 
 .engineer-cta-buttons {

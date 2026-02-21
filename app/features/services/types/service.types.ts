@@ -2,11 +2,7 @@
    Capability Slugs & Types
    ========================================================================== */
 
-export type CapabilitySlug =
-  | 'ai-engineering'
-  | 'data-engineering'
-  | 'full-stack-engineering'
-  | 'devops-engineering';
+export type CapabilitySlug = "digital-transformation" | "ai-transformation";
 
 /* ==========================================================================
    Capability Page Types
@@ -34,7 +30,6 @@ export interface Capability {
   title: string;
   subtitle: string;
   heroImage: string;
-  description: string; // Rich text description
   problems: Problem[]; // Problems this capability solves
   approach: ApproachStep[]; // How we approach this service
   techStack: TechItem[]; // Technologies used
@@ -76,4 +71,3 @@ export interface ServicesOverview {
   metrics: ServiceMetric[];
   capabilityCards: CapabilityCard[];
 }
-
