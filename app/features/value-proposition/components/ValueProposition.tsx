@@ -1,24 +1,24 @@
-import { valuePropData } from '../data/valuePropData';
+import { valuePropData } from "../data/valuePropData";
 import {
   PiGlobeDuotone,
   PiRobotDuotone,
   PiArrowsClockwiseDuotone,
   PiCloudArrowUpDuotone,
-  PiFlowArrowDuotone,
+  PiUsersFourDuotone,
   PiChartLineDuotone,
   PiCalendarCheckDuotone,
-  PiTrophyDuotone
-} from 'react-icons/pi';
-import type { IconType } from 'react-icons';
-import { bookingUrl } from '~/config/site.config';
+  PiTrophyDuotone,
+} from "react-icons/pi";
+import type { IconType } from "react-icons";
+import { bookingUrl } from "~/config/site.config";
 
 const iconMap: Record<string, IconType> = {
   Globe: PiGlobeDuotone,
   Robot: PiRobotDuotone,
   ArrowsClockwise: PiArrowsClockwiseDuotone,
   CloudArrowUp: PiCloudArrowUpDuotone,
-  FlowArrow: PiFlowArrowDuotone,
-  ChartLine: PiChartLineDuotone
+  UsersFour: PiUsersFourDuotone,
+  ChartLine: PiChartLineDuotone,
 };
 
 const cardIcons: IconType[] = [PiGlobeDuotone, PiRobotDuotone];
@@ -28,7 +28,7 @@ export default function ValueProposition() {
     <section id="value-prop" className="value-proposition-section">
       <div className="vp-container">
         <h2 className="section-title mb-md">
-          <span className="text-highlight">Regain</span> Your{' '}
+          <span className="text-highlight">Regain</span> Your{" "}
           <span className="text-highlight">Flow</span>
         </h2>
 
@@ -41,10 +41,7 @@ export default function ValueProposition() {
                   <h2 className="vp-title">
                     <span className="vp-title-row">
                       {CardIcon && (
-                        <CardIcon
-                          color="#00d6cb"
-                          className="vp-title-icon"
-                        />
+                        <CardIcon color="#00d6cb" className="vp-title-icon" />
                       )}
                       {service.title}
                     </span>
@@ -56,7 +53,10 @@ export default function ValueProposition() {
                       return (
                         <li key={bidx} className="vp-bullet-item">
                           {IconComponent && (
-                            <IconComponent size={32} className="vp-bullet-icon" />
+                            <IconComponent
+                              size={32}
+                              className="vp-bullet-icon"
+                            />
                           )}
                           <span>{b.text}</span>
                         </li>
@@ -71,14 +71,14 @@ export default function ValueProposition() {
                       rel="noopener noreferrer"
                     >
                       <PiCalendarCheckDuotone size={24} />
-                      Schedule Free Consultation
+                      Book Your Free Assessment
                     </a>
                     <a
                       href="/client-results"
                       className="neon-button-glass neon-button-secondary"
                     >
                       <PiTrophyDuotone size={24} />
-                      See Our Results
+                      See Client Results
                     </a>
                   </div>
                 </div>

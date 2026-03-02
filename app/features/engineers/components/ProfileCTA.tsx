@@ -1,6 +1,7 @@
 import { PiCalendarCheckDuotone, PiUsersDuotone } from 'react-icons/pi';
 import profileCtaStyles from './profile-cta.css?url';
 import { bookingUrl } from '~/config/site.config';
+import { teamPageCopy } from '../data/teamPageCopy';
 
 export const links = () => [{ rel: 'stylesheet', href: profileCtaStyles }];
 
@@ -16,13 +17,12 @@ export default function ProfileCTA({ engineerName }: ProfileCTAProps) {
       <div className="profile-cta-container glass-card">
         <div className="profile-cta-content">
           <h2 className="profile-cta-title">
-            Ready to Work with{' '}
+            {teamPageCopy.profileCtaTitlePrefix}{' '}
             <span className="text-highlight">{firstName}</span>?
           </h2>
 
           <p className="profile-cta-description">
-            Schedule a free consultation to discuss your project requirements
-            and how {firstName} can help you ship faster.
+            {teamPageCopy.profileCtaDescription}
           </p>
 
           <div className="profile-cta-buttons">
@@ -33,7 +33,7 @@ export default function ProfileCTA({ engineerName }: ProfileCTAProps) {
               rel="noopener noreferrer"
             >
               <PiCalendarCheckDuotone size={24} />
-              Schedule Free Consultation
+              Book Your Free Assessment
             </a>
 
             <a
@@ -46,11 +46,9 @@ export default function ProfileCTA({ engineerName }: ProfileCTAProps) {
           </div>
 
           <p className="profile-cta-note">
-            <span className="text-free-highlight">Free consultation</span> ·{' '}
-            <span className="text-free-highlight">No commitment</span> ·{' '}
-            <span className="text-free-highlight">
-              Flexible engagement terms
-            </span>
+            <span className="text-free-highlight">Free assessment</span> |{' '}
+            <span className="text-free-highlight">No commitment</span> |{' '}
+            <span className="text-free-highlight">Clear next steps</span>
           </p>
         </div>
       </div>

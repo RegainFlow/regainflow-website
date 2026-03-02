@@ -9,6 +9,7 @@ export type ProjectActionType = 'demo' | 'none';
 export interface Project {
   title: string;
   description: string;
+  technicalContext?: string;
   image: string;
   tags: string[];
   industry: string;

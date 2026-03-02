@@ -20,7 +20,7 @@ export const links: Route.LinksFunction = () => [
 export function meta({}: Route.MetaArgs) {
   const title = 'RegainFlow | Digital & AI Transformation Services';
   const description =
-    'Digital transformation and AI solutions for growing businesses. Custom web platforms, workflow automation, AI-powered tools, and data-driven insights that help you operate smarter and earn more.';
+    'Digital transformation and AI services for growing businesses that want more leads, faster response times, and less manual work.';
   const image = 'https://www.regainflow.com/images/og/og-services.png';
   const url = 'https://www.regainflow.com/services';
 

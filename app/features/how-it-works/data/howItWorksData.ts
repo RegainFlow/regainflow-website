@@ -3,26 +3,26 @@ import type { HowItWorksStep } from '../types/how-it-works.types';
 export const howItWorksData: HowItWorksStep[] = [
   {
     number: '1',
-    title: 'Business Assessment',
+    title: 'Find the Bottleneck',
     description:
-      'We start by learning your business inside and out — your workflows, pain points, tools, and goals. We identify where you\'re losing time and money so we can target the highest-impact improvements first.'
+      'We look at how leads, customers, and internal work move through your business so we can spot the slowdowns, leaks, and manual steps holding growth back.'
   },
   {
     number: '2',
-    title: 'Custom Strategy',
+    title: 'Build the Right Plan',
     description:
-      'We design a tailored transformation roadmap with clear milestones, technology recommendations, and expected outcomes. You\'ll know exactly what you\'re getting, what it costs, and what results to expect.'
+      'You get a clear, practical plan focused on the highest-value fixes first, with straightforward scope, timing, and expected business impact.'
   },
   {
     number: '3',
-    title: 'Build & Launch',
+    title: 'Launch What Matters First',
     description:
-      'We build your solution iteratively with frequent demos so you see progress every step of the way. We handle development, testing, and deployment — you focus on running your business.'
+      'We build and launch the highest-impact pieces first so you start seeing wins sooner, while we handle the setup, testing, and rollout.'
   },
   {
     number: '4',
-    title: 'Optimize & Grow',
+    title: 'Improve as You Grow',
     description:
-      'After launch, we monitor performance, optimize based on real usage data, and scale your systems as your business grows. We\'re your long-term technology partner, not a one-and-done vendor.'
+      'Once things are live, we keep improving based on real usage, team feedback, and business results so your systems stay useful as you scale.'
   }
 ];

@@ -26,6 +26,7 @@ const getCategoryIcon = (category: string) => {
 export default function CaseStudiesGrid() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [currentPage, setCurrentPage] = useState(1);
+  const [expandedCards, setExpandedCards] = useState<Set<string>>(new Set());
 
   const filteredItems =
     activeCategory === 'all'
@@ -40,6 +41,7 @@ export default function CaseStudiesGrid() {
   // Reset to page 1 when category changes
   useEffect(() => {
     setCurrentPage(1);
+    setExpandedCards(new Set());
   }, [activeCategory]);
 
   const goToPage = (page: number) => {
@@ -50,6 +52,19 @@ export default function CaseStudiesGrid() {
   const goToPrevious = () => goToPage(currentPage - 1);
   const goToNext = () => goToPage(currentPage + 1);
   const goToLast = () => goToPage(totalPages);
+  const toggleExpanded = (cardId: string) => {
+    setExpandedCards((prev) => {
+      const next = new Set(prev);
+
+      if (next.has(cardId)) {
+        next.delete(cardId);
+      } else {
+        next.add(cardId);
+      }
+
+      return next;
+    });
+  };
 
   return (
     <div className="case-studies-section">
@@ -69,9 +84,16 @@ export default function CaseStudiesGrid() {
 
       {/* Grid Layout */}
       <div className="case-studies-grid">
-        {currentItems.map((item, i) => (
+        {currentItems.map((item, i) => {
+          const cardId = `${item.category}-${item.title}-${startIndex + i}`;
+          const isExpanded = expandedCards.has(cardId);
+          const shouldShowToggle =
+            item.description.length > 140 ||
+            Boolean(item.technicalContext && item.technicalContext.length > 70);
+
+          return (
           <div
-            key={`${item.category}-${i}`}
+            key={cardId}
             className={`case-study-card ${!item.image ? 'card-compact' : ''}`}
             data-category={item.category}
           >
@@ -86,7 +108,34 @@ export default function CaseStudiesGrid() {
             {/* Card Content */}
             <div className="card-content-wrapper">
               <h3 className="card-title">{item.title}</h3>
-              <p className="card-description">{item.description}</p>
+              <div className="card-copy-block">
+                <p
+                  className={`card-description${
+                    isExpanded ? ' card-description-expanded' : ''
+                  }`}
+                >
+                  {item.description}
+                </p>
+                {item.technicalContext ? (
+                  <p
+                    className={`card-technical-context${
+                      isExpanded ? ' card-technical-context-expanded' : ''
+                    }`}
+                  >
+                    {item.technicalContext}
+                  </p>
+                ) : null}
+              </div>
+              {shouldShowToggle ? (
+                <button
+                  type="button"
+                  className="card-read-more"
+                  onClick={() => toggleExpanded(cardId)}
+                  aria-expanded={isExpanded}
+                >
+                  {isExpanded ? 'Show less' : 'Read more'}
+                </button>
+              ) : null}
 
               {/* Image Showcase - 16:9 Aspect Ratio OR Decorative Placeholder */}
               {item.image ? (
@@ -123,14 +172,14 @@ export default function CaseStudiesGrid() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  DEMO
+                  View Example
                 </a>
               ) : (
-                <div className="card-footer-badge">CASE STUDY</div>
+                <div className="card-footer-badge">Project Snapshot</div>
               )}
             </div>
           </div>
-        ))}
+        )})}
       </div>
 
       {/* Pagination Controls */}

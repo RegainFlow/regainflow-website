@@ -152,7 +152,7 @@
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing-wide);
   margin: 0 0 0.75rem 0;
-  text-align: center;
+  text-align: left;
 }
 
 .problem-text {
@@ -181,7 +181,38 @@
 }
 
 /* --------------------------------------------------------------------------
-   5. Our Approach
+   5. Use Cases
+   -------------------------------------------------------------------------- */
+.use-cases-section {
+  background: transparent;
+}
+
+.use-cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.use-case-card {
+  padding: 1.75rem 1.5rem;
+}
+
+.use-case-title {
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin: 0 0 0.75rem;
+}
+
+.use-case-description {
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   6. Our Approach
    -------------------------------------------------------------------------- */
 .our-approach-section {
   background: transparent;
@@ -243,334 +274,6 @@
   color: var(--color-text-secondary);
   line-height: var(--line-height-relaxed);
   margin: 0;
-}
-
-/* --------------------------------------------------------------------------
-   6. Tech Stack
-   -------------------------------------------------------------------------- */
-.tech-stack-section {
-  background: transparent;
-}
-
-.tech-stack-container {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.tech-stack-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem;
-  margin-top: 3rem;
-}
-
-.tech-badge {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1.25rem 1rem;
-  text-align: center;
-  transition: all var(--transition-base);
-}
-
-.tech-badge:hover {
-  transform: translateY(-2px);
-  border-color: var(--glass-border-accent);
-}
-
-.tech-badge-name {
-  font-size: 1rem;
-  font-weight: var(--font-weight-medium);
-  color: var(--color-text-primary);
-  margin-bottom: 0.5rem;
-}
-
-.tech-badge-category {
-  font-size: 0.8rem;
-  color: var(--color-text-muted);
-}
-
-/* Tech Stack Category Glow Borders */
-
-/* AI / LLM Frameworks - Cyan Glow */
-.tech-badge[data-category='AI / LLM Frameworks'] {
-  border-color: rgba(0, 214, 203, 0.5);
-  box-shadow:
-    0 0 10px rgba(0, 214, 203, 0.3),
-    inset 0 0 10px rgba(0, 214, 203, 0.1);
-}
-
-.tech-badge[data-category='AI / LLM Frameworks']:hover {
-  border-color: rgba(0, 214, 203, 0.8);
-  box-shadow:
-    0 0 20px rgba(0, 214, 203, 0.5),
-    inset 0 0 20px rgba(0, 214, 203, 0.15);
-}
-
-/* Programming Languages - Blue Glow */
-.tech-badge[data-category='Programming Languages'] {
-  border-color: rgba(0, 191, 255, 0.5);
-  box-shadow:
-    0 0 10px rgba(0, 191, 255, 0.3),
-    inset 0 0 10px rgba(0, 191, 255, 0.1);
-}
-
-.tech-badge[data-category='Programming Languages']:hover {
-  border-color: rgba(0, 191, 255, 0.8);
-  box-shadow:
-    0 0 20px rgba(0, 191, 255, 0.5),
-    inset 0 0 20px rgba(0, 191, 255, 0.15);
-}
-
-/* Search / Vector DBs - Purple Glow */
-.tech-badge[data-category='Search / Vector DBs'] {
-  border-color: rgba(162, 112, 241, 0.5);
-  box-shadow:
-    0 0 10px rgba(162, 112, 241, 0.3),
-    inset 0 0 10px rgba(162, 112, 241, 0.1);
-}
-
-.tech-badge[data-category='Search / Vector DBs']:hover {
-  border-color: rgba(162, 112, 241, 0.8);
-  box-shadow:
-    0 0 20px rgba(162, 112, 241, 0.5),
-    inset 0 0 20px rgba(162, 112, 241, 0.15);
-}
-
-/* Frontend - Green Glow */
-.tech-badge[data-category='Frontend'] {
-  border-color: rgba(0, 255, 159, 0.5);
-  box-shadow:
-    0 0 10px rgba(0, 255, 159, 0.3),
-    inset 0 0 10px rgba(0, 255, 159, 0.1);
-}
-
-.tech-badge[data-category='Frontend']:hover {
-  border-color: rgba(0, 255, 159, 0.8);
-  box-shadow:
-    0 0 20px rgba(0, 255, 159, 0.5),
-    inset 0 0 20px rgba(0, 255, 159, 0.15);
-}
-
-/* Backend / APIs - Yellow Glow */
-.tech-badge[data-category='Backend / APIs'] {
-  border-color: rgba(255, 247, 64, 0.5);
-  box-shadow:
-    0 0 10px rgba(255, 247, 64, 0.3),
-    inset 0 0 10px rgba(255, 247, 64, 0.1);
-}
-
-.tech-badge[data-category='Backend / APIs']:hover {
-  border-color: rgba(255, 247, 64, 0.8);
-  box-shadow:
-    0 0 20px rgba(255, 247, 64, 0.5),
-    inset 0 0 20px rgba(255, 247, 64, 0.15);
-}
-
-/* DevOps / Automation - Orange Glow */
-.tech-badge[data-category='DevOps / Automation'] {
-  border-color: rgba(255, 140, 66, 0.5);
-  box-shadow:
-    0 0 10px rgba(255, 140, 66, 0.3),
-    inset 0 0 10px rgba(255, 140, 66, 0.1);
-}
-
-.tech-badge[data-category='DevOps / Automation']:hover {
-  border-color: rgba(255, 140, 66, 0.8);
-  box-shadow:
-    0 0 20px rgba(255, 140, 66, 0.5),
-    inset 0 0 20px rgba(255, 140, 66, 0.15);
-}
-
-/* Cloud / AI Services - Gold Glow */
-.tech-badge[data-category='Cloud / AI Services'] {
-  border-color: rgba(255, 200, 55, 0.5);
-  box-shadow:
-    0 0 10px rgba(255, 200, 55, 0.3),
-    inset 0 0 10px rgba(255, 200, 55, 0.1);
-}
-
-.tech-badge[data-category='Cloud / AI Services']:hover {
-  border-color: rgba(255, 200, 55, 0.8);
-  box-shadow:
-    0 0 20px rgba(255, 200, 55, 0.5),
-    inset 0 0 20px rgba(255, 200, 55, 0.15);
-}
-
-/* Databases - Pink Glow */
-.tech-badge[data-category='Databases'] {
-  border-color: rgba(255, 107, 157, 0.5);
-  box-shadow:
-    0 0 10px rgba(255, 107, 157, 0.3),
-    inset 0 0 10px rgba(255, 107, 157, 0.1);
-}
-
-.tech-badge[data-category='Databases']:hover {
-  border-color: rgba(255, 107, 157, 0.8);
-  box-shadow:
-    0 0 20px rgba(255, 107, 157, 0.5),
-    inset 0 0 20px rgba(255, 107, 157, 0.15);
-}
-
-/* Data Validation - Silver Glow */
-.tech-badge[data-category='Data Validation'] {
-  border-color: rgba(192, 192, 192, 0.5);
-  box-shadow:
-    0 0 10px rgba(192, 192, 192, 0.3),
-    inset 0 0 10px rgba(192, 192, 192, 0.1);
-}
-
-.tech-badge[data-category='Data Validation']:hover {
-  border-color: rgba(192, 192, 192, 0.8);
-  box-shadow:
-    0 0 20px rgba(192, 192, 192, 0.5),
-    inset 0 0 20px rgba(192, 192, 192, 0.15);
-}
-
-/* System Integration - Mint Glow */
-.tech-badge[data-category='System Integration'] {
-  border-color: rgba(105, 240, 174, 0.5);
-  box-shadow:
-    0 0 10px rgba(105, 240, 174, 0.3),
-    inset 0 0 10px rgba(105, 240, 174, 0.1);
-}
-
-.tech-badge[data-category='System Integration']:hover {
-  border-color: rgba(105, 240, 174, 0.8);
-  box-shadow:
-    0 0 20px rgba(105, 240, 174, 0.5),
-    inset 0 0 20px rgba(105, 240, 174, 0.15);
-}
-
-/* ML / DL Frameworks - Red Glow */
-.tech-badge[data-category='ML / DL Frameworks'] {
-  border-color: rgba(255, 56, 100, 0.5);
-  box-shadow:
-    0 0 10px rgba(255, 56, 100, 0.3),
-    inset 0 0 10px rgba(255, 56, 100, 0.1);
-}
-
-.tech-badge[data-category='ML / DL Frameworks']:hover {
-  border-color: rgba(255, 56, 100, 0.8);
-  box-shadow:
-    0 0 20px rgba(255, 56, 100, 0.5),
-    inset 0 0 20px rgba(255, 56, 100, 0.15);
-}
-
-/* E-Commerce - Indigo Glow */
-.tech-badge[data-category='E-Commerce'] {
-  border-color: rgba(129, 140, 248, 0.5);
-  box-shadow:
-    0 0 10px rgba(129, 140, 248, 0.3),
-    inset 0 0 10px rgba(129, 140, 248, 0.1);
-}
-
-.tech-badge[data-category='E-Commerce']:hover {
-  border-color: rgba(129, 140, 248, 0.8);
-  box-shadow:
-    0 0 20px rgba(129, 140, 248, 0.45),
-    inset 0 0 20px rgba(129, 140, 248, 0.15);
-}
-
-/* Payments - Emerald Glow */
-.tech-badge[data-category='Payments'] {
-  border-color: rgba(16, 185, 129, 0.5);
-  box-shadow:
-    0 0 10px rgba(16, 185, 129, 0.3),
-    inset 0 0 10px rgba(16, 185, 129, 0.1);
-}
-
-.tech-badge[data-category='Payments']:hover {
-  border-color: rgba(16, 185, 129, 0.8);
-  box-shadow:
-    0 0 20px rgba(16, 185, 129, 0.45),
-    inset 0 0 20px rgba(16, 185, 129, 0.15);
-}
-
-/* Communications - Sky Blue Glow */
-.tech-badge[data-category='Communications'] {
-  border-color: rgba(56, 189, 248, 0.5);
-  box-shadow:
-    0 0 10px rgba(56, 189, 248, 0.3),
-    inset 0 0 10px rgba(56, 189, 248, 0.1);
-}
-
-.tech-badge[data-category='Communications']:hover {
-  border-color: rgba(56, 189, 248, 0.8);
-  box-shadow:
-    0 0 20px rgba(56, 189, 248, 0.45),
-    inset 0 0 20px rgba(56, 189, 248, 0.15);
-}
-
-/* Tech Stack Category Colors (matching engineers page) */
-.tech-badge[data-category='AI / LLM Frameworks'] .tech-badge-category {
-  color: #00d6cb;
-  font-weight: var(--font-weight-bold);
-}
-
-.tech-badge[data-category='Programming Languages'] .tech-badge-category {
-  color: #00bfff;
-  font-weight: var(--font-weight-bold);
-}
-
-.tech-badge[data-category='Search / Vector DBs'] .tech-badge-category {
-  color: #a270f1;
-  font-weight: var(--font-weight-bold);
-}
-
-.tech-badge[data-category='Frontend'] .tech-badge-category {
-  color: #00ff9f;
-  font-weight: var(--font-weight-bold);
-}
-
-.tech-badge[data-category='Backend / APIs'] .tech-badge-category {
-  color: #fff740;
-  font-weight: var(--font-weight-bold);
-}
-
-.tech-badge[data-category='DevOps / Automation'] .tech-badge-category {
-  color: #ff8c42;
-  font-weight: var(--font-weight-bold);
-}
-
-.tech-badge[data-category='Cloud / AI Services'] .tech-badge-category {
-  color: #ffc837;
-  font-weight: var(--font-weight-bold);
-}
-
-.tech-badge[data-category='Databases'] .tech-badge-category {
-  color: #ff6b9d;
-  font-weight: var(--font-weight-bold);
-}
-
-.tech-badge[data-category='Data Validation'] .tech-badge-category {
-  color: #c0c0c0;
-  font-weight: var(--font-weight-bold);
-}
-
-.tech-badge[data-category='System Integration'] .tech-badge-category {
-  color: #69f0ae;
-  font-weight: var(--font-weight-bold);
-}
-
-.tech-badge[data-category='ML / DL Frameworks'] .tech-badge-category {
-  color: #ff3864;
-  font-weight: var(--font-weight-bold);
-}
-
-.tech-badge[data-category='E-Commerce'] .tech-badge-category {
-  color: #818cf8;
-  font-weight: var(--font-weight-bold);
-}
-
-.tech-badge[data-category='Payments'] .tech-badge-category {
-  color: #10b981;
-  font-weight: var(--font-weight-bold);
-}
-
-.tech-badge[data-category='Communications'] .tech-badge-category {
-  color: #38bdf8;
-  font-weight: var(--font-weight-bold);
 }
 
 /* --------------------------------------------------------------------------
@@ -780,11 +483,6 @@
     font-size: 0.95rem;
   }
 
-  .tech-stack-grid {
-    grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
-    gap: 0.875rem;
-  }
-
   .relevant-cases-grid {
     grid-template-columns: 1fr;
   }
@@ -824,66 +522,11 @@
     font-size: 1.5rem;
   }
 
-  .tech-stack-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.625rem;
-  }
-
-  .tech-badge {
-    padding: 0.875rem 0.75rem;
-  }
-
-  .tech-badge-name {
-    font-size: 0.9rem;
-  }
-
-  .tech-badge-category {
-    font-size: 0.75rem;
-  }
-
   .capability-cta-description {
     font-size: 1rem;
   }
 
   .capability-cta-content {
     padding: 2rem 1.25rem;
-  }
-}
-
-@media (max-width: 360px) {
-  .tech-stack-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.5rem;
-  }
-
-  .tech-badge {
-    padding: 0.875rem 0.75rem;
-  }
-
-  .tech-badge-name {
-    font-size: 0.85rem;
-  }
-
-  .tech-badge-category {
-    font-size: 0.7rem;
-  }
-}
-
-@media (max-width: 320px) {
-  .tech-stack-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem;
-  }
-
-  .tech-badge {
-    padding: 0.75rem 0.625rem;
-  }
-
-  .tech-badge-name {
-    font-size: 0.8rem;
-  }
-
-  .tech-badge-category {
-    font-size: 0.65rem;
   }
 }

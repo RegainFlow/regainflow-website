@@ -10,11 +10,11 @@ export const links: Route.LinksFunction = () => [
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: 'RegainFlow | Client Results' },
+    { title: 'RegainFlow | Real Results From Digital & AI Transformation' },
     {
       name: 'description',
       content:
-        'See what we\'ve built. Digital and AI transformation projects delivering real business impact — from workflow automation to AI-powered platforms.'
+        'See how RegainFlow helps growing businesses get faster operations, clearer systems, and measurable wins through digital transformation and practical AI.'
     }
   ];
 }
@@ -28,11 +28,12 @@ export default function projects() {
       <section className="projects-hero-integrated">
         <div className="hero-content">
           <h1 className="projects-title">
-            Client <span className="text-highlight">Results</span>
+            Real <span className="text-highlight">Results</span> From Digital &
+            AI Transformation
           </h1>
           <p className="projects-subtitle">
-            We bring the same engineering rigor from Fortune 500 projects to
-            growing businesses. Here&apos;s what that looks like in practice.
+            These projects show what happens when better systems, automation,
+            and practical AI are tied to real business outcomes instead of buzzwords.
           </p>
         </div>
 
@@ -62,7 +63,7 @@ export default function projects() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Book a Call
+            Book Your Free Assessment
           </a>
         </section>
       </ScrollAnimation>

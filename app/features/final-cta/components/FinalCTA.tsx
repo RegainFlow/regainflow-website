@@ -1,8 +1,9 @@
-import { PiTrophyDuotone, PiCalendarCheckDuotone } from 'react-icons/pi';
-import finalCtaStyles from './final-cta.css?url';
-import { bookingUrl } from '~/config/site.config';
+import { PiTrophyDuotone, PiCalendarCheckDuotone } from "react-icons/pi";
+import finalCtaStyles from "./final-cta.css?url";
+import { bookingUrl } from "~/config/site.config";
+import { finalCtaData } from "../data/finalCtaData";
 
-export const links = () => [{ rel: 'stylesheet', href: finalCtaStyles }];
+export const links = () => [{ rel: "stylesheet", href: finalCtaStyles }];
 
 export default function FinalCTA() {
   return (
@@ -11,15 +12,11 @@ export default function FinalCTA() {
         <div className="final-cta-container glass-card">
           <div className="final-cta-content">
             <h2 className="final-cta-title">
-              Ready to <span className="text-highlight">Transform</span> Your
+              Ready to <span className="text-highlight">Transform</span> your
               Business?
             </h2>
 
-            <p className="final-cta-description">
-              Stop losing revenue to outdated processes and manual workflows.
-              Let us show you how digital and AI transformation can save you
-              time and help you grow.
-            </p>
+            <p className="final-cta-description">{finalCtaData.description}</p>
 
             <div className="final-cta-buttons">
               <a
@@ -29,7 +26,7 @@ export default function FinalCTA() {
                 rel="noopener noreferrer"
               >
                 <PiCalendarCheckDuotone size={24} />
-                Schedule Free Consultation
+                {finalCtaData.primaryCtaText}
               </a>
 
               <a
@@ -37,13 +34,11 @@ export default function FinalCTA() {
                 className="neon-button-glass neon-button-secondary"
               >
                 <PiTrophyDuotone size={24} />
-                See Our Results
+                {finalCtaData.secondaryCtaText}
               </a>
             </div>
 
-            <p className="final-cta-note">
-              Free business assessment · No commitment · Results you can measure
-            </p>
+            <p className="final-cta-note">{finalCtaData.note}</p>
           </div>
         </div>
       </div>

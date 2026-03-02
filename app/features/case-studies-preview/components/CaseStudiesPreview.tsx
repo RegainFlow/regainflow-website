@@ -21,8 +21,8 @@ export default function CaseStudiesPreview() {
           Featured <span className="text-highlight">Case Studies</span>
         </h2>
         <p className="section-subtitle">
-          Enterprise expertise, applied to your business. See what we&apos;ve
-          built for companies like yours.
+          See how smarter websites, automation, and AI translate into faster
+          operations and measurable business wins.
         </p>
 
         <div className="case-studies-grid">
@@ -69,7 +69,7 @@ export default function CaseStudiesPreview() {
 
         <div className="case-studies-cta">
           <Link to="/client-results" className="btn btn-neon">
-            View All Case Studies
+            See Client Results
           </Link>
         </div>
       </div>

@@ -36,7 +36,8 @@
 /* Inline Metrics */
 .projects-metrics-inline {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 280px));
+  justify-content: center;
   gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -273,12 +274,48 @@
   color: var(--color-text-secondary);
   font-size: 0.95rem;
   line-height: 1.7;
-  margin-bottom: 1rem;
+  margin-bottom: 0.35rem;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.card-description-expanded {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.card-technical-context {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin: 0 0 0.75rem;
+  display: none;
+}
+
+.card-technical-context-expanded {
+  display: block;
+}
+
+.card-read-more {
+  align-self: flex-start;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  color: var(--color-primary-light);
+  font-size: 0.82rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: -0.1rem 0 0.35rem;
+}
+
+.card-read-more:hover {
+  color: white;
 }
 
 /* Card Image Showcase - 16:9 Aspect Ratio */
@@ -462,7 +499,8 @@
 /* Mobile */
 @media (max-width: 768px) {
   .projects-metrics-inline {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(220px, 280px));
+    justify-content: center;
     gap: 1rem;
   }
 
@@ -517,7 +555,8 @@
   }
 
   .projects-metrics-inline {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(220px, 320px);
+    justify-content: center;
     gap: clamp(0.75rem, 3vw, 1rem);
   }
 

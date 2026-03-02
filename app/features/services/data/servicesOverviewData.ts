@@ -9,8 +9,8 @@ export const servicesOverviewData: ServicesOverview = {
   // Hero Section
   heroTitle: 'Digital & AI Transformation for Growing Businesses',
   heroSubtitle:
-    'We learn your business, find the pain points, and build digital and AI solutions that help you operate smarter and earn more.',
-  heroCtaText: 'Get Your Free Assessment',
+    'We help growing businesses win more leads, respond faster, and cut busywork with better websites, smart automation, and practical AI.',
+  heroCtaText: 'Book Your Free Assessment',
   heroCtaLink: bookingUrl,
 
   // Process Steps - How It Works
@@ -18,50 +18,58 @@ export const servicesOverviewData: ServicesOverview = {
     {
       step: 1,
       icon: 'PiMagnifyingGlassDuotone',
-      title: 'Business Discovery',
+      title: 'Find the slowdown',
       description:
-        'We dig into your workflows, tools, and bottlenecks to understand where you\'re losing time and money. No generic playbooks — we learn your business first.'
+        'We review how work, leads, and customer communication move through your business so we can spot the biggest friction first.'
     },
     {
       step: 2,
       icon: 'PiMapPinDuotone',
-      title: 'Custom Strategy',
+      title: 'Map the fastest win',
       description:
-        'We design a tailored transformation roadmap with clear milestones, technology recommendations, and ROI projections — so you know exactly what you\'re getting.'
+        'You get a focused plan built around the highest-return changes, with clear scope, priorities, and expected outcomes.'
     },
     {
       step: 3,
       icon: 'PiRocketLaunchDuotone',
-      title: 'Build & Deploy',
+      title: 'Build and launch',
       description:
-        'We build your solution iteratively with frequent demos. You see progress every sprint, provide feedback, and stay in control of the direction.'
+        'We build the right system, show progress early, and launch in stages so you can start seeing value sooner.'
     },
     {
       step: 4,
       icon: 'PiHandshakeDuotone',
-      title: 'Ongoing Partnership',
+      title: 'Improve as you grow',
       description:
-        'After launch, we monitor performance, optimize based on real usage data, and scale your systems as your business grows. We\'re in it for the long haul.'
+        'After launch, we refine what is working, expand what helps, and keep your systems aligned with the next stage of growth.'
     }
   ],
 
   // Service Metrics - Key Stats
   metrics: [
     {
+      category: 'Years',
       value: '15+',
-      label: 'Years Combined Experience'
+      label: 'Combined experience',
+      detail: 'Senior product, automation, and AI delivery'
     },
     {
-      value: '$8M+',
-      label: 'Value Generated for Clients'
-    },
-    {
+      category: 'Projects',
       value: '50+',
-      label: 'Projects Delivered'
+      label: 'Projects shipped',
+      detail: 'Builds, automations, and launches across industries'
     },
     {
-      value: '100%',
-      label: 'Client Satisfaction Rate'
+      category: 'Speed',
+      value: 'Weeks',
+      label: 'to first win',
+      detail: 'Fast momentum without dragging projects out for months'
+    },
+    {
+      category: 'Outcomes',
+      value: 'ROI',
+      label: 'built in from day one',
+      detail: 'Every project tied to business results, not busywork'
     }
   ],
 
@@ -72,14 +80,14 @@ export const servicesOverviewData: ServicesOverview = {
       icon: 'PiGlobeDuotone',
       title: 'Digital Transformation',
       description:
-        'Custom web platforms, workflow automation, marketing systems, and e-commerce solutions that modernize your operations and drive growth.'
+        'Turn your website, follow-up, and internal systems into a smoother engine for sales and operations.'
     },
     {
       slug: 'ai-transformation',
       icon: 'PiRobotDuotone',
       title: 'AI Transformation',
       description:
-        'AI workflow automation, intelligent document processing, chatbots, and data-driven insights that give your business a competitive edge.'
+        'Use AI assistants and smart automation to answer faster, save time, and handle work that slows your team down.'
     }
   ]
 };

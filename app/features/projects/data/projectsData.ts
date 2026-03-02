@@ -1,305 +1,309 @@
 export const projectsItems = [
   {
-    title: 'Multi-Agent Payroll Validation System',
+    title: "Multi-Agent Payroll Validation System",
     description:
-      'A multi-agent validation engine that automates enterprise payroll quality checks across Oracle HCM and Workday systems. Agents run SQL validation, cross-system reconciliation, and AI-generated rules to detect discrepancies in distributed payroll platforms for healthcare organizations.',
-    image: '/images/projects/multi-agent-payroll-validation.png',
+      "Reduced manual payroll quality checks for a healthcare organization and freed up major internal capacity. We built an AI-assisted validation workflow that checked multiple payroll systems and flagged issues automatically.",
+    technicalContext:
+      "AI-assisted validation across Oracle HCM and Workday data flows.",
+    image: "/images/projects/multi-agent-payroll-validation.png",
+    tags: ["12 FTEs saved", "Faster payroll QA", "AI-assisted validation"],
+    industry: "AI Transformation",
+    category: "ai",
+    primaryMetric: "12 FTEs Saved",
+    actionType: "none",
+    capabilities: ["ai-transformation"],
+  },
+  {
+    title: "3D Printing Insight Engine",
+    description:
+      "Helped users find answers faster across a large manufacturing knowledge base instead of hunting through fragmented resources. We built an AI search experience that connected technical records, material data, and print guidance in one place.",
+    technicalContext:
+      "Semantic search and retrieval over millions of manufacturing records.",
+    image: "/images/projects/insight-search-engine.png",
+    tags: ["5K+ daily users", "Faster answers", "AI search"],
+    industry: "AI Transformation",
+    category: "ai",
+    primaryMetric: "5K+ Daily Users",
+    actionType: "demo",
+    link: "https://insight-search-engine.vercel.app/",
+    capabilities: ["ai-transformation"],
+  },
+  {
+    title: "Corporate HR RAG",
+    description:
+      "Made HR policies and employee documentation easier to search so teams could get answers faster with less operational overhead. We rebuilt the search layer with modern retrieval and ranking to improve relevance and reduce maintenance effort.",
+    technicalContext:
+      "Hybrid retrieval and ranking for enterprise HR policy search.",
+    tags: ["3x faster insights", "Better policy lookup", "Lower ops overhead"],
+    image: "/images/projects/corporate-hr-rag.png",
+    industry: "AI Transformation",
+    category: "ai",
+    primaryMetric: "3x Faster Insights",
+    actionType: "none",
+    capabilities: ["ai-transformation"],
+  },
+  {
+    title: "Grid Infrastructure Analytics Platform",
+    description:
+      "Cut manual monitoring work for infrastructure operators and improved incident response speed. We built a live analytics platform that watched thousands of sensor streams and highlighted likely anomalies in real time.",
+    technicalContext:
+      "Custom anomaly detection over large telemetry datasets with live dashboards.",
+    image: "/images/projects/grid-network.png",
     tags: [
-      'Weeks to Days Cycle Time',
-      'Multi-Agent Architecture',
-      'Enterprise-Scale Automation'
+      "80% less manual review",
+      "Faster incident response",
+      "Real-time monitoring",
     ],
-    industry: 'AI TRANSFORMATION',
-    category: 'ai',
-    primaryMetric: '12 FTEs Saved',
-    actionType: 'none',
-    capabilities: ['ai-transformation']
+    industry: "AI Transformation",
+    category: "ai",
+    primaryMetric: "80% Less Manual Review",
+    link: "https://grid-network.vercel.app/",
+    actionType: "demo",
+    capabilities: ["ai-transformation"],
   },
   {
-    title: '3D Printing Insight Engine',
+    title: "Multi-Format Document ETL Pipeline",
     description:
-      'AI-powered knowledge base for additive manufacturing patterns, material properties, and slice profiles. Helps makers and manufacturing engineers debug print failures and optimize settings.',
-    image: '/images/projects/insight-search-engine.png',
+      "Made technical documents easier to process and search across a large content library. We built an automated pipeline that converted, parsed, summarized, and indexed many file types into a searchable knowledge layer.",
+    technicalContext:
+      "Document conversion, OCR, summarization, and indexing pipeline.",
+    image: "/images/projects/multi-format-etl-pipeline.png",
     tags: [
-      'Additive Manufacturing',
-      'Millions of Records',
-      'Hybrid Semantic Search'
+      "5x indexing throughput",
+      "Faster document access",
+      "Automated document pipeline",
     ],
-    industry: 'AI TRANSFORMATION',
-    category: 'ai',
-    primaryMetric: '5K+ Daily Users',
-    actionType: 'demo',
-    link: 'https://insight-search-engine.vercel.app/',
-    capabilities: ['ai-transformation']
+    industry: "AI Transformation",
+    category: "ai",
+    primaryMetric: "5x Indexing Throughput",
+    actionType: "demo",
+    link: "https://multi-format-etl-pipeline.vercel.app/",
+    capabilities: ["ai-transformation"],
   },
   {
-    title: 'Corporate HR RAG',
+    title: "AI-Powered Document Retrieval Platform",
     description:
-      'Rebuilt legacy search platform for a multi-state healthcare network with modern BM25, hybrid vector retrieval, and RRF ranking. Improved query relevance for HR policy lookups, reduced ingestion time, and decreased operational overhead for HR teams managing employee documentation.',
+      "Improved access to legal and case-management documents so teams could find what they needed faster. We built a modern retrieval platform with AI-assisted search, synchronization, and task automation.",
+    technicalContext:
+      "Document retrieval platform with AI search and scheduled sync workflows.",
+    image: "/images/projects/ai-document-retrieval.png",
     tags: [
-      'Hybrid Vector + Keyword',
-      'Improved Query Relevance',
-      'Reduced Ops Overhead'
+      "2x faster information access",
+      "Better document search",
+      "AI-assisted retrieval",
     ],
-    image: '/images/projects/corporate-hr-rag.png',
-    industry: 'AI TRANSFORMATION',
-    category: 'ai',
-    primaryMetric: '3× Faster Insights',
-    actionType: 'none',
-    capabilities: ['ai-transformation']
+    industry: "AI Transformation",
+    category: "ai",
+    primaryMetric: "2x Faster Information Access",
+    actionType: "none",
+    capabilities: ["ai-transformation"],
   },
   {
-    title: 'Grid Infrastructure Analytics Platform',
+    title: "HCM Interoperability Platform",
     description:
-      'Automated system that detects anomalies in utility and industrial grid infrastructure. Monitors thousands of sensor nodes to identify irregularities and potential failures. By cleaning historical telemetry and training a custom model, deployed into a live dashboard, it cut manual operator review by 80% and enabled faster incident response.',
-    image: '/images/projects/grid-network.png',
+      "Improved data consistency across HR, payroll, finance, and benefits systems during a complex migration. We built a validation and reconciliation pipeline that reduced manual checking and supported operational continuity.",
+    technicalContext:
+      "Cross-system normalization and reconciliation across enterprise HR platforms.",
+    image: "/images/projects/hcm-interop-platform.png",
     tags: [
-      '5K+ Sensor Streams',
-      '80% Manual Review Reduction',
-      'Real-Time Dashboards'
+      "Cleaner system handoffs",
+      "Less reconciliation work",
+      "Operational continuity",
     ],
-    industry: 'AI TRANSFORMATION',
-    category: 'ai',
-    primaryMetric: '3× Faster Insights',
-    link: 'https://grid-network.vercel.app/',
-    actionType: 'demo',
-    capabilities: ['ai-transformation']
+    industry: "Digital Transformation",
+    category: "digital",
+    primaryMetric: "Operational Efficiency Gains",
+    link: "https://hcm-interoperability-platform.vercel.app/",
+    actionType: "demo",
+    capabilities: ["digital-transformation"],
   },
   {
-    title: 'Multi-Format Document ETL Pipeline',
+    title: "UI Modernization Overhaul",
     description:
-      'Created a C# backend that loads multiple file formats, converts them to PDFs, sends them to a Python parser that extracts text, chunks content, summarizes tables, and then indexes the processed data into Elasticsearch for fast enterprise knowledge base search across technical documentation.',
-    image: '/images/projects/multi-format-etl-pipeline.png',
+      "Improved speed and usability for a large internal application while making releases easier to manage. We modernized the front end and delivery pipeline so teams could work faster with a more stable product.",
+    technicalContext: "Framework migration and deployment pipeline upgrade.",
+    image: "/images/projects/ui-overhaul.png",
     tags: [
-      'Reusable + Scalable ETL Pipeline',
-      'VLM + OCR Enabled',
-      'Modernized Data Access'
+      "35% performance gain",
+      "Faster releases",
+      "Modernized product experience",
     ],
-    industry: 'AI TRANSFORMATION',
-    category: 'ai',
-    primaryMetric: '5× Indexing Throughput',
-    actionType: 'demo',
-    link: 'https://multi-format-etl-pipeline.vercel.app/',
-    capabilities: ['ai-transformation']
+    industry: "Digital Transformation",
+    category: "digital",
+    primaryMetric: "35% Faster",
+    actionType: "none",
+    capabilities: ["digital-transformation"],
   },
   {
-    title: 'Legacy RPA Modernization with Python & LangGraph',
+    title: "Self-Service PaaS Environment Builder",
     description:
-      'Converted legacy RPA platform automations into modern Python workflows with multi-agent AI orchestration for a financial services back-office. Eliminated vendor licensing costs, improved reliability, and reduced multi-hour invoice processing to minutes with LangGraph-based decision logic.',
-    image: '/images/projects/legacy-rpa-modernization.png',
+      "Cut environment setup time from days to minutes so teams could ship and test faster. We built a self-service provisioning system that standardized delivery across multiple cloud platforms.",
+    technicalContext:
+      "GitOps-based provisioning with Terraform and Ansible across cloud providers.",
+    image: "/images/projects/paas-builder.png",
     tags: [
-      'Eliminated RPA Licensing',
-      'Multi-Agent AI Logic',
-      'Hours to Minutes'
+      "10x faster setup",
+      "Less engineering friction",
+      "Standardized environments",
     ],
-    industry: 'AI TRANSFORMATION',
-    category: 'ai',
-    primaryMetric: 'Zero Vendor Lock-In',
-    actionType: 'none',
-    capabilities: ['ai-transformation']
+    industry: "Digital Transformation",
+    category: "digital",
+    primaryMetric: "10x Faster Environment Setup",
+    link: "https://paas-builder.vercel.app/",
+    actionType: "demo",
+    capabilities: ["digital-transformation"],
   },
   {
-    title: 'AI-Powered Document Retrieval Platform',
+    title: "Security Testing Automation Platform",
     description:
-      'Built a full-stack platform using Java, SpringBoot, and Claude AI for intelligent document retrieval, automated data synchronization, and scheduled task execution in legal case management. Delivered a modern UI that improved accessibility while ensuring compatibility with legacy document management systems.',
-    image: '/images/projects/ai-document-retrieval.png',
+      "Reduced the time and cost required to run repeatable security checks for software teams. We built an automated testing and reporting platform that supported faster audits and ongoing security work.",
+    technicalContext:
+      "Automated vulnerability assessment and reporting workflows.",
+    image: "/images/projects/cyber-operations-automation.png",
     tags: [
-      'Improved Insight Delivery',
-      'AI-Enhanced Processing',
-      'Legacy System Modernization'
+      "5x faster assessments",
+      "Lower testing cost",
+      "Better security workflow",
     ],
-    industry: 'AI TRANSFORMATION',
-    category: 'ai',
-    primaryMetric: '2× Faster Information Access',
-    actionType: 'none',
-    capabilities: ['ai-transformation']
+    industry: "Digital Transformation",
+    category: "digital",
+    primaryMetric: "5x Faster Security Assessments",
+    actionType: "none",
+    capabilities: ["digital-transformation"],
   },
   {
-    title: 'HCM Interoperability Platform',
+    title: "Vendor Catalog Data Normalization Platform",
     description:
-      'End-to-end validation pipeline across HRIS, Payroll, Finance, and Benefits systems for a multi-facility healthcare network. Schema normalization, deterministic rule engines, and reconciliation logic ensuring data consistency across enterprise-scale HR platforms during cloud migration.',
-    image: '/images/projects/hcm-interop-platform.png',
+      "Reduced the manual cleanup needed to turn messy vendor files into usable product data. We built a normalization platform that converted inconsistent spreadsheets into clean records for downstream systems.",
+    technicalContext:
+      "Automated catalog normalization across spreadsheet and SQL workflows.",
+    image: "/images/projects/vendor-catalog.png",
     tags: [
-      'Multi-System Integration',
-      'Multi-System Reconciliation',
-      'Operational Continuity'
+      "90% less manual cleanup",
+      "Cleaner product data",
+      "Automated vendor intake",
     ],
-    industry: 'DIGITAL TRANSFORMATION',
-    category: 'digital',
-    primaryMetric: 'Operational Efficiency Gains',
-    link: 'https://hcm-interoperability-platform.vercel.app/',
-    actionType: 'demo',
-    capabilities: ['digital-transformation']
+    industry: "Digital Transformation",
+    category: "digital",
+    primaryMetric: "90% Manual Cleanup Reduced",
+    actionType: "demo",
+    link: "https://vendor-catalog.vercel.app/",
+    capabilities: ["digital-transformation"],
   },
   {
-    title: 'UI Modernization Overhaul',
+    title: "Procurement Analytics & Vendor Intelligence Platform",
     description:
-      'Modernized a large Angular application by migrating to a faster, modern framework, improving performance by 35%, reducing build times, and upgrading the delivery pipeline to a scalable GitLab + Kubernetes workflow.',
-    image: '/images/projects/ui-overhaul.png',
+      "Made procurement analysis faster and easier for teams comparing vendors, pricing, and sourcing decisions. We built an analytics platform that pulled cost data together and turned it into clearer reporting.",
+    technicalContext:
+      "ERP-integrated procurement analytics with external pricing data.",
+    image: "/images/projects/procurement-analytics.png",
     tags: [
-      'Legacy → Modern Migration',
-      '35% Performance Gain',
-      'Multi-Team Scalability'
+      "4x faster cost analysis",
+      "Clearer vendor decisions",
+      "Better procurement reporting",
     ],
-    industry: 'DIGITAL TRANSFORMATION',
-    category: 'digital',
-    primaryMetric: '35% Faster',
-    actionType: 'none',
-    capabilities: ['digital-transformation']
+    industry: "Digital Transformation",
+    category: "digital",
+    primaryMetric: "4x Faster Cost Analysis",
+    actionType: "demo",
+    link: "https://procurement-analytics.vercel.app/",
+    capabilities: ["digital-transformation"],
   },
   {
-    title: 'Self-Service PaaS Environment Builder',
+    title: "Vending Analytics Platform",
     description:
-      'Automated environment provisioning system designed to accelerate developer velocity. Using a GitOps approach with Terraform and Ansible, developers can spin up ephemeral or persistent cloud environments in minutes rather than days. This solution standardizes cloud resource delivery across AWS, Azure, and GCP, featuring automated drift detection, cost controls, and seamless CI/CD integration for rapid iteration cycles.',
-    image: '/images/projects/paas-builder.png',
+      "Reduced stockouts and improved route planning for a distributed vending operation. We built a live analytics platform that tracked inventory, machine health, and sales patterns in one place.",
+    technicalContext:
+      "Telemetry analytics and predictive monitoring for distributed machines.",
+    image: "/images/projects/vending-machine-analytics.png",
     tags: [
-      'Developer Productivity',
-      'Infrastructure as Code (IaC)',
-      'CI/CD Automation'
+      "40% fewer stockouts",
+      "Better route planning",
+      "Real-time operations view",
     ],
-    industry: 'DIGITAL TRANSFORMATION',
-    category: 'digital',
-    primaryMetric: '10× Faster Environment Setup',
-    link: 'https://paas-builder.vercel.app/',
-    actionType: 'demo',
-    capabilities: ['digital-transformation']
+    industry: "Digital Transformation",
+    category: "digital",
+    primaryMetric: "40% Fewer Stockouts",
+    actionType: "demo",
+    link: "https://vending-machine-analytics.vercel.app/",
+    capabilities: ["digital-transformation"],
   },
   {
-    title: 'Security Testing Automation Platform',
+    title: "Marketing Automation for Distribution Network",
     description:
-      'Automated security testing platform for enterprise vulnerability assessment and penetration testing. Rapid scanning, customizable test suites, and detailed reporting scripts supporting SOC 2 compliance and security audits for SaaS companies.',
-    image: '/images/projects/cyber-operations-automation.png',
+      "Saved weekly admin time and helped a distribution business grow faster through more consistent follow-up. We connected CRM, inventory, and marketing workflows so the sales process moved without manual chasing.",
+    technicalContext:
+      "Integrated CRM, inventory, and marketing automation workflows.",
+    image: "/images/projects/marketing_auto_net.png",
+    tags: ["25 hours saved weekly", "4x sales growth", "Automated follow-up"],
+    industry: "Digital Transformation",
+    category: "digital",
+    primaryMetric: "4x Growth",
+    actionType: "demo",
+    link: "https://marketing-automation-net.vercel.app/",
+    capabilities: ["digital-transformation"],
+  },
+  {
+    title: "TherapeuTech: Real-Time Health Robotics Command",
+    description:
+      "Created a responsive remote-control experience for robotics used in real-time care and interaction scenarios. We built the streaming and control system to keep video, audio, and telemetry synchronized with very low latency.",
+    technicalContext:
+      "Low-latency WebRTC streaming and robotics control on GCP.",
+    image: "/images/projects/therapeutech-demo.png",
     tags: [
-      'Automated Security Testing',
-      'SOC 2 Compliance',
-      'Lower Testing Cost'
+      "Sub-50ms latency",
+      "Real-time remote control",
+      "Reliable live interaction",
     ],
-    industry: 'DIGITAL TRANSFORMATION',
-    category: 'digital',
-    primaryMetric: '5× Faster Security Assessments',
-    actionType: 'none',
-    capabilities: ['digital-transformation']
+    industry: "Digital Transformation",
+    category: "digital",
+    primaryMetric: "< 50ms Latency",
+    actionType: "none",
+    capabilities: ["digital-transformation"],
   },
   {
-    title: 'Vendor Catalog Data Normalization Platform',
+    title: "Wedding Registry & Event Management Platform",
     description:
-      'Enterprise-grade platform designed for retail and supply chain teams to ingest, normalize, and centralize non-standard vendor product catalogs. By automating the transformation of disparate Excel and CSV files into a unified SQL repository, the system ensures consistent product data for downstream procurement and e-commerce systems.',
-    image: '/images/projects/vendor-catalog.png',
+      "Made event planning and guest coordination easier with a polished self-service platform. We built the registry, payment, notifications, and analytics flow into one streamlined experience.",
+    technicalContext:
+      "Full-stack event workflow with payments and guest CRM automation.",
+    image: "/images/projects/wedding-registry.png",
     tags: [
-      'Supply Chain Automation',
-      'Angular + .NET Pipeline',
-      'Catalog Normalization'
+      "90% booking conversion",
+      "Smoother guest management",
+      "Integrated payments",
     ],
-    industry: 'DIGITAL TRANSFORMATION',
-    category: 'digital',
-    primaryMetric: '90% Manual Cleanup Reduced',
-    actionType: 'demo',
-    link: 'https://vendor-catalog.vercel.app/',
-    capabilities: ['digital-transformation']
+    industry: "Digital Transformation",
+    category: "digital",
+    primaryMetric: "90% Booking Conversion",
+    actionType: "none",
+    capabilities: ["digital-transformation"],
   },
   {
-    title: 'Procurement Analytics & Vendor Intelligence Platform',
+    title: "MODA: E-Commerce Fashion Platform",
     description:
-      ' An enterprise-grade Blazor + .NET system designed to streamline procurement operations, vendor management, and cost forecasting. Integrates seamlessly with major ERP systems and external pricing APIs to generate detailed, itemized cost breakdowns and actionable financial insights.',
-    image: '/images/projects/procurement-analytics.png',
-    tags: [
-      'Strategic Sourcing',
-      'Blazor + .NET',
-      'Enterprise Cost Intelligence'
-    ],
-    industry: 'DIGITAL TRANSFORMATION',
-    category: 'digital',
-    primaryMetric: '4× Faster Cost Analysis',
-    actionType: 'demo',
-    link: 'https://procurement-analytics.vercel.app/',
-    capabilities: ['digital-transformation']
+      "Delivered a stronger online shopping experience with reliable checkout, product management, and order visibility. We built the storefront and supporting commerce systems to handle growth with less friction.",
+    technicalContext:
+      "React and .NET commerce stack with AWS infrastructure and Stripe.",
+    image: "/images/projects/moda-ecom.png",
+    tags: ["99.9% uptime", "Smoother checkout", "Scalable online store"],
+    industry: "Digital Transformation",
+    category: "digital",
+    primaryMetric: "99.9% Uptime",
+    actionType: "demo",
+    link: "https://moda-ecom.vercel.app/",
+    capabilities: ["digital-transformation"],
   },
-  {
-    title: 'Vending Analytics Platform',
-    description:
-      'Automated system that optimizes vending machine fleets and supplier performance. Monitors stock levels, machine health, and sales velocity across distributed locations. By analyzing real-time telemetry and historical sales data, it reduced stockouts by 40% and improved route planning efficiency.',
-    image: '/images/projects/vending-machine-analytics.png',
-    tags: ['Real-Time Inventory', 'Angular + .NET', 'Predictive Maintenance'],
-    industry: 'DIGITAL TRANSFORMATION',
-    category: 'digital',
-    primaryMetric: '70% Faster Vendor Assessment',
-    actionType: 'demo',
-    link: 'https://vending-machine-analytics.vercel.app/',
-    capabilities: ['digital-transformation']
-  },
-  {
-    title: 'Marketing Automation for Distribution Network',
-    description:
-      'End-to-end workflow automation eliminating 25 hours of weekly manual tasks. Integrated CRM, inventory, and marketing platforms enabling 4x sales growth through improved response time and data accuracy.',
-    image: '/images/projects/marketing_auto_net.png',
-    tags: ['25 Hours/Week Saved', '90% Workflow Automation', '4x Sales Growth'],
-    industry: 'DIGITAL TRANSFORMATION',
-    category: 'digital',
-    primaryMetric: '4x Growth',
-    actionType: 'demo',
-    link: 'https://marketing-automation-net.vercel.app/',
-    capabilities: ['digital-transformation']
-  },
-  {
-    title: 'TherapeuTech: Real-Time Health Robotics Command',
-    description:
-      'Ultra-low latency control system for autonomous spherical robotics utilizing WebRTC for synchronized video, audio, and telemetry streams. Engineered a Flask-powered backend on GCP to enable real-time remote interaction, allowing hospitalized patients and remote pet owners to engage with physical environments through a self-contained, sensor-rich robotic orb.',
-    image: '/images/projects/therapeutech-demo.png',
-    tags: [
-      'WebRTC Low-Latency Control',
-      'Autonomous Spherical Drive',
-      'GCP & Flask Integration'
-    ],
-    industry: 'DIGITAL TRANSFORMATION',
-    category: 'digital',
-    primaryMetric: '< 50ms Latency',
-    actionType: 'none',
-    capabilities: ['digital-transformation']
-  },
-  {
-    title: 'Wedding Registry & Event Management Platform',
-    description:
-      'Full-stack event management platform built with Vue.js and Firebase serverless architecture. Integrated CRM workflows for guest tracking and Stripe payment processing for gift contributions. Real-time registry updates, automated guest notifications, and comprehensive event analytics dashboard enabling seamless coordination for couples and wedding planners.',
-    image: '/images/projects/wedding-registry.png',
-    tags: [
-      '100+ Events Managed',
-      'Seamless CRM Integration',
-      '90% Booking Conversion'
-    ],
-    industry: 'DIGITAL TRANSFORMATION',
-    category: 'digital',
-    primaryMetric: '100% User Satisfaction',
-    actionType: 'none',
-    capabilities: ['digital-transformation']
-  },
-  {
-    title: 'MODA: E-Commerce Fashion Platform',
-    description:
-      'Enterprise-grade e-commerce platform for fashion merchandise built with React and .NET. Leveraged AWS infrastructure including S3 for media storage, PostgreSQL RDS for transactional data, and CloudFront CDN for global content delivery. Integrated Stripe payment gateway with PCI-compliant checkout flow, inventory management system, and real-time order tracking delivering a seamless shopping experience.',
-    image: '/images/projects/moda-ecom.png',
-    tags: [
-      'AWS Cloud Architecture',
-      'Secure Payment Processing',
-      '2K+ Products Catalog'
-    ],
-    industry: 'DIGITAL TRANSFORMATION',
-    category: 'digital',
-    primaryMetric: '99.9% Uptime',
-    actionType: 'demo',
-    link: 'https://moda-ecom.vercel.app/',
-    capabilities: ['digital-transformation']
-  }
 ];
 
 export const categories = [
-  { id: 'all', label: 'ALL PROJECTS', count: 18 },
-  { id: 'ai', label: 'AI TRANSFORMATION', count: 7 },
-  { id: 'digital', label: 'DIGITAL TRANSFORMATION', count: 11 }
+  { id: "all", label: "All Results", count: 18 },
+  { id: "ai", label: "AI Transformation", count: 7 },
+  { id: "digital", label: "Digital Transformation", count: 11 },
 ];
 
 export const metrics = [
-  { label: 'Estimated Value Created', value: '$5M+' },
-  { label: 'Engineering Hours Saved', value: '5,000+' },
-  { label: 'Business Transformations Delivered', value: '18+' },
-  { label: 'Business Users Impacted', value: '5,000+' }
+  { label: "Estimated value created", value: "$5M+" },
+  { label: "Hours of work reduced", value: "5,000+" },
+  { label: "Client transformations delivered", value: "18+" },
 ];

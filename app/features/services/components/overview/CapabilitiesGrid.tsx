@@ -1,23 +1,28 @@
-import { Link } from 'react-router';
-import * as PiIcons from 'react-icons/pi';
-import type { CapabilityCard } from '../../types/service.types';
-import capabilitiesGridStyles from './capabilities-grid.css?url';
+import { Link } from "react-router";
+import * as PiIcons from "react-icons/pi";
+import type { CapabilityCard } from "../../types/service.types";
+import capabilitiesGridStyles from "./capabilities-grid.css?url";
 
-export const links = () => [{ rel: 'stylesheet', href: capabilitiesGridStyles }];
+export const links = () => [
+  { rel: "stylesheet", href: capabilitiesGridStyles },
+];
 
 interface CapabilitiesGridProps {
   capabilities: CapabilityCard[];
 }
 
-export default function CapabilitiesGrid({ capabilities }: CapabilitiesGridProps) {
+export default function CapabilitiesGrid({
+  capabilities,
+}: CapabilitiesGridProps) {
   return (
     <section className="capabilities-grid-section glass-section">
       <div className="container">
         <h2 className="section-title">
-          Our <span className="text-highlight">Capabilities</span>
+          How We <span className="text-highlight">Help</span>
         </h2>
         <p className="section-subtitle">
-          Specialized engineering disciplines tailored for Digital & AI Transformation
+          Two focused service lines designed to create clearer growth and less
+          operational drag
         </p>
 
         <div className="capabilities-grid">

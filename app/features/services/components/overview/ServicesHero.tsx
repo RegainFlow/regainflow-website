@@ -50,7 +50,7 @@ export default function ServicesHero({
           </div>
 
           <p className="services-hero-note">
-            Free consultation · No commitment · Flexible engagement terms
+            Free assessment | No commitment | Built around business outcomes
           </p>
         </div>
       </div>

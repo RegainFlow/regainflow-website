@@ -1,43 +1,44 @@
-import type { ValueProp } from '../types/value-proposition.types';
+import type { ValueProp } from "../types/value-proposition.types";
 
 export const valuePropData: ValueProp[] = [
   {
-    title: 'Digital Transformation',
-    subtitle: 'Custom web platforms, workflow automation, and marketing systems that modernize your operations and drive growth.',
+    title: "Digital Transformation",
+    subtitle:
+      "Sharper websites and smarter systems that help your business move faster.",
     bullets: [
       {
-        icon: 'Globe',
-        text: 'Custom websites and web apps that convert visitors into customers'
+        icon: "Globe",
+        text: "Websites that turn visitors into leads",
       },
       {
-        icon: 'ArrowsClockwise',
-        text: 'Workflow automation that eliminates hours of manual tasks'
+        icon: "ArrowsClockwise",
+        text: "Automation that cuts manual work",
       },
       {
-        icon: 'CloudArrowUp',
-        text: 'Marketing automation, e-commerce, and CRM integration'
-      }
+        icon: "CloudArrowUp",
+        text: "CRM, marketing, and e-commerce in sync",
+      },
     ],
-    ctaLink: '/services/digital-transformation'
+    ctaLink: "/services/digital-transformation",
   },
   {
-    title: 'AI Transformation',
+    title: "AI Transformation",
     subtitle:
-      'AI-powered workflows, intelligent chatbots, and data insights that give your business a competitive edge.',
+      "Practical AI that helps your team respond faster and do more.",
     bullets: [
       {
-        icon: 'Robot',
-        text: 'AI automation that handles repetitive tasks for you'
+        icon: "Robot",
+        text: "AI automation for repetitive work",
       },
       {
-        icon: 'FlowArrow',
-        text: 'Intelligent document processing and data extraction'
+        icon: "UsersFour",
+        text: "AI teams working 24/7 to support",
       },
       {
-        icon: 'ChartLine',
-        text: 'Data-driven insights and predictive analytics'
-      }
+        icon: "ChartLine",
+        text: "Insights that help you act faster",
+      },
     ],
-    ctaLink: '/services/ai-transformation'
-  }
+    ctaLink: "/services/ai-transformation",
+  },
 ];

@@ -13,89 +13,102 @@ export const capabilitiesData: Capability[] = [
     slug: "digital-transformation",
     title: "Digital Transformation",
     subtitle:
-      "Custom web platforms, workflow automation, and marketing systems that modernize your business operations",
+      "Improve how your business shows up, follows up, and gets work done with better websites, connected systems, and smart automation.",
     heroImage: "/images/services/digital-transformation/hero.png",
     problems: [
       {
         icon: "PiDevicesDuotone",
         problem:
-          "Outdated website that doesn't convert visitors into customers or reflect your brand",
+          "Your website looks dated, confuses visitors, or fails to turn interest into real inquiries",
         solution:
-          "Custom web platforms built with modern frameworks that load fast, look professional, and drive conversions",
+          "We build a clearer, faster website experience that makes your business feel credible and guides visitors toward booking, buying, or reaching out",
       },
       {
         icon: "PiClockCountdownDuotone",
         problem:
-          "Manual workflows eating up 20+ hours per week on repetitive tasks",
+          "Your team loses hours every week to repetitive admin, handoffs, and status chasing",
         solution:
-          "End-to-end workflow automation connecting your tools and eliminating manual data entry, scheduling, and reporting",
+          "We automate the busywork so routine tasks, updates, and follow-up happen without someone manually pushing every step",
       },
       {
         icon: "PiPlugsConnectedDuotone",
         problem:
-          "Disconnected systems — CRM, inventory, accounting all living in silos",
+          "Your CRM, inbox, calendar, and internal tools do not talk to each other, so things slip through the cracks",
         solution:
-          "Seamless integrations connecting your existing tools into a unified system with real-time data sync",
+          "We connect the tools you already use so information flows cleanly and your team has fewer manual handoffs",
       },
       {
         icon: "PiShoppingCartDuotone",
         problem:
-          "No e-commerce presence or an underperforming online store losing sales",
+          "Your online store or checkout flow is leaving money on the table",
         solution:
-          "Custom e-commerce solutions with payment processing, inventory management, and marketing automation built in",
+          "We improve the buying experience with cleaner storefronts, easier checkout, and systems that support repeat sales",
       },
       {
         icon: "PiEnvelopeDuotone",
         problem:
-          "Scattered marketing — no automated email, SMS, or newsletter campaigns",
+          "Leads come in, but follow-up is inconsistent, slow, or entirely manual",
         solution:
-          "Integrated marketing automation with newsletters, SMS campaigns, and drip sequences that run on autopilot",
+          "We build automated follow-up across email, SMS, and your CRM so opportunities keep moving even when your team is busy",
       },
     ],
     approach: [
       {
         step: 1,
-        title: "Business Assessment",
+        title: "Find what is slowing you down",
         description:
-          "We learn your business inside and out — your workflows, pain points, tools, and goals. We identify where you're losing time and money so we can target the highest-impact improvements first.",
+          "We look at where leads stall, tasks pile up, or systems create friction so we can focus on the highest-value fixes first.",
       },
       {
         step: 2,
-        title: "Digital Strategy",
+        title: "Plan the right system",
         description:
-          "We design a custom digital roadmap tailored to your business. This includes platform architecture, integration plans, automation workflows, and a clear timeline with milestones.",
+          "You get a practical roadmap that matches your business, your team, and the level of change that makes sense right now.",
       },
       {
         step: 3,
         title: "Build & Launch",
         description:
-          "We build your solution iteratively with frequent demos so you see progress every step of the way. We handle development, testing, migration, and deployment — you focus on running your business.",
+          "We build, test, and launch in stages so you can see progress clearly and start using what matters without waiting for a massive rollout.",
       },
       {
         step: 4,
-        title: "Optimize & Scale",
+        title: "Keep improving",
         description:
-          "After launch, we monitor performance, gather user feedback, and continuously optimize. As your business grows, your digital systems scale with you.",
+          "After launch, we refine what is working, tighten what is not, and expand the system as your business grows.",
       },
     ],
-    techStack: [
-      { name: "React", category: "Frontend" },
-      { name: "TypeScript", category: "Programming Languages" },
-      { name: "Node.js", category: "Backend / APIs" },
-      { name: "Next.js", category: "Frontend" },
-      { name: "Shopify", category: "E-Commerce" },
-      { name: "WooCommerce", category: "E-Commerce" },
-      { name: "Stripe", category: "Payments" },
-      { name: "Twilio", category: "Communications" },
-      { name: "SendGrid", category: "Communications" },
-      { name: "PostgreSQL", category: "Databases" },
-      { name: "Tailwind CSS", category: "Frontend" },
-      { name: ".NET", category: "Backend / APIs" },
+    useCases: [
+      {
+        title: "Website refresh that converts better",
+        description:
+          "Clarify your offer, strengthen trust, and make it easier for visitors to take the next step."
+      },
+      {
+        title: "Automated lead follow-up",
+        description:
+          "Trigger emails, texts, reminders, and pipeline updates so new inquiries do not go cold."
+      },
+      {
+        title: "CRM, inbox, and calendar handoff",
+        description:
+          "Connect the tools your team already uses so appointments, notes, and status updates stay in sync."
+      },
+      {
+        title: "E-commerce cleanup",
+        description:
+          "Improve product flow, checkout clarity, and the systems behind ordering and fulfillment."
+      },
+      {
+        title: "Owner reporting dashboards",
+        description:
+          "Bring key numbers into one place so you can see performance without stitching together spreadsheets."
+      }
     ],
-    ctaTitle: "Ready to Modernize Your Business?",
+    ctaTitle: "Ready to Make Your Business Easier to Run?",
     ctaDescription:
-      "Schedule a free business assessment. We'll identify your biggest bottlenecks and show you exactly how digital transformation can save you time and increase revenue.",
-    ctaButtonText: "Get Your Free Assessment",
+      "Book a free assessment and we will show you where better systems, follow-up, and automation can create the biggest lift first.",
+    ctaButtonText: "Book Your Free Assessment",
     ctaButtonLink: bookingUrl,
   },
 
@@ -106,89 +119,102 @@ export const capabilitiesData: Capability[] = [
     slug: "ai-transformation",
     title: "AI Transformation",
     subtitle:
-      "AI workflow automation, intelligent document processing, and data-driven insights that give your business a competitive edge",
+      "Put practical AI to work across support, operations, and decision-making so your business responds faster and gets more done.",
     heroImage: "/images/services/ai-transformation/hero.png",
     problems: [
       {
         icon: "PiClockCountdownDuotone",
         problem:
-          "Repetitive manual tasks like data entry, report generation, and document processing eating up your team's time",
+          "Your team spends too much time on repetitive work like updates, summaries, document handling, and routine requests",
         solution:
-          "AI-powered workflow automation that handles repetitive tasks autonomously, freeing your team for higher-value work",
+          "We build AI-powered workflows that take care of repeatable tasks so your team can focus on customers, sales, and execution",
       },
       {
         icon: "PiChartLineDuotone",
         problem:
-          "No data insights — you're making business decisions based on gut feelings, not data",
+          "Important information is buried in systems and documents, which slows decisions and creates uncertainty",
         solution:
-          "Custom analytics dashboards and predictive models that surface trends, forecast demand, and identify growth opportunities",
+          "We create AI-assisted reporting and insight tools that surface what matters faster and make it easier to act with confidence",
       },
       {
         icon: "PiChatDuotone",
         problem:
-          "Unanswered customer inquiries and slow response times hurting your reputation",
+          "Customers wait too long for answers, and slow response times cost trust and sales",
         solution:
-          "AI chatbots and intelligent assistants that handle customer questions 24/7 with accurate, on-brand responses",
+          "We build AI assistants that can answer common questions instantly and help your team keep communication moving",
       },
       {
         icon: "PiFilesDuotone",
         problem:
-          "Document bottlenecks — contracts, invoices, and forms piling up waiting for manual review",
+          "Documents, forms, and internal knowledge are hard to process quickly or search when someone needs an answer",
         solution:
-          "Intelligent document processing that extracts, classifies, and routes information automatically with high accuracy",
+          "We use AI to classify, summarize, extract, and search information so the right details are easier to find and use",
       },
       {
         icon: "PiTrendUpDuotone",
         problem:
-          "Falling behind competitors who are already using AI to move faster",
+          "You want to use AI, but most options sound overhyped, risky, or disconnected from real business needs",
         solution:
-          "Practical AI solutions deployed in weeks, not months — starting with quick wins that deliver immediate ROI",
+          "We focus on practical AI wins first, using modern tools only where they create real speed, savings, or better customer experiences",
       },
     ],
     approach: [
       {
         step: 1,
-        title: "AI Readiness Assessment",
+        title: "Find the best AI fit",
         description:
-          "We evaluate your current processes, data, and team to identify where AI can have the biggest impact. No buzzwords — just honest analysis of what AI can and can't do for your business.",
+          "We identify where AI can save time, improve response speed, or reduce manual effort without making your business more complicated.",
       },
       {
         step: 2,
-        title: "Solution Design",
+        title: "Design around the workflow",
         description:
-          "We design AI solutions tailored to your specific workflows and data. We select the right models, define integration points, and create a phased implementation plan starting with highest-impact use cases.",
+          "We map the workflow, choose the right level of automation, and design the solution around how your team actually works.",
       },
       {
         step: 3,
-        title: "Implementation & Training",
+        title: "Launch with guardrails",
         description:
-          "We build and deploy your AI solutions with hands-on training for your team. Every solution includes human oversight, quality checks, and clear documentation so your team stays in control.",
+          "We launch with testing, oversight, and training so your team stays in control and the AI supports the business instead of creating new risks.",
       },
       {
         step: 4,
-        title: "Monitor & Evolve",
+        title: "Refine what works",
         description:
-          "We track AI performance with real-world metrics, refine models based on actual usage, and expand to additional use cases as you see results. Your AI gets smarter over time.",
+          "We monitor usage, tune performance, and expand to the next use case once the first win is producing value.",
       },
     ],
-    techStack: [
-      { name: "LangChain", category: "AI / LLM Frameworks" },
-      { name: "LangGraph", category: "AI / LLM Frameworks" },
-      { name: "OpenAI", category: "AI / LLM Frameworks" },
-      { name: "Python", category: "Programming Languages" },
-      { name: "FastAPI", category: "Backend / APIs" },
-      { name: "Elasticsearch", category: "Search / Vector DBs" },
-      { name: "PostgreSQL", category: "Databases" },
-      { name: "Redis", category: "Databases" },
-      { name: "TensorFlow", category: "ML / DL Frameworks" },
-      { name: "Pinecone", category: "Search / Vector DBs" },
-      { name: "Anthropic Claude", category: "AI / LLM Frameworks" },
-      { name: "Hugging Face", category: "AI / LLM Frameworks" },
+    useCases: [
+      {
+        title: "AI lead-response assistant",
+        description:
+          "Respond to new inquiries faster with AI that can qualify, route, and support early follow-up."
+      },
+      {
+        title: "AI customer support assistant",
+        description:
+          "Answer common questions instantly and keep customers moving without waiting on your team."
+      },
+      {
+        title: "AI document processing",
+        description:
+          "Extract, summarize, and route information from contracts, forms, invoices, and internal documents."
+      },
+      {
+        title: "AI knowledge and search assistant",
+        description:
+          "Help staff find answers faster across policies, documentation, or internal resources."
+      },
+      {
+        title: "AI reporting and summaries",
+        description:
+          "Turn scattered updates and data into clear summaries that make owner decisions easier."
+      }
     ],
-    ctaTitle: "Ready to Put AI to Work for Your Business?",
+    ctaTitle: "Ready to Put AI to Work Without the Hype?",
     ctaDescription:
-      "Schedule a free AI readiness assessment. We'll identify your best AI opportunities and show you how to get started with practical solutions that deliver real results.",
-    ctaButtonText: "Get Your AI Assessment",
+      "Book a free assessment and we will show you where AI can create faster response times, less manual work, and better customer experiences.",
+    ctaButtonText: "Book Your Free Assessment",
     ctaButtonLink: bookingUrl,
   },
 ];

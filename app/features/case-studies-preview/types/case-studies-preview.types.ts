@@ -6,6 +6,7 @@
 export interface FeaturedCaseStudy {
   title: string;
   description: string;
+  technicalContext?: string;
   image: string;
   tags: string[];
   industry: string;

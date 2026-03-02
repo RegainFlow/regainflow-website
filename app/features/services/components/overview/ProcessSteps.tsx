@@ -18,7 +18,7 @@ export default function ProcessSteps({ steps }: ProcessStepsProps) {
           </h2>
 
           <p className="section-subtitle">
-            Our proven engagement process from discovery to delivery
+            A simple path from bottleneck to launch
           </p>
 
           <div className="process-steps-grid">

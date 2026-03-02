@@ -8,12 +8,14 @@ export const links = () => [
 ];
 
 export default function CaseStudiesPreview() {
-  // Get 3 diverse featured case studies (different capabilities)
-  const featuredCases = [
-    projectsItems[0], // Multi-Agent Payroll Validation (ai-automation, data-validation)
-    projectsItems[2], // Hybrid RAG Aerospace (rag-search, ai-automation)
-    projectsItems[13] // Full-Stack SaaS Platform (full-stack, ai-automation, system-integration)
+  const featuredTitles = [
+    'Marketing Automation for Distribution Network',
+    'AI-Powered Document Retrieval Platform',
+    'MODA: E-Commerce Fashion Platform'
   ];
+  const featuredCases = projectsItems.filter((caseStudy) =>
+    featuredTitles.includes(caseStudy.title)
+  );
 
   return (
     <section className="case-studies-preview-section glass-section">
@@ -23,7 +25,7 @@ export default function CaseStudiesPreview() {
         </h2>
 
         <p className="section-subtitle">
-          Real-world results from production implementations
+          Real outcomes from projects built to improve speed, clarity, and growth
         </p>
 
         <div className="case-studies-grid">
@@ -69,7 +71,7 @@ export default function CaseStudiesPreview() {
             to="/client-results"
             className="btn btn-neon btn-secondary"
           >
-            View All Case Studies
+            See Client Results
             <PiArrowRightBold size={20} />
           </Link>
         </div>

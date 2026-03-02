@@ -16,7 +16,7 @@
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--spacing-lg);
 }
 
@@ -26,9 +26,28 @@
   -webkit-backdrop-filter: var(--glass-blur);
   border: var(--border-glass-light);
   border-radius: var(--radius-lg);
-  padding: var(--spacing-lg);
-  text-align: center;
+  padding: 1.25rem 1.35rem 1.3rem;
+  min-height: 245px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
   transition: var(--transition-base);
+}
+
+.glass-card-stat::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    rgba(34, 211, 238, 0.9),
+    rgba(34, 211, 238, 0.2)
+  );
 }
 
 .glass-card-stat:hover {
@@ -37,21 +56,66 @@
   transform: translateY(-3px);
 }
 
+.glass-card-stat-category {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.76rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: auto;
+}
+
+.glass-card-stat-step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  background: rgba(34, 211, 238, 0.08);
+  color: var(--color-primary-light);
+  letter-spacing: 0.04em;
+}
+
 .glass-card-stat-value {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2.5rem, 3.8vw, 3.8rem);
   font-weight: var(--font-weight-black);
   color: var(--color-primary-light);
   font-family: var(--font-accent);
-  line-height: 1.2;
-  margin-bottom: var(--spacing-xs);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  margin: 2.25rem 0 0.75rem;
+  max-width: 6ch;
 }
 
 .glass-card-stat-label {
-  font-size: clamp(0.8rem, 1vw + 0.25rem, 0.95rem);
+  font-size: 1.02rem;
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  max-width: 11ch;
+  text-wrap: balance;
+}
+
+.glass-card-stat-detail {
+  margin-top: 0.85rem;
+  font-size: 0.84rem;
   color: var(--color-text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-weight: var(--font-weight-semibold);
+  line-height: 1.5;
+  max-width: 22ch;
+}
+
+.glass-card-stat:nth-child(1) .glass-card-stat-value,
+.glass-card-stat:nth-child(2) .glass-card-stat-value {
+  max-width: none;
+}
+
+.glass-card-stat:nth-child(4) .glass-card-stat-value {
+  letter-spacing: -0.06em;
 }
 
 /* Responsive */
@@ -62,16 +126,25 @@
   }
 
   .glass-card-stat {
-    padding: 1.25rem 1rem;
+    min-height: 205px;
+    padding: 1.1rem 1rem 1rem;
+  }
+
+  .glass-card-stat-category {
+    margin-bottom: 0.5rem;
   }
 
   .glass-card-stat-value {
-    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    font-size: clamp(2rem, 6vw, 3rem);
+    margin-top: 1.3rem;
   }
 
   .glass-card-stat-label {
-    font-size: 0.78rem;
-    letter-spacing: 0.06em;
+    font-size: 0.92rem;
+  }
+
+  .glass-card-stat-detail {
+    font-size: 0.8rem;
   }
 }
 
@@ -79,6 +152,10 @@
   .service-metrics-container {
     grid-template-columns: 1fr;
     gap: 0.875rem;
+  }
+
+  .glass-card-stat {
+    min-height: 0;
   }
 }
 

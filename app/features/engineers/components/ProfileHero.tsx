@@ -51,7 +51,7 @@ export default function ProfileHero({ member }: ProfileHeroProps) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Schedule Call with {member.name.split(' ')[0]}
+              Book Your Free Assessment
             </a>
           </div>
         </div>

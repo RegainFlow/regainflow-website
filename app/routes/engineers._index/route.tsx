@@ -19,7 +19,7 @@ export const links: Route.LinksFunction = () => [
 export function meta({}: Route.MetaArgs) {
   const title = 'RegainFlow | Our Team';
   const description =
-    'Meet the team behind your digital and AI transformation. Enterprise-grade engineering expertise in AI/ML, automation, and full-stack development — applied to growing businesses.';
+    'Meet the team helping growing businesses improve websites, simplify operations, and use AI in practical ways.';
   const image = 'https://www.regainflow.com/images/og/og-about.png';
   const url = 'https://www.regainflow.com/engineers';
 

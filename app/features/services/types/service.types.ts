@@ -25,6 +25,11 @@ export interface TechItem {
   category?: string; // For colored badges
 }
 
+export interface UseCaseItem {
+  title: string;
+  description: string;
+}
+
 export interface Capability {
   slug: CapabilitySlug;
   title: string;
@@ -32,7 +37,8 @@ export interface Capability {
   heroImage: string;
   problems: Problem[]; // Problems this capability solves
   approach: ApproachStep[]; // How we approach this service
-  techStack: TechItem[]; // Technologies used
+  techStack?: TechItem[]; // Technologies used
+  useCases: UseCaseItem[];
   ctaTitle: string; // CTA section title
   ctaDescription: string; // CTA description targeting hiring managers
   ctaButtonText: string;
@@ -51,8 +57,10 @@ export interface ProcessStep {
 }
 
 export interface ServiceMetric {
+  category: string;
   value: string; // e.g., "15+"
-  label: string; // e.g., "Years Combined Experience"
+  label: string; // e.g., "Combined experience"
+  detail?: string;
 }
 
 export interface CapabilityCard {

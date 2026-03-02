@@ -16,7 +16,7 @@ export default function TopSkillsShowcase({ topSkills }: TopSkillsShowcaseProps)
     <section className="top-skills-section glass-section">
       <div className="top-skills-container">
         <h2 className="section-title">
-          Top <span className="text-highlight">Skills</span>
+          Technical <span className="text-highlight">Strength</span>
         </h2>
 
         <div className="top-skills-grid">

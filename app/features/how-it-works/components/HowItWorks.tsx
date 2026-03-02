@@ -11,7 +11,7 @@ export default function HowItWorks() {
           How It <span className="text-highlight">Works</span>
         </h2>
         <p className="section-subtitle">
-          Four simple steps to transform your business
+          Four straightforward steps to move from bottlenecks to better systems
         </p>
 
         <div className="steps-grid">

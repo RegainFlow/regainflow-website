@@ -1,5 +1,6 @@
 import ScrollAnimation from '~/components/layout/ScrollAnimation';
 import { teamMembers } from '../data/teamData';
+import { teamPageCopy } from '../data/teamPageCopy';
 import EngineerCard from './EngineerCard';
 import TeamCTA from './TeamCTA';
 
@@ -10,11 +11,10 @@ export default function EngineersLanding() {
       <section className="engineers-hero-section glass-section">
         <div className="engineers-hero-container">
           <h1 className="section-title">
-            Meet Our <span className="text-highlight">Team</span>
+            Meet the Team Behind <span className="text-highlight">RegainFlow</span>
           </h1>
           <p className="section-subtitle">
-            Enterprise-grade engineering expertise, applied to your business.
-            Our team brings 15+ years of combined experience building AI systems, digital platforms, and automation solutions.
+            {teamPageCopy.landingSubtitle}
           </p>
         </div>
       </section>

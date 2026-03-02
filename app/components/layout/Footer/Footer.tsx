@@ -15,9 +15,8 @@ export default function Footer() {
             REGAINFLOW
           </Link>
           <p className="footer-logo-blurb">
-            Your digital and AI transformation partner. We learn your business,
-            find the pain points, and build solutions that help you operate
-            smarter and earn more.
+            Websites, automation, and practical AI for growing businesses that
+            want more leads, faster response, and less manual work.
           </p>
           <img
             src="/images/regain_flow_logo.png"
@@ -70,7 +69,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Free Business Assessment
+              Book Your Free Assessment
             </a>
             <Link to="/terms" className="footer-link">
               Terms & Conditions

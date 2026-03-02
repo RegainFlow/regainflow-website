@@ -12,15 +12,13 @@ export default function ServicesCTA() {
         <div className="services-cta-container glass-card">
           <div className="services-cta-content">
             <h2 className="services-cta-title">
-              Ready to <span className="text-highlight">Transform</span> Your
-              Operations?
+              Ready to <span className="text-highlight">Speed Up</span> the Way
+              Your Business Runs?
             </h2>
 
             <p className="services-cta-description">
-              Schedule a free consultation to discuss your automation, search,
-              or engineering challenges. We'll map your requirements, identify
-              opportunities, and show you exactly how we can deliver measurable
-              ROI.
+              Book a free assessment and we will show you where better systems,
+              automation, or AI can create the fastest payoff for your team.
             </p>
 
             <div className="services-cta-buttons">
@@ -31,7 +29,7 @@ export default function ServicesCTA() {
                 rel="noopener noreferrer"
               >
                 <PiCalendarCheckDuotone size={24} />
-                Schedule Free Consultation
+                Book Your Free Assessment
               </a>
 
               <Link
@@ -39,12 +37,12 @@ export default function ServicesCTA() {
                 className="neon-button-glass neon-button-secondary"
               >
                 <PiArrowRightBold size={20} />
-                View Case Studies
+                See Client Results
               </Link>
             </div>
 
             <p className="services-cta-note">
-              Free assessment · No commitment · Results you can measure
+              Free assessment | No commitment | Clear next steps
             </p>
           </div>
         </div>

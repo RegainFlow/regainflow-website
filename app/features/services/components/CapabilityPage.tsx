@@ -49,9 +49,9 @@ export default function CapabilityPage({ capability }: CapabilityPageProps) {
                   <div className="problem-icon">
                     {IconComponent && <IconComponent size={40} />}
                   </div>
-                  <h3 className="problem-title">Challenge</h3>
+                  <h3 className="problem-title">What&apos;s getting in the way</h3>
                   <p className="problem-text">{problem.problem}</p>
-                  <h4 className="solution-title">Our Solution</h4>
+                  <h4 className="solution-title">What we build</h4>
                   <p className="solution-text">{problem.solution}</p>
                 </div>
               );
@@ -83,31 +83,7 @@ export default function CapabilityPage({ capability }: CapabilityPageProps) {
         </div>
       </section>
 
-      {/* 6. Tech Stack */}
-      <section className="tech-stack-section glass-section">
-        <div className="container">
-          <h2 className="section-title">
-            Technology <span className="text-highlight">Stack</span>
-          </h2>
-
-          <div className="tech-stack-grid">
-            {capability.techStack.map((tech, idx) => (
-              <div
-                key={idx}
-                className="tech-badge glass-card"
-                data-category={tech.category || ""}
-              >
-                <span className="tech-badge-name">{tech.name}</span>
-                {tech.category && (
-                  <span className="tech-badge-category">{tech.category}</span>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 8. Capability CTA */}
+      {/* 6. Capability CTA */}
       <section className="capability-cta-section glass-section">
         <div className="container">
           <div className="capability-cta-card glass-card">

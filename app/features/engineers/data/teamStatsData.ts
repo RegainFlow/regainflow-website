@@ -10,14 +10,14 @@ export const teamStatsData: TeamStat[] = [
   },
   {
     value: '50+',
-    label: 'Projects Delivered'
+    label: 'Builds and launches'
   },
   {
-    value: '25+',
-    label: 'Technologies Mastered'
+    value: 'Practical AI',
+    label: 'Used where it creates real value'
   },
   {
-    value: '100%',
-    label: 'Client Satisfaction'
+    value: 'SMB Focus',
+    label: 'Built for growing teams'
   }
 ];
