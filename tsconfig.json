@@ -5,6 +5,11 @@
     "**/.client/**/*",
     ".react-router/types/**/*"
   ],
+  // MAINTENANCE LOCKDOWN: the route files in app/routes/ are unregistered while
+  // the site is under construction (see app/routes.ts), so react-router no longer
+  // generates their `+types`. Excluded from type-checking until the site is
+  // restored. Remove this "exclude" when bringing the full site back online.
+  "exclude": ["app/routes"],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2022"],
     "types": ["node", "vite/client"],

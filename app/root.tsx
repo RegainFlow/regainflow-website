@@ -7,8 +7,10 @@ import {
   ScrollRestoration,
   isRouteErrorResponse,
 } from "react-router";
-import Navbar from "~/components/layout/Navbar/Navbar";
-import Footer from "~/components/layout/Footer/Footer";
+// Navbar and Footer are intentionally not rendered during the maintenance
+// lockdown so the placeholder page has no links to inaccessible routes.
+// import Navbar from "~/components/layout/Navbar/Navbar";
+// import Footer from "~/components/layout/Footer/Footer";
 import NotFound from "~/components/layout/NotFound/NotFound";
 import { ScrollToTop } from "~/hooks/ScrollToTop";
 
@@ -92,9 +94,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body>
         <ScrollToTop />
         <div className="background-wrapper">
-          <Navbar />
           {children}
-          <Footer />
         </div>
 
         <ScrollRestoration />
